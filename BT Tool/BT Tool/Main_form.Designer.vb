@@ -62,11 +62,13 @@ Partial Class Main_form
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BunifuTransition2 = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.BunifuTransition3 = New BunifuAnimatorNS.BunifuTransition(Me.components)
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         Me.Dashboard_pnl.SuspendLayout()
         Me.User_Pnl.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Status_Pnl.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -639,18 +641,30 @@ Partial Class Main_form
         Animation6.TransparencyCoeff = 1.0!
         Me.BunifuTransition3.DefaultAnimation = Animation6
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.BunifuTransition2.SetDecoration(Me.DataGridView1, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.DataGridView1, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition3.SetDecoration(Me.DataGridView1, BunifuAnimatorNS.DecorationType.None)
+        Me.DataGridView1.Location = New System.Drawing.Point(56, 58)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(994, 530)
+        Me.DataGridView1.TabIndex = 5
+        '
         'Main_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1062, 673)
-        Me.Controls.Add(Me.Status_Pnl)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Settings_Pnl)
         Me.Controls.Add(Me.User_Pnl)
+        Me.Controls.Add(Me.Status_Pnl)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Dashboard_pnl)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.BunifuTransition2.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition1.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition3.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
@@ -665,6 +679,7 @@ Partial Class Main_form
         Me.Panel2.ResumeLayout(False)
         Me.Status_Pnl.ResumeLayout(False)
         Me.Status_Pnl.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -704,4 +719,5 @@ Partial Class Main_form
     Friend WithEvents BunifuTransition3 As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents Label4 As Label
     Friend WithEvents Logout_btn As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
