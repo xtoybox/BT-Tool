@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE870F08-2FD7-45AB-8071-F258FD062843}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BT_Tool.My.MyApplication</StartupObject>
+    <RootNamespace>BT_Tool</RootNamespace>
+    <AssemblyName>BT Tool</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BT Tool.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BT Tool.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>acco.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\packages\GCDesign.1.0.0\lib\net46\GCDesign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GCDesign, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GCDesign.1.0.0\lib\net46\GCDesign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </SplashScreen>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Login_form.Designer.vb">
+      <DependentUpon>Login_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logout_form.Designer.vb">
+      <DependentUpon>Logout_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Logout_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_form.Designer.vb">
+      <DependentUpon>Main_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Login_form.resx">
+      <DependentUpon>Login_form.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logout_form.resx">
+      <DependentUpon>Logout_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_form.resx">
+      <DependentUpon>Main_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\588a64e0d06f6719692a2d10.png" />
+    <Content Include="acco.ico" />
+    <Content Include="Resources\acco.ico" />
+    <Content Include="Resources\accoalde_logo_small.png" />
+    <Content Include="Resources\apps.png" />
+    <Content Include="Resources\archive.png" />
+    <Content Include="Resources\archive1.png" />
+    <None Include="Resources\workflow_32.png" />
+    <None Include="Resources\wait_tracker_32.png" />
+    <None Include="Resources\view_return_32.png" />
+    <None Include="Resources\user_list_32.png" />
+    <None Include="Resources\upload_32.png" />
+    <None Include="Resources\submit_32.png" />
+    <None Include="Resources\show_pass_24.png" />
+    <None Include="Resources\return_32.png" />
+    <None Include="Resources\report_log.png" />
+    <None Include="Resources\refresh_32.png" />
+    <None Include="Resources\reference_32.png" />
+    <None Include="Resources\ratio_tracker_32.png" />
+    <None Include="Resources\open_folder_16.png" />
+    <None Include="Resources\my_file_evaluation_32.png" />
+    <None Include="Resources\monitoring_32.png" />
+    <None Include="Resources\logout_32.png" />
+    <None Include="Resources\login_16.png" />
+    <None Include="Resources\loader4.gif" />
+    <None Include="Resources\loader3.gif" />
+    <None Include="Resources\loader2.gif" />
+    <None Include="Resources\loader1.gif" />
+    <None Include="Resources\idle_tracker_32.png" />
+    <None Include="Resources\hold_32.png" />
+    <None Include="Resources\hide_pass_24.png" />
+    <None Include="Resources\geometry_cyberspace.jpeg" />
+    <None Include="Resources\flagging_32.png" />
+    <None Include="Resources\files_due_32.png" />
+    <None Include="Resources\file_eval_32.png" />
+    <None Include="Resources\export_32.png" />
+    <None Include="Resources\cancel_32.png" />
+    <None Include="Resources\bt_file_32.png" />
+    <None Include="Resources\break_log_32.png" />
+    <None Include="Resources\break_32.png" />
+    <None Include="Resources\archive_32.png" />
+    <Content Include="Resources\Arrow.bmp" />
+    <Content Include="Resources\arrow_downward.png" />
+    <Content Include="Resources\background3.png" />
+    <Content Include="Resources\background3_blur.png" />
+    <Content Include="Resources\background3_dark.png" />
+    <Content Include="Resources\background4.png" />
+    <Content Include="Resources\background_login.png" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\close1.png" />
+    <Content Include="Resources\close2.png" />
+    <Content Include="Resources\close3.png" />
+    <Content Include="Resources\enter.png" />
+    <Content Include="Resources\enter1.png" />
+    <Content Include="Resources\enter2.png" />
+    <Content Include="Resources\enter3.png" />
+    <Content Include="Resources\enter4.png" />
+    <Content Include="Resources\exit-door.png" />
+    <Content Include="Resources\exit.png" />
+    <Content Include="Resources\exit1.png" />
+    <Content Include="Resources\exit2.png" />
+    <Content Include="Resources\exit_to_app.png" />
+    <Content Include="Resources\exit_to_app1.png" />
+    <Content Include="Resources\eye.png" />
+    <Content Include="Resources\file_upload.png" />
+    <Content Include="Resources\file_upload1.png" />
+    <Content Include="Resources\folder.png" />
+    <Content Include="Resources\get_app.png" />
+    <Content Include="Resources\get_app1.png" />
+    <Content Include="Resources\get_app2.png" />
+    <Content Include="Resources\icons8-squared-menu-100.png" />
+    <Content Include="Resources\import_export.png" />
+    <Content Include="Resources\insert_drive_file.png" />
+    <Content Include="Resources\insert_drive_file1.png" />
+    <Content Include="Resources\linear_scale.png" />
+    <Content Include="Resources\linear_scale1.png" />
+    <Content Include="Resources\lock_open.png" />
+    <Content Include="Resources\more_horiz.png" />
+    <Content Include="Resources\people.png" />
+    <Content Include="Resources\people1.png" />
+    <Content Include="Resources\person.png" />
+    <Content Include="Resources\remove.png" />
+    <Content Include="Resources\settings.png" />
+    <Content Include="Resources\visibility.png" />
+    <Content Include="Resources\visibility1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
