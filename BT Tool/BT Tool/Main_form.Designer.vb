@@ -23,9 +23,9 @@ Partial Class Main_form
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation6 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
-        Dim Animation5 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
-        Dim Animation4 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation3 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_form))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -35,6 +35,7 @@ Partial Class Main_form
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Dashboard_pnl = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Workflow_btn = New System.Windows.Forms.Button()
         Me.Userlist_btn = New System.Windows.Forms.Button()
         Me.Filesdue_btn = New System.Windows.Forms.Button()
@@ -62,7 +63,6 @@ Partial Class Main_form
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BunifuTransition2 = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.BunifuTransition3 = New BunifuAnimatorNS.BunifuTransition(Me.components)
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Dashboard_pnl.SuspendLayout()
         Me.User_Pnl.SuspendLayout()
@@ -200,6 +200,22 @@ Partial Class Main_form
         Me.Dashboard_pnl.Name = "Dashboard_pnl"
         Me.Dashboard_pnl.Size = New System.Drawing.Size(50, 664)
         Me.Dashboard_pnl.TabIndex = 1
+        '
+        'Button2
+        '
+        Me.BunifuTransition3.SetDecoration(Me.Button2, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.Button2, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.Button2, BunifuAnimatorNS.DecorationType.None)
+        Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button2.Enabled = False
+        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(0, 564)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(48, 47)
+        Me.Button2.TabIndex = 12
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Workflow_btn
         '
@@ -443,22 +459,22 @@ Partial Class Main_form
         '
         Me.BunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
         Me.BunifuTransition1.Cursor = Nothing
-        Animation6.AnimateOnlyDifferences = True
-        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
-        Animation6.LeafCoeff = 0!
-        Animation6.MaxTime = 1.0!
-        Animation6.MinTime = 0!
-        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
-        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
-        Animation6.MosaicSize = 0
-        Animation6.Padding = New System.Windows.Forms.Padding(0)
-        Animation6.RotateCoeff = 0!
-        Animation6.RotateLimit = 0!
-        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
-        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
-        Animation6.TimeCoeff = 0!
-        Animation6.TransparencyCoeff = 0!
-        Me.BunifuTransition1.DefaultAnimation = Animation6
+        Animation3.AnimateOnlyDifferences = True
+        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
+        Animation3.LeafCoeff = 0!
+        Animation3.MaxTime = 1.0!
+        Animation3.MinTime = 0!
+        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
+        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
+        Animation3.MosaicSize = 0
+        Animation3.Padding = New System.Windows.Forms.Padding(0)
+        Animation3.RotateCoeff = 0!
+        Animation3.RotateLimit = 0!
+        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
+        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
+        Animation3.TimeCoeff = 0!
+        Animation3.TransparencyCoeff = 0!
+        Me.BunifuTransition1.DefaultAnimation = Animation3
         '
         'Panel2
         '
@@ -484,14 +500,14 @@ Partial Class Main_form
         Me.BunifuTransition3.SetDecoration(Me.Submit_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.Submit_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition1.SetDecoration(Me.Submit_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Submit_btn.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Submit_btn.Dock = System.Windows.Forms.DockStyle.Top
         Me.Submit_btn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Submit_btn.ForeColor = System.Drawing.Color.White
         Me.Submit_btn.Image = Global.BT_Tool.My.Resources.Resources.submit_321
         Me.Submit_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Submit_btn.Location = New System.Drawing.Point(0, 349)
+        Me.Submit_btn.Location = New System.Drawing.Point(0, 244)
         Me.Submit_btn.Name = "Submit_btn"
-        Me.Submit_btn.Size = New System.Drawing.Size(60, 63)
+        Me.Submit_btn.Size = New System.Drawing.Size(60, 61)
         Me.Submit_btn.TabIndex = 17
         Me.Submit_btn.Text = "SUBMIT"
         Me.Submit_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -503,14 +519,14 @@ Partial Class Main_form
         Me.BunifuTransition3.SetDecoration(Me.Cancel_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.Cancel_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition1.SetDecoration(Me.Cancel_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Cancel_btn.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Cancel_btn.Dock = System.Windows.Forms.DockStyle.Top
         Me.Cancel_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cancel_btn.ForeColor = System.Drawing.Color.White
         Me.Cancel_btn.Image = Global.BT_Tool.My.Resources.Resources.cancel_32
         Me.Cancel_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Cancel_btn.Location = New System.Drawing.Point(0, 412)
+        Me.Cancel_btn.Location = New System.Drawing.Point(0, 183)
         Me.Cancel_btn.Name = "Cancel_btn"
-        Me.Cancel_btn.Size = New System.Drawing.Size(60, 63)
+        Me.Cancel_btn.Size = New System.Drawing.Size(60, 61)
         Me.Cancel_btn.TabIndex = 16
         Me.Cancel_btn.Text = "CANCEL"
         Me.Cancel_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -522,14 +538,14 @@ Partial Class Main_form
         Me.BunifuTransition3.SetDecoration(Me.Hold_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.Hold_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition1.SetDecoration(Me.Hold_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Hold_btn.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Hold_btn.Dock = System.Windows.Forms.DockStyle.Top
         Me.Hold_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Hold_btn.ForeColor = System.Drawing.Color.White
         Me.Hold_btn.Image = Global.BT_Tool.My.Resources.Resources.hold_32
         Me.Hold_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Hold_btn.Location = New System.Drawing.Point(0, 475)
+        Me.Hold_btn.Location = New System.Drawing.Point(0, 122)
         Me.Hold_btn.Name = "Hold_btn"
-        Me.Hold_btn.Size = New System.Drawing.Size(60, 63)
+        Me.Hold_btn.Size = New System.Drawing.Size(60, 61)
         Me.Hold_btn.TabIndex = 15
         Me.Hold_btn.Text = "HOLD"
         Me.Hold_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -541,14 +557,14 @@ Partial Class Main_form
         Me.BunifuTransition3.SetDecoration(Me.Return_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.Return_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition1.SetDecoration(Me.Return_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Return_btn.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Return_btn.Dock = System.Windows.Forms.DockStyle.Top
         Me.Return_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Return_btn.ForeColor = System.Drawing.Color.White
         Me.Return_btn.Image = Global.BT_Tool.My.Resources.Resources.return_32
         Me.Return_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Return_btn.Location = New System.Drawing.Point(0, 538)
+        Me.Return_btn.Location = New System.Drawing.Point(0, 61)
         Me.Return_btn.Name = "Return_btn"
-        Me.Return_btn.Size = New System.Drawing.Size(60, 63)
+        Me.Return_btn.Size = New System.Drawing.Size(60, 61)
         Me.Return_btn.TabIndex = 14
         Me.Return_btn.Text = "RETURN"
         Me.Return_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -560,14 +576,14 @@ Partial Class Main_form
         Me.BunifuTransition3.SetDecoration(Me.Break_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.Break_btn, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition1.SetDecoration(Me.Break_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Break_btn.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Break_btn.Dock = System.Windows.Forms.DockStyle.Top
         Me.Break_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Break_btn.ForeColor = System.Drawing.Color.White
         Me.Break_btn.Image = Global.BT_Tool.My.Resources.Resources.break_321
         Me.Break_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Break_btn.Location = New System.Drawing.Point(0, 601)
+        Me.Break_btn.Location = New System.Drawing.Point(0, 0)
         Me.Break_btn.Name = "Break_btn"
-        Me.Break_btn.Size = New System.Drawing.Size(60, 63)
+        Me.Break_btn.Size = New System.Drawing.Size(60, 61)
         Me.Break_btn.TabIndex = 13
         Me.Break_btn.Text = "BREAK"
         Me.Break_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -604,59 +620,43 @@ Partial Class Main_form
         '
         Me.BunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
         Me.BunifuTransition2.Cursor = Nothing
-        Animation5.AnimateOnlyDifferences = True
-        Animation5.BlindCoeff = CType(resources.GetObject("Animation5.BlindCoeff"), System.Drawing.PointF)
-        Animation5.LeafCoeff = 0!
-        Animation5.MaxTime = 1.0!
-        Animation5.MinTime = 0!
-        Animation5.MosaicCoeff = CType(resources.GetObject("Animation5.MosaicCoeff"), System.Drawing.PointF)
-        Animation5.MosaicShift = CType(resources.GetObject("Animation5.MosaicShift"), System.Drawing.PointF)
-        Animation5.MosaicSize = 0
-        Animation5.Padding = New System.Windows.Forms.Padding(0)
-        Animation5.RotateCoeff = 0!
-        Animation5.RotateLimit = 0!
-        Animation5.ScaleCoeff = CType(resources.GetObject("Animation5.ScaleCoeff"), System.Drawing.PointF)
-        Animation5.SlideCoeff = CType(resources.GetObject("Animation5.SlideCoeff"), System.Drawing.PointF)
-        Animation5.TimeCoeff = 0!
-        Animation5.TransparencyCoeff = 0!
-        Me.BunifuTransition2.DefaultAnimation = Animation5
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.BunifuTransition2.DefaultAnimation = Animation2
         '
         'BunifuTransition3
         '
         Me.BunifuTransition3.AnimationType = BunifuAnimatorNS.AnimationType.Transparent
         Me.BunifuTransition3.Cursor = Nothing
-        Animation4.AnimateOnlyDifferences = True
-        Animation4.BlindCoeff = CType(resources.GetObject("Animation4.BlindCoeff"), System.Drawing.PointF)
-        Animation4.LeafCoeff = 0!
-        Animation4.MaxTime = 1.0!
-        Animation4.MinTime = 0!
-        Animation4.MosaicCoeff = CType(resources.GetObject("Animation4.MosaicCoeff"), System.Drawing.PointF)
-        Animation4.MosaicShift = CType(resources.GetObject("Animation4.MosaicShift"), System.Drawing.PointF)
-        Animation4.MosaicSize = 0
-        Animation4.Padding = New System.Windows.Forms.Padding(0)
-        Animation4.RotateCoeff = 0!
-        Animation4.RotateLimit = 0!
-        Animation4.ScaleCoeff = CType(resources.GetObject("Animation4.ScaleCoeff"), System.Drawing.PointF)
-        Animation4.SlideCoeff = CType(resources.GetObject("Animation4.SlideCoeff"), System.Drawing.PointF)
-        Animation4.TimeCoeff = 0!
-        Animation4.TransparencyCoeff = 1.0!
-        Me.BunifuTransition3.DefaultAnimation = Animation4
-        '
-        'Button2
-        '
-        Me.BunifuTransition3.SetDecoration(Me.Button2, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Button2, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Button2, BunifuAnimatorNS.DecorationType.None)
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button2.Enabled = False
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(0, 564)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(48, 47)
-        Me.Button2.TabIndex = 12
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.UseVisualStyleBackColor = True
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 1.0!
+        Me.BunifuTransition3.DefaultAnimation = Animation1
         '
         'Main_form
         '
