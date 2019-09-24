@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports System.ComponentModel
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SplashScreen
     Inherits System.Windows.Forms.Form
 
@@ -22,7 +24,7 @@ Partial Class SplashScreen
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents BunifuProgressBar1 As Bunifu.Framework.UI.BunifuProgressBar
+    Friend WithEvents Timer1 As Timer
 
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
@@ -32,17 +34,18 @@ Partial Class SplashScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SplashScreen))
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.BunifuProgressBar1 = New Bunifu.Framework.UI.BunifuProgressBar()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Copyright = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BunifuGradientPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,7 +66,6 @@ Partial Class SplashScreen
         Me.BunifuGradientPanel1.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel1.BackgroundImage"), System.Drawing.Image)
         Me.BunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuGradientPanel1.Controls.Add(Me.Label7)
-        Me.BunifuGradientPanel1.Controls.Add(Me.BunifuProgressBar1)
         Me.BunifuGradientPanel1.Controls.Add(Me.Label6)
         Me.BunifuGradientPanel1.Controls.Add(Me.Copyright)
         Me.BunifuGradientPanel1.Controls.Add(Me.Label2)
@@ -85,25 +87,13 @@ Partial Class SplashScreen
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(151, 200)
+        Me.Label7.Location = New System.Drawing.Point(141, 209)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(57, 13)
+        Me.Label7.Size = New System.Drawing.Size(77, 16)
         Me.Label7.TabIndex = 30
         Me.Label7.Text = "Loading ..."
-        '
-        'BunifuProgressBar1
-        '
-        Me.BunifuProgressBar1.BackColor = System.Drawing.Color.Silver
-        Me.BunifuProgressBar1.BorderRadius = 5
-        Me.BunifuProgressBar1.Location = New System.Drawing.Point(25, 216)
-        Me.BunifuProgressBar1.MaximumValue = 100
-        Me.BunifuProgressBar1.Name = "BunifuProgressBar1"
-        Me.BunifuProgressBar1.ProgressColor = System.Drawing.Color.Gray
-        Me.BunifuProgressBar1.Size = New System.Drawing.Size(308, 13)
-        Me.BunifuProgressBar1.TabIndex = 29
-        Me.BunifuProgressBar1.Value = 0
         '
         'Label6
         '
@@ -121,12 +111,12 @@ Partial Class SplashScreen
         '
         Me.Copyright.AutoSize = True
         Me.Copyright.BackColor = System.Drawing.Color.Transparent
-        Me.Copyright.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Copyright.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Copyright.ForeColor = System.Drawing.Color.DarkGray
         Me.Copyright.Location = New System.Drawing.Point(3, 275)
         Me.Copyright.Name = "Copyright"
         Me.Copyright.Padding = New System.Windows.Forms.Padding(2)
-        Me.Copyright.Size = New System.Drawing.Size(217, 17)
+        Me.Copyright.Size = New System.Drawing.Size(238, 20)
         Me.Copyright.TabIndex = 27
         Me.Copyright.Text = "Copyright © Accolade Resources Inc. 2018"
         '
@@ -134,11 +124,11 @@ Partial Class SplashScreen
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DarkGray
         Me.Label2.Location = New System.Drawing.Point(3, 259)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 13)
+        Me.Label2.Size = New System.Drawing.Size(72, 16)
         Me.Label2.TabIndex = 26
         Me.Label2.Text = "Version 1.0.0"
         '
@@ -177,6 +167,10 @@ Partial Class SplashScreen
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "BT"
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'SplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -200,12 +194,16 @@ Partial Class SplashScreen
 
     Private Sub SplashScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        BunifuProgressBar1.Value = 50
+
 
     End Sub
 
-    Private Sub Label3_Click_1(sender As Object, e As EventArgs) Handles Label3.Click
+    Private Sub SplashScreen_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         Login_form.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
     End Sub
 End Class

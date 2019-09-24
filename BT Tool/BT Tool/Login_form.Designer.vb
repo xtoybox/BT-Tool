@@ -35,6 +35,9 @@ Partial Class Login_form
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Password_txtbox = New System.Windows.Forms.TextBox()
         Me.Username_txtbox = New System.Windows.Forms.TextBox()
+        Me.Error3_lbl = New System.Windows.Forms.Label()
+        Me.Error1_lbl = New System.Windows.Forms.Label()
+        Me.Error2_lbl = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.BunifuGradientPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -87,6 +90,9 @@ Partial Class Login_form
         Me.BunifuGradientPanel1.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel1.BackgroundImage"), System.Drawing.Image)
         Me.BunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuGradientPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BunifuGradientPanel1.Controls.Add(Me.Error2_lbl)
+        Me.BunifuGradientPanel1.Controls.Add(Me.Error1_lbl)
+        Me.BunifuGradientPanel1.Controls.Add(Me.Error3_lbl)
         Me.BunifuGradientPanel1.Controls.Add(Me.Button2)
         Me.BunifuGradientPanel1.Controls.Add(Me.Login_btn)
         Me.BunifuGradientPanel1.Controls.Add(Me.Label3)
@@ -101,7 +107,7 @@ Partial Class Login_form
         Me.BunifuGradientPanel1.Location = New System.Drawing.Point(0, 38)
         Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"
         Me.BunifuGradientPanel1.Quality = 10
-        Me.BunifuGradientPanel1.Size = New System.Drawing.Size(265, 251)
+        Me.BunifuGradientPanel1.Size = New System.Drawing.Size(265, 254)
         Me.BunifuGradientPanel1.TabIndex = 1
         '
         'Button2
@@ -129,7 +135,7 @@ Partial Class Login_form
         Me.Login_btn.ForeColor = System.Drawing.Color.White
         Me.Login_btn.Image = Global.BT_Tool.My.Resources.Resources.logout_32
         Me.Login_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Login_btn.Location = New System.Drawing.Point(73, 173)
+        Me.Login_btn.Location = New System.Drawing.Point(73, 177)
         Me.Login_btn.Name = "Login_btn"
         Me.Login_btn.Size = New System.Drawing.Size(123, 43)
         Me.Login_btn.TabIndex = 12
@@ -181,12 +187,51 @@ Partial Class Login_form
         Me.Username_txtbox.Size = New System.Drawing.Size(214, 27)
         Me.Username_txtbox.TabIndex = 10
         '
+        'Error3_lbl
+        '
+        Me.Error3_lbl.AutoSize = True
+        Me.Error3_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.Error3_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Error3_lbl.ForeColor = System.Drawing.Color.Red
+        Me.Error3_lbl.Location = New System.Drawing.Point(19, 159)
+        Me.Error3_lbl.Name = "Error3_lbl"
+        Me.Error3_lbl.Size = New System.Drawing.Size(227, 13)
+        Me.Error3_lbl.TabIndex = 0
+        Me.Error3_lbl.Text = "Username or Password incorrect, Please try again"
+        Me.Error3_lbl.Visible = False
+        '
+        'Error1_lbl
+        '
+        Me.Error1_lbl.AutoSize = True
+        Me.Error1_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.Error1_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Error1_lbl.ForeColor = System.Drawing.Color.Red
+        Me.Error1_lbl.Location = New System.Drawing.Point(80, 79)
+        Me.Error1_lbl.Name = "Error1_lbl"
+        Me.Error1_lbl.Size = New System.Drawing.Size(115, 13)
+        Me.Error1_lbl.TabIndex = 0
+        Me.Error1_lbl.Text = "Please enter Username !"
+        Me.Error1_lbl.Visible = False
+        '
+        'Error2_lbl
+        '
+        Me.Error2_lbl.AutoSize = True
+        Me.Error2_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.Error2_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Error2_lbl.ForeColor = System.Drawing.Color.Red
+        Me.Error2_lbl.Location = New System.Drawing.Point(83, 145)
+        Me.Error2_lbl.Name = "Error2_lbl"
+        Me.Error2_lbl.Size = New System.Drawing.Size(112, 13)
+        Me.Error2_lbl.TabIndex = 0
+        Me.Error2_lbl.Text = "Please enter Password !"
+        Me.Error2_lbl.Visible = False
+        '
         'Login_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(265, 289)
+        Me.ClientSize = New System.Drawing.Size(265, 292)
         Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -212,4 +257,7 @@ Partial Class Login_form
     Friend WithEvents Label2 As Label
     Friend WithEvents Password_txtbox As TextBox
     Friend WithEvents Username_txtbox As TextBox
+    Friend WithEvents Error3_lbl As Label
+    Friend WithEvents Error2_lbl As Label
+    Friend WithEvents Error1_lbl As Label
 End Class

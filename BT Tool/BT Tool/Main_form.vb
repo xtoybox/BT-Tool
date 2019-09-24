@@ -70,6 +70,59 @@ Public Class Main_form
         Settings_Pnl.Visible = False
         User_Pnl.Visible = False
 
+        ' if main panel clicked hide all dropdowns 
+
+    End Sub
+
+    Sub hidedropdowns()
+
+        If Settings_Pnl.Height = 239 Then
+
+            BunifuTransition1.HideSync(Settings_Pnl)
+            Settings_Pnl.Height = 0
+
+        End If
+
+        If User_Pnl.Height = 239 Then
+
+            BunifuTransition1.HideSync(User_Pnl)
+            User_Pnl.Height = 0
+
+        End If
+
+        If Dashboard_pnl.Width = 213 Then
+
+            BunifuTransition2.HideSync(Dashboard_pnl)
+
+            Myfileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Fileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Monitoring_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Viewreturn_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Flagging_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Ratiotracker_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Idletracker_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Waittracker_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Filesdue_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Userlist_btn.ImageAlign = ContentAlignment.MiddleCenter
+            Workflow_btn.ImageAlign = ContentAlignment.MiddleCenter
+
+            Myfileeval_btn.Text = ""
+            Fileeval_btn.Text = ""
+            Monitoring_btn.Text = ""
+            Viewreturn_btn.Text = ""
+            Flagging_btn.Text = ""
+            Ratiotracker_btn.Text = ""
+            Idletracker_btn.Text = ""
+            Waittracker_btn.Text = ""
+            Filesdue_btn.Text = ""
+            Userlist_btn.Text = ""
+            Workflow_btn.Text = ""
+
+            Dashboard_pnl.Width = 50
+            BunifuTransition3.ShowSync(Dashboard_pnl)
+
+        End If
+
     End Sub
 
     Private Sub Burgermenu_btn_Click(sender As Object, e As EventArgs) Handles Burgermenu_btn.Click
@@ -140,11 +193,18 @@ Public Class Main_form
 
     End Sub
 
-    Private Sub Break_btn_Click(sender As Object, e As EventArgs) Handles Break_btn.Click
-
-    End Sub
-
     Private Sub Logout_btn_Click(sender As Object, e As EventArgs) Handles Logout_btn.Click
         Logout_form.Show()
+        Me.Enabled = False
+        Me.TopMost = True
+        Logout_form.TopMost = True
+    End Sub
+
+    Private Sub Main_form_Click(sender As Object, e As EventArgs) Handles Me.Click
+        hidedropdowns()
+    End Sub
+
+    Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click
+        hidedropdowns()
     End Sub
 End Class
