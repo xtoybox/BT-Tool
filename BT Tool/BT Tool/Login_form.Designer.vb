@@ -29,15 +29,15 @@ Partial Class Login_form
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.Error2_lbl = New System.Windows.Forms.Label()
+        Me.Error1_lbl = New System.Windows.Forms.Label()
+        Me.Error3_lbl = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Login_btn = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Password_txtbox = New System.Windows.Forms.TextBox()
         Me.Username_txtbox = New System.Windows.Forms.TextBox()
-        Me.Error3_lbl = New System.Windows.Forms.Label()
-        Me.Error1_lbl = New System.Windows.Forms.Label()
-        Me.Error2_lbl = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.BunifuGradientPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -110,6 +110,45 @@ Partial Class Login_form
         Me.BunifuGradientPanel1.Size = New System.Drawing.Size(265, 254)
         Me.BunifuGradientPanel1.TabIndex = 1
         '
+        'Error2_lbl
+        '
+        Me.Error2_lbl.AutoSize = True
+        Me.Error2_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.Error2_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Error2_lbl.ForeColor = System.Drawing.Color.Red
+        Me.Error2_lbl.Location = New System.Drawing.Point(83, 145)
+        Me.Error2_lbl.Name = "Error2_lbl"
+        Me.Error2_lbl.Size = New System.Drawing.Size(109, 13)
+        Me.Error2_lbl.TabIndex = 0
+        Me.Error2_lbl.Text = "Please enter Password!"
+        Me.Error2_lbl.Visible = False
+        '
+        'Error1_lbl
+        '
+        Me.Error1_lbl.AutoSize = True
+        Me.Error1_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.Error1_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Error1_lbl.ForeColor = System.Drawing.Color.Red
+        Me.Error1_lbl.Location = New System.Drawing.Point(80, 79)
+        Me.Error1_lbl.Name = "Error1_lbl"
+        Me.Error1_lbl.Size = New System.Drawing.Size(112, 13)
+        Me.Error1_lbl.TabIndex = 0
+        Me.Error1_lbl.Text = "Please enter Username!"
+        Me.Error1_lbl.Visible = False
+        '
+        'Error3_lbl
+        '
+        Me.Error3_lbl.AutoSize = True
+        Me.Error3_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.Error3_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Error3_lbl.ForeColor = System.Drawing.Color.Red
+        Me.Error3_lbl.Location = New System.Drawing.Point(19, 159)
+        Me.Error3_lbl.Name = "Error3_lbl"
+        Me.Error3_lbl.Size = New System.Drawing.Size(227, 13)
+        Me.Error3_lbl.TabIndex = 0
+        Me.Error3_lbl.Text = "Username or Password incorrect, Please try again"
+        Me.Error3_lbl.Visible = False
+        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.White
@@ -138,7 +177,7 @@ Partial Class Login_form
         Me.Login_btn.Location = New System.Drawing.Point(73, 177)
         Me.Login_btn.Name = "Login_btn"
         Me.Login_btn.Size = New System.Drawing.Size(123, 43)
-        Me.Login_btn.TabIndex = 12
+        Me.Login_btn.TabIndex = 2
         Me.Login_btn.Text = "  Log-In"
         Me.Login_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Login_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -176,7 +215,7 @@ Partial Class Login_form
         Me.Password_txtbox.Name = "Password_txtbox"
         Me.Password_txtbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Password_txtbox.Size = New System.Drawing.Size(183, 27)
-        Me.Password_txtbox.TabIndex = 11
+        Me.Password_txtbox.TabIndex = 1
         '
         'Username_txtbox
         '
@@ -185,46 +224,7 @@ Partial Class Login_form
         Me.Username_txtbox.Location = New System.Drawing.Point(27, 49)
         Me.Username_txtbox.Name = "Username_txtbox"
         Me.Username_txtbox.Size = New System.Drawing.Size(214, 27)
-        Me.Username_txtbox.TabIndex = 10
-        '
-        'Error3_lbl
-        '
-        Me.Error3_lbl.AutoSize = True
-        Me.Error3_lbl.BackColor = System.Drawing.Color.Transparent
-        Me.Error3_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Error3_lbl.ForeColor = System.Drawing.Color.Red
-        Me.Error3_lbl.Location = New System.Drawing.Point(19, 159)
-        Me.Error3_lbl.Name = "Error3_lbl"
-        Me.Error3_lbl.Size = New System.Drawing.Size(227, 13)
-        Me.Error3_lbl.TabIndex = 0
-        Me.Error3_lbl.Text = "Username or Password incorrect, Please try again"
-        Me.Error3_lbl.Visible = False
-        '
-        'Error1_lbl
-        '
-        Me.Error1_lbl.AutoSize = True
-        Me.Error1_lbl.BackColor = System.Drawing.Color.Transparent
-        Me.Error1_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Error1_lbl.ForeColor = System.Drawing.Color.Red
-        Me.Error1_lbl.Location = New System.Drawing.Point(80, 79)
-        Me.Error1_lbl.Name = "Error1_lbl"
-        Me.Error1_lbl.Size = New System.Drawing.Size(115, 13)
-        Me.Error1_lbl.TabIndex = 0
-        Me.Error1_lbl.Text = "Please enter Username !"
-        Me.Error1_lbl.Visible = False
-        '
-        'Error2_lbl
-        '
-        Me.Error2_lbl.AutoSize = True
-        Me.Error2_lbl.BackColor = System.Drawing.Color.Transparent
-        Me.Error2_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Error2_lbl.ForeColor = System.Drawing.Color.Red
-        Me.Error2_lbl.Location = New System.Drawing.Point(83, 145)
-        Me.Error2_lbl.Name = "Error2_lbl"
-        Me.Error2_lbl.Size = New System.Drawing.Size(112, 13)
-        Me.Error2_lbl.TabIndex = 0
-        Me.Error2_lbl.Text = "Please enter Password !"
-        Me.Error2_lbl.Visible = False
+        Me.Username_txtbox.TabIndex = 0
         '
         'Login_form
         '

@@ -2,6 +2,9 @@
 
 Public Class Login_form
 
+    Dim showpass As Image = My.Resources.show_pass_24
+    Dim hidepass As Image = My.Resources.hide_pass_24
+
     Dim originalheight As Integer = 292
     Dim witherrorheight As Integer = 352
     Dim origbuttonlocation As Integer = 173
@@ -13,18 +16,20 @@ Public Class Login_form
 
     Private Sub Login_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Button2.Image = showpass
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        If Button2.Image Is My.Resources.show_pass_24 Then
+        If Button2.Image Is showpass Then
 
-            Button2.Image = My.Resources.hide_pass_24
+            Button2.Image = hidepass
             Password_txtbox.PasswordChar = ""
 
-        ElseIf Button2.Image Is My.Resources.hide_pass_24 Then
+        ElseIf Button2.Image Is hidepass Then
 
-            Button2.Image = My.Resources.show_pass_24
+            Button2.Image = showpass
             Password_txtbox.PasswordChar = "*"
 
         End If
