@@ -54,11 +54,11 @@ Partial Class Main_form
         Me.Settings_Pnl = New System.Windows.Forms.Panel()
         Me.BunifuTransition1 = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Submit_btn = New System.Windows.Forms.Button()
-        Me.Cancel_btn = New System.Windows.Forms.Button()
-        Me.Hold_btn = New System.Windows.Forms.Button()
-        Me.Return_btn = New System.Windows.Forms.Button()
         Me.Break_btn = New System.Windows.Forms.Button()
+        Me.Return_btn = New System.Windows.Forms.Button()
+        Me.Hold_btn = New System.Windows.Forms.Button()
+        Me.Cancel_btn = New System.Windows.Forms.Button()
+        Me.Submit_btn = New System.Windows.Forms.Button()
         Me.Status_Pnl = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BunifuTransition2 = New BunifuAnimatorNS.BunifuTransition(Me.components)
@@ -480,11 +480,11 @@ Partial Class Main_form
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
-        Me.Panel2.Controls.Add(Me.Submit_btn)
-        Me.Panel2.Controls.Add(Me.Cancel_btn)
-        Me.Panel2.Controls.Add(Me.Hold_btn)
-        Me.Panel2.Controls.Add(Me.Return_btn)
         Me.Panel2.Controls.Add(Me.Break_btn)
+        Me.Panel2.Controls.Add(Me.Return_btn)
+        Me.Panel2.Controls.Add(Me.Hold_btn)
+        Me.Panel2.Controls.Add(Me.Cancel_btn)
+        Me.Panel2.Controls.Add(Me.Submit_btn)
         Me.BunifuTransition1.SetDecoration(Me.Panel2, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.Panel2, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition3.SetDecoration(Me.Panel2, BunifuAnimatorNS.DecorationType.None)
@@ -494,43 +494,43 @@ Partial Class Main_form
         Me.Panel2.Size = New System.Drawing.Size(60, 664)
         Me.Panel2.TabIndex = 3
         '
-        'Submit_btn
+        'Break_btn
         '
-        Me.Submit_btn.BackColor = System.Drawing.Color.Black
-        Me.BunifuTransition3.SetDecoration(Me.Submit_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Submit_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Submit_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Submit_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Submit_btn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Submit_btn.ForeColor = System.Drawing.Color.White
-        Me.Submit_btn.Image = Global.BT_Tool.My.Resources.Resources.submit_321
-        Me.Submit_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Submit_btn.Location = New System.Drawing.Point(0, 244)
-        Me.Submit_btn.Name = "Submit_btn"
-        Me.Submit_btn.Size = New System.Drawing.Size(60, 61)
-        Me.Submit_btn.TabIndex = 17
-        Me.Submit_btn.Text = "SUBMIT"
-        Me.Submit_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Submit_btn.UseVisualStyleBackColor = False
+        Me.Break_btn.BackColor = System.Drawing.Color.Black
+        Me.BunifuTransition3.SetDecoration(Me.Break_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.Break_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.Break_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.Break_btn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Break_btn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Break_btn.ForeColor = System.Drawing.Color.White
+        Me.Break_btn.Image = Global.BT_Tool.My.Resources.Resources.break_321
+        Me.Break_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Break_btn.Location = New System.Drawing.Point(0, 280)
+        Me.Break_btn.Name = "Break_btn"
+        Me.Break_btn.Size = New System.Drawing.Size(60, 70)
+        Me.Break_btn.TabIndex = 17
+        Me.Break_btn.Text = "BREAK"
+        Me.Break_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Break_btn.UseVisualStyleBackColor = False
         '
-        'Cancel_btn
+        'Return_btn
         '
-        Me.Cancel_btn.BackColor = System.Drawing.Color.Black
-        Me.BunifuTransition3.SetDecoration(Me.Cancel_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Cancel_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Cancel_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Cancel_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Cancel_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cancel_btn.ForeColor = System.Drawing.Color.White
-        Me.Cancel_btn.Image = Global.BT_Tool.My.Resources.Resources.cancel_32
-        Me.Cancel_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Cancel_btn.Location = New System.Drawing.Point(0, 183)
-        Me.Cancel_btn.Name = "Cancel_btn"
-        Me.Cancel_btn.Size = New System.Drawing.Size(60, 61)
-        Me.Cancel_btn.TabIndex = 16
-        Me.Cancel_btn.Text = "CANCEL"
-        Me.Cancel_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Cancel_btn.UseVisualStyleBackColor = False
+        Me.Return_btn.BackColor = System.Drawing.Color.Black
+        Me.BunifuTransition3.SetDecoration(Me.Return_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.Return_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.Return_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.Return_btn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Return_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Return_btn.ForeColor = System.Drawing.Color.White
+        Me.Return_btn.Image = Global.BT_Tool.My.Resources.Resources.return_321
+        Me.Return_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Return_btn.Location = New System.Drawing.Point(0, 210)
+        Me.Return_btn.Name = "Return_btn"
+        Me.Return_btn.Size = New System.Drawing.Size(60, 70)
+        Me.Return_btn.TabIndex = 16
+        Me.Return_btn.Text = "RETURN"
+        Me.Return_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Return_btn.UseVisualStyleBackColor = False
         '
         'Hold_btn
         '
@@ -543,51 +543,51 @@ Partial Class Main_form
         Me.Hold_btn.ForeColor = System.Drawing.Color.White
         Me.Hold_btn.Image = Global.BT_Tool.My.Resources.Resources.hold_32
         Me.Hold_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Hold_btn.Location = New System.Drawing.Point(0, 122)
+        Me.Hold_btn.Location = New System.Drawing.Point(0, 140)
         Me.Hold_btn.Name = "Hold_btn"
-        Me.Hold_btn.Size = New System.Drawing.Size(60, 61)
+        Me.Hold_btn.Size = New System.Drawing.Size(60, 70)
         Me.Hold_btn.TabIndex = 15
         Me.Hold_btn.Text = "HOLD"
         Me.Hold_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Hold_btn.UseVisualStyleBackColor = False
         '
-        'Return_btn
+        'Cancel_btn
         '
-        Me.Return_btn.BackColor = System.Drawing.Color.Black
-        Me.BunifuTransition3.SetDecoration(Me.Return_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Return_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Return_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Return_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Return_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Return_btn.ForeColor = System.Drawing.Color.White
-        Me.Return_btn.Image = Global.BT_Tool.My.Resources.Resources.return_32
-        Me.Return_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Return_btn.Location = New System.Drawing.Point(0, 61)
-        Me.Return_btn.Name = "Return_btn"
-        Me.Return_btn.Size = New System.Drawing.Size(60, 61)
-        Me.Return_btn.TabIndex = 14
-        Me.Return_btn.Text = "RETURN"
-        Me.Return_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Return_btn.UseVisualStyleBackColor = False
+        Me.Cancel_btn.BackColor = System.Drawing.Color.Black
+        Me.BunifuTransition3.SetDecoration(Me.Cancel_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.Cancel_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.Cancel_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.Cancel_btn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Cancel_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cancel_btn.ForeColor = System.Drawing.Color.White
+        Me.Cancel_btn.Image = Global.BT_Tool.My.Resources.Resources.cancel_321
+        Me.Cancel_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Cancel_btn.Location = New System.Drawing.Point(0, 70)
+        Me.Cancel_btn.Name = "Cancel_btn"
+        Me.Cancel_btn.Size = New System.Drawing.Size(60, 70)
+        Me.Cancel_btn.TabIndex = 14
+        Me.Cancel_btn.Text = "CANCEL"
+        Me.Cancel_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Cancel_btn.UseVisualStyleBackColor = False
         '
-        'Break_btn
+        'Submit_btn
         '
-        Me.Break_btn.BackColor = System.Drawing.Color.Black
-        Me.BunifuTransition3.SetDecoration(Me.Break_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Break_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Break_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Break_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Break_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Break_btn.ForeColor = System.Drawing.Color.White
-        Me.Break_btn.Image = Global.BT_Tool.My.Resources.Resources.break_321
-        Me.Break_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Break_btn.Location = New System.Drawing.Point(0, 0)
-        Me.Break_btn.Name = "Break_btn"
-        Me.Break_btn.Size = New System.Drawing.Size(60, 61)
-        Me.Break_btn.TabIndex = 13
-        Me.Break_btn.Text = "BREAK"
-        Me.Break_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Break_btn.UseVisualStyleBackColor = False
+        Me.Submit_btn.BackColor = System.Drawing.Color.Black
+        Me.BunifuTransition3.SetDecoration(Me.Submit_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.Submit_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.Submit_btn, BunifuAnimatorNS.DecorationType.None)
+        Me.Submit_btn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Submit_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Submit_btn.ForeColor = System.Drawing.Color.White
+        Me.Submit_btn.Image = Global.BT_Tool.My.Resources.Resources.submit_321
+        Me.Submit_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Submit_btn.Location = New System.Drawing.Point(0, 0)
+        Me.Submit_btn.Name = "Submit_btn"
+        Me.Submit_btn.Size = New System.Drawing.Size(60, 70)
+        Me.Submit_btn.TabIndex = 13
+        Me.Submit_btn.Text = "SUBMIT"
+        Me.Submit_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Submit_btn.UseVisualStyleBackColor = False
         '
         'Status_Pnl
         '
@@ -596,7 +596,7 @@ Partial Class Main_form
         Me.BunifuTransition1.SetDecoration(Me.Status_Pnl, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.Status_Pnl, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition3.SetDecoration(Me.Status_Pnl, BunifuAnimatorNS.DecorationType.None)
-        Me.Status_Pnl.Location = New System.Drawing.Point(1011, 693)
+        Me.Status_Pnl.Location = New System.Drawing.Point(1010, 693)
         Me.Status_Pnl.Name = "Status_Pnl"
         Me.Status_Pnl.Size = New System.Drawing.Size(115, 23)
         Me.Status_Pnl.TabIndex = 4
@@ -710,11 +710,11 @@ Partial Class Main_form
     Friend WithEvents User_Pnl As Panel
     Friend WithEvents Settings_Pnl As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Cancel_btn As Button
-    Friend WithEvents Hold_btn As Button
     Friend WithEvents Return_btn As Button
-    Friend WithEvents Break_btn As Button
+    Friend WithEvents Hold_btn As Button
+    Friend WithEvents Cancel_btn As Button
     Friend WithEvents Submit_btn As Button
+    Friend WithEvents Break_btn As Button
     Friend WithEvents Status_Pnl As Panel
     Friend WithEvents Label3 As Label
     Public WithEvents BunifuTransition1 As BunifuAnimatorNS.BunifuTransition
