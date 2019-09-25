@@ -1230,7 +1230,6 @@ Partial Class Main_form
         Me.txt_accuracy.Name = "txt_accuracy"
         Me.txt_accuracy.Size = New System.Drawing.Size(139, 21)
         Me.txt_accuracy.TabIndex = 22
-        Me.txt_accuracy.Text = "SANIC"
         '
         'Label7
         '
