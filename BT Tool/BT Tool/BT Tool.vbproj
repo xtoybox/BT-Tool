@@ -100,6 +100,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="varMod.vb" />
     <SplashScreen Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </SplashScreen>
