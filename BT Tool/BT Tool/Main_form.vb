@@ -1,15 +1,16 @@
-﻿Imports BunifuAnimatorNS.BunifuTransition
+﻿Imports System.IO
+Imports BunifuAnimatorNS.BunifuTransition
 
 Public Class Main_form
 
+    Public baseLoc As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+    Public baseSound As String = My.Computer.FileSystem.SpecialDirectories.MyMusic
     Dim screenWidth As Integer = Screen.PrimaryScreen.Bounds.Width
     Dim screenHeight As Integer = Screen.PrimaryScreen.Bounds.Height
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        End
-    End Sub
-
     Private Sub Main_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        CheckDirectory()
         ' == For design ==
         Settings_Pnl.Height = 0
         User_Pnl.Height = 0
@@ -26,6 +27,61 @@ Public Class Main_form
 
         ' if main panel clicked hide all dropdowns 
 
+    End Sub
+
+    ''' <summary>
+    ''' some pc's use are not able to connect on the default accomediasvr and vice versa.
+    ''' </summary>
+    Sub CheckDirectory()
+
+        'create folder in mydocuments 
+        Dim btDir As String = Path.Combine(baseLoc, "BT Tool Documents")
+        If Not Directory.Exists(btDir) Then Directory.CreateDirectory(btDir)
+        Dim di As New DirectoryInfo(btDir)
+        'If ((di.Attributes And FileAttributes.Hidden) <> FileAttributes.Hidden) Then File.SetAttributes(btDir, FileAttributes.Hidden)
+
+        If Not Directory.Exists(Path.Combine(btDir, "BT")) Then Directory.CreateDirectory(Path.Combine(btDir, "BT"))
+        If Not Directory.Exists(Path.Combine(btDir, "PR")) Then Directory.CreateDirectory(Path.Combine(btDir, "PR"))
+        If Not Directory.Exists(Path.Combine(btDir, "TS")) Then Directory.CreateDirectory(Path.Combine(btDir, "TS"))
+        If Not Directory.Exists(Path.Combine(btDir, "CC")) Then Directory.CreateDirectory(Path.Combine(btDir, "CC"))
+        If Not Directory.Exists(Path.Combine(btDir, "ST")) Then Directory.CreateDirectory(Path.Combine(btDir, "ST"))
+        If Not Directory.Exists(Path.Combine(btDir, "AUDITOR")) Then Directory.CreateDirectory(Path.Combine(btDir, "AUDITOR"))
+
+        If Directory.Exists("\\ACC-TEST-SQL\Users") Then
+            varMod.BaseServer = "\\ACC-TEST-SQL\Users\admin\Desktop"
+        ElseIf Directory.Exists("\\172.16.3.65\Users") Then
+            varMod.BaseServer = "\\172.16.3.65\Users\admin\Desktop"
+        Else
+            MessageBox.Show("System cannot connect to server." & vbCrLf & "Contact your System Administrator.", "Connection issue to server", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        End If
+
+        'If rdMain.Checked Then
+        '    If Directory.Exists("\\accomediasvr\MediaFiles-2") Then
+        '        varMod.BaseServer = "\\accomediasvr\MediaFiles-2"
+        '    ElseIf Directory.Exists("\\172.16.3.54\MediaFiles-2") Then
+        '        varMod.BaseServer = "\\172.16.3.54\MediaFiles-2"
+        '    Else
+        '        MessageBox.Show("System cannot connect to server." & vbCrLf & "Contact your System Administrator.", "Connection issue to server", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        '    End If
+        'ElseIf rdTest.Checked Then
+        '    If Directory.Exists("\\ACC-TEST-SQL\Users\admin\Desktop") Then
+        '        varMod.BaseServer = "\\ACC-TEST-SQL\Users\admin\Desktop"
+        '    ElseIf Directory.Exists("\\172.16.3.65\Users\admin\Desktop") Then
+        '        varMod.BaseServer = "\\172.16.3.65\Users\admin\Desktop"
+        '    Else
+        '        MessageBox.Show("System cannot connect to server." & vbCrLf & "Contact your System Administrator.", "Connection issue to server", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        '    End If
+        'End If
+
+
+        'If Directory.Exists("\\accomediasvr\MediaFiles-2\FROOT") Then
+        '    varMod.BaseServer = "\\accomediasvr\MediaFiles-2\FROOT"
+        'ElseIf Directory.Exists("\\172.16.3.54\MediaFiles-2\FROOT") Then
+        '    varMod.BaseServer = "\\172.16.3.54\MediaFiles-2\FROOT"
+        'Else
+        '    MessageBox.Show("System cannot connect to server." & vbCrLf & "Contact your System Administrator.", "Connection issue to server", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        '    End
+        'End If
     End Sub
 
     Sub hidedropdowns()
