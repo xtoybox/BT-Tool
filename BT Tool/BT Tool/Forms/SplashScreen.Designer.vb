@@ -199,7 +199,7 @@ Partial Class SplashScreen
     End Sub
 
     Private Sub SplashScreen_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Login_form.Show()
+        frm_login.Show()
         Me.Close()
     End Sub
 

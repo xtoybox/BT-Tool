@@ -74,11 +74,16 @@
       <HintPath>..\packages\GCDesign.1.0.0\lib\net46\GCDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -100,6 +105,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\CustomFunctions.vb" />
+    <Compile Include="Modules\JsonClass.vb" />
+    <Compile Include="Modules\main_class.vb" />
+    <Compile Include="Modules\SQLClass.vb" />
     <Compile Include="Modules\varMod.vb" />
     <SplashScreen Include="Forms\SplashScreen.vb">
       <SubType>Form</SubType>
@@ -111,22 +120,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LogintestdbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Login_form.Designer.vb">
-      <DependentUpon>Login_form.vb</DependentUpon>
+    <Compile Include="Forms\frm_login.Designer.vb">
+      <DependentUpon>frm_login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Login_form.vb">
+    <Compile Include="Forms\frm_login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Logout_form.Designer.vb">
-      <DependentUpon>Logout_form.vb</DependentUpon>
+    <Compile Include="Forms\frm_logout.Designer.vb">
+      <DependentUpon>frm_logout.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Logout_form.vb">
+    <Compile Include="Forms\frm_logout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Main_form.Designer.vb">
-      <DependentUpon>Main_form.vb</DependentUpon>
+    <Compile Include="Forms\frm_main.Designer.vb">
+      <DependentUpon>frm_main.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main_form.vb">
+    <Compile Include="Forms\frm_main.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -150,15 +159,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\Login_form.resx">
-      <DependentUpon>Login_form.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\frm_login.resx">
+      <DependentUpon>frm_login.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Logout_form.resx">
-      <DependentUpon>Logout_form.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\frm_logout.resx">
+      <DependentUpon>frm_logout.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Main_form.resx">
-      <DependentUpon>Main_form.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\frm_main.resx">
+      <DependentUpon>frm_main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>

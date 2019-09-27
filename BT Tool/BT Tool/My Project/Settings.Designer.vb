@@ -64,6 +64,32 @@ Namespace My
                 Return CType(Me("LogintestdbConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("@""Data Source=ACCOMEDIASVR\VOICEWARE;Initial Catalog=mttool2;Integrated Security="& _ 
+            "False;User ID=mttool;Password=sysMAN1@#$%;Connect Timeout=60;Encrypt=False;Trust"& _ 
+            "ServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"";")>  _
+        Public Property mttool2connectionstring() As String
+            Get
+                Return CType(Me("mttool2connectionstring"),String)
+            End Get
+            Set
+                Me("mttool2connectionstring") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property conSel() As String
+            Get
+                Return CType(Me("conSel"),String)
+            End Get
+            Set
+                Me("conSel") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
