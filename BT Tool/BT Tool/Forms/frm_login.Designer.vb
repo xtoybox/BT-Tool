@@ -138,14 +138,14 @@ Partial Class frm_login
         '
         'err
         '
-        Me.err.AutoSize = True
         Me.err.BackColor = System.Drawing.Color.Transparent
         Me.err.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.err.ForeColor = System.Drawing.Color.Red
-        Me.err.Location = New System.Drawing.Point(19, 152)
+        Me.err.Location = New System.Drawing.Point(-1, 145)
         Me.err.Name = "err"
-        Me.err.Size = New System.Drawing.Size(0, 13)
+        Me.err.Size = New System.Drawing.Size(264, 30)
         Me.err.TabIndex = 0
+        Me.err.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.err.Visible = False
         '
         'Button2
