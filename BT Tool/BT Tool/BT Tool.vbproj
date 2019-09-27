@@ -107,7 +107,8 @@
   <ItemGroup>
     <Compile Include="Modules\CustomFunctions.vb" />
     <Compile Include="Modules\JsonClass.vb" />
-    <Compile Include="Modules\main_class.vb" />
+    <Compile Include="Modules\mainClass.vb" />
+    <Compile Include="Modules\restrictionMod.vb" />
     <Compile Include="Modules\SQLClass.vb" />
     <Compile Include="Modules\varMod.vb" />
     <SplashScreen Include="Forms\SplashScreen.vb">
@@ -309,6 +310,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\markform\markform\markform.csproj">
+      <Project>{21ff7b10-f193-4d60-8ba6-08bb50c5be90}</Project>
+      <Name>markform</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

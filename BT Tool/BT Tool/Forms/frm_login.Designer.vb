@@ -33,7 +33,7 @@ Partial Class frm_login
         Me.Error1_lbl = New System.Windows.Forms.Label()
         Me.err = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Login_btn = New System.Windows.Forms.Button()
+        Me.btn_login = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_password = New System.Windows.Forms.TextBox()
@@ -94,7 +94,7 @@ Partial Class frm_login
         Me.BunifuGradientPanel1.Controls.Add(Me.Error1_lbl)
         Me.BunifuGradientPanel1.Controls.Add(Me.err)
         Me.BunifuGradientPanel1.Controls.Add(Me.Button2)
-        Me.BunifuGradientPanel1.Controls.Add(Me.Login_btn)
+        Me.BunifuGradientPanel1.Controls.Add(Me.btn_login)
         Me.BunifuGradientPanel1.Controls.Add(Me.Label3)
         Me.BunifuGradientPanel1.Controls.Add(Me.Label2)
         Me.BunifuGradientPanel1.Controls.Add(Me.txt_password)
@@ -164,23 +164,23 @@ Partial Class frm_login
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Login_btn
+        'btn_login
         '
-        Me.Login_btn.BackColor = System.Drawing.Color.Transparent
-        Me.Login_btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Login_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Login_btn.ForeColor = System.Drawing.Color.White
-        Me.Login_btn.Image = Global.BT_Tool.My.Resources.Resources.logout_32
-        Me.Login_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Login_btn.Location = New System.Drawing.Point(73, 177)
-        Me.Login_btn.Name = "Login_btn"
-        Me.Login_btn.Size = New System.Drawing.Size(123, 43)
-        Me.Login_btn.TabIndex = 2
-        Me.Login_btn.Text = "  Log-In"
-        Me.Login_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Login_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Login_btn.UseVisualStyleBackColor = False
+        Me.btn_login.BackColor = System.Drawing.Color.Transparent
+        Me.btn_login.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_login.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_login.ForeColor = System.Drawing.Color.White
+        Me.btn_login.Image = Global.BT_Tool.My.Resources.Resources.logout_32
+        Me.btn_login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_login.Location = New System.Drawing.Point(73, 177)
+        Me.btn_login.Name = "btn_login"
+        Me.btn_login.Size = New System.Drawing.Size(123, 43)
+        Me.btn_login.TabIndex = 2
+        Me.btn_login.Text = "  Log-In"
+        Me.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_login.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -251,7 +251,7 @@ Partial Class frm_login
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents Button2 As Button
-    Friend WithEvents Login_btn As Button
+    Friend WithEvents btn_login As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_password As TextBox

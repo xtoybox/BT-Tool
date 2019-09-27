@@ -607,10 +607,157 @@ BT Tool
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="F:BT_Tool.CustomFunctions.frm">
+ <summary>
+ Used for custom dropdown menu and <see cref="M:BT_Tool.CustomFunctions.IsFormOpen(System.String,System.Boolean,System.String)"/> function.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomFunctions.GetForm">
+ <summary>
+ used for the <see cref="M:BT_Tool.CustomFunctions.IsFormOpen(System.String,System.Boolean,System.String)"/> function.
+ </summary>
+</member>
+<member name="M:BT_Tool.CustomFunctions.SetForm(System.Windows.Forms.Form@)">
+ <summary>
+ Setting the value of <see cref="F:BT_Tool.CustomFunctions.frm"/>
+ </summary>
+ <param name="f"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.SetWindowText(System.IntPtr,System.String)">
+ <summary>
+ Getting the shared function SetWindowText from user32.dll
+ </summary>
+ <param name="hwnd"></param>
+ <param name="lpString"></param>
+ <returns></returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.ButtonDropdownLocation(System.Windows.Forms.Panel,System.Windows.Forms.Button)">
+ <summary>
+ Setting the panel location at the bottom of the button and adding event handler to the button to trigger a dropdown effect to the panel.
+ </summary>
+ <param name="pnlName">The panel that contains the buttons as menu</param>
+ <param name="btnName">The button that will toggle the panel visibility</param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.ButtonDropdownRemoveHandler(System.Windows.Forms.Button)">
+ <summary>
+ Removing the event handler of a button that toggle the panel visibility.
+ </summary>
+ <param name="btnName"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.ButtonDropdownAddHandler(System.Windows.Forms.Button)">
+ <summary>
+ Adding event handler that will toggle the panel visibility.
+ </summary>
+ <param name="btnName"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.DropdownHeight(System.Windows.Forms.Panel)">
+ <summary>
+ Setting the panel height base on the total height of te buttons contained inside the panel.
+ </summary>
+ <param name="pnl"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.DropDownBtn_Click(System.Object,System.EventArgs)">
+ <summary>
+ Execute a click event the button that toggles the panel visibility is click
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.FindControlRecursive(System.Collections.Generic.List{System.Windows.Forms.Control},System.Windows.Forms.Control,System.Type)">
+ <summary>
+ List all of the controls contained inside a set parent control.
+ </summary>
+ <param name="list"></param>
+ <param name="parent">The control in which the seach is rooted.</param>
+ <param name="ctrlType">The type of control to be search</param>
+ <returns></returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.WriteToFile(System.String,System.String)">
+ <summary>
+ Creating a file containing the text.
+ <para>It can also put a datetime log by adding {0} to the text.</para>
+ </summary>
+ <param name="txt">The text that will be written inside the text file.</param>
+ <param name="path">The file path and name of the text file.</param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.isEmpty(System.String)">
+ <summary>
+ Checking a given string if it is <see langword="NULL"/>, Empty, or only space 
+ </summary>
+ <param name="str"></param>
+ <returns>Boolean</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.IsExist(System.String,System.Boolean)">
+ <summary>
+ Checking if a file exist in a given path
+ </summary>
+ <param name="path">The file path and file name.</param>
+ <param name="expected">The expected result of the checking.</param>
+ <returns>String</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.RowsNumber(System.Windows.Forms.DataGridView)">
+ <summary>
+ Setting the row number of the datagridview.
+ <para>Note: The row number is only visible if the RowHeadersVisible property of the datagridview is set to <see langword="True"/>.</para>
+ </summary>
+ <param name="dgv"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.FormatFileSize(System.Double)">
+ <summary>
+ Converting the given filesize into a user-friendly readable file size.
+ </summary>
+ <param name="TheSize"></param>
+ <returns>Double</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.SecondsToTime24(System.Double)">
+ <summary>
+ Convert seconds to 24 hour format.
+ </summary>
+ <param name="sec"></param>
+ <returns>String</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.IsFormOpen(System.String,System.Boolean,System.String)">
+ <summary>
+ Checking if the given form is open.
+ </summary>
+ <param name="FormName">The name of the form.</param>
+ <param name="CheckTag">(Optional) If set to <see langword="True"/> then it will also check if the form tag is equal to the <paramref name="TagValue"/>.</param>
+ <param name="TagValue">(Optional) Used only if the <paramref name="CheckTag"/> is set to <see langword="True"/></param>
+ <returns>Boolean</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.DebugMsg(System.Exception,System.Boolean)">
+ <summary>
+ Used on Try Catch and alert the user of the <seealso cref="T:System.Exception"/> by poping a <seealso cref="T:System.Windows.Forms.MessageBox"/> containing the <seealso cref="P:System.Exception.Message"/>.
+ </summary>
+ <param name="ex">The <seealso cref="T:System.Exception"/> thrown by the Try Catch.</param>
+ <param name="log">(Optional) if set to <see langword="True"/> then write a file containing the <seealso cref="T:System.Exception"/> details in the MyDocuments</param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.ErrorLog(System.Exception,System.String)">
+ <summary>
+ Another version of <seealso cref="M:BT_Tool.CustomFunctions.DebugMsg(System.Exception,System.Boolean)"/> but unlike <seealso cref="M:BT_Tool.CustomFunctions.DebugMsg(System.Exception,System.Boolean)"/>, this will always log the <seealso cref="T:System.Exception"/>.
+ </summary>
+ <param name="ex"><seealso cref="T:System.Exception"/> from the Try Catch.</param>
+ <param name="msg">(optional) a custom message to be used for the <seealso cref="T:System.Windows.Forms.MessageBox"/>.</param>
+</member>
 <member name="T:BT_Tool.LogintestdbDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
+</member>
+<member name="M:BT_Tool.frm_main.CheckDirectory">
+ <summary>
+ some pc's use are not able to connect on the default accomediasvr and vice versa.
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_main.fillMain">
+ <summary>
+ populate the main gridview depending on the user logged in
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_main.fillCombo">
+ <summary>
+ populate combobox
+ </summary>
 </member>
 </members>
 </doc>

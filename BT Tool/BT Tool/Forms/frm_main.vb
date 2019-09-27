@@ -4,8 +4,8 @@ Imports BunifuAnimatorNS.BunifuTransition
 Public Class frm_main
 
     Private CustomFn As New CustomFunctions()
-    Private cf As New main_class
-    Private db As New SQLClass
+    Private cf As New mainClass
+    Private db As New markDBOClass.SQLClass
 
     Public baseLoc As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
     Public baseSound As String = My.Computer.FileSystem.SpecialDirectories.MyMusic
@@ -29,7 +29,8 @@ Public Class frm_main
         Me.Location = New Point(0, 0)
         Settings_Pnl.Left = screenWidth - 245
         User_Pnl.Left = screenWidth - 307
-
+        Me.Show()
+        frm_login.ShowDialog(Me)
         ' if main panel clicked hide all dropdowns 
 
     End Sub
@@ -655,5 +656,92 @@ Public Class frm_main
 
     Private Sub Exit_btn_MouseLeave(sender As Object, e As EventArgs) Handles Exit_btn.MouseLeave
         Exit_btn.BackColor = Color.Black
+    End Sub
+
+    ''' <summary>
+    ''' populate combobox
+    ''' </summary>
+    Sub fillCombo()
+        Try
+            db.SQLDependency(False)
+            'fill combobox with usernames
+            Dim dt As DataTable = db.query("SELECT Id,UPPER(LEFT(username,1))+LOWER(SUBSTRING(username,2,LEN(username))) AS uname,uDept,department,btwork,position FROM dbo.UserData WHERE deactivated = 0 ORDER BY department,username")
+            Dim dv As New DataView(dt)
+            dt.Rows.Add(0, "", "", "bt", 0, "prod")
+            dt.Rows.Add(0, "", "", "pr", 0, "prod")
+            dt.Rows.Add(0, "", "st", "bet", 0, "prod")
+            dt.Rows.Add(0, "", "cc", "bet", 0, "prod")
+            dt.AcceptChanges()
+            '**********bt************
+            dv.RowFilter = "department LIKE 'bt' OR btwork = 1 AND position LIKE 'prod'"
+
+            cbo_bt.DisplayMember = "uname"
+            cbo_bt.ValueMember = "Id"
+            cbo_bt.DataSource = dv
+            cbo_bt.SelectedValue = 0
+
+
+            dv = New DataView(dt)
+            dv.RowFilter = "department LIKE 'bt' AND position LIKE 'prod'"
+
+            cbo_qabt.DisplayMember = "uname"
+            cbo_qabt.ValueMember = "Id"
+            cbo_qabt.DataSource = dv
+            cbo_qabt.SelectedValue = 0
+
+            '**********pr************
+            dv = New DataView(dt)
+            dv.RowFilter = "department LIKE 'pr' AND position LIKE 'prod'"
+
+            cbo_pr.DisplayMember = "uname"
+            cbo_pr.ValueMember = "Id"
+            cbo_pr.DataSource = dv
+            cbo_pr.SelectedValue = 0
+
+            dv = New DataView(dt)
+            dv.RowFilter = "department LIKE 'pr' AND position LIKE 'prod'"
+
+            cbo_qapr.DisplayMember = "uname"
+            cbo_qapr.ValueMember = "Id"
+            cbo_qapr.DataSource = dv
+            cbo_qapr.SelectedValue = 0
+
+            '*********s&t***********
+            dv = New DataView(dt)
+            dv.RowFilter = "uDept LIKE 'st' AND position LIKE 'prod'"
+
+            cbo_st.DisplayMember = "uname"
+            cbo_st.ValueMember = "Id"
+            cbo_st.DataSource = dv
+            cbo_st.SelectedValue = 0
+
+            dv = New DataView(dt)
+            dv.RowFilter = "uDept LIKE 'st' AND position LIKE 'prod'"
+
+            cbo_qast.DisplayMember = "uname"
+            cbo_qast.ValueMember = "Id"
+            cbo_qast.DataSource = dv
+            cbo_qast.SelectedValue = 0
+
+            '*********cc***********
+            dv = New DataView(dt)
+            dv.RowFilter = "uDept LIKE 'cc' AND position LIKE 'prod'"
+
+            cbo_cc.DisplayMember = "uname"
+            cbo_cc.ValueMember = "Id"
+            cbo_cc.DataSource = dv
+            cbo_cc.SelectedValue = 0
+
+            dv = New DataView(dt)
+            dv.RowFilter = "uDept LIKE 'cc' AND position LIKE 'prod'"
+
+            cbo_qacc.DisplayMember = "uname"
+            cbo_qacc.ValueMember = "Id"
+            cbo_qacc.DataSource = dv
+            cbo_qacc.SelectedValue = 0
+        Catch ex As Exception
+            CustomFn.ErrorLog(ex)
+        End Try
+
     End Sub
 End Class

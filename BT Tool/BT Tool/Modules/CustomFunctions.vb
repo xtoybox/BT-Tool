@@ -35,33 +35,33 @@ Public Class CustomFunctions
     ''' </summary>
     ''' <param name="frm"></param>
     ''' <param name="lbltxt"></param>
-    Public Sub FormResize(ByVal frm As Form, ByVal lbltxt As String)
-        'resize functionality
-        Dim _resizer As New Resizer(frm)
-        _resizer.Compass = CardinalDirection.All
-        'or you can assign values this way in bitwise
-        _resizer.Compass =
-            CardinalDirection.East _
-            Or CardinalDirection.South _
-            Or CardinalDirection.North _
-            Or CardinalDirection.West _
-            Or CardinalDirection.SouthWest _
-            Or CardinalDirection.SouthEast _
-            Or CardinalDirection.NorthWest _
-            Or CardinalDirection.NorthEast
+    'Public Sub FormResize(ByVal frm As Form, ByVal lbltxt As String)
+    '    'resize functionality
+    '    Dim _resizer As New Resizer(frm)
+    '    _resizer.Compass = CardinalDirection.All
+    '    'or you can assign values this way in bitwise
+    '    _resizer.Compass =
+    '        CardinalDirection.East _
+    '        Or CardinalDirection.South _
+    '        Or CardinalDirection.North _
+    '        Or CardinalDirection.West _
+    '        Or CardinalDirection.SouthWest _
+    '        Or CardinalDirection.SouthEast _
+    '        Or CardinalDirection.NorthWest _
+    '        Or CardinalDirection.NorthEast
 
-        SetWindowText(frm.Handle.ToInt32, lbltxt)
-    End Sub
+    '    SetWindowText(frm.Handle.ToInt32, lbltxt)
+    'End Sub
     ''' <summary>
     ''' Make custom object as a trigger for the form to drag.
     ''' </summary>
     ''' <param name="frm">The form that contains the object as trigger</param>
     ''' <param name="trggr">The object that will trigger the drag event</param>
-    Public Sub FormDrag(ByVal frm As Form, ByVal trggr As Object)
-        'drag functionality
-        Dim _dragger As New Dragger({trggr, frm})
+    'Public Sub FormDrag(ByVal frm As Form, ByVal trggr As Object)
+    '    'drag functionality
+    '    Dim _dragger As New Dragger({trggr, frm})
 
-    End Sub
+    'End Sub
     ''' <summary>
     ''' Setting the panel location at the bottom of the button and adding event handler to the button to trigger a dropdown effect to the panel.
     ''' </summary>

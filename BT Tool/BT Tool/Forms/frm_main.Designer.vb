@@ -1556,7 +1556,7 @@ Partial Class frm_main
         Me.BunifuTransition3.DefaultAnimation = Animation1
         Me.BunifuTransition3.TimeStep = 0.03!
         '
-        'Main_form
+        'frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1569,7 +1569,7 @@ Partial Class frm_main
         Me.BunifuTransition1.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition3.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Main_form"
+        Me.Name = "frm_main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

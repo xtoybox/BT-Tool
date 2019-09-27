@@ -2,9 +2,11 @@
 
 Public Class frm_login
 
+
+    Private mainClass As New mainClass()
+
     Dim showpass As Image = My.Resources.show_pass_24
     Dim hidepass As Image = My.Resources.hide_pass_24
-
     Dim originalheight As Integer = 292
     Dim witherrorheight As Integer = 352
     Dim origbuttonlocation As Integer = 173
@@ -36,19 +38,43 @@ Public Class frm_login
 
     End Sub
 
-    Private Sub Login_btn_Click(sender As Object, e As EventArgs) Handles Login_btn.Click
+    Private Sub txtUser_KeyUp(sender As Object, e As KeyEventArgs) Handles txt_username.KeyDown
+        If Me.err.Text <> "" Then Me.err.Text = ""
+        If e.KeyCode = Keys.Enter Then Me.btn_login_Click(sender, e)
+    End Sub
 
-        trylogin()
+    Private Sub txtPass_KeyUp(sender As Object, e As KeyEventArgs) Handles txt_password.KeyDown
+        If Me.err.Text <> "" Then Me.err.Text = ""
+        If e.KeyCode = Keys.Enter Then Me.btn_login_Click(sender, e)
+    End Sub
+
+    Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
+
+        'trylogin()
+
+        Dim login As Boolean = mainClass.userLogin(1)
+
+        If login = True Then
+            'frm_main.AddingHandler()
+            'frm_main.Notif()
+            'restrictionMod.ResetRestrictions()
+            'restrictionMod.rest_main()
+
+            Me.err.Text = ""
+            Me.txt_username.Text = ""
+            Me.txt_password.Text = ""
+            Me.Close()
+        End If
 
     End Sub
 
-    Private Sub Login_btn_MouseEnter(sender As Object, e As EventArgs) Handles Login_btn.MouseEnter
-        Login_btn.BackColor = Color.Black
+    Private Sub Login_btn_MouseEnter(sender As Object, e As EventArgs) Handles btn_login.MouseEnter
+        btn_login.BackColor = Color.Black
     End Sub
 
-    Private Sub Login_btn_MouseLeave(sender As Object, e As EventArgs) Handles Login_btn.MouseLeave
+    Private Sub Login_btn_MouseLeave(sender As Object, e As EventArgs) Handles btn_login.MouseLeave
 
-        Login_btn.BackColor = Color.Transparent
+        btn_login.BackColor = Color.Transparent
 
         Button2.Image = My.Resources.show_pass_24
 
@@ -90,5 +116,7 @@ Public Class frm_login
         ' ---              ---
 
     End Sub
+
+
 
 End Class
