@@ -607,6 +607,22 @@ BT Tool
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:BT_Tool.BorderStyleNoneExtensions.Resizer">
+ <summary>
+Provides resizing functionality to a BorderStyle-None Form.
+ </summary>
+</member>
+<member name="F:BT_Tool.BorderStyleNoneExtensions.Resizer.RESERVED_BORDERMARGIN">
+ <summary>
+This field serves as a criterion to prevent conflicts between Resizer() and Dragger(), 
+if both Classes are targets of the same invoker.
+ </summary>
+</member>
+<member name="T:BT_Tool.BorderStyleNoneExtensions.Dragger">
+ <summary>
+Provides dragging functionality to a BorderStyle-None Form.
+ </summary>
+</member>
 <member name="F:BT_Tool.CustomFunctions.frm">
  <summary>
  Used for custom dropdown menu and <see cref="M:BT_Tool.CustomFunctions.IsFormOpen(System.String,System.Boolean,System.String)"/> function.

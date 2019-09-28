@@ -387,29 +387,29 @@ Public Class frm_main
 
             BunifuTransition2.HideSync(Dashboard_pnl)
 
-            Myfileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Fileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Monitoring_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Viewreturn_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Flagging_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Ratiotracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Idletracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Waittracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Filesdue_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Userlist_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Workflow_btn.ImageAlign = ContentAlignment.MiddleCenter
+            btn_myeval.ImageAlign = ContentAlignment.MiddleCenter
+            btn_file_eval.ImageAlign = ContentAlignment.MiddleCenter
+            btn_monitoring.ImageAlign = ContentAlignment.MiddleCenter
+            btn_viewreturn.ImageAlign = ContentAlignment.MiddleCenter
+            btn_flagging.ImageAlign = ContentAlignment.MiddleCenter
+            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_files_due.ImageAlign = ContentAlignment.MiddleCenter
+            btn_userlist.ImageAlign = ContentAlignment.MiddleCenter
+            btn_workflow.ImageAlign = ContentAlignment.MiddleCenter
 
-            Myfileeval_btn.Text = ""
-            Fileeval_btn.Text = ""
-            Monitoring_btn.Text = ""
-            Viewreturn_btn.Text = ""
-            Flagging_btn.Text = ""
-            Ratiotracker_btn.Text = ""
-            Idletracker_btn.Text = ""
-            Waittracker_btn.Text = ""
-            Filesdue_btn.Text = ""
-            Userlist_btn.Text = ""
-            Workflow_btn.Text = ""
+            btn_myeval.Text = ""
+            btn_file_eval.Text = ""
+            btn_monitoring.Text = ""
+            btn_viewreturn.Text = ""
+            btn_flagging.Text = ""
+            btn_ratio_tracker.Text = ""
+            btn_idle_tracker.Text = ""
+            btn_wait_tracker.Text = ""
+            btn_files_due.Text = ""
+            btn_userlist.Text = ""
+            btn_workflow.Text = ""
 
             Dashboard_pnl.Width = 50
             BunifuTransition3.ShowSync(Dashboard_pnl)
@@ -438,29 +438,29 @@ Public Class frm_main
 
             BunifuTransition2.HideSync(Dashboard_pnl)
 
-            Myfileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Fileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Monitoring_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Viewreturn_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Flagging_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Ratiotracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Idletracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Waittracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Filesdue_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Userlist_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Workflow_btn.ImageAlign = ContentAlignment.MiddleCenter
+            btn_myeval.ImageAlign = ContentAlignment.MiddleCenter
+            btn_file_eval.ImageAlign = ContentAlignment.MiddleCenter
+            btn_monitoring.ImageAlign = ContentAlignment.MiddleCenter
+            btn_viewreturn.ImageAlign = ContentAlignment.MiddleCenter
+            btn_flagging.ImageAlign = ContentAlignment.MiddleCenter
+            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_files_due.ImageAlign = ContentAlignment.MiddleCenter
+            btn_userlist.ImageAlign = ContentAlignment.MiddleCenter
+            btn_workflow.ImageAlign = ContentAlignment.MiddleCenter
 
-            Myfileeval_btn.Text = ""
-            Fileeval_btn.Text = ""
-            Monitoring_btn.Text = ""
-            Viewreturn_btn.Text = ""
-            Flagging_btn.Text = ""
-            Ratiotracker_btn.Text = ""
-            Idletracker_btn.Text = ""
-            Waittracker_btn.Text = ""
-            Filesdue_btn.Text = ""
-            Userlist_btn.Text = ""
-            Workflow_btn.Text = ""
+            btn_myeval.Text = ""
+            btn_file_eval.Text = ""
+            btn_monitoring.Text = ""
+            btn_viewreturn.Text = ""
+            btn_flagging.Text = ""
+            btn_ratio_tracker.Text = ""
+            btn_idle_tracker.Text = ""
+            btn_wait_tracker.Text = ""
+            btn_files_due.Text = ""
+            btn_userlist.Text = ""
+            btn_workflow.Text = ""
 
 
             Dashboard_pnl.Width = 50
@@ -470,29 +470,29 @@ Public Class frm_main
 
             BunifuTransition3.HideSync(Dashboard_pnl)
 
-            Myfileeval_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Fileeval_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Monitoring_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Viewreturn_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Flagging_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Ratiotracker_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Idletracker_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Waittracker_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Filesdue_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Userlist_btn.ImageAlign = ContentAlignment.MiddleLeft
-            Workflow_btn.ImageAlign = ContentAlignment.MiddleLeft
+            btn_myeval.ImageAlign = ContentAlignment.MiddleLeft
+            btn_file_eval.ImageAlign = ContentAlignment.MiddleLeft
+            btn_monitoring.ImageAlign = ContentAlignment.MiddleLeft
+            btn_viewreturn.ImageAlign = ContentAlignment.MiddleLeft
+            btn_flagging.ImageAlign = ContentAlignment.MiddleLeft
+            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleLeft
+            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleLeft
+            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleLeft
+            btn_files_due.ImageAlign = ContentAlignment.MiddleLeft
+            btn_userlist.ImageAlign = ContentAlignment.MiddleLeft
+            btn_workflow.ImageAlign = ContentAlignment.MiddleLeft
 
-            Myfileeval_btn.Text = "My Evaluation"
-            Fileeval_btn.Text = "File Evaluation"
-            Monitoring_btn.Text = "Monitoring"
-            Viewreturn_btn.Text = "View Return"
-            Flagging_btn.Text = "Flagging"
-            Ratiotracker_btn.Text = "Ratio Tracker"
-            Idletracker_btn.Text = "Idle Tracker"
-            Waittracker_btn.Text = "Wait Tracker"
-            Filesdue_btn.Text = "Files Due"
-            Userlist_btn.Text = "User List"
-            Workflow_btn.Text = "Workflow"
+            btn_myeval.Text = "My Evaluation"
+            btn_file_eval.Text = "File Evaluation"
+            btn_monitoring.Text = "Monitoring"
+            btn_viewreturn.Text = "View Return"
+            btn_flagging.Text = "Flagging"
+            btn_ratio_tracker.Text = "Ratio Tracker"
+            btn_idle_tracker.Text = "Idle Tracker"
+            btn_wait_tracker.Text = "Wait Tracker"
+            btn_files_due.Text = "Files Due"
+            btn_userlist.Text = "User List"
+            btn_workflow.Text = "Workflow"
 
             Dashboard_pnl.Width = 213
             BunifuTransition2.ShowSync(Dashboard_pnl)
@@ -540,29 +540,29 @@ Public Class frm_main
 
             BunifuTransition2.HideSync(Dashboard_pnl)
 
-            Myfileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Fileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Monitoring_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Viewreturn_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Flagging_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Ratiotracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Idletracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Waittracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Filesdue_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Userlist_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Workflow_btn.ImageAlign = ContentAlignment.MiddleCenter
+            btn_myeval.ImageAlign = ContentAlignment.MiddleCenter
+            btn_file_eval.ImageAlign = ContentAlignment.MiddleCenter
+            btn_monitoring.ImageAlign = ContentAlignment.MiddleCenter
+            btn_viewreturn.ImageAlign = ContentAlignment.MiddleCenter
+            btn_flagging.ImageAlign = ContentAlignment.MiddleCenter
+            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_files_due.ImageAlign = ContentAlignment.MiddleCenter
+            btn_userlist.ImageAlign = ContentAlignment.MiddleCenter
+            btn_workflow.ImageAlign = ContentAlignment.MiddleCenter
 
-            Myfileeval_btn.Text = ""
-            Fileeval_btn.Text = ""
-            Monitoring_btn.Text = ""
-            Viewreturn_btn.Text = ""
-            Flagging_btn.Text = ""
-            Ratiotracker_btn.Text = ""
-            Idletracker_btn.Text = ""
-            Waittracker_btn.Text = ""
-            Filesdue_btn.Text = ""
-            Userlist_btn.Text = ""
-            Workflow_btn.Text = ""
+            btn_myeval.Text = ""
+            btn_file_eval.Text = ""
+            btn_monitoring.Text = ""
+            btn_viewreturn.Text = ""
+            btn_flagging.Text = ""
+            btn_ratio_tracker.Text = ""
+            btn_idle_tracker.Text = ""
+            btn_wait_tracker.Text = ""
+            btn_files_due.Text = ""
+            btn_userlist.Text = ""
+            btn_workflow.Text = ""
 
             Dashboard_pnl.Width = 50
             BunifuTransition3.ShowSync(Dashboard_pnl)
@@ -594,29 +594,29 @@ Public Class frm_main
 
             BunifuTransition2.HideSync(Dashboard_pnl)
 
-            Myfileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Fileeval_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Monitoring_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Viewreturn_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Flagging_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Ratiotracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Idletracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Waittracker_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Filesdue_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Userlist_btn.ImageAlign = ContentAlignment.MiddleCenter
-            Workflow_btn.ImageAlign = ContentAlignment.MiddleCenter
+            btn_myeval.ImageAlign = ContentAlignment.MiddleCenter
+            btn_file_eval.ImageAlign = ContentAlignment.MiddleCenter
+            btn_monitoring.ImageAlign = ContentAlignment.MiddleCenter
+            btn_viewreturn.ImageAlign = ContentAlignment.MiddleCenter
+            btn_flagging.ImageAlign = ContentAlignment.MiddleCenter
+            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleCenter
+            btn_files_due.ImageAlign = ContentAlignment.MiddleCenter
+            btn_userlist.ImageAlign = ContentAlignment.MiddleCenter
+            btn_workflow.ImageAlign = ContentAlignment.MiddleCenter
 
-            Myfileeval_btn.Text = ""
-            Fileeval_btn.Text = ""
-            Monitoring_btn.Text = ""
-            Viewreturn_btn.Text = ""
-            Flagging_btn.Text = ""
-            Ratiotracker_btn.Text = ""
-            Idletracker_btn.Text = ""
-            Waittracker_btn.Text = ""
-            Filesdue_btn.Text = ""
-            Userlist_btn.Text = ""
-            Workflow_btn.Text = ""
+            btn_myeval.Text = ""
+            btn_file_eval.Text = ""
+            btn_monitoring.Text = ""
+            btn_viewreturn.Text = ""
+            btn_flagging.Text = ""
+            btn_ratio_tracker.Text = ""
+            btn_idle_tracker.Text = ""
+            btn_wait_tracker.Text = ""
+            btn_files_due.Text = ""
+            btn_userlist.Text = ""
+            btn_workflow.Text = ""
 
             Dashboard_pnl.Width = 50
             BunifuTransition3.ShowSync(Dashboard_pnl)

@@ -35,24 +35,24 @@ Partial Class frm_main
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Dashboard_pnl = New System.Windows.Forms.Panel()
-        Me.Workflow_btn = New System.Windows.Forms.Button()
-        Me.Userlist_btn = New System.Windows.Forms.Button()
-        Me.Filesdue_btn = New System.Windows.Forms.Button()
-        Me.Waittracker_btn = New System.Windows.Forms.Button()
-        Me.Idletracker_btn = New System.Windows.Forms.Button()
-        Me.Ratiotracker_btn = New System.Windows.Forms.Button()
-        Me.Flagging_btn = New System.Windows.Forms.Button()
-        Me.Viewreturn_btn = New System.Windows.Forms.Button()
-        Me.Monitoring_btn = New System.Windows.Forms.Button()
-        Me.Fileeval_btn = New System.Windows.Forms.Button()
-        Me.Myfileeval_btn = New System.Windows.Forms.Button()
+        Me.btn_workflow = New System.Windows.Forms.Button()
+        Me.btn_userlist = New System.Windows.Forms.Button()
+        Me.btn_files_due = New System.Windows.Forms.Button()
+        Me.btn_wait_tracker = New System.Windows.Forms.Button()
+        Me.btn_idle_tracker = New System.Windows.Forms.Button()
+        Me.btn_ratio_tracker = New System.Windows.Forms.Button()
+        Me.btn_flagging = New System.Windows.Forms.Button()
+        Me.btn_viewreturn = New System.Windows.Forms.Button()
+        Me.btn_monitoring = New System.Windows.Forms.Button()
+        Me.btn_file_eval = New System.Windows.Forms.Button()
+        Me.btn_myeval = New System.Windows.Forms.Button()
         Me.Burgermenu_btn = New System.Windows.Forms.Button()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuTransition1 = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Break_btn = New System.Windows.Forms.Button()
         Me.Return_btn = New System.Windows.Forms.Button()
-        Me.Hold_btn = New System.Windows.Forms.Button()
+        Me.btn_hold = New System.Windows.Forms.Button()
         Me.Cancel_btn = New System.Windows.Forms.Button()
         Me.Submit_btn = New System.Windows.Forms.Button()
         Me.Main_pnl = New System.Windows.Forms.Panel()
@@ -102,7 +102,7 @@ Partial Class frm_main
         Me.txt_receive = New System.Windows.Forms.TextBox()
         Me.txt_branch = New System.Windows.Forms.TextBox()
         Me.txt_client = New System.Windows.Forms.TextBox()
-        Me.txt_submit = New System.Windows.Forms.TextBox()
+        Me.txt_due = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -115,6 +115,7 @@ Partial Class frm_main
         Me.main_gridview = New System.Windows.Forms.DataGridView()
         Me.BunifuTransition2 = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.BunifuTransition3 = New BunifuAnimatorNS.BunifuTransition(Me.components)
+        Me.pnl_header = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Dashboard_pnl.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -234,17 +235,17 @@ Partial Class frm_main
         '
         Me.Dashboard_pnl.BackColor = System.Drawing.Color.Black
         Me.Dashboard_pnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Dashboard_pnl.Controls.Add(Me.Workflow_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Userlist_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Filesdue_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Waittracker_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Idletracker_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Ratiotracker_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Flagging_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Viewreturn_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Monitoring_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Fileeval_btn)
-        Me.Dashboard_pnl.Controls.Add(Me.Myfileeval_btn)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_workflow)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_userlist)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_files_due)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_wait_tracker)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_idle_tracker)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_ratio_tracker)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_flagging)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_viewreturn)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_monitoring)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_file_eval)
+        Me.Dashboard_pnl.Controls.Add(Me.btn_myeval)
         Me.Dashboard_pnl.Controls.Add(Me.Burgermenu_btn)
         Me.BunifuTransition1.SetDecoration(Me.Dashboard_pnl, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.Dashboard_pnl, BunifuAnimatorNS.DecorationType.None)
@@ -254,192 +255,192 @@ Partial Class frm_main
         Me.Dashboard_pnl.Size = New System.Drawing.Size(50, 566)
         Me.Dashboard_pnl.TabIndex = 1
         '
-        'Workflow_btn
+        'btn_workflow
         '
-        Me.BunifuTransition3.SetDecoration(Me.Workflow_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Workflow_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Workflow_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Workflow_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Workflow_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Workflow_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Workflow_btn.ForeColor = System.Drawing.Color.White
-        Me.Workflow_btn.Image = CType(resources.GetObject("Workflow_btn.Image"), System.Drawing.Image)
-        Me.Workflow_btn.Location = New System.Drawing.Point(0, 517)
-        Me.Workflow_btn.Name = "Workflow_btn"
-        Me.Workflow_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Workflow_btn.TabIndex = 11
-        Me.Workflow_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Workflow_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_workflow, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_workflow, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_workflow, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_workflow.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_workflow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_workflow.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_workflow.ForeColor = System.Drawing.Color.White
+        Me.btn_workflow.Image = CType(resources.GetObject("btn_workflow.Image"), System.Drawing.Image)
+        Me.btn_workflow.Location = New System.Drawing.Point(0, 517)
+        Me.btn_workflow.Name = "btn_workflow"
+        Me.btn_workflow.Size = New System.Drawing.Size(48, 47)
+        Me.btn_workflow.TabIndex = 11
+        Me.btn_workflow.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_workflow.UseVisualStyleBackColor = True
         '
-        'Userlist_btn
+        'btn_userlist
         '
-        Me.BunifuTransition3.SetDecoration(Me.Userlist_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Userlist_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Userlist_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Userlist_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Userlist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Userlist_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Userlist_btn.ForeColor = System.Drawing.Color.White
-        Me.Userlist_btn.Image = CType(resources.GetObject("Userlist_btn.Image"), System.Drawing.Image)
-        Me.Userlist_btn.Location = New System.Drawing.Point(0, 470)
-        Me.Userlist_btn.Name = "Userlist_btn"
-        Me.Userlist_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Userlist_btn.TabIndex = 10
-        Me.Userlist_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Userlist_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_userlist, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_userlist, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_userlist, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_userlist.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_userlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_userlist.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_userlist.ForeColor = System.Drawing.Color.White
+        Me.btn_userlist.Image = CType(resources.GetObject("btn_userlist.Image"), System.Drawing.Image)
+        Me.btn_userlist.Location = New System.Drawing.Point(0, 470)
+        Me.btn_userlist.Name = "btn_userlist"
+        Me.btn_userlist.Size = New System.Drawing.Size(48, 47)
+        Me.btn_userlist.TabIndex = 10
+        Me.btn_userlist.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_userlist.UseVisualStyleBackColor = True
         '
-        'Filesdue_btn
+        'btn_files_due
         '
-        Me.BunifuTransition3.SetDecoration(Me.Filesdue_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Filesdue_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Filesdue_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Filesdue_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Filesdue_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Filesdue_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Filesdue_btn.ForeColor = System.Drawing.Color.White
-        Me.Filesdue_btn.Image = CType(resources.GetObject("Filesdue_btn.Image"), System.Drawing.Image)
-        Me.Filesdue_btn.Location = New System.Drawing.Point(0, 423)
-        Me.Filesdue_btn.Name = "Filesdue_btn"
-        Me.Filesdue_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Filesdue_btn.TabIndex = 9
-        Me.Filesdue_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Filesdue_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_files_due, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_files_due, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_files_due, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_files_due.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_files_due.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_files_due.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_files_due.ForeColor = System.Drawing.Color.White
+        Me.btn_files_due.Image = CType(resources.GetObject("btn_files_due.Image"), System.Drawing.Image)
+        Me.btn_files_due.Location = New System.Drawing.Point(0, 423)
+        Me.btn_files_due.Name = "btn_files_due"
+        Me.btn_files_due.Size = New System.Drawing.Size(48, 47)
+        Me.btn_files_due.TabIndex = 9
+        Me.btn_files_due.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_files_due.UseVisualStyleBackColor = True
         '
-        'Waittracker_btn
+        'btn_wait_tracker
         '
-        Me.BunifuTransition3.SetDecoration(Me.Waittracker_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Waittracker_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Waittracker_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Waittracker_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Waittracker_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Waittracker_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Waittracker_btn.ForeColor = System.Drawing.Color.White
-        Me.Waittracker_btn.Image = CType(resources.GetObject("Waittracker_btn.Image"), System.Drawing.Image)
-        Me.Waittracker_btn.Location = New System.Drawing.Point(0, 376)
-        Me.Waittracker_btn.Name = "Waittracker_btn"
-        Me.Waittracker_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Waittracker_btn.TabIndex = 8
-        Me.Waittracker_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Waittracker_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_wait_tracker, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_wait_tracker, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_wait_tracker, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_wait_tracker.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_wait_tracker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_wait_tracker.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_wait_tracker.ForeColor = System.Drawing.Color.White
+        Me.btn_wait_tracker.Image = CType(resources.GetObject("btn_wait_tracker.Image"), System.Drawing.Image)
+        Me.btn_wait_tracker.Location = New System.Drawing.Point(0, 376)
+        Me.btn_wait_tracker.Name = "btn_wait_tracker"
+        Me.btn_wait_tracker.Size = New System.Drawing.Size(48, 47)
+        Me.btn_wait_tracker.TabIndex = 8
+        Me.btn_wait_tracker.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_wait_tracker.UseVisualStyleBackColor = True
         '
-        'Idletracker_btn
+        'btn_idle_tracker
         '
-        Me.BunifuTransition3.SetDecoration(Me.Idletracker_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Idletracker_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Idletracker_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Idletracker_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Idletracker_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Idletracker_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Idletracker_btn.ForeColor = System.Drawing.Color.White
-        Me.Idletracker_btn.Image = CType(resources.GetObject("Idletracker_btn.Image"), System.Drawing.Image)
-        Me.Idletracker_btn.Location = New System.Drawing.Point(0, 329)
-        Me.Idletracker_btn.Name = "Idletracker_btn"
-        Me.Idletracker_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Idletracker_btn.TabIndex = 7
-        Me.Idletracker_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Idletracker_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_idle_tracker, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_idle_tracker, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_idle_tracker, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_idle_tracker.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_idle_tracker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_idle_tracker.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_idle_tracker.ForeColor = System.Drawing.Color.White
+        Me.btn_idle_tracker.Image = CType(resources.GetObject("btn_idle_tracker.Image"), System.Drawing.Image)
+        Me.btn_idle_tracker.Location = New System.Drawing.Point(0, 329)
+        Me.btn_idle_tracker.Name = "btn_idle_tracker"
+        Me.btn_idle_tracker.Size = New System.Drawing.Size(48, 47)
+        Me.btn_idle_tracker.TabIndex = 7
+        Me.btn_idle_tracker.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_idle_tracker.UseVisualStyleBackColor = True
         '
-        'Ratiotracker_btn
+        'btn_ratio_tracker
         '
-        Me.BunifuTransition3.SetDecoration(Me.Ratiotracker_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Ratiotracker_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Ratiotracker_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Ratiotracker_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Ratiotracker_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Ratiotracker_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ratiotracker_btn.ForeColor = System.Drawing.Color.White
-        Me.Ratiotracker_btn.Image = CType(resources.GetObject("Ratiotracker_btn.Image"), System.Drawing.Image)
-        Me.Ratiotracker_btn.Location = New System.Drawing.Point(0, 282)
-        Me.Ratiotracker_btn.Name = "Ratiotracker_btn"
-        Me.Ratiotracker_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Ratiotracker_btn.TabIndex = 6
-        Me.Ratiotracker_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Ratiotracker_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_ratio_tracker, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_ratio_tracker, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_ratio_tracker, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_ratio_tracker.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_ratio_tracker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_ratio_tracker.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ratio_tracker.ForeColor = System.Drawing.Color.White
+        Me.btn_ratio_tracker.Image = CType(resources.GetObject("btn_ratio_tracker.Image"), System.Drawing.Image)
+        Me.btn_ratio_tracker.Location = New System.Drawing.Point(0, 282)
+        Me.btn_ratio_tracker.Name = "btn_ratio_tracker"
+        Me.btn_ratio_tracker.Size = New System.Drawing.Size(48, 47)
+        Me.btn_ratio_tracker.TabIndex = 6
+        Me.btn_ratio_tracker.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_ratio_tracker.UseVisualStyleBackColor = True
         '
-        'Flagging_btn
+        'btn_flagging
         '
-        Me.BunifuTransition3.SetDecoration(Me.Flagging_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Flagging_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Flagging_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Flagging_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Flagging_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Flagging_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Flagging_btn.ForeColor = System.Drawing.Color.White
-        Me.Flagging_btn.Image = CType(resources.GetObject("Flagging_btn.Image"), System.Drawing.Image)
-        Me.Flagging_btn.Location = New System.Drawing.Point(0, 235)
-        Me.Flagging_btn.Name = "Flagging_btn"
-        Me.Flagging_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Flagging_btn.TabIndex = 5
-        Me.Flagging_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Flagging_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_flagging, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_flagging, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_flagging, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_flagging.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_flagging.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_flagging.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_flagging.ForeColor = System.Drawing.Color.White
+        Me.btn_flagging.Image = CType(resources.GetObject("btn_flagging.Image"), System.Drawing.Image)
+        Me.btn_flagging.Location = New System.Drawing.Point(0, 235)
+        Me.btn_flagging.Name = "btn_flagging"
+        Me.btn_flagging.Size = New System.Drawing.Size(48, 47)
+        Me.btn_flagging.TabIndex = 5
+        Me.btn_flagging.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_flagging.UseVisualStyleBackColor = True
         '
-        'Viewreturn_btn
+        'btn_viewreturn
         '
-        Me.BunifuTransition3.SetDecoration(Me.Viewreturn_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Viewreturn_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Viewreturn_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Viewreturn_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Viewreturn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Viewreturn_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Viewreturn_btn.ForeColor = System.Drawing.Color.White
-        Me.Viewreturn_btn.Image = CType(resources.GetObject("Viewreturn_btn.Image"), System.Drawing.Image)
-        Me.Viewreturn_btn.Location = New System.Drawing.Point(0, 188)
-        Me.Viewreturn_btn.Name = "Viewreturn_btn"
-        Me.Viewreturn_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Viewreturn_btn.TabIndex = 4
-        Me.Viewreturn_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Viewreturn_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_viewreturn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_viewreturn, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_viewreturn, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_viewreturn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_viewreturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_viewreturn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_viewreturn.ForeColor = System.Drawing.Color.White
+        Me.btn_viewreturn.Image = CType(resources.GetObject("btn_viewreturn.Image"), System.Drawing.Image)
+        Me.btn_viewreturn.Location = New System.Drawing.Point(0, 188)
+        Me.btn_viewreturn.Name = "btn_viewreturn"
+        Me.btn_viewreturn.Size = New System.Drawing.Size(48, 47)
+        Me.btn_viewreturn.TabIndex = 4
+        Me.btn_viewreturn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_viewreturn.UseVisualStyleBackColor = True
         '
-        'Monitoring_btn
+        'btn_monitoring
         '
-        Me.BunifuTransition3.SetDecoration(Me.Monitoring_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Monitoring_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Monitoring_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Monitoring_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Monitoring_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Monitoring_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Monitoring_btn.ForeColor = System.Drawing.Color.White
-        Me.Monitoring_btn.Image = CType(resources.GetObject("Monitoring_btn.Image"), System.Drawing.Image)
-        Me.Monitoring_btn.Location = New System.Drawing.Point(0, 141)
-        Me.Monitoring_btn.Name = "Monitoring_btn"
-        Me.Monitoring_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Monitoring_btn.TabIndex = 3
-        Me.Monitoring_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Monitoring_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_monitoring, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_monitoring, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_monitoring, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_monitoring.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_monitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_monitoring.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_monitoring.ForeColor = System.Drawing.Color.White
+        Me.btn_monitoring.Image = CType(resources.GetObject("btn_monitoring.Image"), System.Drawing.Image)
+        Me.btn_monitoring.Location = New System.Drawing.Point(0, 141)
+        Me.btn_monitoring.Name = "btn_monitoring"
+        Me.btn_monitoring.Size = New System.Drawing.Size(48, 47)
+        Me.btn_monitoring.TabIndex = 3
+        Me.btn_monitoring.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_monitoring.UseVisualStyleBackColor = True
         '
-        'Fileeval_btn
+        'btn_file_eval
         '
-        Me.BunifuTransition3.SetDecoration(Me.Fileeval_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Fileeval_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Fileeval_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Fileeval_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Fileeval_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Fileeval_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fileeval_btn.ForeColor = System.Drawing.Color.White
-        Me.Fileeval_btn.Image = CType(resources.GetObject("Fileeval_btn.Image"), System.Drawing.Image)
-        Me.Fileeval_btn.Location = New System.Drawing.Point(0, 94)
-        Me.Fileeval_btn.Name = "Fileeval_btn"
-        Me.Fileeval_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Fileeval_btn.TabIndex = 2
-        Me.Fileeval_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Fileeval_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_file_eval, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_file_eval, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_file_eval, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_file_eval.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_file_eval.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_file_eval.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_file_eval.ForeColor = System.Drawing.Color.White
+        Me.btn_file_eval.Image = CType(resources.GetObject("btn_file_eval.Image"), System.Drawing.Image)
+        Me.btn_file_eval.Location = New System.Drawing.Point(0, 94)
+        Me.btn_file_eval.Name = "btn_file_eval"
+        Me.btn_file_eval.Size = New System.Drawing.Size(48, 47)
+        Me.btn_file_eval.TabIndex = 2
+        Me.btn_file_eval.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_file_eval.UseVisualStyleBackColor = True
         '
-        'Myfileeval_btn
+        'btn_myeval
         '
-        Me.BunifuTransition3.SetDecoration(Me.Myfileeval_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Myfileeval_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Myfileeval_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Myfileeval_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Myfileeval_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Myfileeval_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Myfileeval_btn.ForeColor = System.Drawing.Color.White
-        Me.Myfileeval_btn.Image = CType(resources.GetObject("Myfileeval_btn.Image"), System.Drawing.Image)
-        Me.Myfileeval_btn.Location = New System.Drawing.Point(0, 47)
-        Me.Myfileeval_btn.Name = "Myfileeval_btn"
-        Me.Myfileeval_btn.Size = New System.Drawing.Size(48, 47)
-        Me.Myfileeval_btn.TabIndex = 1
-        Me.Myfileeval_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Myfileeval_btn.UseVisualStyleBackColor = True
+        Me.BunifuTransition3.SetDecoration(Me.btn_myeval, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_myeval, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_myeval, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_myeval.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_myeval.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_myeval.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_myeval.ForeColor = System.Drawing.Color.White
+        Me.btn_myeval.Image = CType(resources.GetObject("btn_myeval.Image"), System.Drawing.Image)
+        Me.btn_myeval.Location = New System.Drawing.Point(0, 47)
+        Me.btn_myeval.Name = "btn_myeval"
+        Me.btn_myeval.Size = New System.Drawing.Size(48, 47)
+        Me.btn_myeval.TabIndex = 1
+        Me.btn_myeval.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_myeval.UseVisualStyleBackColor = True
         '
         'Burgermenu_btn
         '
@@ -491,7 +492,7 @@ Partial Class frm_main
         Me.Panel2.BackColor = System.Drawing.Color.Black
         Me.Panel2.Controls.Add(Me.Break_btn)
         Me.Panel2.Controls.Add(Me.Return_btn)
-        Me.Panel2.Controls.Add(Me.Hold_btn)
+        Me.Panel2.Controls.Add(Me.btn_hold)
         Me.Panel2.Controls.Add(Me.Cancel_btn)
         Me.Panel2.Controls.Add(Me.Submit_btn)
         Me.BunifuTransition1.SetDecoration(Me.Panel2, BunifuAnimatorNS.DecorationType.None)
@@ -545,26 +546,26 @@ Partial Class frm_main
         Me.Return_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Return_btn.UseVisualStyleBackColor = False
         '
-        'Hold_btn
+        'btn_hold
         '
-        Me.Hold_btn.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuTransition3.SetDecoration(Me.Hold_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.Hold_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.Hold_btn, BunifuAnimatorNS.DecorationType.None)
-        Me.Hold_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Hold_btn.FlatAppearance.BorderSize = 0
-        Me.Hold_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Hold_btn.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Hold_btn.ForeColor = System.Drawing.Color.White
-        Me.Hold_btn.Image = Global.BT_Tool.My.Resources.Resources.hold_32
-        Me.Hold_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Hold_btn.Location = New System.Drawing.Point(0, 122)
-        Me.Hold_btn.Name = "Hold_btn"
-        Me.Hold_btn.Size = New System.Drawing.Size(63, 61)
-        Me.Hold_btn.TabIndex = 15
-        Me.Hold_btn.Text = "HOLD"
-        Me.Hold_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Hold_btn.UseVisualStyleBackColor = False
+        Me.btn_hold.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuTransition3.SetDecoration(Me.btn_hold, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.btn_hold, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.btn_hold, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_hold.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_hold.FlatAppearance.BorderSize = 0
+        Me.btn_hold.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_hold.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_hold.ForeColor = System.Drawing.Color.White
+        Me.btn_hold.Image = Global.BT_Tool.My.Resources.Resources.hold_32
+        Me.btn_hold.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btn_hold.Location = New System.Drawing.Point(0, 122)
+        Me.btn_hold.Name = "btn_hold"
+        Me.btn_hold.Size = New System.Drawing.Size(63, 61)
+        Me.btn_hold.TabIndex = 15
+        Me.btn_hold.Text = "HOLD"
+        Me.btn_hold.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_hold.UseVisualStyleBackColor = False
         '
         'Cancel_btn
         '
@@ -616,6 +617,7 @@ Partial Class frm_main
         Me.Main_pnl.Controls.Add(Me.User_Pnl)
         Me.Main_pnl.Controls.Add(Me.Panel3)
         Me.Main_pnl.Controls.Add(Me.main_gridview)
+        Me.Main_pnl.Controls.Add(Me.pnl_header)
         Me.BunifuTransition1.SetDecoration(Me.Main_pnl, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.Main_pnl, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition3.SetDecoration(Me.Main_pnl, BunifuAnimatorNS.DecorationType.None)
@@ -1183,7 +1185,7 @@ Partial Class frm_main
         Me.TableLayoutPanel1.Controls.Add(Me.txt_receive, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_branch, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_client, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.txt_submit, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txt_due, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label11, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label20, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label21, 0, 2)
@@ -1345,20 +1347,20 @@ Partial Class frm_main
         Me.txt_client.Size = New System.Drawing.Size(114, 21)
         Me.txt_client.TabIndex = 12
         '
-        'txt_submit
+        'txt_due
         '
-        Me.txt_submit.BackColor = System.Drawing.Color.White
-        Me.txt_submit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BunifuTransition3.SetDecoration(Me.txt_submit, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition1.SetDecoration(Me.txt_submit, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuTransition2.SetDecoration(Me.txt_submit, BunifuAnimatorNS.DecorationType.None)
-        Me.txt_submit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txt_submit.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_submit.Location = New System.Drawing.Point(84, 4)
-        Me.txt_submit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txt_submit.Name = "txt_submit"
-        Me.txt_submit.Size = New System.Drawing.Size(114, 21)
-        Me.txt_submit.TabIndex = 8
+        Me.txt_due.BackColor = System.Drawing.Color.White
+        Me.txt_due.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BunifuTransition3.SetDecoration(Me.txt_due, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me.txt_due, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.txt_due, BunifuAnimatorNS.DecorationType.None)
+        Me.txt_due.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txt_due.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_due.Location = New System.Drawing.Point(84, 4)
+        Me.txt_due.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_due.Name = "txt_due"
+        Me.txt_due.Size = New System.Drawing.Size(114, 21)
+        Me.txt_due.TabIndex = 8
         '
         'Label11
         '
@@ -1556,6 +1558,17 @@ Partial Class frm_main
         Me.BunifuTransition3.DefaultAnimation = Animation1
         Me.BunifuTransition3.TimeStep = 0.03!
         '
+        'pnl_header
+        '
+        Me.BunifuTransition1.SetDecoration(Me.pnl_header, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.pnl_header, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition3.SetDecoration(Me.pnl_header, BunifuAnimatorNS.DecorationType.None)
+        Me.pnl_header.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnl_header.Location = New System.Drawing.Point(0, 0)
+        Me.pnl_header.Name = "pnl_header"
+        Me.pnl_header.Size = New System.Drawing.Size(1313, 657)
+        Me.pnl_header.TabIndex = 60
+        '
         'frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1600,22 +1613,22 @@ Partial Class frm_main
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Dashboard_pnl As Panel
-    Friend WithEvents Viewreturn_btn As Button
-    Friend WithEvents Monitoring_btn As Button
-    Friend WithEvents Fileeval_btn As Button
-    Friend WithEvents Myfileeval_btn As Button
+    Friend WithEvents btn_viewreturn As Button
+    Friend WithEvents btn_monitoring As Button
+    Friend WithEvents btn_file_eval As Button
+    Friend WithEvents btn_myeval As Button
     Friend WithEvents Burgermenu_btn As Button
-    Friend WithEvents Workflow_btn As Button
-    Friend WithEvents Userlist_btn As Button
-    Friend WithEvents Filesdue_btn As Button
-    Friend WithEvents Waittracker_btn As Button
-    Friend WithEvents Idletracker_btn As Button
-    Friend WithEvents Ratiotracker_btn As Button
-    Friend WithEvents Flagging_btn As Button
+    Friend WithEvents btn_workflow As Button
+    Friend WithEvents btn_userlist As Button
+    Friend WithEvents btn_files_due As Button
+    Friend WithEvents btn_wait_tracker As Button
+    Friend WithEvents btn_idle_tracker As Button
+    Friend WithEvents btn_ratio_tracker As Button
+    Friend WithEvents btn_flagging As Button
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Return_btn As Button
-    Friend WithEvents Hold_btn As Button
+    Friend WithEvents btn_hold As Button
     Friend WithEvents Cancel_btn As Button
     Friend WithEvents Submit_btn As Button
     Friend WithEvents Break_btn As Button
@@ -1667,7 +1680,7 @@ Partial Class frm_main
     Friend WithEvents txt_receive As TextBox
     Friend WithEvents txt_branch As TextBox
     Friend WithEvents txt_client As TextBox
-    Friend WithEvents txt_submit As TextBox
+    Friend WithEvents txt_due As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
@@ -1684,4 +1697,5 @@ Partial Class frm_main
     Friend WithEvents User_Pnl As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents Settings_Pnl As Panel
+    Friend WithEvents pnl_header As Panel
 End Class

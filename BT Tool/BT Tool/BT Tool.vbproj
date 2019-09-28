@@ -105,6 +105,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\BorderStyleNoneExtensions.vb" />
     <Compile Include="Modules\CustomFunctions.vb" />
     <Compile Include="Modules\JsonClass.vb" />
     <Compile Include="Modules\mainClass.vb" />

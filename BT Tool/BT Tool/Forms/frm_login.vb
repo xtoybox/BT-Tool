@@ -2,9 +2,8 @@
 
 Public Class frm_login
 
-
+    Private CustomFn As New CustomFunctions()
     Private mainClass As New mainClass()
-
     Dim showpass As Image = My.Resources.show_pass_24
     Dim hidepass As Image = My.Resources.hide_pass_24
     Dim originalheight As Integer = 292
@@ -18,6 +17,8 @@ Public Class frm_login
 
     Private Sub Login_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        CustomFn.SetForm(Me)
+        'CustomFn.FormDrag(Me, pnl_header)
         Button2.Image = showpass
 
     End Sub

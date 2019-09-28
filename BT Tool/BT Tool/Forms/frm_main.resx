@@ -593,7 +593,7 @@
         jTx288daC1ZHTZva4J5Q06Y2tCfUHHwNxjwB6jv2aVnUgGcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Workflow_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_workflow.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -609,7 +609,7 @@
         VaNwLYpHYGWf8z8lu56X3adPgU7nDKDAuXwb+ILmAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Userlist_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_userlist.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -623,7 +623,7 @@
         zrhVw8s34WP9DdGG/4kAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Filesdue_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_files_due.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -634,7 +634,7 @@
         XgAVbHTwEQnhDXQ6kscoYJK8AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Waittracker_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_wait_tracker.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -651,7 +651,7 @@
         YII=
 </value>
   </data>
-  <data name="Idletracker_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_idle_tracker.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -665,7 +665,7 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="Ratiotracker_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_ratio_tracker.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -678,7 +678,7 @@
         CRpW7ODz1rS+Lfgrem4AB6gaPZ9G/ZWj5xsa+olW6w2lnmhbZ9V1FgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Flagging_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_flagging.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -687,7 +687,7 @@
         hwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Viewreturn_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_viewreturn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -701,7 +701,7 @@
         g3a1YOOdtM1rtU+rvcZ+xqr7dAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Monitoring_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_monitoring.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -717,7 +717,7 @@
         IfrdeSk0WYvtxnmA/nxzQaMX6B5aRufQPrsyGI22AQr/+SRM4BI0AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Fileeval_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_file_eval.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -731,7 +731,7 @@
         vsOh6ioZHQiZszgfgqFtaB1KfPJK5QMskTgNCNnCbwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Myfileeval_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_myeval.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAH1AAAB9QFhROp1AAAAGXRFWHRTb2Z0d2FyZQB3d3cu
