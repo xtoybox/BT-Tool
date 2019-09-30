@@ -6,12 +6,15 @@ Public Class frm_main
     Private CustomFn As New CustomFunctions()
     Private cf As New mainClass
     Private db As New markDBOClass.SQLClass
-
+    Public locDir As String
+    Private Const QuotationMark As String = """"
     Public baseLoc As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
     Public baseSound As String = My.Computer.FileSystem.SpecialDirectories.MyMusic
     Dim screenWidth As Integer = Screen.PrimaryScreen.Bounds.Width
     Dim screenHeight As Integer = Screen.PrimaryScreen.Bounds.Height
-
+    Dim defaultPlayer As Integer = 1
+    Public fSelect As Boolean
+    Private LastRowSelected As Integer = vbNull
 
     Private Sub Main_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -94,7 +97,7 @@ Public Class frm_main
     ''' populate the main gridview depending on the user logged in
     ''' </summary>
     Public Sub fillMain()
-
+        Dim i As Long
         Try
             Me.Cursor = Cursors.AppStarting
             'db.SQLDependency(False)
@@ -309,7 +312,6 @@ Public Class frm_main
                     End If
                 End If
                 '****************************
-                Dim i As Long
 
                 '{"id", "Prio", "Blank", "Rush", "Receive", "Service", "Due", "Client", "Branch", "Soundfile", "servSound", "locSound",'11
                 '"Duration", "wFile", "servDoc", "servLoc", "Page",'16
@@ -342,6 +344,8 @@ Public Class frm_main
             CustomFn.RowsNumber(main_gridview)
             'If Me.dgv1.Rows.Count <> 0 Then
             For Each row As DataGridViewRow In Me.main_gridview.Rows
+                i = i + 1
+                Debug.Print(row.Cells(0).Value.ToString)
                 If row.Cells(0).Value.ToString = selRow Then
                     Dim index As Integer = row.Index
                     row.Selected = True 'either this or the bottom line would work
@@ -359,6 +363,7 @@ Public Class frm_main
             Next
         Catch ex As Exception
             CustomFn.ErrorLog(ex)
+            Console.WriteLine(i)
         End Try
 
         'main_gridview.Sort(main_gridview.Columns(5), System.ComponentModel.ListSortDirection.Ascending)
@@ -743,5 +748,314 @@ Public Class frm_main
             CustomFn.ErrorLog(ex)
         End Try
 
+    End Sub
+
+
+    ''' <summary>
+    ''' opens audio file/audio directory(for cc)
+    ''' </summary>
+    Private Sub btn_Audio_Click(sender As Object, e As EventArgs) Handles btn_Audio.Click
+
+        Try
+            If Me.txt_audio.Text <> "" Then
+                'markDBOClass.SQLClass.conStr = "this value"
+                Dim soundName As String = Me.txt_audio.Text
+                Dim servSound As String = Path.Combine(varMod.BaseServer, varMod.servSound)
+                Dim deskDir As String = Path.Combine(My.Computer.FileSystem.SpecialDirectories.Desktop, varMod.userName, varMod.client)
+                'copy sound from server directory to local directory
+
+                Dim locSound As String = Path.Combine(baseSound, soundName)
+
+                If varMod.uDept = "cc" Then
+                    If Not Directory.Exists(deskDir) Then
+                        Directory.CreateDirectory(deskDir)
+                    End If
+
+                    'Me.lbl_status.Text = "Copying File, please wait"
+                    File.Copy(servSound, Path.Combine(deskDir, varMod.sFile))
+                    Process.Start(deskDir)
+                    'Me.lbl_status.Text = "Done"
+                Else
+                    If File.Exists(locSound) Then
+                        'file exists
+                        'if server size <> user size then overwrite
+                        Dim sInfo As New FileInfo(servSound)
+                        Dim lInfo As New FileInfo(locSound)
+
+                        If sInfo.Length <> lInfo.Length Then
+                            'Me.lbl_status.Text = "Copying File, please wait"
+                            File.Copy(servSound, locSound, True)
+                            'Me.lbl_status.Text = "Done"
+                        End If
+                    Else
+                        'file does not exist in local directory
+                        Try
+                            'Me.lbl_status.Text = "Copying File, please wait"
+                            File.Copy(servSound, locSound, True)
+                            'Me.lbl_status.Text = "Done"
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            Exit Sub
+                        End Try
+                    End If
+                    'frm_playerselect.locDir = locSound
+                    'frm_playerselect.Show()
+                    startPlayer()
+
+                End If
+            End If
+        Catch ex As Exception
+            CustomFn.ErrorLog(ex)
+        End Try
+    End Sub
+
+    Private Sub btn_Doc_Click(sender As Object, e As EventArgs) Handles btn_Doc.Click
+
+    End Sub
+
+    Private Sub rd_express_CheckedChanged(sender As Object, e As EventArgs) Handles rd_express.CheckedChanged, rd_acqt.CheckedChanged, rd_pepsup.CheckedChanged
+
+        If rd_express.Checked Then
+            defaultPlayer = 1
+        ElseIf rd_pepsup.Checked Then
+            defaultPlayer = 2
+        ElseIf rd_acqt.Checked Then
+            defaultPlayer = 3
+        End If
+
+    End Sub
+
+    Sub startPlayer()
+
+        Select Case defaultPlayer
+            Case 1
+                'use express scribe
+                Dim P As New ProcessStartInfo
+                P.FileName = "C:\Program Files (x86)\NCH Swift Sound\Scribe\scribe.exe"
+                If IO.File.Exists(P.FileName) = False And InStr(P.FileName, "x86") = 0 Then
+                    P.FileName = "C:\Program Files\NCH Swift Sound\Scribe\scribe.exe"
+                End If
+
+                Try
+                    P.Arguments = QuotationMark & locDir & QuotationMark
+                    Process.Start(P)
+                    Me.Close()
+                Catch
+                    MsgBox("Unable to find Express Scribe. Please open file manually.")
+                    Process.Start(locDir)
+                End Try
+            Case 2
+                'use people support
+                Dim P As New ProcessStartInfo
+                P.FileName = "C:\Program Files (x86)\PeopleSupport\TMS\RTMMPlayer.exe"
+                If IO.File.Exists(P.FileName) = False And InStr(P.FileName, "x86") = 0 Then
+                    P.FileName = "C:\Program Files\PeopleSupport\TMS\RTMMPlayer.exe"
+                End If
+                Try
+                    P.Arguments = QuotationMark & locDir & QuotationMark
+                    Process.Start(P)
+                    Me.Close()
+                Catch
+                    MsgBox("Unable to find PeopleSupport Multimedia Player. Please open file manually.")
+                    Process.Start(locDir)
+                End Try
+            Case 3
+                'Dim p As New ProcessStartInfo
+                'p.FileName = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\ftsu2.exe"
+                'p.Arguments = QuotationMark & locDir & QuotationMark
+                'If IO.File.Exists(p.FileName) = False Then
+                '    MsgBox("ARI Player not found.", vbCritical, "ARI Media Player")
+                '    Process.Start(locDir)
+                '    Exit Sub
+                'End If
+                'Try
+                '    Process.Start(p)
+                '    Me.Close()
+                'Catch
+                '    MessageBox.Show(Err.Description, "ARI Media Player", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                '    Process.Start(locDir)
+                'End Try
+        End Select
+    End Sub
+
+    Private Sub main_gridview_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles main_gridview.CellDoubleClick
+        Try
+            If e.RowIndex <> -1 And e.ColumnIndex <> -1 Then
+                '***********************************************************
+                Dim dgv As DataGridView = CType(sender, DataGridView)
+                Dim SelectedRow As DataGridViewRow = dgv.SelectedRows(0)
+                If Not cf.isStringEmpty(SelectedRow.Cells(41).Value.ToString()) Then
+                    Dim m As String = ""
+                    If SelectedRow.Cells(41).Value.ToString() = "NOT YET" Then
+                        Dim topfile As String = dgv.Rows(0).Cells(9).Value.ToString()
+                        m = "You can't start on this file yet. " & vbNewLine & "Submit [" & topfile & "] first."
+                    ElseIf SelectedRow.Cells(41).Value.ToString() = "WORKFLOW" Then
+                        m = "You can't start this file yet since the previous workflow is not done yet."
+                    ElseIf SelectedRow.Cells(41).Value.ToString = "PROD" Then
+                        m = "You can't start on this file yet. It is currently being work by the production assigned on it."
+                    Else
+                        m = "You can't start this file since it is already being passed to the QA."
+                    End If
+                    MessageBox.Show(Me, m, "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Exit Sub
+                End If
+
+                Dim msg As String = ""
+
+                If main_gridview.SelectedRows(0).Cells(42).Value Then
+                    Dim isPass As Boolean = True
+                    For Each row As DataGridViewRow In main_gridview.Rows
+                        If main_gridview.SelectedRows(0).Index <> row.Index And row.Cells(37).Value And Integer.Parse(row.Cells(40).Value.ToString()) = varMod.uid Then
+                            Dim curfile As String = row.Cells(9).Value.ToString()
+                            msg = "You can't start on this file yet. " & vbNewLine & "Submit [" & curfile & "] first."
+                            isPass = False
+                            Exit For
+                        End If
+                    Next
+                    If Not isPass Then
+                        MessageBox.Show(Me, msg, "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        Exit Sub
+                    End If
+                End If
+                '***********************************************************
+
+                'If Me.main_gridview.SelectedRows(0).Cells(40).Value = varMod.uid Or Me.main_gridview.SelectedRows(0).Cells(40).Value = 0 Then
+
+                If varMod.CurUserPos.ToLower = "prod" Then
+                    Dim rushCount As Integer = 0
+
+                    For Each row As DataGridViewRow In Me.main_gridview.Rows
+                        If CInt(row.Cells(3).Value) = True Then
+                            rushCount += 1
+                        End If
+                    Next
+
+                    If Me.main_gridview.SelectedRows(0).Cells(3).Value <> True And rushCount <> 0 Then
+                        If rushCount <> 0 Then MessageBox.Show("You still have " & rushCount & " rush file(s).", "Rush found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation) : Exit Sub
+                    End If
+
+                End If
+
+
+                'file selection
+                Dim maingrid As DataGridView = sender
+                Dim gActive As Integer
+                Dim selRow As Integer = Me.main_gridview.SelectedRows(0).Cells(0).Value
+
+                If Not varMod.CurUserPos Like "sched" Then
+                    db.nQuery("UPDATE dbo.Main SET activeUser=@activeUser,active=@active WHERE Id=" & selRow, New String() {"activeUser", varMod.uid, "active", "True"})
+                    maingrid(37, e.RowIndex).Value = True
+                    'Me.main_gridview.SelectedRows(0).Cells(36).Value = True
+                End If
+
+                fSelect = True
+                '35-'38
+                If varMod.fId <> selRow Then
+
+                    '0"id", 1"Prio", 2"Blank", 3"Rush", 4"Receive", 5"Service", 6"Due", 7"Client", 8"Branch", 9"Soundfile", 10"servSound", 11"locSound",'
+                    '"12Duration", 13"wFile", 14"servDoc", 15"servLoc", 16Page",'
+                    '"17BT", 18"QA BT", 19"PR", 20"QA PR", 21"S&T", 22"QA ST", 23"CC", "QA CC",'24
+                    '"25btid", 26"qabtid", 27"prid", 28"qaprid", 29"stid", 30"qastid", 31"ccid", "qaccid",'32
+                    '"33Accuracy", 34"Status", 35"Workflow", 36"Current Flow", 37"Active", 38"ret   File", 39"retDirectory", 40"activeUser", 41"rowEnabled", "isHold"} '42
+
+                    If Me.main_gridview.Rows.Count <> 0 Then
+
+                        Me.chk_blank.Checked = Me.main_gridview.SelectedRows(0).Cells(2).Value
+                        Me.chk_rush.Checked = Me.main_gridview.SelectedRows(0).Cells(3).Value
+                        Me.txt_receive.Text = Me.main_gridview.SelectedRows(0).Cells(4).Value.ToString
+                        Me.cbo_service.Text = Me.main_gridview.SelectedRows(0).Cells(5).Value.ToString
+                        Me.txt_due.Text = Me.main_gridview.SelectedRows(0).Cells(6).Value.ToString
+                        Me.txt_client.Text = Me.main_gridview.SelectedRows(0).Cells(7).Value.ToString
+                        Me.txt_branch.Text = Me.main_gridview.SelectedRows(0).Cells(8).Value.ToString
+                        Me.txt_audio.Text = Me.main_gridview.SelectedRows(0).Cells(9).Value.ToString
+                        Me.txt_duration.Text = Me.main_gridview.SelectedRows(0).Cells(12).Value.ToString
+                        Me.txt_document.Text = Me.main_gridview.SelectedRows(0).Cells(13).Value.ToString
+
+                        Select Case varMod.CurUserPos
+                            Case "admin", "ts", "auditor"
+                                Me.txt_page.Text = Me.main_gridview.SelectedRows(0).Cells(16).Value.ToString
+                                Me.cbo_bt.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(25).Value
+                                Me.cbo_pr.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(27).Value
+                                Me.cbo_st.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(29).Value
+                                Me.cbo_cc.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(31).Value
+                                Me.cbo_qabt.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(26).Value
+                                Me.cbo_qapr.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(28).Value
+                                Me.cbo_qast.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(30).Value
+                                Me.cbo_qacc.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(32).Value
+                            Case "sched"
+                                Me.txt_page.Text = Me.main_gridview.SelectedRows(0).Cells(16).Value.ToString
+
+                                Select Case varMod.CurUserDep
+                                    Case "bt"
+                                        Me.cbo_bt.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(25).Value
+                                        Me.cbo_qabt.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(26).Value
+                                    Case "pr"
+                                        Me.cbo_pr.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(27).Value
+                                        Me.cbo_qapr.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(28).Value
+                                    Case "bet"
+                                        If varMod.uDept = "st" Then
+                                            Me.cbo_st.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(29).Value
+                                            Me.cbo_qast.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(30).Value
+                                        ElseIf varMod.uDept = "cc" Then
+                                            Me.cbo_cc.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(31).Value
+                                            Me.cbo_qacc.SelectedValue = Me.main_gridview.SelectedRows(0).Cells(32).Value
+                                        End If
+                                End Select
+                        End Select
+                    End If
+
+                    varMod.recDate = Me.main_gridview.SelectedRows(0).Cells(4).Value.ToString
+                    varMod.client = Me.main_gridview.SelectedRows(0).Cells(7).Value.ToString
+                    varMod.branch = Me.main_gridview.SelectedRows(0).Cells(8).Value.ToString
+                    varMod.sFile = Me.main_gridview.SelectedRows(0).Cells(9).Value.ToString
+                    varMod.servSound = Me.main_gridview.SelectedRows(0).Cells(10).Value.ToString
+                    varMod.docName = Me.main_gridview.SelectedRows(0).Cells(13).Value.ToString
+                    varMod.servDoc = Me.main_gridview.SelectedRows(0).Cells(14).Value.ToString
+                    varMod.btid = Integer.Parse(Me.main_gridview.SelectedRows(0).Cells(25).Value)
+                    varMod.prid = Integer.Parse(Me.main_gridview.SelectedRows(0).Cells(27).Value)
+                    varMod.qaprid = Integer.Parse(Me.main_gridview.SelectedRows(0).Cells(28).Value)
+                    varMod.cFlow = Me.main_gridview.SelectedRows(0).Cells(36).Value
+                    varMod.returnStat = Me.main_gridview.SelectedRows(0).Cells(38).Value
+                    varMod.retDirectory = Me.main_gridview.SelectedRows(0).Cells(39).Value.ToString
+
+                    For i = 0 To Me.main_gridview.Columns.Count - 1
+                        Console.WriteLine(i & " = " & Me.main_gridview.SelectedRows(0).Cells(i).Value & " | " & Me.main_gridview.Columns(i).Name & " | " & Me.main_gridview.SelectedRows(0).Cells(i).Value.GetType.ToString())
+                    Next
+                    Console.WriteLine(Me.main_gridview.SelectedRows(0).Cells(0).Value & " | " & Me.main_gridview.SelectedRows(0).Cells(36).Value & " | " & Me.main_gridview.Columns(36).Name)
+
+                    varMod.flow = Me.main_gridview.SelectedRows(0).Cells(35).Value.ToString
+                    'cFlow = Me.main_gridview.SelectedRows(0).Cells(36).Value
+
+                    'QA users
+                    If varMod.CurUserPos = "prod" Then
+                        If varMod.uDept = "bt" Then
+                            varMod.qauserid = Me.main_gridview.SelectedRows(0).Cells(26).Value
+                        ElseIf varMod.uDept = "pr" Then
+                            varMod.qauserid = Me.main_gridview.SelectedRows(0).Cells(28).Value
+                        ElseIf varMod.uDept = "st" Then
+                            varMod.qauserid = Me.main_gridview.SelectedRows(0).Cells(30).Value
+                        ElseIf varMod.uDept = "cc" Then
+                            varMod.qauserid = Me.main_gridview.SelectedRows(0).Cells(32).Value
+                        End If
+                    End If
+
+
+                    db.nQuery("UPDATE dbo.Main SET activeUser=@activeUser,active=@active WHERE Id=" & varMod.fId, New String() {"activeUser", 0, "active", "False"})
+                    Dim rindex As Integer = e.RowIndex
+                    If LastRowSelected <> vbNull Then rindex = LastRowSelected
+                    maingrid(36, rindex).Value = False
+                    'maingrid(24, varMod.fId).Value = False
+                    If LastRowSelected <> vbNull Then LastRowSelected = e.RowIndex
+                End If
+
+                varMod.fId = Me.main_gridview.SelectedRows(0).Cells(0).Value
+
+                fillMain()
+                'End If
+            End If
+        Catch ex As Exception
+            CustomFn.ErrorLog(ex)
+        End Try
     End Sub
 End Class

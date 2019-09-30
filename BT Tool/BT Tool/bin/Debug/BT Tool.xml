@@ -775,5 +775,10 @@ Represents a strongly typed in-memory cache of data.
  populate combobox
  </summary>
 </member>
+<member name="M:BT_Tool.frm_main.btn_Audio_Click(System.Object,System.EventArgs)">
+ <summary>
+ opens audio file/audio directory(for cc)
+ </summary>
+</member>
 </members>
 </doc>

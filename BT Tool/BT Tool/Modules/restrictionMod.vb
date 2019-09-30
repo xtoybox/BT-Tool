@@ -57,7 +57,7 @@
                     '.chk_priority.Enabled = False
                     .chk_rush.Enabled = False
                     '.btn_idle.Enabled = False
-                    .servPicker.Enabled = False
+                    .cbo_service.Enabled = False
                     .chk_rush.Enabled = False
                     .txt_due.ReadOnly = True
                     .txt_client.ReadOnly = True
@@ -121,7 +121,7 @@
             .cbo_qast.Enabled = True
             .cbo_qacc.Enabled = True
 
-            .servPicker.Enabled = True
+            .cbo_service.Enabled = True
 
             .cbo_bt.Enabled = False
             .cbo_qabt.Enabled = False
