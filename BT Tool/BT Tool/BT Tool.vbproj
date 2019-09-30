@@ -105,6 +105,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frm_upload.Designer.vb">
+      <DependentUpon>frm_upload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_upload.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modules\BorderStyleNoneExtensions.vb" />
     <Compile Include="Modules\CustomFunctions.vb" />
     <Compile Include="Modules\JsonClass.vb" />
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_main.resx">
       <DependentUpon>frm_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_upload.resx">
+      <DependentUpon>frm_upload.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>

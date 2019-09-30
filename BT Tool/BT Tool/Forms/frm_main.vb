@@ -420,7 +420,7 @@ Public Class frm_main
             BunifuTransition3.ShowSync(Dashboard_pnl)
 
         End If
-
+        Exit Sub
     End Sub
 
     Private Sub Burgermenu_btn_Click(sender As Object, e As EventArgs) Handles Burgermenu_btn.Click
@@ -521,11 +521,8 @@ Public Class frm_main
         hidedropdowns()
     End Sub
 
-    Private Sub User_Btn_LostFocus(sender As Object, e As EventArgs)
-        'hidedropdowns()
-    End Sub
-
     Private Sub Settings_btn_LostFocus(sender As Object, e As EventArgs)
+
         'hidedropdowns()
     End Sub
 
@@ -645,7 +642,7 @@ Public Class frm_main
         End
     End Sub
 
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles btn_logout.Click
 
         Me.Enabled = False
         Me.TopMost = True
@@ -1057,5 +1054,21 @@ Public Class frm_main
         Catch ex As Exception
             CustomFn.ErrorLog(ex)
         End Try
+    End Sub
+
+    Private Sub btn_upload_Click(sender As Object, e As EventArgs) Handles btn_upload.Click
+        frm_upload.Show()
+    End Sub
+
+    Private Sub User_Btn_LostFocus(sender As Object, e As EventArgs) Handles User_Btn.LostFocus
+
+        If btn_logout.Focused Then
+
+        Else
+
+            hidedropdowns()
+
+        End If
+
     End Sub
 End Class
