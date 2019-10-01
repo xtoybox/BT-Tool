@@ -1,0 +1,11 @@
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\bin\Debug\AccoladeWCFServiceHost.exe.config
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\bin\Debug\AccoladeWCFServiceHost.exe
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\bin\Debug\AccoladeWCFServiceHost.pdb
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\bin\Debug\AccoladeWCFService.dll
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\bin\Debug\AccoladeWCFService.pdb
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\bin\Debug\AccoladeWCFService.dll.config
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\obj\Debug\AccoladeWCFServiceHost.csprojAssemblyReference.cache
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\obj\Debug\AccoladeWCFServiceHost.csproj.CoreCompileInputs.cache
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\obj\Debug\AccoladeWCFServiceHost.csproj.CopyComplete
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\obj\Debug\AccoladeWCFServiceHost.exe
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFServiceHost\obj\Debug\AccoladeWCFServiceHost.pdb
