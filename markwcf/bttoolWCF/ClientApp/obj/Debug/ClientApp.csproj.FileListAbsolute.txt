@@ -1,0 +1,11 @@
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\bin\Debug\ClientApp.exe.config
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\bin\Debug\ClientApp.exe
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\bin\Debug\ClientApp.pdb
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\bin\Debug\AccoladeWCFService.dll
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\bin\Debug\AccoladeWCFService.pdb
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\bin\Debug\AccoladeWCFService.dll.config
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\obj\Debug\ClientApp.csproj.CopyComplete
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\obj\Debug\ClientApp.exe
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\ClientApp\obj\Debug\ClientApp.pdb

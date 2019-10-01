@@ -1,0 +1,6 @@
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFService\bin\Debug\AccoladeWCFService.dll.config
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFService\bin\Debug\AccoladeWCFService.dll
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFService\bin\Debug\AccoladeWCFService.pdb
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFService\obj\Debug\AccoladeWCFService.csproj.CoreCompileInputs.cache
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFService\obj\Debug\AccoladeWCFService.dll
+C:\Users\Accolade ts1\Desktop\c# projects\markwcf\bttoolWCF\AccoladeWCFService\obj\Debug\AccoladeWCFService.pdb
