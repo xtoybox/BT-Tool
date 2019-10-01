@@ -1,0 +1,1005 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BT Tool
+</name>
+</assembly>
+<members>
+<member name="T:BT_Tool.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources._588a64e0d06f6719692a2d10">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources._exit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.acco">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.acco1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.accoalde_logo_small">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.apps">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.archive">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.archive_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.archive_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.archive1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.Arrow">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.arrow_downward">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.background_login">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.background3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.background3_blur">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.background3_dark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.background4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.break_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.break_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.break_log_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.break_log_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.bt_file_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.bt_file_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.cancel_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.cancel_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.close">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.close1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.close2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.close3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.enter">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.enter1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.enter2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.enter3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.enter4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.exit_to_app">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.exit_to_app1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.exit1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.exit2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.export_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.export_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.eye">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.file_eval_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.file_eval_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.file_upload">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.file_upload1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.files_due_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.files_due_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.flagging_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.flagging_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.folder">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.geometry_cyberspace">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.geometry_cyberspace1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.get_app">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.get_app1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.get_app2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.hide_pass_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.hide_pass_241">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.hold_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.hold_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.idle_tracker_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.idle_tracker_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.import_export">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.insert_drive_file">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.insert_drive_file1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.linear_scale">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.linear_scale1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.loader1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.loader11">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.loader2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.loader21">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.loader3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.loader31">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.loader4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.loader41">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.lock_open">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.login_16">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.login_161">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.logout_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.logout_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.monitoring_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.monitoring_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.more_horiz">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.my_file_evaluation_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.my_file_evaluation_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.open_folder_16">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.open_folder_161">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.people">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.people1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.person">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.ratio_tracker_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.ratio_tracker_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.reference_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.reference_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.refresh_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.refresh_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.remove">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.report_log">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.report_log1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.return_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.return_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.settings">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.show_pass_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.show_pass_241">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.submit_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.submit_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.upload_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.upload_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.user_list_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.user_list_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.view_return_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.view_return_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.visibility">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.visibility1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.wait_tracker_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.wait_tracker_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.workflow_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.workflow_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:BT_Tool.frm_upload.frm_upload_Load(System.Object,System.EventArgs)">
+ <summary>
+ Executing event on form load
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:BT_Tool.frm_upload.btn_upload_Click(System.Object,System.EventArgs)">
+ <summary>
+ Execute event when upload button is clicked
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:BT_Tool.frm_upload.ReloadToolStripMenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Execute event when reload button from the menu strip control is clicked
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:BT_Tool.frm_upload.dgv_upload_Sorted(System.Object,System.EventArgs)">
+ <summary>
+ Execute event when datagridview header is clicked. This will fixed the format of the datagridview rows
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:BT_Tool.frm_upload.Filter_Event(System.Object,System.EventArgs)">
+ <summary>
+ Execute the filter function if cbo_client selected item is changed or txt_filename text is changed.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:BT_Tool.frm_upload.LoadFiles">
+ <summary>
+ Loading data from the server and populate data to the datagridview
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_upload.EnableControls(System.Boolean)">
+ <summary>
+ Enable or disable controls
+ </summary>
+ <param name="b"></param>
+</member>
+<member name="M:BT_Tool.frm_upload.UploadData">
+ <summary>
+ Asychronous function for uploading data to the database
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_upload.LoadWorkFlowDataSource">
+ <summary>
+ Populate workflow combobox
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_upload.FormatDGV">
+ <summary>
+ Format datagridview row
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_upload.Filter">
+ <summary>
+ Filter datagridview
+ </summary>
+</member>
+<member name="T:BT_Tool.LUData">
+ <summary>
+ A class to store last 
+ </summary>
+</member>
+<member name="T:BT_Tool.BorderStyleNoneExtensions.Resizer">
+ <summary>
+Provides resizing functionality to a BorderStyle-None Form.
+ </summary>
+</member>
+<member name="F:BT_Tool.BorderStyleNoneExtensions.Resizer.RESERVED_BORDERMARGIN">
+ <summary>
+This field serves as a criterion to prevent conflicts between Resizer() and Dragger(), 
+if both Classes are targets of the same invoker.
+ </summary>
+</member>
+<member name="T:BT_Tool.BorderStyleNoneExtensions.Dragger">
+ <summary>
+Provides dragging functionality to a BorderStyle-None Form.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomFunctions.frm">
+ <summary>
+ Used for custom dropdown menu and <see cref="M:BT_Tool.CustomFunctions.IsFormOpen(System.String,System.Boolean,System.String)"/> function.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomFunctions.GetForm">
+ <summary>
+ used for the <see cref="M:BT_Tool.CustomFunctions.IsFormOpen(System.String,System.Boolean,System.String)"/> function.
+ </summary>
+</member>
+<member name="M:BT_Tool.CustomFunctions.SetForm(System.Windows.Forms.Form@)">
+ <summary>
+ Setting the value of <see cref="F:BT_Tool.CustomFunctions.frm"/>
+ </summary>
+ <param name="f"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.SetWindowText(System.IntPtr,System.String)">
+ <summary>
+ Getting the shared function SetWindowText from user32.dll
+ </summary>
+ <param name="hwnd"></param>
+ <param name="lpString"></param>
+ <returns></returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.ButtonDropdownLocation(System.Windows.Forms.Panel,System.Windows.Forms.Button)">
+ <summary>
+ Setting the panel location at the bottom of the button and adding event handler to the button to trigger a dropdown effect to the panel.
+ </summary>
+ <param name="pnlName">The panel that contains the buttons as menu</param>
+ <param name="btnName">The button that will toggle the panel visibility</param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.ButtonDropdownRemoveHandler(System.Windows.Forms.Button)">
+ <summary>
+ Removing the event handler of a button that toggle the panel visibility.
+ </summary>
+ <param name="btnName"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.ButtonDropdownAddHandler(System.Windows.Forms.Button)">
+ <summary>
+ Adding event handler that will toggle the panel visibility.
+ </summary>
+ <param name="btnName"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.DropdownHeight(System.Windows.Forms.Panel)">
+ <summary>
+ Setting the panel height base on the total height of te buttons contained inside the panel.
+ </summary>
+ <param name="pnl"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.DropDownBtn_Click(System.Object,System.EventArgs)">
+ <summary>
+ Execute a click event the button that toggles the panel visibility is click
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.FindControlRecursive(System.Collections.Generic.List{System.Windows.Forms.Control},System.Windows.Forms.Control,System.Type)">
+ <summary>
+ List all of the controls contained inside a set parent control.
+ </summary>
+ <param name="list"></param>
+ <param name="parent">The control in which the seach is rooted.</param>
+ <param name="ctrlType">The type of control to be search</param>
+ <returns></returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.WriteToFile(System.String,System.String)">
+ <summary>
+ Creating a file containing the text.
+ <para>It can also put a datetime log by adding {0} to the text.</para>
+ </summary>
+ <param name="txt">The text that will be written inside the text file.</param>
+ <param name="path">The file path and name of the text file.</param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.isEmpty(System.String)">
+ <summary>
+ Checking a given string if it is <see langword="NULL"/>, Empty, or only space 
+ </summary>
+ <param name="str"></param>
+ <returns>Boolean</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.IsExist(System.String,System.Boolean)">
+ <summary>
+ Checking if a file exist in a given path
+ </summary>
+ <param name="path">The file path and file name.</param>
+ <param name="expected">The expected result of the checking.</param>
+ <returns>String</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.RowsNumber(System.Windows.Forms.DataGridView)">
+ <summary>
+ Setting the row number of the datagridview.
+ <para>Note: The row number is only visible if the RowHeadersVisible property of the datagridview is set to <see langword="True"/>.</para>
+ </summary>
+ <param name="dgv"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.FormatFileSize(System.Double)">
+ <summary>
+ Converting the given filesize into a user-friendly readable file size.
+ </summary>
+ <param name="TheSize"></param>
+ <returns>Double</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.SecondsToTime24(System.Double)">
+ <summary>
+ Convert seconds to 24 hour format.
+ </summary>
+ <param name="sec"></param>
+ <returns>String</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.IsFormOpen(System.String,System.Boolean,System.String)">
+ <summary>
+ Checking if the given form is open.
+ </summary>
+ <param name="FormName">The name of the form.</param>
+ <param name="CheckTag">(Optional) If set to <see langword="True"/> then it will also check if the form tag is equal to the <paramref name="TagValue"/>.</param>
+ <param name="TagValue">(Optional) Used only if the <paramref name="CheckTag"/> is set to <see langword="True"/></param>
+ <returns>Boolean</returns>
+</member>
+<member name="M:BT_Tool.CustomFunctions.DebugMsg(System.Exception,System.Boolean)">
+ <summary>
+ Used on Try Catch and alert the user of the <seealso cref="T:System.Exception"/> by poping a <seealso cref="T:System.Windows.Forms.MessageBox"/> containing the <seealso cref="P:System.Exception.Message"/>.
+ </summary>
+ <param name="ex">The <seealso cref="T:System.Exception"/> thrown by the Try Catch.</param>
+ <param name="log">(Optional) if set to <see langword="True"/> then write a file containing the <seealso cref="T:System.Exception"/> details in the MyDocuments</param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.ErrorLog(System.Exception,System.String)">
+ <summary>
+ Another version of <seealso cref="M:BT_Tool.CustomFunctions.DebugMsg(System.Exception,System.Boolean)"/> but unlike <seealso cref="M:BT_Tool.CustomFunctions.DebugMsg(System.Exception,System.Boolean)"/>, this will always log the <seealso cref="T:System.Exception"/>.
+ </summary>
+ <param name="ex"><seealso cref="T:System.Exception"/> from the Try Catch.</param>
+ <param name="msg">(optional) a custom message to be used for the <seealso cref="T:System.Windows.Forms.MessageBox"/>.</param>
+</member>
+<member name="F:BT_Tool.CustomVariables.DebugDirectory">
+ <summary>
+ The directory on which the debug error text file will be placed.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.DebugTextFile">
+ <summary>
+ Default debug text file that contains all the errors and exceptions.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.CurrentUserID">
+ <summary>
+ The ID of the current user logged in.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.CurrentUserName">
+ <summary>
+ The name of the current user logged in.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.CurrentUDept">
+ <summary>
+ Similar with CurrentUserDepartment but is more specific for the BET. <para>This will return cc or st for the BET depatment.</para>
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.LockTime">
+ <summary>
+ The set time for the user before the app is lock
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.CurrentUserIsActive">
+ <summary>
+ Returns <see langword="True"/> if the user is online, else <see langword="False"/>
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.CurrentUserPosition">
+ <summary>
+ The position of the current logged in user
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.CurrentUserDepartment">
+ <summary>
+ The department of the current logged in user.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.CurrentUserIsBTWork">
+ <summary>
+ Returns <see langword="True"/> if the current user btwork is true, else <see langword="False"/>.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.FileLocalDirectory">
+ <summary>
+ The directory where all of the working files of the current user is located. A.K.A "locDir"
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.FileLocalBaseDirectory">
+ <summary>
+ The base directory that will be used for setting the FileLocalDirectory.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.MyDocumentsDirectory">
+ <summary>
+ The directory of My Documents. A.K.A "baseLoc"
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.MyMusicDirectory">
+ <summary>
+ The directory of My Music. A.K.A "baseSound"
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.BaseServer">
+ <summary>
+ The server to use throughout the application
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.FileID">
+ <summary>
+ The ID of the file the user selected from the main gridview.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.RecDate">
+ <summary>
+ Date receive of the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.Client">
+ <summary>
+ Client of the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.SoundFile">
+ <summary>
+ Sound file of the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.ServSound">
+ <summary>
+ Service Sound of the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.DocName">
+ <summary>
+ Document name of the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.ServDoc">
+ <summary>
+ Service document of the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.Branch">
+ <summary>
+ The branch name of the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.BTID">
+ <summary>
+ BT user assigned for the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.PRID">
+ <summary>
+ PR user assigned for the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.QAPRID">
+ <summary>
+ PR QA user assigned for the selected file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.RetDirectory">
+ <summary>
+ The return directory of the returned file.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.CurrentUserLevel">
+ <summary>
+ The access level of the current user logged in.
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.DebugFilePath">
+ <summary>
+ The path where the debug file is located
+ </summary>
+</member>
+<member name="F:BT_Tool.CustomVariables.CurrentUserRestriction">
+ <summary>
+ The restrictions of the current logged in user.
+ </summary>
+</member>
+<member name="T:BT_Tool.LogintestdbDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="M:BT_Tool.frm_main.CheckDirectory">
+ <summary>
+ some pc's use are not able to connect on the default accomediasvr and vice versa.
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_main.fillMain">
+ <summary>
+ populate the main gridview depending on the user logged in
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_main.fillCombo">
+ <summary>
+ populate combobox
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_main.btn_Audio_Click(System.Object,System.EventArgs)">
+ <summary>
+ opens audio file/audio directory(for cc)
+ </summary>
+</member>
+</members>
+</doc>
