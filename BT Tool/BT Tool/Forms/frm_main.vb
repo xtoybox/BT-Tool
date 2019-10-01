@@ -28,6 +28,9 @@ Public Class frm_main
 
         CheckDirectory()
         ' == For design ==
+
+        Dashboard_pnl.Width = 213
+
         Settings_Pnl.Height = 0
         User_Pnl.Height = 0
 
