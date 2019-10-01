@@ -314,4 +314,20 @@ recheckfile:
 
         Return result
     End Function
+
+    Public Sub ClearTextBoxes(ByVal frm As Form, Optional ByVal ctrlcol As Control.ControlCollection = Nothing)
+        If ctrlcol Is Nothing Then ctrlcol = frm.Controls
+        For Each ctrl As Control In ctrlcol
+            If TypeOf (ctrl) Is TextBox Then
+                'ctl.Text = ""
+                DirectCast(ctrl, TextBox).Clear()
+            ElseIf TypeOf (ctrl) Is ComboBox Then
+                DirectCast(ctrl, ComboBox).SelectedValue = 0
+            Else
+                If Not ctrl.Controls Is Nothing OrElse ctrl.Controls.Count <> 0 Then
+                    ClearTextBoxes(frm, ctrl.Controls)
+                End If
+            End If
+        Next
+    End Sub
 End Class

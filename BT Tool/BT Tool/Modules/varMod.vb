@@ -43,5 +43,6 @@
     Public canUpload As Boolean
     Public canWorkflow As Boolean
     Public returnStat As Boolean
+    Public upList As New List(Of String)()
 
 End Module
