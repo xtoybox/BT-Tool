@@ -86,14 +86,15 @@ Partial Class frm_logout
         Me.Button1.Text = "YES"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Logout_form
+        'frm_logout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(298, 127)
         Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Logout_form"
+        Me.Name = "frm_logout"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Logout_form"
         Me.BunifuGradientPanel1.ResumeLayout(False)

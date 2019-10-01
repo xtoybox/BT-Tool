@@ -47,6 +47,7 @@ Public Class BreakLogData
     Public Property bend As String
     Public Property duration As String
 End Class
+
 Public Class GridHeaders
     Public Property width As Integer
     Public Property text As String

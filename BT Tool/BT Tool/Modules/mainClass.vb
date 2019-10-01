@@ -3,7 +3,7 @@ Imports System.Globalization
 
 Public Class mainClass
 
-    Private db As New markDBOClass.SQLClass
+    Private db As New markform.SQLClass
     Dim baseLoc As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
     Private CustomFn As New CustomFunctions()
 

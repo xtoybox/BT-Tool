@@ -1,11 +1,19 @@
-﻿Imports System.IO
-Imports BunifuAnimatorNS.BunifuTransition
+﻿Imports System.ComponentModel
+Imports System.Globalization
+Imports System.Runtime.InteropServices
+Imports System.IO
+Imports System.Threading
+Imports Microsoft.Office.Interop
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
+Imports System.Net.NetworkInformation
+
 
 Public Class frm_main
 
     Private CustomFn As New CustomFunctions()
     Private cf As New mainClass
-    Private db As New markDBOClass.SQLClass
+    Private db As New markform.SQLClass
     Public locDir As String
     Private Const QuotationMark As String = """"
     Public baseLoc As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
@@ -642,7 +650,7 @@ Public Class frm_main
         End
     End Sub
 
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles btn_logout.Click
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles btn_loginout.Click
 
         Me.Enabled = False
         Me.TopMost = True
@@ -1062,7 +1070,7 @@ Public Class frm_main
 
     Private Sub User_Btn_LostFocus(sender As Object, e As EventArgs) Handles User_Btn.LostFocus
 
-        If btn_logout.Focused Then
+        If btn_loginout.Focused Then
 
         Else
 
