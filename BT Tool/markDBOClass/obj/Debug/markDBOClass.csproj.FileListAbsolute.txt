@@ -18,6 +18,7 @@ C:\Users\Accolade P1\Desktop\BT-Tool\markDBOClass\obj\Debug\markDBOClass.csproj.
 C:\Users\Accolade P1\Desktop\BT-Tool\markDBOClass\obj\Debug\markDBOClass.csproj.CopyComplete
 C:\Users\Accolade P1\Desktop\BT-Tool\markDBOClass\obj\Debug\markDBOClass.dll
 C:\Users\Accolade P1\Desktop\BT-Tool\markDBOClass\obj\Debug\markDBOClass.pdb
+<<<<<<< HEAD
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\markDBOClass\bin\Debug\markDBOClass.dll
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\markDBOClass\bin\Debug\markDBOClass.pdb
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\markDBOClass\obj\Debug\markDBOClass.csprojAssemblyReference.cache
@@ -25,3 +26,12 @@ C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\markDBOClass\obj\Debug\mark
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\markDBOClass\obj\Debug\markDBOClass.csproj.CopyComplete
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\markDBOClass\obj\Debug\markDBOClass.dll
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\markDBOClass\obj\Debug\markDBOClass.pdb
+=======
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markDBOClass\bin\Debug\markDBOClass.dll
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markDBOClass\bin\Debug\markDBOClass.pdb
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markDBOClass\obj\Debug\markDBOClass.csprojAssemblyReference.cache
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markDBOClass\obj\Debug\markDBOClass.csproj.CoreCompileInputs.cache
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markDBOClass\obj\Debug\markDBOClass.csproj.CopyComplete
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markDBOClass\obj\Debug\markDBOClass.dll
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markDBOClass\obj\Debug\markDBOClass.pdb
+>>>>>>> ab4744640c5fc676735521ea7d6d753513a7404b

@@ -331,6 +331,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <ProjectReference Include="..\..\..\bttool-old\c# projects\c# projects\markForm\markform\markform.csproj">
+      <Project>{21ff7b10-f193-4d60-8ba6-08bb50c5be90}</Project>
+      <Name>markform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\markDBOClass\markDBOClass.csproj">
+      <Project>{1782cd91-173d-451e-85c9-ac59125454fd}</Project>
+      <Name>markDBOClass</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+>>>>>>> ab4744640c5fc676735521ea7d6d753513a7404b
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>

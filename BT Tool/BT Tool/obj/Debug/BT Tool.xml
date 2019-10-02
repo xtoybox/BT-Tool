@@ -607,75 +607,34 @@ BT Tool
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="M:BT_Tool.frm_upload.frm_upload_Load(System.Object,System.EventArgs)">
- <summary>
- Executing event on form load
- </summary>
- <param name="sender"></param>
- <param name="e"></param>
-</member>
 <member name="M:BT_Tool.frm_upload.btn_upload_Click(System.Object,System.EventArgs)">
  <summary>
- Execute event when upload button is clicked
- </summary>
- <param name="sender"></param>
- <param name="e"></param>
-</member>
-<member name="M:BT_Tool.frm_upload.ReloadToolStripMenuItem_Click(System.Object,System.EventArgs)">
- <summary>
- Execute event when reload button from the menu strip control is clicked
- </summary>
- <param name="sender"></param>
- <param name="e"></param>
-</member>
-<member name="M:BT_Tool.frm_upload.dgv_upload_Sorted(System.Object,System.EventArgs)">
- <summary>
- Execute event when datagridview header is clicked. This will fixed the format of the datagridview rows
- </summary>
- <param name="sender"></param>
- <param name="e"></param>
-</member>
-<member name="M:BT_Tool.frm_upload.Filter_Event(System.Object,System.EventArgs)">
- <summary>
- Execute the filter function if cbo_client selected item is changed or txt_filename text is changed.
- </summary>
- <param name="sender"></param>
- <param name="e"></param>
-</member>
-<member name="M:BT_Tool.frm_upload.LoadFiles">
- <summary>
- Loading data from the server and populate data to the datagridview
+ old upload function
  </summary>
 </member>
-<member name="M:BT_Tool.frm_upload.EnableControls(System.Boolean)">
+<member name="M:BT_Tool.frm_upload.GetAllFolders(System.String)">
  <summary>
- Enable or disable controls
- </summary>
- <param name="b"></param>
-</member>
-<member name="M:BT_Tool.frm_upload.UploadData">
- <summary>
- Asychronous function for uploading data to the database
+ old functin for uploading file
  </summary>
 </member>
-<member name="M:BT_Tool.frm_upload.LoadWorkFlowDataSource">
+<member name="M:BT_Tool.frm_upload.GetFiles(System.String)">
  <summary>
- Populate workflow combobox
+ extract file details from predefined directory for uploading
  </summary>
 </member>
-<member name="M:BT_Tool.frm_upload.FormatDGV">
+<member name="M:BT_Tool.frm_upload.uploadFiles">
  <summary>
- Format datagridview row
+ uploading process based on selected files on upload form
  </summary>
 </member>
-<member name="M:BT_Tool.frm_upload.Filter">
+<member name="M:BT_Tool.frm_upload.newUpload">
  <summary>
- Filter datagridview
+ new upload function, not being used
  </summary>
 </member>
-<member name="T:BT_Tool.LUData">
+<member name="M:BT_Tool.frm_upload.ShowAVIInfo(System.String)">
  <summary>
- A class to store last 
+ get sound file details for duration
  </summary>
 </member>
 <member name="T:BT_Tool.BorderStyleNoneExtensions.Resizer">
@@ -999,6 +958,12 @@ Represents a strongly typed in-memory cache of data.
 <member name="M:BT_Tool.frm_main.btn_Audio_Click(System.Object,System.EventArgs)">
  <summary>
  opens audio file/audio directory(for cc)
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_main.archive_function">
+ <summary>
+ archiving files that have been exported
+ archived files are only viewable by the admin
  </summary>
 </member>
 </members>
