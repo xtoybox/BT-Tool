@@ -1,9 +1,10 @@
 ﻿Imports System.IO
 Imports System.Globalization
+Imports markDBOClass
 
 Public Class mainClass
 
-    Private db As New markform.SQLClass
+    Private db As New SQLClass
     Dim baseLoc As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
     Private CustomFn As New CustomFunctions()
 

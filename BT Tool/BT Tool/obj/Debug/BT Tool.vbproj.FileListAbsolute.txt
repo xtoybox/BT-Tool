@@ -113,3 +113,4 @@ C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\Interop.WMPLib.dl
 C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT Tool.vbproj.ResolveComReference.cache
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\Interop.WMPLib.dll
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT Tool.vbproj.ResolveComReference.cache
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_userlist.resources
