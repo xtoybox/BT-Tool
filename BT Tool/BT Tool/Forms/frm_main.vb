@@ -1068,7 +1068,7 @@ Public Class frm_main
     End Sub
 
     Private Sub btn_upload_Click(sender As Object, e As EventArgs) Handles btn_upload.Click
-        frm_upload.Show()
+        frm_upload.ShowDialog(Me)
     End Sub
 
     Private Sub User_Btn_LostFocus(sender As Object, e As EventArgs) Handles User_Btn.LostFocus
@@ -1078,6 +1078,51 @@ Public Class frm_main
         Else
 
             hidedropdowns()
+
+        End If
+
+    End Sub
+
+    Private Sub btn_archive_Click(sender As Object, e As EventArgs) Handles btn_archive.Click
+
+    End Sub
+
+    ''' <summary>
+    ''' archiving files that have been exported
+    ''' archived files are only viewable by the admin
+    ''' </summary>
+    Sub archive_function()
+        'Dim repwhat As String = "TRANSCRIPT(\\\w+)*\\DOWNLOAD"
+        'Dim repwith As String = "TRANSCRIPT\archive\DOWNLOAD"
+        'Dim repTest As String = System.Text.RegularExpressions.Regex.Replace(val1, repwhat, repwith, System.Text.RegularExpressions.RegexOptions.IgnoreCase)
+        ''Console.writeline(repTest)
+        If New String() {"admin"}.Contains(varMod.CurUserPos) Then
+
+            Dim dt As Data.DataTable = db.query("SELECT Id,servdoc,wFile FROM dbo.Main WHERE status='done'")
+            Dim repwhat As String = "TRANSCRIPT.+DOWNLOAD"
+            Dim repwith As String = "TRANSCRIPT\archive\DOWNLOAD"
+            Dim idList As New List(Of Integer)()
+
+            For Each rows As DataRow In dt.Rows
+                Dim row As Object = rows.ItemArray
+                Try
+                    Dim repDir As String = System.Text.RegularExpressions.Regex.Replace(row(1), repwhat, repwith)
+                    If Not Directory.Exists(Path.Combine(varMod.BaseServer, repDir)) Then Directory.CreateDirectory(Path.Combine(varMod.BaseServer, repDir))
+                    Console.WriteLine(Path.Combine(varMod.BaseServer, row(1), row(2)))
+                    Console.WriteLine(Path.Combine(varMod.BaseServer, repDir, row(2)))
+                    File.Copy(Path.Combine(varMod.BaseServer, row(1), row(2)), Path.Combine(varMod.BaseServer, repDir, row(2)))
+                    idList.Add(row(0))
+                Catch ex As Exception
+                    MessageBox.Show(ex.ToString, "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End Try
+            Next
+
+            If idList.Count <> 0 Then
+                db.nQuery("UPDATE dbo.Main SET status='archive' WHERE Id IN (" & String.Join(",", idList) & ")")
+                MessageBox.Show("Archvie complete." & vbCrLf& & "Archived " & idList.Count & " files.", "", MessageBoxButtons.OK, MessageBoxIcon.None)
+            Else
+                MessageBox.Show("No files available to archive", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
 
         End If
 

@@ -326,7 +326,7 @@
       <Project>{21ff7b10-f193-4d60-8ba6-08bb50c5be90}</Project>
       <Name>markform</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\markDBOClass\markDBOClass.csproj">
+    <ProjectReference Include="..\markDBOClass\markDBOClass.csproj">
       <Project>{1782cd91-173d-451e-85c9-ac59125454fd}</Project>
       <Name>markDBOClass</Name>
     </ProjectReference>
