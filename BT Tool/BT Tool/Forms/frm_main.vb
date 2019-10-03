@@ -8,6 +8,7 @@ Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 Imports System.Net.NetworkInformation
 
+
 Public Class frm_main
 
     Private CustomFn As New CustomFunctions()
@@ -1082,10 +1083,6 @@ Public Class frm_main
 
     End Sub
 
-<<<<<<< HEAD
-    Private Sub btn_userlist_Click(sender As Object, e As EventArgs) Handles btn_userlist.Click
-        frm_userlist.Show()
-=======
     Private Sub btn_archive_Click(sender As Object, e As EventArgs) Handles btn_archive.Click
 
     End Sub
@@ -1129,6 +1126,5 @@ Public Class frm_main
 
         End If
 
->>>>>>> ab4744640c5fc676735521ea7d6d753513a7404b
     End Sub
 End Class

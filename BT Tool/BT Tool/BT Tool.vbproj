@@ -111,12 +111,6 @@
     <Compile Include="Forms\frm_upload.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_userlist.Designer.vb">
-      <DependentUpon>frm_userlist.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frm_userlist.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Modules\BorderStyleNoneExtensions.vb" />
     <Compile Include="Modules\CustomFunctions.vb" />
     <Compile Include="Modules\CustomVariables.vb" />
@@ -186,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_upload.resx">
       <DependentUpon>frm_upload.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_userlist.resx">
-      <DependentUpon>frm_userlist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
@@ -331,8 +322,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <ProjectReference Include="..\..\..\bttool-old\c# projects\c# projects\markForm\markform\markform.csproj">
       <Project>{21ff7b10-f193-4d60-8ba6-08bb50c5be90}</Project>
       <Name>markform</Name>
@@ -343,7 +332,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
->>>>>>> ab4744640c5fc676735521ea7d6d753513a7404b
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -389,16 +377,6 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\markDBOClass\markDBOClass.csproj">
-      <Project>{1782cd91-173d-451e-85c9-ac59125454fd}</Project>
-      <Name>markDBOClass</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\markform old\markform\markform.csproj">
-      <Project>{21ff7b10-f193-4d60-8ba6-08bb50c5be90}</Project>
-      <Name>markform</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

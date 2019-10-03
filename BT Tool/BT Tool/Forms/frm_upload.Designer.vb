@@ -27,6 +27,7 @@ Partial Class frm_upload
         Dim Animation3 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_exit = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -49,11 +50,7 @@ Partial Class frm_upload
         Me.ReloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
-<<<<<<< HEAD
-        Me.btn_exit = New System.Windows.Forms.Button()
-=======
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
->>>>>>> ab4744640c5fc676735521ea7d6d753513a7404b
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -88,6 +85,22 @@ Partial Class frm_upload
         Me.Label1.Size = New System.Drawing.Size(66, 19)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Upload"
+        '
+        'btn_exit
+        '
+        Me.btn_exit.BackColor = System.Drawing.Color.DarkRed
+        Me.BunifuTransition1.SetDecoration(Me.btn_exit, BunifuAnimatorNS.DecorationType.None)
+        Me.btn_exit.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btn_exit.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed
+        Me.btn_exit.FlatAppearance.BorderSize = 0
+        Me.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_exit.ForeColor = System.Drawing.Color.Transparent
+        Me.btn_exit.Image = Global.BT_Tool.My.Resources.Resources.close1
+        Me.btn_exit.Location = New System.Drawing.Point(813, 0)
+        Me.btn_exit.Name = "btn_exit"
+        Me.btn_exit.Size = New System.Drawing.Size(39, 38)
+        Me.btn_exit.TabIndex = 1
+        Me.btn_exit.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -353,22 +366,6 @@ Partial Class frm_upload
         Me.BunifuDragControl1.TargetControl = Me.Panel1
         Me.BunifuDragControl1.Vertical = True
         '
-        'btn_exit
-        '
-        Me.btn_exit.BackColor = System.Drawing.Color.DarkRed
-        Me.BunifuTransition1.SetDecoration(Me.btn_exit, BunifuAnimatorNS.DecorationType.None)
-        Me.btn_exit.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btn_exit.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed
-        Me.btn_exit.FlatAppearance.BorderSize = 0
-        Me.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_exit.ForeColor = System.Drawing.Color.Transparent
-        Me.btn_exit.Image = Global.BT_Tool.My.Resources.Resources.close1
-        Me.btn_exit.Location = New System.Drawing.Point(813, 0)
-        Me.btn_exit.Name = "btn_exit"
-        Me.btn_exit.Size = New System.Drawing.Size(39, 38)
-        Me.btn_exit.TabIndex = 1
-        Me.btn_exit.UseVisualStyleBackColor = False
-        '
         'frm_upload
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -402,6 +399,7 @@ Partial Class frm_upload
     End Sub
 
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents btn_exit As Button
     Friend WithEvents BunifuTransition1 As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents Panel2 As Panel
     Friend WithEvents GroupBox2 As GroupBox
@@ -425,9 +423,5 @@ Partial Class frm_upload
     Friend WithEvents ReloadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
-<<<<<<< HEAD
-    Friend WithEvents btn_exit As Button
-=======
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
->>>>>>> ab4744640c5fc676735521ea7d6d753513a7404b
 End Class
