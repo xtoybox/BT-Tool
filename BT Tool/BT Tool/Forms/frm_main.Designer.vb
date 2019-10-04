@@ -1547,6 +1547,7 @@ Partial Class frm_main
         '
         'main_gridview
         '
+        Me.main_gridview.AllowUserToAddRows = False
         Me.main_gridview.BackgroundColor = System.Drawing.Color.White
         Me.main_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.main_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
