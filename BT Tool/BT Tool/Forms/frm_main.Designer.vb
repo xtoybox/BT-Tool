@@ -24,10 +24,10 @@ Partial Class frm_main
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_main))
-        Dim Animation4 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim Animation5 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
-        Dim Animation6 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation3 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.User_Btn = New System.Windows.Forms.Button()
         Me.Settings_Btn = New System.Windows.Forms.Button()
@@ -518,22 +518,22 @@ Partial Class frm_main
         '
         Me.BunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
         Me.BunifuTransition1.Cursor = Nothing
-        Animation4.AnimateOnlyDifferences = True
-        Animation4.BlindCoeff = CType(resources.GetObject("Animation4.BlindCoeff"), System.Drawing.PointF)
-        Animation4.LeafCoeff = 0!
-        Animation4.MaxTime = 1.0!
-        Animation4.MinTime = 0!
-        Animation4.MosaicCoeff = CType(resources.GetObject("Animation4.MosaicCoeff"), System.Drawing.PointF)
-        Animation4.MosaicShift = CType(resources.GetObject("Animation4.MosaicShift"), System.Drawing.PointF)
-        Animation4.MosaicSize = 0
-        Animation4.Padding = New System.Windows.Forms.Padding(0)
-        Animation4.RotateCoeff = 0!
-        Animation4.RotateLimit = 0!
-        Animation4.ScaleCoeff = CType(resources.GetObject("Animation4.ScaleCoeff"), System.Drawing.PointF)
-        Animation4.SlideCoeff = CType(resources.GetObject("Animation4.SlideCoeff"), System.Drawing.PointF)
-        Animation4.TimeCoeff = 0!
-        Animation4.TransparencyCoeff = 0!
-        Me.BunifuTransition1.DefaultAnimation = Animation4
+        Animation3.AnimateOnlyDifferences = True
+        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
+        Animation3.LeafCoeff = 0!
+        Animation3.MaxTime = 1.0!
+        Animation3.MinTime = 0!
+        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
+        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
+        Animation3.MosaicSize = 0
+        Animation3.Padding = New System.Windows.Forms.Padding(0)
+        Animation3.RotateCoeff = 0!
+        Animation3.RotateLimit = 0!
+        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
+        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
+        Animation3.TimeCoeff = 0!
+        Animation3.TransparencyCoeff = 0!
+        Me.BunifuTransition1.DefaultAnimation = Animation3
         '
         'Panel2
         '
@@ -1553,14 +1553,14 @@ Partial Class frm_main
         Me.BunifuTransition2.SetDecoration(Me.main_gridview, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition1.SetDecoration(Me.main_gridview, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition3.SetDecoration(Me.main_gridview, BunifuAnimatorNS.DecorationType.None)
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.main_gridview.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.main_gridview.DefaultCellStyle = DataGridViewCellStyle1
         Me.main_gridview.Location = New System.Drawing.Point(49, 226)
         Me.main_gridview.Name = "main_gridview"
         Me.main_gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -1757,43 +1757,43 @@ Partial Class frm_main
         '
         Me.BunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
         Me.BunifuTransition2.Cursor = Nothing
-        Animation5.AnimateOnlyDifferences = True
-        Animation5.BlindCoeff = CType(resources.GetObject("Animation5.BlindCoeff"), System.Drawing.PointF)
-        Animation5.LeafCoeff = 0!
-        Animation5.MaxTime = 1.0!
-        Animation5.MinTime = 0!
-        Animation5.MosaicCoeff = CType(resources.GetObject("Animation5.MosaicCoeff"), System.Drawing.PointF)
-        Animation5.MosaicShift = CType(resources.GetObject("Animation5.MosaicShift"), System.Drawing.PointF)
-        Animation5.MosaicSize = 0
-        Animation5.Padding = New System.Windows.Forms.Padding(0)
-        Animation5.RotateCoeff = 0!
-        Animation5.RotateLimit = 0!
-        Animation5.ScaleCoeff = CType(resources.GetObject("Animation5.ScaleCoeff"), System.Drawing.PointF)
-        Animation5.SlideCoeff = CType(resources.GetObject("Animation5.SlideCoeff"), System.Drawing.PointF)
-        Animation5.TimeCoeff = 0!
-        Animation5.TransparencyCoeff = 0!
-        Me.BunifuTransition2.DefaultAnimation = Animation5
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.BunifuTransition2.DefaultAnimation = Animation2
         '
         'BunifuTransition3
         '
         Me.BunifuTransition3.AnimationType = BunifuAnimatorNS.AnimationType.Transparent
         Me.BunifuTransition3.Cursor = Nothing
-        Animation6.AnimateOnlyDifferences = True
-        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
-        Animation6.LeafCoeff = 0!
-        Animation6.MaxTime = 1.0!
-        Animation6.MinTime = 0!
-        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
-        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
-        Animation6.MosaicSize = 0
-        Animation6.Padding = New System.Windows.Forms.Padding(0)
-        Animation6.RotateCoeff = 0!
-        Animation6.RotateLimit = 0!
-        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
-        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
-        Animation6.TimeCoeff = 0!
-        Animation6.TransparencyCoeff = 1.0!
-        Me.BunifuTransition3.DefaultAnimation = Animation6
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 1.0!
+        Me.BunifuTransition3.DefaultAnimation = Animation1
         Me.BunifuTransition3.TimeStep = 0.03!
         '
         'frm_main
