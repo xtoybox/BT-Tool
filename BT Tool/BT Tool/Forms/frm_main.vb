@@ -8,7 +8,6 @@ Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 Imports System.Net.NetworkInformation
 
-
 Public Class frm_main
 
     Private CustomFn As New CustomFunctions()
@@ -24,27 +23,28 @@ Public Class frm_main
     Public fSelect As Boolean
     Private LastRowSelected As Integer = vbNull
 
+    Dim TaskBarRect As Rectangle = Rectangle.Intersect(Screen.PrimaryScreen.WorkingArea, Screen.PrimaryScreen.Bounds)
+
     Private Sub Main_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         CheckDirectory()
         ' == For design ==
 
-        Dashboard_pnl.Width = 213
+        'User_Pnl.Height = 0
 
-        Settings_Pnl.Height = 0
-        User_Pnl.Height = 0
-
-        Settings_Pnl.Visible = False
-        User_Pnl.Visible = False
-
+        'User_Pnl.Visible = False
         Me.Width = screenWidth
-        Me.Height = screenHeight - 50
+        Me.Height = screenHeight - 44
 
         Me.Location = New Point(0, 0)
-        Settings_Pnl.Left = screenWidth - 245
-        User_Pnl.Left = screenWidth - 307
+        'User_Pnl.Left = screenWidth - 300
+        'User_Pnl.Top = True
         Me.Show()
         frm_login.ShowDialog(Me)
+
+        main_gridview.Width = screenWidth - (174 + 63)
+        main_gridview.Height = screenHeight - (181 + 43 + 50)
+
         ' if main panel clicked hide all dropdowns 
 
     End Sub
@@ -385,137 +385,85 @@ Public Class frm_main
 
     Sub hidedropdowns()
 
-        If Settings_Pnl.Height = 200 Then
-
-            BunifuTransition1.HideSync(Settings_Pnl)
-            Settings_Pnl.Height = 0
-
-        End If
-
-        If User_Pnl.Height = 200 Then
-
-            BunifuTransition1.HideSync(User_Pnl)
-            User_Pnl.Height = 0
-
-        End If
-
-        If Dashboard_pnl.Width = 213 Then
-
-            BunifuTransition2.HideSync(Dashboard_pnl)
-
-            btn_myeval.ImageAlign = ContentAlignment.MiddleCenter
-            btn_file_eval.ImageAlign = ContentAlignment.MiddleCenter
-            btn_monitoring.ImageAlign = ContentAlignment.MiddleCenter
-            btn_viewreturn.ImageAlign = ContentAlignment.MiddleCenter
-            btn_flagging.ImageAlign = ContentAlignment.MiddleCenter
-            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_files_due.ImageAlign = ContentAlignment.MiddleCenter
-            btn_userlist.ImageAlign = ContentAlignment.MiddleCenter
-            btn_workflow.ImageAlign = ContentAlignment.MiddleCenter
-
-            btn_myeval.Text = ""
-            btn_file_eval.Text = ""
-            btn_monitoring.Text = ""
-            btn_viewreturn.Text = ""
-            btn_flagging.Text = ""
-            btn_ratio_tracker.Text = ""
-            btn_idle_tracker.Text = ""
-            btn_wait_tracker.Text = ""
-            btn_files_due.Text = ""
-            btn_userlist.Text = ""
-            btn_workflow.Text = ""
-
-            Dashboard_pnl.Width = 50
-            BunifuTransition3.ShowSync(Dashboard_pnl)
-
-        End If
-        Exit Sub
-    End Sub
-
-    Private Sub Burgermenu_btn_Click(sender As Object, e As EventArgs) Handles Burgermenu_btn.Click
-
-        If Settings_Pnl.Height = 200 Then
-
-            BunifuTransition1.HideSync(Settings_Pnl)
-            Settings_Pnl.Height = 0
-
-        End If
-
-        If User_Pnl.Height = 200 Then
-
-            BunifuTransition1.HideSync(User_Pnl)
-            User_Pnl.Height = 0
-
-        End If
-
-        If Dashboard_pnl.Width = 213 Then
-
-            BunifuTransition2.HideSync(Dashboard_pnl)
-
-            btn_myeval.ImageAlign = ContentAlignment.MiddleCenter
-            btn_file_eval.ImageAlign = ContentAlignment.MiddleCenter
-            btn_monitoring.ImageAlign = ContentAlignment.MiddleCenter
-            btn_viewreturn.ImageAlign = ContentAlignment.MiddleCenter
-            btn_flagging.ImageAlign = ContentAlignment.MiddleCenter
-            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_files_due.ImageAlign = ContentAlignment.MiddleCenter
-            btn_userlist.ImageAlign = ContentAlignment.MiddleCenter
-            btn_workflow.ImageAlign = ContentAlignment.MiddleCenter
-
-            btn_myeval.Text = ""
-            btn_file_eval.Text = ""
-            btn_monitoring.Text = ""
-            btn_viewreturn.Text = ""
-            btn_flagging.Text = ""
-            btn_ratio_tracker.Text = ""
-            btn_idle_tracker.Text = ""
-            btn_wait_tracker.Text = ""
-            btn_files_due.Text = ""
-            btn_userlist.Text = ""
-            btn_workflow.Text = ""
-
-
-            Dashboard_pnl.Width = 50
-            BunifuTransition3.ShowSync(Dashboard_pnl)
-
-        ElseIf Dashboard_pnl.Width = 50 Then
-
-            BunifuTransition3.HideSync(Dashboard_pnl)
-
-            btn_myeval.ImageAlign = ContentAlignment.MiddleLeft
-            btn_file_eval.ImageAlign = ContentAlignment.MiddleLeft
-            btn_monitoring.ImageAlign = ContentAlignment.MiddleLeft
-            btn_viewreturn.ImageAlign = ContentAlignment.MiddleLeft
-            btn_flagging.ImageAlign = ContentAlignment.MiddleLeft
-            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleLeft
-            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleLeft
-            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleLeft
-            btn_files_due.ImageAlign = ContentAlignment.MiddleLeft
-            btn_userlist.ImageAlign = ContentAlignment.MiddleLeft
-            btn_workflow.ImageAlign = ContentAlignment.MiddleLeft
-
-            btn_myeval.Text = "My Evaluation"
-            btn_file_eval.Text = "File Evaluation"
-            btn_monitoring.Text = "Monitoring"
-            btn_viewreturn.Text = "View Return"
-            btn_flagging.Text = "Flagging"
-            btn_ratio_tracker.Text = "Ratio Tracker"
-            btn_idle_tracker.Text = "Idle Tracker"
-            btn_wait_tracker.Text = "Wait Tracker"
-            btn_files_due.Text = "Files Due"
-            btn_userlist.Text = "User List"
-            btn_workflow.Text = "Workflow"
-
-            Dashboard_pnl.Width = 213
-            BunifuTransition2.ShowSync(Dashboard_pnl)
-
-        End If
+        BunifuTransition1.HideSync(User_Pnl)
 
     End Sub
+
+    'Private Sub Burgermenu_btn_Click(sender As Object, e As EventArgs)
+
+    '    If User_Pnl.Height = 200 Then
+
+    '        BunifuTransition1.HideSync(User_Pnl)
+    '        User_Pnl.Height = 0
+
+    '    End If
+
+    '    If Dashboard_pnl.Width = 190 Then
+
+    '        BunifuTransition2.HideSync(Dashboard_pnl)
+
+    '        btn_myeval.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_file_eval.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_monitoring.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_viewreturn.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_flagging.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_idle_tracker.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_wait_tracker.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_files_due.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_userlist.ImageAlign = ContentAlignment.MiddleCenter
+    '        btn_workflow.ImageAlign = ContentAlignment.MiddleCenter
+
+    '        btn_myeval.Text = ""
+    '        btn_file_eval.Text = ""
+    '        btn_monitoring.Text = ""
+    '        btn_viewreturn.Text = ""
+    '        btn_flagging.Text = ""
+    '        btn_ratio_tracker.Text = ""
+    '        btn_idle_tracker.Text = ""
+    '        btn_wait_tracker.Text = ""
+    '        btn_files_due.Text = ""
+    '        btn_userlist.Text = ""
+    '        btn_workflow.Text = ""
+
+
+    '        Dashboard_pnl.Width = 50
+    '        BunifuTransition3.ShowSync(Dashboard_pnl)
+
+    '    ElseIf Dashboard_pnl.Width = 50 Then
+
+    '        BunifuTransition3.HideSync(Dashboard_pnl)
+
+    '        btn_myeval.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_file_eval.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_monitoring.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_viewreturn.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_flagging.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_idle_tracker.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_wait_tracker.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_files_due.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_userlist.ImageAlign = ContentAlignment.MiddleLeft
+    '        btn_workflow.ImageAlign = ContentAlignment.MiddleLeft
+
+    '        btn_myeval.Text = "My Evaluation"
+    '        btn_file_eval.Text = "File Evaluation"
+    '        btn_monitoring.Text = "Monitoring"
+    '        btn_viewreturn.Text = "View Return"
+    '        btn_flagging.Text = "Flagging"
+    '        btn_ratio_tracker.Text = "Ratio Tracker"
+    '        btn_idle_tracker.Text = "Idle Tracker"
+    '        btn_wait_tracker.Text = "Wait Tracker"
+    '        btn_files_due.Text = "Files Due"
+    '        btn_userlist.Text = "User List"
+    '        btn_workflow.Text = "Workflow"
+
+    '        Dashboard_pnl.Width = 190
+    '        BunifuTransition2.ShowSync(Dashboard_pnl)
+
+    '    End If
+
+    'End Sub
     Private Sub Main_form_Click(sender As Object, e As EventArgs) Handles Me.Click
         hidedropdowns()
     End Sub
@@ -532,135 +480,9 @@ Public Class frm_main
         hidedropdowns()
     End Sub
 
-    Private Sub Settings_btn_LostFocus(sender As Object, e As EventArgs)
-
-        'hidedropdowns()
-    End Sub
-
-    Private Sub Burgermenu_btn_LostFocus(sender As Object, e As EventArgs) Handles Burgermenu_btn.LostFocus
-        'hidedropdowns()
-    End Sub
-
-    Private Sub User_Btn_Click(sender As Object, e As EventArgs) Handles User_Btn.Click
-        If Settings_Pnl.Height = 200 Then
-
-            BunifuTransition1.HideSync(Settings_Pnl)
-            Settings_Pnl.Height = 0
-
-        End If
-
-        If Dashboard_pnl.Width = 213 Then
-
-            BunifuTransition2.HideSync(Dashboard_pnl)
-
-            btn_myeval.ImageAlign = ContentAlignment.MiddleCenter
-            btn_file_eval.ImageAlign = ContentAlignment.MiddleCenter
-            btn_monitoring.ImageAlign = ContentAlignment.MiddleCenter
-            btn_viewreturn.ImageAlign = ContentAlignment.MiddleCenter
-            btn_flagging.ImageAlign = ContentAlignment.MiddleCenter
-            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_files_due.ImageAlign = ContentAlignment.MiddleCenter
-            btn_userlist.ImageAlign = ContentAlignment.MiddleCenter
-            btn_workflow.ImageAlign = ContentAlignment.MiddleCenter
-
-            btn_myeval.Text = ""
-            btn_file_eval.Text = ""
-            btn_monitoring.Text = ""
-            btn_viewreturn.Text = ""
-            btn_flagging.Text = ""
-            btn_ratio_tracker.Text = ""
-            btn_idle_tracker.Text = ""
-            btn_wait_tracker.Text = ""
-            btn_files_due.Text = ""
-            btn_userlist.Text = ""
-            btn_workflow.Text = ""
-
-            Dashboard_pnl.Width = 50
-            BunifuTransition3.ShowSync(Dashboard_pnl)
-
-        End If
-
-        If User_Pnl.Height = 200 Then
-
-            BunifuTransition1.HideSync(User_Pnl)
-            User_Pnl.Height = 0
-
-        Else
-
-            User_Pnl.Height = 200
-            BunifuTransition1.ShowSync(User_Pnl)
-
-        End If
-    End Sub
-
-    Private Sub Settings_Btn_Click(sender As Object, e As EventArgs) Handles Settings_Btn.Click
-        If User_Pnl.Height = 200 Then
-
-            BunifuTransition1.HideSync(User_Pnl)
-            User_Pnl.Height = 0
-
-        End If
-
-        If Dashboard_pnl.Width = 213 Then
-
-            BunifuTransition2.HideSync(Dashboard_pnl)
-
-            btn_myeval.ImageAlign = ContentAlignment.MiddleCenter
-            btn_file_eval.ImageAlign = ContentAlignment.MiddleCenter
-            btn_monitoring.ImageAlign = ContentAlignment.MiddleCenter
-            btn_viewreturn.ImageAlign = ContentAlignment.MiddleCenter
-            btn_flagging.ImageAlign = ContentAlignment.MiddleCenter
-            btn_ratio_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_idle_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_wait_tracker.ImageAlign = ContentAlignment.MiddleCenter
-            btn_files_due.ImageAlign = ContentAlignment.MiddleCenter
-            btn_userlist.ImageAlign = ContentAlignment.MiddleCenter
-            btn_workflow.ImageAlign = ContentAlignment.MiddleCenter
-
-            btn_myeval.Text = ""
-            btn_file_eval.Text = ""
-            btn_monitoring.Text = ""
-            btn_viewreturn.Text = ""
-            btn_flagging.Text = ""
-            btn_ratio_tracker.Text = ""
-            btn_idle_tracker.Text = ""
-            btn_wait_tracker.Text = ""
-            btn_files_due.Text = ""
-            btn_userlist.Text = ""
-            btn_workflow.Text = ""
-
-            Dashboard_pnl.Width = 50
-            BunifuTransition3.ShowSync(Dashboard_pnl)
-
-        End If
-
-        If Settings_Pnl.Height = 200 Then
-
-            BunifuTransition1.HideSync(Settings_Pnl)
-            Settings_Pnl.Height = 0
-
-        Else
-
-            Settings_Pnl.Height = 200
-            BunifuTransition1.ShowSync(Settings_Pnl)
-
-        End If
-    End Sub
 
     Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
         End
-    End Sub
-
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles btn_loginout.Click
-
-        Me.Enabled = False
-        Me.TopMost = True
-        Me.Location = New Point(0, 0)
-        frm_logout.Show()
-        frm_logout.TopMost = True
-
     End Sub
 
     Private Sub Exit_btn_MouseHover(sender As Object, e As EventArgs) Handles Exit_btn.MouseHover
@@ -1071,9 +893,31 @@ Public Class frm_main
         frm_upload.ShowDialog(Me)
     End Sub
 
-    Private Sub User_Btn_LostFocus(sender As Object, e As EventArgs) Handles User_Btn.LostFocus
+    ' Dropdown hide when other objects are clicked
 
-        If btn_loginout.Focused Then
+    Private Sub Burgermenu_btn_LostFocus(sender As Object, e As EventArgs)
+
+        If btn_myeval.Focused Then
+
+        ElseIf btn_file_eval.Focused Then
+
+        ElseIf btn_monitoring.Focused Then
+
+        ElseIf btn_viewreturn.Focused Then
+
+        ElseIf btn_flagging.Focused Then
+
+        ElseIf btn_ratio_tracker.Focused Then
+
+        ElseIf btn_idle_tracker.Focused Then
+
+        ElseIf btn_wait_tracker.Focused Then
+
+        ElseIf btn_files_due.Focused Then
+
+        ElseIf btn_userlist.Focused Then
+
+        ElseIf btn_workflow.Focused Then
 
         Else
 
@@ -1082,6 +926,8 @@ Public Class frm_main
         End If
 
     End Sub
+
+    ' Dropdown hide when other objects are clicked - END
 
     Private Sub btn_archive_Click(sender As Object, e As EventArgs) Handles btn_archive.Click
 
@@ -1125,6 +971,55 @@ Public Class frm_main
             End If
 
         End If
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Me.Hide()
+        frm_minimized.Show()
+
+    End Sub
+
+    Private Sub btn_loginout_Click(sender As Object, e As EventArgs) Handles btn_loginout.Click
+        Me.Enabled = False
+        Me.TopMost = True
+        Me.Location = New Point(0, 0)
+        frm_logout.Show()
+        frm_logout.TopMost = True
+    End Sub
+
+    Private Sub btn_userlist_Click(sender As Object, e As EventArgs) Handles btn_userlist.Click
+        frm_userlist.Show()
+    End Sub
+
+    Private Sub User_Btn_Click(sender As Object, e As EventArgs) Handles User_Btn.Click
+
+        If User_Pnl.Visible = False Then
+
+            BunifuTransition1.ShowSync(User_Pnl)
+
+        ElseIf User_Pnl.Visible = True Then
+
+            BunifuTransition1.HideSync(User_Pnl)
+
+        End If
+
+    End Sub
+
+    Private Sub User_Btn_LostFocus(sender As Object, e As EventArgs) Handles User_Btn.LostFocus
+        If btn_loginout.Focused Then
+
+        Else
+
+            hidedropdowns()
+
+        End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+        BunifuTransition1.HideSync(User_Pnl)
 
     End Sub
 End Class

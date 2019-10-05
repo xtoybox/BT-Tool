@@ -74,6 +74,10 @@
       <HintPath>..\packages\GCDesign.1.0.0\lib\net46\GCDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="markform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\markForm new\markform\bin\Debug\markform.exe</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -105,10 +109,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frm_minimized.Designer.vb">
+      <DependentUpon>frm_minimized.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_minimized.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_upload.Designer.vb">
       <DependentUpon>frm_upload.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frm_upload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_userlist.Designer.vb">
+      <DependentUpon>frm_userlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_userlist.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\BorderStyleNoneExtensions.vb" />
@@ -178,8 +194,14 @@
     <EmbeddedResource Include="Forms\frm_main.resx">
       <DependentUpon>frm_main.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_minimized.resx">
+      <DependentUpon>frm_minimized.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_upload.resx">
       <DependentUpon>frm_upload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_userlist.resx">
+      <DependentUpon>frm_userlist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
@@ -215,6 +237,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\window-16.png" />
+    <None Include="Resources\window-4-512.png" />
     <None Include="packages.config" />
     <None Include="Resources\588a64e0d06f6719692a2d10.png" />
     <Content Include="acco.ico" />
@@ -294,12 +318,16 @@
     <Content Include="Resources\get_app1.png" />
     <Content Include="Resources\get_app2.png" />
     <Content Include="Resources\icons8-squared-menu-100.png" />
+    <None Include="Resources\icons8-windows-10-64.png" />
+    <None Include="Resources\icons8-windows-10-32.png" />
     <Content Include="Resources\import_export.png" />
     <Content Include="Resources\insert_drive_file.png" />
     <Content Include="Resources\insert_drive_file1.png" />
     <Content Include="Resources\linear_scale.png" />
     <Content Include="Resources\linear_scale1.png" />
     <Content Include="Resources\lock_open.png" />
+    <None Include="Resources\Maximize.bmp" />
+    <None Include="Resources\maximize-window-512.png" />
     <Content Include="Resources\more_horiz.png" />
     <Content Include="Resources\people.png" />
     <Content Include="Resources\people1.png" />
@@ -322,10 +350,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\bttool-old\c# projects\c# projects\markForm\markform\markform.csproj">
-      <Project>{21ff7b10-f193-4d60-8ba6-08bb50c5be90}</Project>
-      <Name>markform</Name>
-    </ProjectReference>
     <ProjectReference Include="..\markDBOClass\markDBOClass.csproj">
       <Project>{1782cd91-173d-451e-85c9-ac59125454fd}</Project>
       <Name>markDBOClass</Name>
@@ -377,6 +401,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

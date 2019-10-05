@@ -326,9 +326,9 @@ Partial Class frm_upload
         Me.lbl_status.ForeColor = System.Drawing.Color.White
         Me.lbl_status.Location = New System.Drawing.Point(3, 2)
         Me.lbl_status.Name = "lbl_status"
-        Me.lbl_status.Size = New System.Drawing.Size(51, 17)
+        Me.lbl_status.Size = New System.Drawing.Size(20, 17)
         Me.lbl_status.TabIndex = 10
-        Me.lbl_status.Text = "Status: "
+        Me.lbl_status.Text = "---"
         '
         'MenuStrip1
         '

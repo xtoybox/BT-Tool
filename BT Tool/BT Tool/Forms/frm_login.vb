@@ -33,7 +33,7 @@ Public Class frm_login
         ElseIf Button2.Image Is hidepass Then
 
             Button2.Image = showpass
-            txt_password.PasswordChar = "*"
+            txt_password.PasswordChar = "•"
 
         End If
 
@@ -56,15 +56,12 @@ Public Class frm_login
         Dim login As Boolean = mainClass.userLogin(1)
 
         If login = True Then
-            'frm_main.AddingHandler()
-            'frm_main.Notif()
-            'restrictionMod.ResetRestrictions()
-            'restrictionMod.rest_main()
 
             Me.err.Text = ""
             Me.txt_username.Text = ""
             Me.txt_password.Text = ""
             Me.Close()
+
         End If
 
     End Sub
@@ -109,7 +106,6 @@ Public Class frm_login
                         err.Visible = True
                     End If
                 End Using
-
             End Using
 
         End If

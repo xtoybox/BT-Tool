@@ -317,6 +317,16 @@ BT Tool
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:BT_Tool.My.Resources.Resources.icons8_windows_10_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.icons8_windows_10_64">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:BT_Tool.My.Resources.Resources.idle_tracker_32">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -413,6 +423,11 @@ BT Tool
 </summary>
 </member>
 <member name="P:BT_Tool.My.Resources.Resources.logout_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.maximize_window_512">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -593,6 +608,16 @@ BT Tool
 </summary>
 </member>
 <member name="P:BT_Tool.My.Resources.Resources.wait_tracker_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.window_16">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.window_4_512">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

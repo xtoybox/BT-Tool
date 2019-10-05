@@ -212,7 +212,7 @@ Partial Class frm_login
         Me.txt_password.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_password.Location = New System.Drawing.Point(27, 115)
         Me.txt_password.Name = "txt_password"
-        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txt_password.Size = New System.Drawing.Size(183, 27)
         Me.txt_password.TabIndex = 1
         '
