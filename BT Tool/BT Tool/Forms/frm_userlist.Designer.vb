@@ -26,6 +26,8 @@ Partial Class frm_userlist
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_userlist))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim CheckBoxProperties1 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
+        Dim CheckBoxProperties2 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -33,8 +35,8 @@ Partial Class frm_userlist
         Me.dgv_userlist = New System.Windows.Forms.DataGridView()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbo_f_dep = New PresentationControls.CheckBoxComboBox()
+        Me.cbo_f_pos = New PresentationControls.CheckBoxComboBox()
         Me.chk_f_deactivate = New System.Windows.Forms.CheckBox()
         Me.chk_f_online = New System.Windows.Forms.CheckBox()
         Me.txt_f_name = New System.Windows.Forms.TextBox()
@@ -158,7 +160,7 @@ Partial Class frm_userlist
         Me.dgv_userlist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -190,8 +192,8 @@ Partial Class frm_userlist
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Silver
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.cbo_f_dep)
+        Me.GroupBox1.Controls.Add(Me.cbo_f_pos)
         Me.GroupBox1.Controls.Add(Me.chk_f_deactivate)
         Me.GroupBox1.Controls.Add(Me.chk_f_online)
         Me.GroupBox1.Controls.Add(Me.txt_f_name)
@@ -203,7 +205,7 @@ Partial Class frm_userlist
         Me.GroupBox1.Controls.Add(Me.txt_f_uname)
         Me.GroupBox1.Controls.Add(Me.chk_f_locked)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
         Me.GroupBox1.Location = New System.Drawing.Point(5, 5)
         Me.GroupBox1.Name = "GroupBox1"
@@ -213,25 +215,29 @@ Partial Class frm_userlist
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filter:"
         '
-        'ComboBox2
+        'cbo_f_dep
         '
-        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(354, 35)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(103, 25)
-        Me.ComboBox2.TabIndex = 29
+        CheckBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cbo_f_dep.CheckBoxProperties = CheckBoxProperties1
+        Me.cbo_f_dep.DisplayMemberSingleItem = ""
+        Me.cbo_f_dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbo_f_dep.FormattingEnabled = True
+        Me.cbo_f_dep.Location = New System.Drawing.Point(233, 35)
+        Me.cbo_f_dep.Name = "cbo_f_dep"
+        Me.cbo_f_dep.Size = New System.Drawing.Size(107, 24)
+        Me.cbo_f_dep.TabIndex = 30
         '
-        'ComboBox1
+        'cbo_f_pos
         '
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(234, 35)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(107, 25)
-        Me.ComboBox1.TabIndex = 29
+        CheckBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cbo_f_pos.CheckBoxProperties = CheckBoxProperties2
+        Me.cbo_f_pos.DisplayMemberSingleItem = ""
+        Me.cbo_f_pos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbo_f_pos.FormattingEnabled = True
+        Me.cbo_f_pos.Location = New System.Drawing.Point(354, 35)
+        Me.cbo_f_pos.Name = "cbo_f_pos"
+        Me.cbo_f_pos.Size = New System.Drawing.Size(107, 24)
+        Me.cbo_f_pos.TabIndex = 7
         '
         'chk_f_deactivate
         '
@@ -950,8 +956,6 @@ Partial Class frm_userlist
     Friend WithEvents Button1 As Button
     Friend WithEvents Panel9 As Panel
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents chk_f_deactivate As CheckBox
     Friend WithEvents chk_f_online As CheckBox
     Friend WithEvents txt_f_name As TextBox
@@ -966,4 +970,6 @@ Partial Class frm_userlist
     Friend WithEvents dgv_userlist As DataGridView
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents cbo_f_dep As PresentationControls.CheckBoxComboBox
+    Friend WithEvents cbo_f_pos As PresentationControls.CheckBoxComboBox
 End Class

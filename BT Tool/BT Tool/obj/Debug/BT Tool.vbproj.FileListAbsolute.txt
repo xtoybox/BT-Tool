@@ -117,3 +117,5 @@ C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\markDBOCl
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\markDBOClass.pdb
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_minimized.resources
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_userlist.resources
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_minimized.resources
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_userlist.resources

@@ -350,6 +350,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CheckBoxComboBox\CheckBoxComboBox\CheckBoxComboBox.csproj">
+      <Project>{70a25201-8ea4-48f8-a4a6-ed13adf8823c}</Project>
+      <Name>CheckBoxComboBox</Name>
+    </ProjectReference>
     <ProjectReference Include="..\markDBOClass\markDBOClass.csproj">
       <Project>{1782cd91-173d-451e-85c9-ac59125454fd}</Project>
       <Name>markDBOClass</Name>
