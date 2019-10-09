@@ -483,6 +483,7 @@
             this.Tag = "";
             this.Text = "Flagging";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_flagging_FormClosing);
+            this.Load += new System.EventHandler(this.frm_flagging_Load);
             this.pnl_group_container.ResumeLayout(false);
             this.tlp_flag_form_container.ResumeLayout(false);
             this.tlp_flag_form_container.PerformLayout();

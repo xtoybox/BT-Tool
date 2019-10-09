@@ -422,6 +422,12 @@ namespace markform
             tss_status.Text = tssStr;
             this.Cursor = Cursors.Default;
         }
+
+        private void frm_flagging_Load(object sender, EventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Filter data
         /// </summary>
