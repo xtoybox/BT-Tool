@@ -119,3 +119,10 @@ C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.f
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_userlist.resources
 C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_minimized.resources
 C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_userlist.resources
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\CheckBoxComboBox.dll
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\CheckBoxComboBox.pdb
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_workflow.resources
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_file_eval.resources
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_file_eval_bulkdownload.resources
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_flagging.resources
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_break.resources

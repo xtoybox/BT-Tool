@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_login
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frm_login
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_login))
@@ -68,6 +68,7 @@ Partial Class frm_login
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
@@ -101,9 +102,9 @@ Partial Class frm_login
         Me.BunifuGradientPanel1.Controls.Add(Me.txt_username)
         Me.BunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White
-        Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Black
-        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Black
-        Me.BunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Black
+        Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White
+        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White
+        Me.BunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White
         Me.BunifuGradientPanel1.Location = New System.Drawing.Point(0, 38)
         Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"
         Me.BunifuGradientPanel1.Quality = 10
@@ -129,7 +130,7 @@ Partial Class frm_login
         Me.Error1_lbl.BackColor = System.Drawing.Color.Transparent
         Me.Error1_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Error1_lbl.ForeColor = System.Drawing.Color.Red
-        Me.Error1_lbl.Location = New System.Drawing.Point(110, 13)
+        Me.Error1_lbl.Location = New System.Drawing.Point(122, 13)
         Me.Error1_lbl.Name = "Error1_lbl"
         Me.Error1_lbl.Size = New System.Drawing.Size(112, 13)
         Me.Error1_lbl.TabIndex = 0
@@ -152,6 +153,7 @@ Partial Class frm_login
         '
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
@@ -166,7 +168,7 @@ Partial Class frm_login
         '
         'btn_login
         '
-        Me.btn_login.BackColor = System.Drawing.Color.Transparent
+        Me.btn_login.BackColor = System.Drawing.Color.Black
         Me.btn_login.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_login.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -187,7 +189,7 @@ Partial Class frm_login
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(23, 92)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(95, 20)
@@ -199,7 +201,7 @@ Partial Class frm_login
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(23, 26)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 20)
@@ -234,6 +236,7 @@ Partial Class frm_login
         Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_login"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

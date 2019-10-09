@@ -987,7 +987,7 @@
             this.tlp_q4_container.ColumnCount = 3;
             this.tlp_q4_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tlp_q4_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlp_q4_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 263F));
+            this.tlp_q4_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 265F));
             this.tlp_q4_container.Controls.Add(this.lbl_q4_1, 0, 0);
             this.tlp_q4_container.Controls.Add(this.rtxt_q4, 2, 0);
             this.tlp_q4_container.Controls.Add(this.pnl_cbo_q4_readonly_alt_container, 1, 0);
@@ -1005,16 +1005,16 @@
             this.lbl_q4_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_q4_1.Location = new System.Drawing.Point(4, 1);
             this.lbl_q4_1.Name = "lbl_q4_1";
-            this.lbl_q4_1.Size = new System.Drawing.Size(112, 52);
+            this.lbl_q4_1.Size = new System.Drawing.Size(111, 52);
             this.lbl_q4_1.TabIndex = 0;
             this.lbl_q4_1.Text = "Incomplete Transcript (Ten-second Rule)";
             // 
             // rtxt_q4
             // 
             this.rtxt_q4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxt_q4.Location = new System.Drawing.Point(202, 4);
+            this.rtxt_q4.Location = new System.Drawing.Point(201, 4);
             this.rtxt_q4.Name = "rtxt_q4";
-            this.rtxt_q4.Size = new System.Drawing.Size(258, 46);
+            this.rtxt_q4.Size = new System.Drawing.Size(259, 46);
             this.rtxt_q4.TabIndex = 19;
             this.rtxt_q4.Text = "";
             // 
@@ -1023,7 +1023,7 @@
             this.pnl_cbo_q4_readonly_alt_container.Controls.Add(this.lbl_q4_cbo);
             this.pnl_cbo_q4_readonly_alt_container.Controls.Add(this.cbo_q4);
             this.pnl_cbo_q4_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_cbo_q4_readonly_alt_container.Location = new System.Drawing.Point(123, 4);
+            this.pnl_cbo_q4_readonly_alt_container.Location = new System.Drawing.Point(122, 4);
             this.pnl_cbo_q4_readonly_alt_container.Name = "pnl_cbo_q4_readonly_alt_container";
             this.pnl_cbo_q4_readonly_alt_container.Size = new System.Drawing.Size(72, 46);
             this.pnl_cbo_q4_readonly_alt_container.TabIndex = 12;
@@ -1054,7 +1054,7 @@
             this.tlp_q3_container.ColumnCount = 3;
             this.tlp_q3_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tlp_q3_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlp_q3_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 263F));
+            this.tlp_q3_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 265F));
             this.tlp_q3_container.Controls.Add(this.rtxt_q3_2, 2, 1);
             this.tlp_q3_container.Controls.Add(this.lbl_q3_1, 0, 0);
             this.tlp_q3_container.Controls.Add(this.lbl_q3_2, 0, 1);
@@ -1073,9 +1073,9 @@
             // rtxt_q3_2
             // 
             this.rtxt_q3_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxt_q3_2.Location = new System.Drawing.Point(202, 60);
+            this.rtxt_q3_2.Location = new System.Drawing.Point(201, 60);
             this.rtxt_q3_2.Name = "rtxt_q3_2";
-            this.rtxt_q3_2.Size = new System.Drawing.Size(258, 50);
+            this.rtxt_q3_2.Size = new System.Drawing.Size(259, 50);
             this.rtxt_q3_2.TabIndex = 17;
             this.rtxt_q3_2.Text = "";
             // 
@@ -1084,7 +1084,7 @@
             this.lbl_q3_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_q3_1.Location = new System.Drawing.Point(4, 1);
             this.lbl_q3_1.Name = "lbl_q3_1";
-            this.lbl_q3_1.Size = new System.Drawing.Size(112, 55);
+            this.lbl_q3_1.Size = new System.Drawing.Size(111, 55);
             this.lbl_q3_1.TabIndex = 0;
             this.lbl_q3_1.Text = "Was the file as accurately\r\n\r\n(Grammar and Tenses, Punctuations, Spelling, Paraph" +
     "rasing, Timecoding)";
@@ -1094,16 +1094,16 @@
             this.lbl_q3_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_q3_2.Location = new System.Drawing.Point(4, 57);
             this.lbl_q3_2.Name = "lbl_q3_2";
-            this.lbl_q3_2.Size = new System.Drawing.Size(112, 56);
+            this.lbl_q3_2.Size = new System.Drawing.Size(111, 56);
             this.lbl_q3_2.TabIndex = 1;
             this.lbl_q3_2.Text = "Header Information";
             // 
             // rtxt_q3_1
             // 
             this.rtxt_q3_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxt_q3_1.Location = new System.Drawing.Point(202, 4);
+            this.rtxt_q3_1.Location = new System.Drawing.Point(201, 4);
             this.rtxt_q3_1.Name = "rtxt_q3_1";
-            this.rtxt_q3_1.Size = new System.Drawing.Size(258, 49);
+            this.rtxt_q3_1.Size = new System.Drawing.Size(259, 49);
             this.rtxt_q3_1.TabIndex = 15;
             this.rtxt_q3_1.Text = "";
             // 
@@ -1112,7 +1112,7 @@
             this.pnl_cbo_q3_1_readonly_alt_container.Controls.Add(this.lbl_q3_1_cbo);
             this.pnl_cbo_q3_1_readonly_alt_container.Controls.Add(this.cbo_q3_1);
             this.pnl_cbo_q3_1_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_cbo_q3_1_readonly_alt_container.Location = new System.Drawing.Point(123, 4);
+            this.pnl_cbo_q3_1_readonly_alt_container.Location = new System.Drawing.Point(122, 4);
             this.pnl_cbo_q3_1_readonly_alt_container.Name = "pnl_cbo_q3_1_readonly_alt_container";
             this.pnl_cbo_q3_1_readonly_alt_container.Size = new System.Drawing.Size(72, 49);
             this.pnl_cbo_q3_1_readonly_alt_container.TabIndex = 12;
@@ -1142,7 +1142,7 @@
             this.pnl_cbo_q3_2_readonly_alt_container.Controls.Add(this.lbl_q3_2_cbo);
             this.pnl_cbo_q3_2_readonly_alt_container.Controls.Add(this.cbo_q3_2);
             this.pnl_cbo_q3_2_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_cbo_q3_2_readonly_alt_container.Location = new System.Drawing.Point(123, 60);
+            this.pnl_cbo_q3_2_readonly_alt_container.Location = new System.Drawing.Point(122, 60);
             this.pnl_cbo_q3_2_readonly_alt_container.Name = "pnl_cbo_q3_2_readonly_alt_container";
             this.pnl_cbo_q3_2_readonly_alt_container.Size = new System.Drawing.Size(72, 50);
             this.pnl_cbo_q3_2_readonly_alt_container.TabIndex = 12;
@@ -1173,7 +1173,7 @@
             this.tlp_q2_container.ColumnCount = 3;
             this.tlp_q2_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tlp_q2_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlp_q2_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 263F));
+            this.tlp_q2_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 265F));
             this.tlp_q2_container.Controls.Add(this.rtxt_q2_2, 2, 1);
             this.tlp_q2_container.Controls.Add(this.lbl_q2_1, 0, 0);
             this.tlp_q2_container.Controls.Add(this.lbl_q2_2, 0, 1);
@@ -1192,9 +1192,9 @@
             // rtxt_q2_2
             // 
             this.rtxt_q2_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxt_q2_2.Location = new System.Drawing.Point(202, 60);
+            this.rtxt_q2_2.Location = new System.Drawing.Point(201, 60);
             this.rtxt_q2_2.Name = "rtxt_q2_2";
-            this.rtxt_q2_2.Size = new System.Drawing.Size(258, 50);
+            this.rtxt_q2_2.Size = new System.Drawing.Size(259, 50);
             this.rtxt_q2_2.TabIndex = 13;
             this.rtxt_q2_2.Text = "";
             // 
@@ -1203,7 +1203,7 @@
             this.lbl_q2_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_q2_1.Location = new System.Drawing.Point(4, 1);
             this.lbl_q2_1.Name = "lbl_q2_1";
-            this.lbl_q2_1.Size = new System.Drawing.Size(112, 55);
+            this.lbl_q2_1.Size = new System.Drawing.Size(111, 55);
             this.lbl_q2_1.TabIndex = 0;
             this.lbl_q2_1.Text = "Transcription Guide, Job\r\n\r\n(Face Sheets, Video, Text Files)";
             // 
@@ -1212,16 +1212,16 @@
             this.lbl_q2_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_q2_2.Location = new System.Drawing.Point(4, 57);
             this.lbl_q2_2.Name = "lbl_q2_2";
-            this.lbl_q2_2.Size = new System.Drawing.Size(112, 56);
+            this.lbl_q2_2.Size = new System.Drawing.Size(111, 56);
             this.lbl_q2_2.TabIndex = 1;
             this.lbl_q2_2.Text = "Internet Research";
             // 
             // rtxt_q2_1
             // 
             this.rtxt_q2_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxt_q2_1.Location = new System.Drawing.Point(202, 4);
+            this.rtxt_q2_1.Location = new System.Drawing.Point(201, 4);
             this.rtxt_q2_1.Name = "rtxt_q2_1";
-            this.rtxt_q2_1.Size = new System.Drawing.Size(258, 49);
+            this.rtxt_q2_1.Size = new System.Drawing.Size(259, 49);
             this.rtxt_q2_1.TabIndex = 11;
             this.rtxt_q2_1.Text = "";
             // 
@@ -1230,7 +1230,7 @@
             this.pnl_cbo_q2_1_readonly_alt_container.Controls.Add(this.lbl_q2_1_cbo);
             this.pnl_cbo_q2_1_readonly_alt_container.Controls.Add(this.cbo_q2_1);
             this.pnl_cbo_q2_1_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_cbo_q2_1_readonly_alt_container.Location = new System.Drawing.Point(123, 4);
+            this.pnl_cbo_q2_1_readonly_alt_container.Location = new System.Drawing.Point(122, 4);
             this.pnl_cbo_q2_1_readonly_alt_container.Name = "pnl_cbo_q2_1_readonly_alt_container";
             this.pnl_cbo_q2_1_readonly_alt_container.Size = new System.Drawing.Size(72, 49);
             this.pnl_cbo_q2_1_readonly_alt_container.TabIndex = 12;
@@ -1260,7 +1260,7 @@
             this.pnl_cbo_q2_2_readonly_alt_container.Controls.Add(this.lbl_q2_2_cbo);
             this.pnl_cbo_q2_2_readonly_alt_container.Controls.Add(this.cbo_q2_2);
             this.pnl_cbo_q2_2_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_cbo_q2_2_readonly_alt_container.Location = new System.Drawing.Point(123, 60);
+            this.pnl_cbo_q2_2_readonly_alt_container.Location = new System.Drawing.Point(122, 60);
             this.pnl_cbo_q2_2_readonly_alt_container.Name = "pnl_cbo_q2_2_readonly_alt_container";
             this.pnl_cbo_q2_2_readonly_alt_container.Size = new System.Drawing.Size(72, 50);
             this.pnl_cbo_q2_2_readonly_alt_container.TabIndex = 12;
@@ -1305,7 +1305,7 @@
             this.tlp_q1_container.ColumnCount = 3;
             this.tlp_q1_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tlp_q1_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tlp_q1_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 263F));
+            this.tlp_q1_container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 265F));
             this.tlp_q1_container.Controls.Add(this.rtxt_q1_2, 2, 1);
             this.tlp_q1_container.Controls.Add(this.lbl_q1_1, 0, 0);
             this.tlp_q1_container.Controls.Add(this.lbl_q1_2, 0, 1);
@@ -1324,9 +1324,9 @@
             // rtxt_q1_2
             // 
             this.rtxt_q1_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxt_q1_2.Location = new System.Drawing.Point(202, 60);
+            this.rtxt_q1_2.Location = new System.Drawing.Point(201, 60);
             this.rtxt_q1_2.Name = "rtxt_q1_2";
-            this.rtxt_q1_2.Size = new System.Drawing.Size(258, 50);
+            this.rtxt_q1_2.Size = new System.Drawing.Size(259, 50);
             this.rtxt_q1_2.TabIndex = 9;
             this.rtxt_q1_2.Text = "";
             // 
@@ -1335,7 +1335,7 @@
             this.lbl_q1_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_q1_1.Location = new System.Drawing.Point(4, 1);
             this.lbl_q1_1.Name = "lbl_q1_1";
-            this.lbl_q1_1.Size = new System.Drawing.Size(112, 55);
+            this.lbl_q1_1.Size = new System.Drawing.Size(111, 55);
             this.lbl_q1_1.TabIndex = 0;
             this.lbl_q1_1.Text = "General Specifications\r\n\r\n(Font and Spacing, Headers, Number Rules, Transcription" +
     " Basics General, Standalones)";
@@ -1345,16 +1345,16 @@
             this.lbl_q1_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_q1_2.Location = new System.Drawing.Point(4, 57);
             this.lbl_q1_2.Name = "lbl_q1_2";
-            this.lbl_q1_2.Size = new System.Drawing.Size(112, 56);
+            this.lbl_q1_2.Size = new System.Drawing.Size(111, 56);
             this.lbl_q1_2.TabIndex = 1;
             this.lbl_q1_2.Text = "Speaker Specification";
             // 
             // rtxt_q1_1
             // 
             this.rtxt_q1_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxt_q1_1.Location = new System.Drawing.Point(202, 4);
+            this.rtxt_q1_1.Location = new System.Drawing.Point(201, 4);
             this.rtxt_q1_1.Name = "rtxt_q1_1";
-            this.rtxt_q1_1.Size = new System.Drawing.Size(258, 49);
+            this.rtxt_q1_1.Size = new System.Drawing.Size(259, 49);
             this.rtxt_q1_1.TabIndex = 7;
             this.rtxt_q1_1.Text = "";
             // 
@@ -1363,7 +1363,7 @@
             this.pnl_cbo_q1_1_readonly_alt_container.Controls.Add(this.lbl_q1_1_cbo);
             this.pnl_cbo_q1_1_readonly_alt_container.Controls.Add(this.cbo_q1_1);
             this.pnl_cbo_q1_1_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_cbo_q1_1_readonly_alt_container.Location = new System.Drawing.Point(123, 4);
+            this.pnl_cbo_q1_1_readonly_alt_container.Location = new System.Drawing.Point(122, 4);
             this.pnl_cbo_q1_1_readonly_alt_container.Name = "pnl_cbo_q1_1_readonly_alt_container";
             this.pnl_cbo_q1_1_readonly_alt_container.Size = new System.Drawing.Size(72, 49);
             this.pnl_cbo_q1_1_readonly_alt_container.TabIndex = 11;
@@ -1393,7 +1393,7 @@
             this.pnl_cbo_q1_2_readonly_alt_container.Controls.Add(this.lbl_q1_2_cbo);
             this.pnl_cbo_q1_2_readonly_alt_container.Controls.Add(this.cbo_q1_2);
             this.pnl_cbo_q1_2_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_cbo_q1_2_readonly_alt_container.Location = new System.Drawing.Point(123, 60);
+            this.pnl_cbo_q1_2_readonly_alt_container.Location = new System.Drawing.Point(122, 60);
             this.pnl_cbo_q1_2_readonly_alt_container.Name = "pnl_cbo_q1_2_readonly_alt_container";
             this.pnl_cbo_q1_2_readonly_alt_container.Size = new System.Drawing.Size(72, 50);
             this.pnl_cbo_q1_2_readonly_alt_container.TabIndex = 12;

@@ -435,7 +435,7 @@
             // 
             this.tss_status.ForeColor = System.Drawing.Color.White;
             this.tss_status.Name = "tss_status";
-            this.tss_status.Size = new System.Drawing.Size(118, 17);
+            this.tss_status.Size = new System.Drawing.Size(109, 17);
             this.tss_status.Text = "toolStripStatusLabel1";
             // 
             // dgv_flag

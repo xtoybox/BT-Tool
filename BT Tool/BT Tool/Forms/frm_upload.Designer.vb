@@ -24,7 +24,9 @@ Partial Class frm_upload
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_upload))
-        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_exit = New System.Windows.Forms.Button()
@@ -67,6 +69,7 @@ Partial Class frm_upload
         Me.Panel1.Controls.Add(Me.btn_exit)
         Me.BunifuTransition1.SetDecoration(Me.Panel1, BunifuAnimatorNS.DecorationType.None)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -89,6 +92,7 @@ Partial Class frm_upload
         'btn_exit
         '
         Me.btn_exit.BackColor = System.Drawing.Color.DarkRed
+        Me.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuTransition1.SetDecoration(Me.btn_exit, BunifuAnimatorNS.DecorationType.None)
         Me.btn_exit.Dock = System.Windows.Forms.DockStyle.Right
         Me.btn_exit.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed
@@ -156,8 +160,12 @@ Partial Class frm_upload
         'btn_upload
         '
         Me.btn_upload.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_upload.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuTransition1.SetDecoration(Me.btn_upload, BunifuAnimatorNS.DecorationType.None)
         Me.btn_upload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.btn_upload.FlatAppearance.BorderSize = 0
+        Me.btn_upload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btn_upload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
         Me.btn_upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_upload.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_upload.ForeColor = System.Drawing.Color.White
@@ -279,31 +287,48 @@ Partial Class frm_upload
         '
         Me.BunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
         Me.BunifuTransition1.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.BunifuTransition1.DefaultAnimation = Animation1
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.BunifuTransition1.DefaultAnimation = Animation2
         '
         'grid_upload
         '
+        Me.grid_upload.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grid_upload.BackgroundColor = System.Drawing.Color.White
+        Me.grid_upload.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.grid_upload.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.grid_upload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BunifuTransition1.SetDecoration(Me.grid_upload, BunifuAnimatorNS.DecorationType.None)
         Me.grid_upload.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grid_upload.Location = New System.Drawing.Point(0, 130)
         Me.grid_upload.Name = "grid_upload"
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grid_upload.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.grid_upload.RowHeadersVisible = False
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
+        Me.grid_upload.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.grid_upload.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grid_upload.Size = New System.Drawing.Size(852, 399)
         Me.grid_upload.TabIndex = 2
         '
@@ -332,7 +357,7 @@ Partial Class frm_upload
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Gray
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BunifuTransition1.SetDecoration(Me.MenuStrip1, BunifuAnimatorNS.DecorationType.None)
         Me.MenuStrip1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadToolStripMenuItem, Me.SettingsToolStripMenuItem})
@@ -344,7 +369,7 @@ Partial Class frm_upload
         '
         'ReloadToolStripMenuItem
         '
-        Me.ReloadToolStripMenuItem.BackColor = System.Drawing.Color.DimGray
+        Me.ReloadToolStripMenuItem.BackColor = System.Drawing.Color.Gray
         Me.ReloadToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem"
         Me.ReloadToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
@@ -352,7 +377,7 @@ Partial Class frm_upload
         '
         'SettingsToolStripMenuItem
         '
-        Me.SettingsToolStripMenuItem.BackColor = System.Drawing.Color.DimGray
+        Me.SettingsToolStripMenuItem.BackColor = System.Drawing.Color.Gray
         Me.SettingsToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
@@ -378,10 +403,11 @@ Partial Class frm_upload
         Me.Controls.Add(Me.Panel1)
         Me.BunifuTransition1.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_upload"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frm_upload"
+        Me.Text = "BT-Tool Upload"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

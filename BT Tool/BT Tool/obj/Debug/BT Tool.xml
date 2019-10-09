@@ -297,6 +297,11 @@ BT Tool
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:BT_Tool.My.Resources.Resources.giphy">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:BT_Tool.My.Resources.Resources.hide_pass_24">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -398,6 +403,16 @@ BT Tool
 </summary>
 </member>
 <member name="P:BT_Tool.My.Resources.Resources.loader41">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.loading_12">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.Loading_login">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -552,12 +567,22 @@ BT Tool
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:BT_Tool.My.Resources.Resources.source">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:BT_Tool.My.Resources.Resources.submit_32">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:BT_Tool.My.Resources.Resources.submit_321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:BT_Tool.My.Resources.Resources.tenor">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -660,6 +685,45 @@ BT Tool
 <member name="M:BT_Tool.frm_upload.ShowAVIInfo(System.String)">
  <summary>
  get sound file details for duration
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_userlist.frm_userlist_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ Cancel asynchronous action before closing the form
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:BT_Tool.frm_userlist.LoadUserList">
+ <summary>
+ load user list from the database
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_userlist.LoadComboBox">
+ <summary>
+ This will populate the comboboxes
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_userlist.Filter">
+ <summary>
+ Contains the procedure for filtering the data from the user list datagridview datasource.
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_userlist.ResetUserForm">
+ <summary>
+ Reset the Add/Edit Fields to its default value.
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_userlist.FilterCbo(System.String,System.String)">
+ <summary>
+ Filter cbo_position base on department
+ </summary>
+ <param name="dep">cbo_dep value</param>
+ <param name="pos">cbo_pos value</param>
+</member>
+<member name="M:BT_Tool.frm_userlist.SetRestrictions">
+ <summary>
+ Setting the restriction for user list form.
  </summary>
 </member>
 <member name="T:BT_Tool.BorderStyleNoneExtensions.Resizer">
@@ -980,10 +1044,11 @@ Represents a strongly typed in-memory cache of data.
  populate combobox
  </summary>
 </member>
-<member name="M:BT_Tool.frm_main.btn_Audio_Click(System.Object,System.EventArgs)">
+<member name="M:BT_Tool.frm_main.btn_Audio_Click_1(System.Object,System.EventArgs)">
  <summary>
  opens audio file/audio directory(for cc)
  </summary>
+
 </member>
 <member name="M:BT_Tool.frm_main.archive_function">
  <summary>

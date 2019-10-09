@@ -24,10 +24,10 @@ Partial Class frm_userlist
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_userlist))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim CheckBoxProperties1 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim CheckBoxProperties2 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
+        Dim CheckBoxProperties3 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,6 +48,9 @@ Partial Class frm_userlist
         Me.txt_f_uname = New System.Windows.Forms.TextBox()
         Me.chk_f_locked = New System.Windows.Forms.CheckBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.btn_save = New System.Windows.Forms.Button()
+        Me.btn_clear = New System.Windows.Forms.Button()
         Me.btn_open_restrict_editor = New System.Windows.Forms.Button()
         Me.tlp_contain_multi = New System.Windows.Forms.TableLayoutPanel()
         Me.btn_activate = New System.Windows.Forms.Button()
@@ -60,9 +63,6 @@ Partial Class frm_userlist
         Me.btn_unlock = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.btn_clear = New System.Windows.Forms.Button()
-        Me.btn_save = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btn_edit_restrict = New System.Windows.Forms.Button()
         Me.chk_forbt = New System.Windows.Forms.CheckBox()
@@ -93,9 +93,9 @@ Partial Class frm_userlist
         Me.Panel9.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         Me.tlp_contain_multi.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.SuspendLayout()
@@ -108,19 +108,20 @@ Partial Class frm_userlist
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(699, 30)
+        Me.Panel1.Size = New System.Drawing.Size(696, 30)
         Me.Panel1.TabIndex = 0
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkRed
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = Global.BT_Tool.My.Resources.Resources.close1
-        Me.Button1.Location = New System.Drawing.Point(666, 0)
+        Me.Button1.Location = New System.Drawing.Point(663, 0)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(33, 30)
         Me.Button1.TabIndex = 1
@@ -147,7 +148,7 @@ Partial Class frm_userlist
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 30)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(699, 588)
+        Me.Panel2.Size = New System.Drawing.Size(696, 606)
         Me.Panel2.TabIndex = 1
         '
         'dgv_userlist
@@ -155,27 +156,28 @@ Partial Class frm_userlist
         Me.dgv_userlist.AllowUserToAddRows = False
         Me.dgv_userlist.AllowUserToDeleteRows = False
         Me.dgv_userlist.AllowUserToResizeRows = False
+        Me.dgv_userlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_userlist.BackgroundColor = System.Drawing.Color.White
         Me.dgv_userlist.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_userlist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv_userlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_userlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgv_userlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_userlist.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgv_userlist.Location = New System.Drawing.Point(213, 104)
         Me.dgv_userlist.Name = "dgv_userlist"
         Me.dgv_userlist.ReadOnly = True
         Me.dgv_userlist.RowHeadersVisible = False
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.dgv_userlist.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.dgv_userlist.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgv_userlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_userlist.Size = New System.Drawing.Size(484, 482)
+        Me.dgv_userlist.Size = New System.Drawing.Size(481, 500)
         Me.dgv_userlist.TabIndex = 4
         '
         'Panel9
@@ -186,7 +188,7 @@ Partial Class frm_userlist
         Me.Panel9.Location = New System.Drawing.Point(213, 0)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel9.Size = New System.Drawing.Size(484, 104)
+        Me.Panel9.Size = New System.Drawing.Size(481, 104)
         Me.Panel9.TabIndex = 3
         '
         'GroupBox1
@@ -210,15 +212,15 @@ Partial Class frm_userlist
         Me.GroupBox1.Location = New System.Drawing.Point(5, 5)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(5, 0, 5, 5)
-        Me.GroupBox1.Size = New System.Drawing.Size(474, 94)
+        Me.GroupBox1.Size = New System.Drawing.Size(471, 94)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filter:"
         '
         'cbo_f_dep
         '
-        CheckBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cbo_f_dep.CheckBoxProperties = CheckBoxProperties1
+        CheckBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cbo_f_dep.CheckBoxProperties = CheckBoxProperties2
         Me.cbo_f_dep.DisplayMemberSingleItem = ""
         Me.cbo_f_dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_f_dep.FormattingEnabled = True
@@ -229,8 +231,8 @@ Partial Class frm_userlist
         '
         'cbo_f_pos
         '
-        CheckBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cbo_f_pos.CheckBoxProperties = CheckBoxProperties2
+        CheckBoxProperties3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cbo_f_pos.CheckBoxProperties = CheckBoxProperties3
         Me.cbo_f_pos.DisplayMemberSingleItem = ""
         Me.cbo_f_pos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_f_pos.FormattingEnabled = True
@@ -357,6 +359,7 @@ Partial Class frm_userlist
         '
         Me.Panel3.AutoScroll = True
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Panel6)
         Me.Panel3.Controls.Add(Me.btn_open_restrict_editor)
         Me.Panel3.Controls.Add(Me.tlp_contain_multi)
         Me.Panel3.Controls.Add(Me.Label12)
@@ -366,20 +369,60 @@ Partial Class frm_userlist
         Me.Panel3.ForeColor = System.Drawing.Color.White
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(213, 586)
+        Me.Panel3.Size = New System.Drawing.Size(213, 604)
         Me.Panel3.TabIndex = 2
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.btn_save)
+        Me.Panel6.Controls.Add(Me.btn_clear)
+        Me.Panel6.Location = New System.Drawing.Point(5, 376)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(203, 33)
+        Me.Panel6.TabIndex = 23
+        '
+        'btn_save
+        '
+        Me.btn_save.BackColor = System.Drawing.Color.DimGray
+        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_save.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save.ForeColor = System.Drawing.Color.White
+        Me.btn_save.Location = New System.Drawing.Point(-2, 3)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(100, 24)
+        Me.btn_save.TabIndex = 11
+        Me.btn_save.Text = "Save"
+        Me.btn_save.UseVisualStyleBackColor = False
+        '
+        'btn_clear
+        '
+        Me.btn_clear.BackColor = System.Drawing.Color.DimGray
+        Me.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_clear.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_clear.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_clear.ForeColor = System.Drawing.Color.White
+        Me.btn_clear.Location = New System.Drawing.Point(102, 3)
+        Me.btn_clear.Name = "btn_clear"
+        Me.btn_clear.Size = New System.Drawing.Size(101, 24)
+        Me.btn_clear.TabIndex = 12
+        Me.btn_clear.Text = "Clear"
+        Me.btn_clear.UseVisualStyleBackColor = False
         '
         'btn_open_restrict_editor
         '
         Me.btn_open_restrict_editor.BackColor = System.Drawing.Color.DimGray
         Me.btn_open_restrict_editor.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_open_restrict_editor.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btn_open_restrict_editor.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.btn_open_restrict_editor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_open_restrict_editor.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_open_restrict_editor.ForeColor = System.Drawing.Color.White
-        Me.btn_open_restrict_editor.Location = New System.Drawing.Point(3, 551)
+        Me.btn_open_restrict_editor.Location = New System.Drawing.Point(0, 572)
         Me.btn_open_restrict_editor.Name = "btn_open_restrict_editor"
-        Me.btn_open_restrict_editor.Size = New System.Drawing.Size(207, 32)
+        Me.btn_open_restrict_editor.Size = New System.Drawing.Size(213, 32)
         Me.btn_open_restrict_editor.TabIndex = 12
         Me.btn_open_restrict_editor.Text = "Open User Restriction Editor"
         Me.btn_open_restrict_editor.UseVisualStyleBackColor = False
@@ -398,8 +441,7 @@ Partial Class frm_userlist
         Me.tlp_contain_multi.Controls.Add(Me.btn_bt_on, 0, 3)
         Me.tlp_contain_multi.Controls.Add(Me.btn_lock, 0, 2)
         Me.tlp_contain_multi.Controls.Add(Me.btn_unlock, 1, 2)
-        Me.tlp_contain_multi.Dock = System.Windows.Forms.DockStyle.Top
-        Me.tlp_contain_multi.Location = New System.Drawing.Point(0, 428)
+        Me.tlp_contain_multi.Location = New System.Drawing.Point(0, 445)
         Me.tlp_contain_multi.Name = "tlp_contain_multi"
         Me.tlp_contain_multi.RowCount = 4
         Me.tlp_contain_multi.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
@@ -548,9 +590,8 @@ Partial Class frm_userlist
         'Label12
         '
         Me.Label12.BackColor = System.Drawing.Color.Black
-        Me.Label12.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label12.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(0, 397)
+        Me.Label12.Location = New System.Drawing.Point(0, 411)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(213, 31)
         Me.Label12.TabIndex = 21
@@ -560,7 +601,6 @@ Partial Class frm_userlist
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.Panel6)
         Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Controls.Add(Me.cbo_locktime)
         Me.Panel4.Controls.Add(Me.Label10)
@@ -578,48 +618,8 @@ Partial Class frm_userlist
         Me.Panel4.Location = New System.Drawing.Point(0, 31)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel4.Size = New System.Drawing.Size(213, 366)
+        Me.Panel4.Size = New System.Drawing.Size(213, 348)
         Me.Panel4.TabIndex = 20
-        '
-        'Panel6
-        '
-        Me.Panel6.Controls.Add(Me.btn_clear)
-        Me.Panel6.Controls.Add(Me.btn_save)
-        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel6.Location = New System.Drawing.Point(5, 334)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(203, 28)
-        Me.Panel6.TabIndex = 23
-        '
-        'btn_clear
-        '
-        Me.btn_clear.BackColor = System.Drawing.Color.DimGray
-        Me.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_clear.FlatAppearance.BorderColor = System.Drawing.Color.Gray
-        Me.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_clear.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_clear.ForeColor = System.Drawing.Color.White
-        Me.btn_clear.Location = New System.Drawing.Point(103, 3)
-        Me.btn_clear.Name = "btn_clear"
-        Me.btn_clear.Size = New System.Drawing.Size(100, 24)
-        Me.btn_clear.TabIndex = 12
-        Me.btn_clear.Text = "Clear"
-        Me.btn_clear.UseVisualStyleBackColor = False
-        '
-        'btn_save
-        '
-        Me.btn_save.BackColor = System.Drawing.Color.DimGray
-        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.Gray
-        Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_save.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save.ForeColor = System.Drawing.Color.White
-        Me.btn_save.Location = New System.Drawing.Point(-2, 3)
-        Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(100, 24)
-        Me.btn_save.TabIndex = 11
-        Me.btn_save.Text = "Save"
-        Me.btn_save.UseVisualStyleBackColor = False
         '
         'Panel5
         '
@@ -629,7 +629,7 @@ Partial Class frm_userlist
         Me.Panel5.Controls.Add(Me.chk_locked)
         Me.Panel5.Controls.Add(Me.chk_deactivate)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(5, 260)
+        Me.Panel5.Location = New System.Drawing.Point(5, 270)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(203, 74)
         Me.Panel5.TabIndex = 22
@@ -702,18 +702,18 @@ Partial Class frm_userlist
         Me.cbo_locktime.Dock = System.Windows.Forms.DockStyle.Top
         Me.cbo_locktime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_locktime.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbo_locktime.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbo_locktime.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_locktime.FormattingEnabled = True
-        Me.cbo_locktime.Location = New System.Drawing.Point(5, 239)
+        Me.cbo_locktime.Location = New System.Drawing.Point(5, 246)
         Me.cbo_locktime.Name = "cbo_locktime"
-        Me.cbo_locktime.Size = New System.Drawing.Size(203, 21)
+        Me.cbo_locktime.Size = New System.Drawing.Size(203, 24)
         Me.cbo_locktime.TabIndex = 6
         '
         'Label10
         '
         Me.Label10.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(5, 217)
+        Me.Label10.Location = New System.Drawing.Point(5, 224)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(203, 22)
         Me.Label10.TabIndex = 14
@@ -725,18 +725,18 @@ Partial Class frm_userlist
         Me.cbo_pos.Dock = System.Windows.Forms.DockStyle.Top
         Me.cbo_pos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_pos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbo_pos.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbo_pos.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_pos.FormattingEnabled = True
-        Me.cbo_pos.Location = New System.Drawing.Point(5, 196)
+        Me.cbo_pos.Location = New System.Drawing.Point(5, 200)
         Me.cbo_pos.Name = "cbo_pos"
-        Me.cbo_pos.Size = New System.Drawing.Size(203, 21)
+        Me.cbo_pos.Size = New System.Drawing.Size(203, 24)
         Me.cbo_pos.TabIndex = 5
         '
         'Label9
         '
         Me.Label9.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(5, 174)
+        Me.Label9.Location = New System.Drawing.Point(5, 178)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(203, 22)
         Me.Label9.TabIndex = 10
@@ -750,7 +750,7 @@ Partial Class frm_userlist
         Me.cbo_dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_dep.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_dep.FormattingEnabled = True
-        Me.cbo_dep.Location = New System.Drawing.Point(5, 150)
+        Me.cbo_dep.Location = New System.Drawing.Point(5, 154)
         Me.cbo_dep.Name = "cbo_dep"
         Me.cbo_dep.Size = New System.Drawing.Size(203, 24)
         Me.cbo_dep.TabIndex = 4
@@ -758,8 +758,8 @@ Partial Class frm_userlist
         'Label8
         '
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(5, 128)
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(5, 132)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(203, 22)
         Me.Label8.TabIndex = 9
@@ -771,7 +771,7 @@ Partial Class frm_userlist
         Me.Panel8.Controls.Add(Me.btn_showhide_pass)
         Me.Panel8.Controls.Add(Me.txt_pass)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel8.Location = New System.Drawing.Point(5, 106)
+        Me.Panel8.Location = New System.Drawing.Point(5, 110)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(203, 22)
         Me.Panel8.TabIndex = 21
@@ -795,10 +795,10 @@ Partial Class frm_userlist
         '
         Me.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_pass.Dock = System.Windows.Forms.DockStyle.Left
-        Me.txt_pass.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_pass.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_pass.Location = New System.Drawing.Point(0, 0)
         Me.txt_pass.Name = "txt_pass"
-        Me.txt_pass.Size = New System.Drawing.Size(174, 19)
+        Me.txt_pass.Size = New System.Drawing.Size(174, 21)
         Me.txt_pass.TabIndex = 3
         Me.txt_pass.UseSystemPasswordChar = True
         '
@@ -806,7 +806,7 @@ Partial Class frm_userlist
         '
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(5, 84)
+        Me.Label7.Location = New System.Drawing.Point(5, 88)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(203, 22)
         Me.Label7.TabIndex = 4
@@ -817,17 +817,17 @@ Partial Class frm_userlist
         '
         Me.txt_uname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_uname.Dock = System.Windows.Forms.DockStyle.Top
-        Me.txt_uname.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_uname.Location = New System.Drawing.Point(5, 65)
+        Me.txt_uname.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_uname.Location = New System.Drawing.Point(5, 67)
         Me.txt_uname.Name = "txt_uname"
-        Me.txt_uname.Size = New System.Drawing.Size(203, 19)
+        Me.txt_uname.Size = New System.Drawing.Size(203, 21)
         Me.txt_uname.TabIndex = 2
         '
         'Label6
         '
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(5, 43)
+        Me.Label6.Location = New System.Drawing.Point(5, 45)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(203, 22)
         Me.Label6.TabIndex = 2
@@ -838,10 +838,10 @@ Partial Class frm_userlist
         '
         Me.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_name.Dock = System.Windows.Forms.DockStyle.Top
-        Me.txt_name.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_name.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_name.Location = New System.Drawing.Point(5, 24)
         Me.txt_name.Name = "txt_name"
-        Me.txt_name.Size = New System.Drawing.Size(203, 19)
+        Me.txt_name.Size = New System.Drawing.Size(203, 21)
         Me.txt_name.TabIndex = 1
         '
         'Label5
@@ -885,13 +885,14 @@ Partial Class frm_userlist
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(699, 618)
+        Me.ClientSize = New System.Drawing.Size(696, 636)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_userlist"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frm_userlist"
+        Me.Text = "BT-Tool Userlist"
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -901,10 +902,10 @@ Partial Class frm_userlist
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
         Me.tlp_contain_multi.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel8.ResumeLayout(False)

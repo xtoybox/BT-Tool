@@ -93,7 +93,6 @@ Public Class frm_main
         '    End If
         'End If
 
-
         'If Directory.Exists("\\accomediasvr\MediaFiles-2\FROOT") Then
         '    varMod.BaseServer = "\\accomediasvr\MediaFiles-2\FROOT"
         'ElseIf Directory.Exists("\\172.16.3.54\MediaFiles-2\FROOT") Then
@@ -485,14 +484,6 @@ Public Class frm_main
         End
     End Sub
 
-    Private Sub Exit_btn_MouseHover(sender As Object, e As EventArgs) Handles Exit_btn.MouseHover
-        Exit_btn.BackColor = Color.Red
-    End Sub
-
-    Private Sub Exit_btn_MouseLeave(sender As Object, e As EventArgs) Handles Exit_btn.MouseLeave
-        Exit_btn.BackColor = Color.Black
-    End Sub
-
     ''' <summary>
     ''' populate combobox
     ''' </summary>
@@ -584,8 +575,8 @@ Public Class frm_main
     ''' <summary>
     ''' opens audio file/audio directory(for cc)
     ''' </summary>
-    Private Sub btn_Audio_Click(sender As Object, e As EventArgs) Handles btn_Audio.Click
-
+    '''
+    Private Sub btn_Audio_Click_1(sender As Object, e As EventArgs) Handles btn_Audio.Click
         Try
             If Me.txt_audio.Text <> "" Then
                 'markDBOClass.SQLClass.conStr = "this value"
@@ -640,11 +631,11 @@ Public Class frm_main
         End Try
     End Sub
 
-    Private Sub btn_Doc_Click(sender As Object, e As EventArgs) Handles btn_Doc.Click
+    Private Sub btn_Doc_Click_1(sender As Object, e As EventArgs) Handles btn_Doc.Click
 
     End Sub
 
-    Private Sub rd_express_CheckedChanged(sender As Object, e As EventArgs) Handles rd_express.CheckedChanged, rd_acqt.CheckedChanged, rd_pepsup.CheckedChanged
+    Private Sub rd_express_CheckedChanged(sender As Object, e As EventArgs)
 
         If rd_express.Checked Then
             defaultPlayer = 1
@@ -990,7 +981,7 @@ Public Class frm_main
     End Sub
 
     Private Sub btn_userlist_Click(sender As Object, e As EventArgs) Handles btn_userlist.Click
-        frm_userlist.Show()
+        frm_userlist.ShowDialog(Me)
     End Sub
 
     Private Sub User_Btn_Click(sender As Object, e As EventArgs) Handles User_Btn.Click
@@ -1021,5 +1012,39 @@ Public Class frm_main
 
         BunifuTransition1.HideSync(User_Pnl)
 
+    End Sub
+
+    Private Sub btn_workflow_Click(sender As Object, e As EventArgs) Handles btn_workflow.Click
+
+        frm_workflow.ShowDialog(Me)
+
+    End Sub
+
+    Private Sub btn_file_eval_Click(sender As Object, e As EventArgs) Handles btn_file_eval.Click
+        frm_file_eval.ShowDialog(Me)
+    End Sub
+
+    Private Sub btn_flagging_Click(sender As Object, e As EventArgs) Handles btn_flagging.Click
+        frm_flagging.ShowDialog(Me)
+    End Sub
+
+    Private Sub btn_myeval_Click(sender As Object, e As EventArgs) Handles btn_myeval.Click
+        frm_file_eval.ShowDialog(Me)
+    End Sub
+
+    Private Sub btn_break_Click(sender As Object, e As EventArgs) Handles btn_break.Click
+        frm_break.ShowDialog(Me)
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
+
+    End Sub
+
+    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel2.Paint
+
+    End Sub
+
+    Private Sub Panel1_DoubleClick(sender As Object, e As EventArgs) Handles Panel1.DoubleClick
+        Me.Location = New Point(0, 0)
     End Sub
 End Class

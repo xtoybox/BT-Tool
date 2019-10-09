@@ -66,18 +66,6 @@ Public Class frm_login
 
     End Sub
 
-    Private Sub Login_btn_MouseEnter(sender As Object, e As EventArgs) Handles btn_login.MouseEnter
-        btn_login.BackColor = Color.Black
-    End Sub
-
-    Private Sub Login_btn_MouseLeave(sender As Object, e As EventArgs) Handles btn_login.MouseLeave
-
-        btn_login.BackColor = Color.Transparent
-
-        Button2.Image = My.Resources.show_pass_24
-
-    End Sub
-
     Sub trylogin()
 
         ' -- Test Db Login --
@@ -87,8 +75,10 @@ Public Class frm_login
 
         If txt_username.Text.Length <= 0 Then
             Error1_lbl.Visible = True
+            btn_login.Image = My.Resources.logout_32
         ElseIf txt_password.Text.Length <= 0 Then
             Error2_lbl.Visible = True
+            btn_login.Image = My.Resources.logout_32
         Else
 
             Dim sql As String = "SELECT COUNT(*) FROM Login WHERE Username=@Username AND Password=@Password"
@@ -99,6 +89,7 @@ Public Class frm_login
                     cmd.Parameters.AddWithValue("@Password", txt_password.Text)
                     Dim value = cmd.ExecuteScalar()
                     If value > 0 Then
+                        btn_login.Image = My.Resources.logout_32
                         frm_main.Show()
                         frm_main.Enabled = True
                         Me.Close()
