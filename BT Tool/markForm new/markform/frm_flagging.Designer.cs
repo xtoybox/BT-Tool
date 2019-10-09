@@ -465,6 +465,7 @@
             this.dgv_flag.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_flag.Size = new System.Drawing.Size(872, 551);
             this.dgv_flag.TabIndex = 2;
+            this.dgv_flag.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_flag_CellContentClick);
             this.dgv_flag.Sorted += new System.EventHandler(this.dgv_flag_Sorted);
             // 
             // frm_flagging

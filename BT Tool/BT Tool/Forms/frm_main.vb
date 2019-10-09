@@ -382,12 +382,6 @@ Public Class frm_main
         'End If
     End Sub
 
-    Sub hidedropdowns()
-
-        BunifuTransition1.HideSync(User_Pnl)
-
-    End Sub
-
     'Private Sub Burgermenu_btn_Click(sender As Object, e As EventArgs)
 
     '    If User_Pnl.Height = 200 Then
@@ -463,22 +457,6 @@ Public Class frm_main
     '    End If
 
     'End Sub
-    Private Sub Main_form_Click(sender As Object, e As EventArgs) Handles Me.Click
-        hidedropdowns()
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles main_gridview.CellContentClick
-        hidedropdowns()
-    End Sub
-
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles main_gridview.CellClick
-        hidedropdowns()
-    End Sub
-
-    Private Sub Main_pnl_Click(sender As Object, e As EventArgs) Handles Main_pnl.Click
-        hidedropdowns()
-    End Sub
-
 
     Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
         End
@@ -886,38 +864,6 @@ Public Class frm_main
 
     ' Dropdown hide when other objects are clicked
 
-    Private Sub Burgermenu_btn_LostFocus(sender As Object, e As EventArgs)
-
-        If btn_myeval.Focused Then
-
-        ElseIf btn_file_eval.Focused Then
-
-        ElseIf btn_monitoring.Focused Then
-
-        ElseIf btn_viewreturn.Focused Then
-
-        ElseIf btn_flagging.Focused Then
-
-        ElseIf btn_ratio_tracker.Focused Then
-
-        ElseIf btn_idle_tracker.Focused Then
-
-        ElseIf btn_wait_tracker.Focused Then
-
-        ElseIf btn_files_due.Focused Then
-
-        ElseIf btn_userlist.Focused Then
-
-        ElseIf btn_workflow.Focused Then
-
-        Else
-
-            hidedropdowns()
-
-        End If
-
-    End Sub
-
     ' Dropdown hide when other objects are clicked - END
 
     Private Sub btn_archive_Click(sender As Object, e As EventArgs) Handles btn_archive.Click
@@ -984,36 +930,6 @@ Public Class frm_main
         frm_userlist.ShowDialog(Me)
     End Sub
 
-    Private Sub User_Btn_Click(sender As Object, e As EventArgs) Handles User_Btn.Click
-
-        If User_Pnl.Visible = False Then
-
-            BunifuTransition1.ShowSync(User_Pnl)
-
-        ElseIf User_Pnl.Visible = True Then
-
-            BunifuTransition1.HideSync(User_Pnl)
-
-        End If
-
-    End Sub
-
-    Private Sub User_Btn_LostFocus(sender As Object, e As EventArgs) Handles User_Btn.LostFocus
-        If btn_loginout.Focused Then
-
-        Else
-
-            hidedropdowns()
-
-        End If
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
-        BunifuTransition1.HideSync(User_Pnl)
-
-    End Sub
-
     Private Sub btn_workflow_Click(sender As Object, e As EventArgs) Handles btn_workflow.Click
 
         frm_workflow.ShowDialog(Me)
@@ -1025,7 +941,9 @@ Public Class frm_main
     End Sub
 
     Private Sub btn_flagging_Click(sender As Object, e As EventArgs) Handles btn_flagging.Click
-        frm_flagging.ShowDialog(Me)
+        Dim flagging = New frm_flagging
+
+        flagging.ShowDialog(Me)
     End Sub
 
     Private Sub btn_myeval_Click(sender As Object, e As EventArgs) Handles btn_myeval.Click

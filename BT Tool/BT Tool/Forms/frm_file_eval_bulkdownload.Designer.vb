@@ -134,16 +134,15 @@ Partial Class frm_file_eval_bulkdownload
         Me.pnl_action_btn_container.Controls.Add(Me.Panel3)
         Me.pnl_action_btn_container.Controls.Add(Me.btn_close)
         Me.pnl_action_btn_container.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnl_action_btn_container.Location = New System.Drawing.Point(0, 417)
+        Me.pnl_action_btn_container.Location = New System.Drawing.Point(0, 407)
         Me.pnl_action_btn_container.Name = "pnl_action_btn_container"
-        Me.pnl_action_btn_container.Size = New System.Drawing.Size(472, 26)
+        Me.pnl_action_btn_container.Size = New System.Drawing.Size(472, 36)
         Me.pnl_action_btn_container.TabIndex = 7
         '
         'btn_download
         '
         Me.btn_download.BackColor = System.Drawing.Color.DimGray
         Me.btn_download.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_download.Dock = System.Windows.Forms.DockStyle.Right
         Me.btn_download.Enabled = False
         Me.btn_download.FlatAppearance.BorderSize = 0
         Me.btn_download.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
@@ -151,7 +150,7 @@ Partial Class frm_file_eval_bulkdownload
         Me.btn_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_download.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_download.ForeColor = System.Drawing.Color.White
-        Me.btn_download.Location = New System.Drawing.Point(327, 0)
+        Me.btn_download.Location = New System.Drawing.Point(307, 3)
         Me.btn_download.Name = "btn_download"
         Me.btn_download.Size = New System.Drawing.Size(73, 26)
         Me.btn_download.TabIndex = 1
@@ -161,9 +160,9 @@ Partial Class frm_file_eval_bulkdownload
         'Panel3
         '
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel3.Location = New System.Drawing.Point(400, 0)
+        Me.Panel3.Location = New System.Drawing.Point(462, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(10, 26)
+        Me.Panel3.Size = New System.Drawing.Size(10, 36)
         Me.Panel3.TabIndex = 2
         '
         'btn_close
@@ -171,14 +170,13 @@ Partial Class frm_file_eval_bulkdownload
         Me.btn_close.BackColor = System.Drawing.Color.DimGray
         Me.btn_close.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_close.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btn_close.Dock = System.Windows.Forms.DockStyle.Right
         Me.btn_close.FlatAppearance.BorderSize = 0
         Me.btn_close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btn_close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_close.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_close.ForeColor = System.Drawing.Color.White
-        Me.btn_close.Location = New System.Drawing.Point(410, 0)
+        Me.btn_close.Location = New System.Drawing.Point(390, 3)
         Me.btn_close.Name = "btn_close"
         Me.btn_close.Size = New System.Drawing.Size(62, 26)
         Me.btn_close.TabIndex = 0
@@ -198,6 +196,7 @@ Partial Class frm_file_eval_bulkdownload
         'tss_status
         '
         Me.tss_status.BackColor = System.Drawing.Color.DimGray
+        Me.tss_status.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter
         Me.tss_status.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tss_status.ForeColor = System.Drawing.Color.White
         Me.tss_status.Name = "tss_status"
@@ -220,7 +219,7 @@ Partial Class frm_file_eval_bulkdownload
         '
         'txt_directory
         '
-        Me.txt_directory.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txt_directory.BackColor = System.Drawing.Color.White
         Me.txt_directory.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_directory.Location = New System.Drawing.Point(10, 24)
         Me.txt_directory.Name = "txt_directory"
@@ -232,7 +231,6 @@ Partial Class frm_file_eval_bulkdownload
         '
         Me.btn_browse_folder.BackColor = System.Drawing.Color.DimGray
         Me.btn_browse_folder.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_browse_folder.Dock = System.Windows.Forms.DockStyle.Right
         Me.btn_browse_folder.FlatAppearance.BorderSize = 0
         Me.btn_browse_folder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btn_browse_folder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
@@ -240,7 +238,7 @@ Partial Class frm_file_eval_bulkdownload
         Me.btn_browse_folder.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_browse_folder.Location = New System.Drawing.Point(402, 24)
         Me.btn_browse_folder.Name = "btn_browse_folder"
-        Me.btn_browse_folder.Size = New System.Drawing.Size(38, 19)
+        Me.btn_browse_folder.Size = New System.Drawing.Size(38, 21)
         Me.btn_browse_folder.TabIndex = 1
         Me.btn_browse_folder.Text = "..."
         Me.btn_browse_folder.UseVisualStyleBackColor = False

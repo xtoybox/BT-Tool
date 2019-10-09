@@ -24,10 +24,10 @@ Partial Class frm_userlist
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_userlist))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim CheckBoxProperties1 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
         Dim CheckBoxProperties2 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
-        Dim CheckBoxProperties3 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -84,7 +84,6 @@ Partial Class frm_userlist
         Me.txt_name = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
@@ -160,22 +159,22 @@ Partial Class frm_userlist
         Me.dgv_userlist.BackgroundColor = System.Drawing.Color.White
         Me.dgv_userlist.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_userlist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv_userlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_userlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_userlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_userlist.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgv_userlist.Location = New System.Drawing.Point(213, 104)
         Me.dgv_userlist.Name = "dgv_userlist"
         Me.dgv_userlist.ReadOnly = True
         Me.dgv_userlist.RowHeadersVisible = False
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.dgv_userlist.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.dgv_userlist.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv_userlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_userlist.Size = New System.Drawing.Size(481, 500)
         Me.dgv_userlist.TabIndex = 4
@@ -219,8 +218,8 @@ Partial Class frm_userlist
         '
         'cbo_f_dep
         '
-        CheckBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cbo_f_dep.CheckBoxProperties = CheckBoxProperties2
+        CheckBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cbo_f_dep.CheckBoxProperties = CheckBoxProperties1
         Me.cbo_f_dep.DisplayMemberSingleItem = ""
         Me.cbo_f_dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_f_dep.FormattingEnabled = True
@@ -231,8 +230,8 @@ Partial Class frm_userlist
         '
         'cbo_f_pos
         '
-        CheckBoxProperties3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cbo_f_pos.CheckBoxProperties = CheckBoxProperties3
+        CheckBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cbo_f_pos.CheckBoxProperties = CheckBoxProperties2
         Me.cbo_f_pos.DisplayMemberSingleItem = ""
         Me.cbo_f_pos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_f_pos.FormattingEnabled = True
@@ -867,13 +866,6 @@ Partial Class frm_userlist
         Me.Label11.Text = "Add/ Edit User"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'BunifuDragControl1
-        '
-        Me.BunifuDragControl1.Fixed = True
-        Me.BunifuDragControl1.Horizontal = True
-        Me.BunifuDragControl1.TargetControl = Me.Panel1
-        Me.BunifuDragControl1.Vertical = True
-        '
         'ImageList1
         '
         Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
@@ -967,7 +959,6 @@ Partial Class frm_userlist
     Friend WithEvents chk_f_forbt As CheckBox
     Friend WithEvents txt_f_uname As TextBox
     Friend WithEvents chk_f_locked As CheckBox
-    Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents dgv_userlist As DataGridView
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents ToolTip1 As ToolTip

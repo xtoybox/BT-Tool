@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_minimized
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,13 @@ Partial Class frm_minimized
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_minimized))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.SuspendLayout()
         '
         'Label1
@@ -89,13 +87,6 @@ Partial Class frm_minimized
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'BunifuDragControl1
-        '
-        Me.BunifuDragControl1.Fixed = True
-        Me.BunifuDragControl1.Horizontal = True
-        Me.BunifuDragControl1.TargetControl = Me
-        Me.BunifuDragControl1.Vertical = True
-        '
         'frm_minimized
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -121,5 +112,4 @@ Partial Class frm_minimized
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
 End Class

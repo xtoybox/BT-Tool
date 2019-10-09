@@ -22,14 +22,12 @@ Partial Class frm_workflow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_workflow))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.dgv_wf = New System.Windows.Forms.DataGridView()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -94,13 +92,6 @@ Partial Class frm_workflow
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Workflow"
         '
-        'BunifuDragControl1
-        '
-        Me.BunifuDragControl1.Fixed = True
-        Me.BunifuDragControl1.Horizontal = True
-        Me.BunifuDragControl1.TargetControl = Me.Panel1
-        Me.BunifuDragControl1.Vertical = True
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
@@ -118,12 +109,12 @@ Partial Class frm_workflow
         Me.dgv_wf.AllowUserToAddRows = False
         Me.dgv_wf.AllowUserToDeleteRows = False
         Me.dgv_wf.AllowUserToResizeRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgv_wf.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgv_wf.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_wf.BackgroundColor = System.Drawing.Color.White
         Me.dgv_wf.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_wf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -132,8 +123,8 @@ Partial Class frm_workflow
         Me.dgv_wf.Name = "dgv_wf"
         Me.dgv_wf.ReadOnly = True
         Me.dgv_wf.RowHeadersVisible = False
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.dgv_wf.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.dgv_wf.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv_wf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_wf.Size = New System.Drawing.Size(198, 340)
         Me.dgv_wf.TabIndex = 5
@@ -401,7 +392,6 @@ Partial Class frm_workflow
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents Panel2 As Panel
     Friend WithEvents dgv_wf As DataGridView
     Friend WithEvents Panel3 As Panel

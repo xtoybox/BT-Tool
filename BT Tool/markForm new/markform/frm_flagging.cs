@@ -428,6 +428,11 @@ namespace markform
 
         }
 
+        private void dgv_flag_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Filter data
         /// </summary>

@@ -23,47 +23,14 @@ Public Class frm_login
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-        If Button2.Image Is showpass Then
-
-            Button2.Image = hidepass
-            txt_password.PasswordChar = ""
-
-        ElseIf Button2.Image Is hidepass Then
-
-            Button2.Image = showpass
-            txt_password.PasswordChar = "•"
-
-        End If
-
-    End Sub
-
-    Private Sub txtUser_KeyUp(sender As Object, e As KeyEventArgs) Handles txt_username.KeyDown
+    Private Sub txtUser_KeyUp(sender As Object, e As KeyEventArgs)
         If Me.err.Text <> "" Then Me.err.Text = ""
-        If e.KeyCode = Keys.Enter Then Me.btn_login_Click(sender, e)
+        If e.KeyCode = Keys.Enter Then Me.btn_login_Click_1(sender, e)
     End Sub
 
-    Private Sub txtPass_KeyUp(sender As Object, e As KeyEventArgs) Handles txt_password.KeyDown
+    Private Sub txtPass_KeyUp(sender As Object, e As KeyEventArgs)
         If Me.err.Text <> "" Then Me.err.Text = ""
-        If e.KeyCode = Keys.Enter Then Me.btn_login_Click(sender, e)
-    End Sub
-
-    Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
-
-        'trylogin()
-
-        Dim login As Boolean = mainClass.userLogin(1)
-
-        If login = True Then
-
-            Me.err.Text = ""
-            Me.txt_username.Text = ""
-            Me.txt_password.Text = ""
-            Me.Close()
-
-        End If
-
+        If e.KeyCode = Keys.Enter Then Me.btn_login_Click_1(sender, e)
     End Sub
 
     Sub trylogin()
@@ -105,6 +72,62 @@ Public Class frm_login
 
     End Sub
 
+    Private Sub btn_login_Click_1(sender As Object, e As EventArgs) Handles btn_login.Click
+        'trylogin()
 
+        Dim login As Boolean = mainClass.userLogin(1)
 
+        If login = True Then
+
+            Me.err.Text = ""
+            Me.txt_username.Text = ""
+            Me.txt_password.Text = ""
+            Me.Close()
+
+        End If
+    End Sub
+
+    Private Sub Error1_lbl_Click(sender As Object, e As EventArgs) Handles Error1_lbl.Click
+
+    End Sub
+
+    Private Sub err_Click(sender As Object, e As EventArgs) Handles err.Click
+
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+
+        If Button2.Image Is showpass Then
+
+            Button2.Image = hidepass
+            txt_password.PasswordChar = ""
+
+        ElseIf Button2.Image Is hidepass Then
+
+            Button2.Image = showpass
+            txt_password.PasswordChar = "•"
+
+        End If
+
+    End Sub
+
+    Private Sub Error2_lbl_Click(sender As Object, e As EventArgs) Handles Error2_lbl.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
+
+    End Sub
+
+    Private Sub txt_username_TextChanged(sender As Object, e As EventArgs) Handles txt_username.TextChanged
+
+    End Sub
 End Class

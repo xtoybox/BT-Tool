@@ -132,7 +132,7 @@ Public Class frm_upload
                 'get date?
                 'Dim newDir As String = Regex.Replace(sDir, "[/\\][/\\]+[A-Za-z0-9._%+-]+[/\\]+[A-Za-z0-9._%+-]+[/\\]", "", RegexOptions.IgnoreCase)
                 'Dim newDir As String = Regex.Replace(sDir, varMod.BaseServer, "", RegexOptions.IgnoreCase)
-                Dim newDir As String = sDir.Replace(varmod.BaseServer & "\", "")
+                Dim newDir As String = sDir.Replace(varMod.BaseServer & "\", "")
                 Dim serverPath As String = Path.Combine(gPath, fName)
 
                 'Try
@@ -551,7 +551,7 @@ here:
                 Console.WriteLine(sDir)
 
                 Dim servSound As String = Path.Combine("FROOT\AUDIO", uploadDir, branch)
-                Dim gPath As String = Path.Combine(varMod.BaseServer, servsound)
+                Dim gPath As String = Path.Combine(varMod.BaseServer, servSound)
                 If Not Directory.Exists(gPath) Then Directory.CreateDirectory(gPath)
 
                 If branch <> "" Then
@@ -666,6 +666,10 @@ onError:
 
         Dim ds As DataTable = grid_upload.DataSource
         ds.DefaultView.RowFilter = txt
+
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
 
     End Sub
 

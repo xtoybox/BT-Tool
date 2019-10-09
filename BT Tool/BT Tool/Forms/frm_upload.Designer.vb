@@ -22,11 +22,9 @@ Partial Class frm_upload
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_upload))
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_exit = New System.Windows.Forms.Button()
@@ -44,14 +42,12 @@ Partial Class frm_upload
         Me.cbo_client = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_filename = New System.Windows.Forms.TextBox()
-        Me.BunifuTransition1 = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.grid_upload = New System.Windows.Forms.DataGridView()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ReloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -67,7 +63,6 @@ Partial Class frm_upload
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btn_exit)
-        Me.BunifuTransition1.SetDecoration(Me.Panel1, BunifuAnimatorNS.DecorationType.None)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.ForeColor = System.Drawing.Color.White
@@ -80,7 +75,6 @@ Partial Class frm_upload
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuTransition1.SetDecoration(Me.Label1, BunifuAnimatorNS.DecorationType.None)
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 8)
@@ -93,7 +87,6 @@ Partial Class frm_upload
         '
         Me.btn_exit.BackColor = System.Drawing.Color.DarkRed
         Me.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTransition1.SetDecoration(Me.btn_exit, BunifuAnimatorNS.DecorationType.None)
         Me.btn_exit.Dock = System.Windows.Forms.DockStyle.Right
         Me.btn_exit.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed
         Me.btn_exit.FlatAppearance.BorderSize = 0
@@ -111,7 +104,6 @@ Partial Class frm_upload
         Me.Panel2.BackColor = System.Drawing.Color.DimGray
         Me.Panel2.Controls.Add(Me.GroupBox2)
         Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.BunifuTransition1.SetDecoration(Me.Panel2, BunifuAnimatorNS.DecorationType.None)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 62)
         Me.Panel2.Name = "Panel2"
@@ -127,7 +119,6 @@ Partial Class frm_upload
         Me.GroupBox2.Controls.Add(Me.dtp_due)
         Me.GroupBox2.Controls.Add(Me.cbo_workflow)
         Me.GroupBox2.Controls.Add(Me.dtp_time)
-        Me.BunifuTransition1.SetDecoration(Me.GroupBox2, BunifuAnimatorNS.DecorationType.None)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(294, 1)
         Me.GroupBox2.Name = "GroupBox2"
@@ -138,7 +129,6 @@ Partial Class frm_upload
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.BunifuTransition1.SetDecoration(Me.Label6, BunifuAnimatorNS.DecorationType.None)
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(6, 12)
         Me.Label6.Name = "Label6"
@@ -149,7 +139,6 @@ Partial Class frm_upload
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.BunifuTransition1.SetDecoration(Me.Label5, BunifuAnimatorNS.DecorationType.None)
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(264, 13)
         Me.Label5.Name = "Label5"
@@ -161,7 +150,6 @@ Partial Class frm_upload
         '
         Me.btn_upload.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btn_upload.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTransition1.SetDecoration(Me.btn_upload, BunifuAnimatorNS.DecorationType.None)
         Me.btn_upload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.btn_upload.FlatAppearance.BorderSize = 0
         Me.btn_upload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
@@ -179,7 +167,6 @@ Partial Class frm_upload
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.BunifuTransition1.SetDecoration(Me.Label4, BunifuAnimatorNS.DecorationType.None)
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(142, 13)
         Me.Label4.Name = "Label4"
@@ -190,7 +177,6 @@ Partial Class frm_upload
         'dtp_due
         '
         Me.dtp_due.CustomFormat = "M/d/yyyy h:mm:ss tt"
-        Me.BunifuTransition1.SetDecoration(Me.dtp_due, BunifuAnimatorNS.DecorationType.None)
         Me.dtp_due.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtp_due.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtp_due.Location = New System.Drawing.Point(145, 29)
@@ -200,7 +186,6 @@ Partial Class frm_upload
         '
         'cbo_workflow
         '
-        Me.BunifuTransition1.SetDecoration(Me.cbo_workflow, BunifuAnimatorNS.DecorationType.None)
         Me.cbo_workflow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_workflow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_workflow.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -214,7 +199,6 @@ Partial Class frm_upload
         'dtp_time
         '
         Me.dtp_time.CustomFormat = "M/d/yyyy h:mm:ss tt"
-        Me.BunifuTransition1.SetDecoration(Me.dtp_time, BunifuAnimatorNS.DecorationType.None)
         Me.dtp_time.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtp_time.Format = System.Windows.Forms.DateTimePickerFormat.Time
         Me.dtp_time.Location = New System.Drawing.Point(267, 29)
@@ -230,7 +214,6 @@ Partial Class frm_upload
         Me.GroupBox1.Controls.Add(Me.cbo_client)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txt_filename)
-        Me.BunifuTransition1.SetDecoration(Me.GroupBox1, BunifuAnimatorNS.DecorationType.None)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(6, -1)
@@ -243,7 +226,6 @@ Partial Class frm_upload
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.BunifuTransition1.SetDecoration(Me.Label3, BunifuAnimatorNS.DecorationType.None)
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(147, 15)
         Me.Label3.Name = "Label3"
@@ -253,7 +235,6 @@ Partial Class frm_upload
         '
         'cbo_client
         '
-        Me.BunifuTransition1.SetDecoration(Me.cbo_client, BunifuAnimatorNS.DecorationType.None)
         Me.cbo_client.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_client.FormattingEnabled = True
@@ -265,7 +246,6 @@ Partial Class frm_upload
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.BunifuTransition1.SetDecoration(Me.Label2, BunifuAnimatorNS.DecorationType.None)
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(9, 15)
         Me.Label2.Name = "Label2"
@@ -276,33 +256,11 @@ Partial Class frm_upload
         'txt_filename
         '
         Me.txt_filename.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BunifuTransition1.SetDecoration(Me.txt_filename, BunifuAnimatorNS.DecorationType.None)
         Me.txt_filename.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_filename.Location = New System.Drawing.Point(147, 33)
         Me.txt_filename.Name = "txt_filename"
         Me.txt_filename.Size = New System.Drawing.Size(129, 23)
         Me.txt_filename.TabIndex = 6
-        '
-        'BunifuTransition1
-        '
-        Me.BunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
-        Me.BunifuTransition1.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.BunifuTransition1.DefaultAnimation = Animation2
         '
         'grid_upload
         '
@@ -311,23 +269,22 @@ Partial Class frm_upload
         Me.grid_upload.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grid_upload.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.grid_upload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.BunifuTransition1.SetDecoration(Me.grid_upload, BunifuAnimatorNS.DecorationType.None)
         Me.grid_upload.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grid_upload.Location = New System.Drawing.Point(0, 130)
         Me.grid_upload.Name = "grid_upload"
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkGray
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grid_upload.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grid_upload.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.grid_upload.RowHeadersVisible = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
-        Me.grid_upload.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        Me.grid_upload.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.grid_upload.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grid_upload.Size = New System.Drawing.Size(852, 399)
         Me.grid_upload.TabIndex = 2
@@ -336,7 +293,6 @@ Partial Class frm_upload
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel3.Controls.Add(Me.lbl_status)
-        Me.BunifuTransition1.SetDecoration(Me.Panel3, BunifuAnimatorNS.DecorationType.None)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 508)
         Me.Panel3.Name = "Panel3"
@@ -346,7 +302,6 @@ Partial Class frm_upload
         'lbl_status
         '
         Me.lbl_status.AutoSize = True
-        Me.BunifuTransition1.SetDecoration(Me.lbl_status, BunifuAnimatorNS.DecorationType.None)
         Me.lbl_status.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_status.ForeColor = System.Drawing.Color.White
         Me.lbl_status.Location = New System.Drawing.Point(3, 2)
@@ -358,7 +313,6 @@ Partial Class frm_upload
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BunifuTransition1.SetDecoration(Me.MenuStrip1, BunifuAnimatorNS.DecorationType.None)
         Me.MenuStrip1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadToolStripMenuItem, Me.SettingsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 38)
@@ -384,13 +338,6 @@ Partial Class frm_upload
         Me.SettingsToolStripMenuItem.Text = "Settings"
         Me.SettingsToolStripMenuItem.Visible = False
         '
-        'BunifuDragControl1
-        '
-        Me.BunifuDragControl1.Fixed = True
-        Me.BunifuDragControl1.Horizontal = True
-        Me.BunifuDragControl1.TargetControl = Me.Panel1
-        Me.BunifuDragControl1.Vertical = True
-        '
         'frm_upload
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -401,7 +348,6 @@ Partial Class frm_upload
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel1)
-        Me.BunifuTransition1.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_upload"
@@ -427,7 +373,6 @@ Partial Class frm_upload
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btn_exit As Button
-    Friend WithEvents BunifuTransition1 As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents Panel2 As Panel
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label6 As Label
@@ -449,6 +394,5 @@ Partial Class frm_upload
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ReloadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
 End Class

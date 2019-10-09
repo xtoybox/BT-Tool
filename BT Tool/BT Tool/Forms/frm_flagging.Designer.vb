@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_flagging
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class frm_flagging
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_flagging))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgv_flag = New System.Windows.Forms.DataGridView()
@@ -58,7 +57,6 @@ Partial Class frm_flagging
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.dgv_flag, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_group_container.SuspendLayout()
@@ -92,22 +90,22 @@ Partial Class frm_flagging
         Me.dgv_flag.BackgroundColor = System.Drawing.Color.White
         Me.dgv_flag.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_flag.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv_flag.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_flag.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_flag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_flag.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgv_flag.Location = New System.Drawing.Point(200, 28)
         Me.dgv_flag.Name = "dgv_flag"
         Me.dgv_flag.ReadOnly = True
         Me.dgv_flag.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.dgv_flag.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.dgv_flag.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv_flag.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgv_flag.Size = New System.Drawing.Size(796, 575)
         Me.dgv_flag.TabIndex = 7
@@ -128,6 +126,7 @@ Partial Class frm_flagging
         '
         'tlp_flag_form_container
         '
+        Me.tlp_flag_form_container.BackColor = System.Drawing.Color.Black
         Me.tlp_flag_form_container.ColumnCount = 1
         Me.tlp_flag_form_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlp_flag_form_container.Controls.Add(Me.lbl_client, 0, 0)
@@ -221,7 +220,7 @@ Partial Class frm_flagging
         '
         'btn_save
         '
-        Me.btn_save.BackColor = System.Drawing.Color.DimGray
+        Me.btn_save.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_save.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -240,7 +239,7 @@ Partial Class frm_flagging
         '
         'btn_delete
         '
-        Me.btn_delete.BackColor = System.Drawing.Color.DimGray
+        Me.btn_delete.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_delete.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -275,7 +274,7 @@ Partial Class frm_flagging
         '
         'btn_seen
         '
-        Me.btn_seen.BackColor = System.Drawing.Color.DimGray
+        Me.btn_seen.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btn_seen.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_seen.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_seen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -294,7 +293,7 @@ Partial Class frm_flagging
         '
         'btn_unseen
         '
-        Me.btn_unseen.BackColor = System.Drawing.Color.DimGray
+        Me.btn_unseen.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btn_unseen.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_unseen.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_unseen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -326,6 +325,7 @@ Partial Class frm_flagging
         '
         'tlp_filter_export
         '
+        Me.tlp_filter_export.BackColor = System.Drawing.Color.Black
         Me.tlp_filter_export.ColumnCount = 1
         Me.tlp_filter_export.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlp_filter_export.Controls.Add(Me.label2, 0, 0)
@@ -432,7 +432,7 @@ Partial Class frm_flagging
         '
         'btn_export
         '
-        Me.btn_export.BackColor = System.Drawing.Color.DimGray
+        Me.btn_export.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btn_export.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_export.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_export.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -451,7 +451,7 @@ Partial Class frm_flagging
         '
         'btn_reload
         '
-        Me.btn_reload.BackColor = System.Drawing.Color.DimGray
+        Me.btn_reload.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btn_reload.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_reload.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_reload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -538,13 +538,6 @@ Partial Class frm_flagging
         Me.Button1.TabIndex = 0
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'BunifuDragControl1
-        '
-        Me.BunifuDragControl1.Fixed = True
-        Me.BunifuDragControl1.Horizontal = True
-        Me.BunifuDragControl1.TargetControl = Me.Panel2
-        Me.BunifuDragControl1.Vertical = True
-        '
         'frm_flagging
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -607,5 +600,4 @@ Partial Class frm_flagging
     Friend WithEvents Button1 As Button
     Private WithEvents dgv_flag As DataGridView
     Friend WithEvents Label5 As Label
-    Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
 End Class
