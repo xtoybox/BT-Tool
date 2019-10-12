@@ -220,9 +220,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q2_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q2_2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q2_2.Location = New System.Drawing.Point(259, 60)
+        Me.rtxt_q2_2.Location = New System.Drawing.Point(249, 60)
         Me.rtxt_q2_2.Name = "rtxt_q2_2"
-        Me.rtxt_q2_2.Size = New System.Drawing.Size(282, 50)
+        Me.rtxt_q2_2.Size = New System.Drawing.Size(292, 50)
         Me.rtxt_q2_2.TabIndex = 13
         Me.rtxt_q2_2.Text = ""
         '
@@ -233,7 +233,7 @@ Partial Class frm_file_eval
         Me.lbl_q3_2_cbo.ForeColor = System.Drawing.Color.White
         Me.lbl_q3_2_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q3_2_cbo.Name = "lbl_q3_2_cbo"
-        Me.lbl_q3_2_cbo.Size = New System.Drawing.Size(53, 26)
+        Me.lbl_q3_2_cbo.Size = New System.Drawing.Size(51, 26)
         Me.lbl_q3_2_cbo.TabIndex = 17
         Me.lbl_q3_2_cbo.Text = "label1"
         Me.lbl_q3_2_cbo.Visible = False
@@ -246,7 +246,7 @@ Partial Class frm_file_eval
         Me.cbo_q3_2.FormattingEnabled = True
         Me.cbo_q3_2.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q3_2.Name = "cbo_q3_2"
-        Me.cbo_q3_2.Size = New System.Drawing.Size(53, 24)
+        Me.cbo_q3_2.Size = New System.Drawing.Size(51, 24)
         Me.cbo_q3_2.TabIndex = 16
         '
         'pnl_cbo_q3_2_readonly_alt_container
@@ -254,9 +254,9 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q3_2_readonly_alt_container.Controls.Add(Me.lbl_q3_2_cbo)
         Me.pnl_cbo_q3_2_readonly_alt_container.Controls.Add(Me.cbo_q3_2)
         Me.pnl_cbo_q3_2_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q3_2_readonly_alt_container.Location = New System.Drawing.Point(199, 60)
+        Me.pnl_cbo_q3_2_readonly_alt_container.Location = New System.Drawing.Point(191, 60)
         Me.pnl_cbo_q3_2_readonly_alt_container.Name = "pnl_cbo_q3_2_readonly_alt_container"
-        Me.pnl_cbo_q3_2_readonly_alt_container.Size = New System.Drawing.Size(53, 50)
+        Me.pnl_cbo_q3_2_readonly_alt_container.Size = New System.Drawing.Size(51, 50)
         Me.pnl_cbo_q3_2_readonly_alt_container.TabIndex = 12
         '
         'lbl_q3_1_cbo
@@ -266,7 +266,7 @@ Partial Class frm_file_eval
         Me.lbl_q3_1_cbo.ForeColor = System.Drawing.Color.White
         Me.lbl_q3_1_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q3_1_cbo.Name = "lbl_q3_1_cbo"
-        Me.lbl_q3_1_cbo.Size = New System.Drawing.Size(53, 25)
+        Me.lbl_q3_1_cbo.Size = New System.Drawing.Size(51, 25)
         Me.lbl_q3_1_cbo.TabIndex = 15
         Me.lbl_q3_1_cbo.Text = "label1"
         Me.lbl_q3_1_cbo.Visible = False
@@ -279,16 +279,16 @@ Partial Class frm_file_eval
         Me.cbo_q3_1.FormattingEnabled = True
         Me.cbo_q3_1.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q3_1.Name = "cbo_q3_1"
-        Me.cbo_q3_1.Size = New System.Drawing.Size(53, 24)
+        Me.cbo_q3_1.Size = New System.Drawing.Size(51, 24)
         Me.cbo_q3_1.TabIndex = 14
         '
         'rtxt_q3_2
         '
         Me.rtxt_q3_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q3_2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q3_2.Location = New System.Drawing.Point(259, 60)
+        Me.rtxt_q3_2.Location = New System.Drawing.Point(249, 60)
         Me.rtxt_q3_2.Name = "rtxt_q3_2"
-        Me.rtxt_q3_2.Size = New System.Drawing.Size(282, 50)
+        Me.rtxt_q3_2.Size = New System.Drawing.Size(292, 50)
         Me.rtxt_q3_2.TabIndex = 17
         Me.rtxt_q3_2.Text = ""
         '
@@ -299,7 +299,7 @@ Partial Class frm_file_eval
         Me.lbl_q3_1.ForeColor = System.Drawing.Color.White
         Me.lbl_q3_1.Location = New System.Drawing.Point(4, 1)
         Me.lbl_q3_1.Name = "lbl_q3_1"
-        Me.lbl_q3_1.Size = New System.Drawing.Size(188, 55)
+        Me.lbl_q3_1.Size = New System.Drawing.Size(180, 55)
         Me.lbl_q3_1.TabIndex = 0
         Me.lbl_q3_1.Text = "Was the file as accurately" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Grammar and Tenses, Punctuations, Spelling, Paraphra" &
     "sing, Timecoding)"
@@ -311,7 +311,7 @@ Partial Class frm_file_eval
         Me.lbl_q3_2.ForeColor = System.Drawing.Color.White
         Me.lbl_q3_2.Location = New System.Drawing.Point(4, 57)
         Me.lbl_q3_2.Name = "lbl_q3_2"
-        Me.lbl_q3_2.Size = New System.Drawing.Size(188, 56)
+        Me.lbl_q3_2.Size = New System.Drawing.Size(180, 56)
         Me.lbl_q3_2.TabIndex = 1
         Me.lbl_q3_2.Text = "Header Information"
         '
@@ -319,9 +319,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q3_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q3_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q3_1.Location = New System.Drawing.Point(259, 4)
+        Me.rtxt_q3_1.Location = New System.Drawing.Point(249, 4)
         Me.rtxt_q3_1.Name = "rtxt_q3_1"
-        Me.rtxt_q3_1.Size = New System.Drawing.Size(282, 49)
+        Me.rtxt_q3_1.Size = New System.Drawing.Size(292, 49)
         Me.rtxt_q3_1.TabIndex = 15
         Me.rtxt_q3_1.Text = ""
         '
@@ -330,9 +330,9 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q3_1_readonly_alt_container.Controls.Add(Me.lbl_q3_1_cbo)
         Me.pnl_cbo_q3_1_readonly_alt_container.Controls.Add(Me.cbo_q3_1)
         Me.pnl_cbo_q3_1_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q3_1_readonly_alt_container.Location = New System.Drawing.Point(199, 4)
+        Me.pnl_cbo_q3_1_readonly_alt_container.Location = New System.Drawing.Point(191, 4)
         Me.pnl_cbo_q3_1_readonly_alt_container.Name = "pnl_cbo_q3_1_readonly_alt_container"
-        Me.pnl_cbo_q3_1_readonly_alt_container.Size = New System.Drawing.Size(53, 49)
+        Me.pnl_cbo_q3_1_readonly_alt_container.Size = New System.Drawing.Size(51, 49)
         Me.pnl_cbo_q3_1_readonly_alt_container.TabIndex = 12
         '
         'lbl_q4_cbo
@@ -342,7 +342,7 @@ Partial Class frm_file_eval
         Me.lbl_q4_cbo.ForeColor = System.Drawing.Color.White
         Me.lbl_q4_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q4_cbo.Name = "lbl_q4_cbo"
-        Me.lbl_q4_cbo.Size = New System.Drawing.Size(55, 22)
+        Me.lbl_q4_cbo.Size = New System.Drawing.Size(52, 22)
         Me.lbl_q4_cbo.TabIndex = 19
         Me.lbl_q4_cbo.Text = "label1"
         Me.lbl_q4_cbo.Visible = False
@@ -353,7 +353,7 @@ Partial Class frm_file_eval
         Me.tlp_q3_container.ColumnCount = 3
         Me.tlp_q3_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.60175!))
         Me.tlp_q3_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.39824!))
-        Me.tlp_q3_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287.0!))
+        Me.tlp_q3_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297.0!))
         Me.tlp_q3_container.Controls.Add(Me.rtxt_q3_2, 2, 1)
         Me.tlp_q3_container.Controls.Add(Me.lbl_q3_1, 0, 0)
         Me.tlp_q3_container.Controls.Add(Me.lbl_q3_2, 0, 1)
@@ -377,7 +377,7 @@ Partial Class frm_file_eval
         Me.cbo_q4.FormattingEnabled = True
         Me.cbo_q4.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q4.Name = "cbo_q4"
-        Me.cbo_q4.Size = New System.Drawing.Size(55, 24)
+        Me.cbo_q4.Size = New System.Drawing.Size(52, 24)
         Me.cbo_q4.TabIndex = 18
         '
         'lbl_q4_1
@@ -387,7 +387,7 @@ Partial Class frm_file_eval
         Me.lbl_q4_1.ForeColor = System.Drawing.Color.White
         Me.lbl_q4_1.Location = New System.Drawing.Point(4, 1)
         Me.lbl_q4_1.Name = "lbl_q4_1"
-        Me.lbl_q4_1.Size = New System.Drawing.Size(186, 52)
+        Me.lbl_q4_1.Size = New System.Drawing.Size(179, 52)
         Me.lbl_q4_1.TabIndex = 0
         Me.lbl_q4_1.Text = "Incomplete Transcript (Ten-second Rule)"
         '
@@ -395,9 +395,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q4.Location = New System.Drawing.Point(259, 4)
+        Me.rtxt_q4.Location = New System.Drawing.Point(249, 4)
         Me.rtxt_q4.Name = "rtxt_q4"
-        Me.rtxt_q4.Size = New System.Drawing.Size(282, 46)
+        Me.rtxt_q4.Size = New System.Drawing.Size(292, 46)
         Me.rtxt_q4.TabIndex = 19
         Me.rtxt_q4.Text = ""
         '
@@ -406,9 +406,9 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q4_readonly_alt_container.Controls.Add(Me.lbl_q4_cbo)
         Me.pnl_cbo_q4_readonly_alt_container.Controls.Add(Me.cbo_q4)
         Me.pnl_cbo_q4_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q4_readonly_alt_container.Location = New System.Drawing.Point(197, 4)
+        Me.pnl_cbo_q4_readonly_alt_container.Location = New System.Drawing.Point(190, 4)
         Me.pnl_cbo_q4_readonly_alt_container.Name = "pnl_cbo_q4_readonly_alt_container"
-        Me.pnl_cbo_q4_readonly_alt_container.Size = New System.Drawing.Size(55, 46)
+        Me.pnl_cbo_q4_readonly_alt_container.Size = New System.Drawing.Size(52, 46)
         Me.pnl_cbo_q4_readonly_alt_container.TabIndex = 12
         '
         'tlp_q4_container
@@ -417,7 +417,7 @@ Partial Class frm_file_eval
         Me.tlp_q4_container.ColumnCount = 3
         Me.tlp_q4_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.97103!))
         Me.tlp_q4_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.02897!))
-        Me.tlp_q4_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287.0!))
+        Me.tlp_q4_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297.0!))
         Me.tlp_q4_container.Controls.Add(Me.lbl_q4_1, 0, 0)
         Me.tlp_q4_container.Controls.Add(Me.rtxt_q4, 2, 0)
         Me.tlp_q4_container.Controls.Add(Me.pnl_cbo_q4_readonly_alt_container, 1, 0)
@@ -513,7 +513,7 @@ Partial Class frm_file_eval
         Me.tlp_q2_container.ColumnCount = 3
         Me.tlp_q2_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.28316!))
         Me.tlp_q2_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.71683!))
-        Me.tlp_q2_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287.0!))
+        Me.tlp_q2_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297.0!))
         Me.tlp_q2_container.Controls.Add(Me.rtxt_q2_2, 2, 1)
         Me.tlp_q2_container.Controls.Add(Me.lbl_q2_1, 0, 0)
         Me.tlp_q2_container.Controls.Add(Me.lbl_q2_2, 0, 1)
@@ -536,7 +536,7 @@ Partial Class frm_file_eval
         Me.lbl_q2_1.ForeColor = System.Drawing.Color.White
         Me.lbl_q2_1.Location = New System.Drawing.Point(4, 1)
         Me.lbl_q2_1.Name = "lbl_q2_1"
-        Me.lbl_q2_1.Size = New System.Drawing.Size(187, 55)
+        Me.lbl_q2_1.Size = New System.Drawing.Size(180, 55)
         Me.lbl_q2_1.TabIndex = 0
         Me.lbl_q2_1.Text = "Transcription Guide, Job" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Face Sheets, Video, Text Files)"
         '
@@ -547,7 +547,7 @@ Partial Class frm_file_eval
         Me.lbl_q2_2.ForeColor = System.Drawing.Color.White
         Me.lbl_q2_2.Location = New System.Drawing.Point(4, 57)
         Me.lbl_q2_2.Name = "lbl_q2_2"
-        Me.lbl_q2_2.Size = New System.Drawing.Size(187, 56)
+        Me.lbl_q2_2.Size = New System.Drawing.Size(180, 56)
         Me.lbl_q2_2.TabIndex = 1
         Me.lbl_q2_2.Text = "Internet Research"
         '
@@ -555,9 +555,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q2_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q2_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q2_1.Location = New System.Drawing.Point(259, 4)
+        Me.rtxt_q2_1.Location = New System.Drawing.Point(249, 4)
         Me.rtxt_q2_1.Name = "rtxt_q2_1"
-        Me.rtxt_q2_1.Size = New System.Drawing.Size(282, 49)
+        Me.rtxt_q2_1.Size = New System.Drawing.Size(292, 49)
         Me.rtxt_q2_1.TabIndex = 11
         Me.rtxt_q2_1.Text = ""
         '
@@ -566,9 +566,9 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q2_1_readonly_alt_container.Controls.Add(Me.lbl_q2_1_cbo)
         Me.pnl_cbo_q2_1_readonly_alt_container.Controls.Add(Me.cbo_q2_1)
         Me.pnl_cbo_q2_1_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q2_1_readonly_alt_container.Location = New System.Drawing.Point(198, 4)
+        Me.pnl_cbo_q2_1_readonly_alt_container.Location = New System.Drawing.Point(191, 4)
         Me.pnl_cbo_q2_1_readonly_alt_container.Name = "pnl_cbo_q2_1_readonly_alt_container"
-        Me.pnl_cbo_q2_1_readonly_alt_container.Size = New System.Drawing.Size(54, 49)
+        Me.pnl_cbo_q2_1_readonly_alt_container.Size = New System.Drawing.Size(51, 49)
         Me.pnl_cbo_q2_1_readonly_alt_container.TabIndex = 12
         '
         'lbl_q2_1_cbo
@@ -578,7 +578,7 @@ Partial Class frm_file_eval
         Me.lbl_q2_1_cbo.ForeColor = System.Drawing.Color.White
         Me.lbl_q2_1_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q2_1_cbo.Name = "lbl_q2_1_cbo"
-        Me.lbl_q2_1_cbo.Size = New System.Drawing.Size(54, 25)
+        Me.lbl_q2_1_cbo.Size = New System.Drawing.Size(51, 25)
         Me.lbl_q2_1_cbo.TabIndex = 11
         Me.lbl_q2_1_cbo.Text = "label1"
         Me.lbl_q2_1_cbo.Visible = False
@@ -591,7 +591,7 @@ Partial Class frm_file_eval
         Me.cbo_q2_1.FormattingEnabled = True
         Me.cbo_q2_1.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q2_1.Name = "cbo_q2_1"
-        Me.cbo_q2_1.Size = New System.Drawing.Size(54, 24)
+        Me.cbo_q2_1.Size = New System.Drawing.Size(51, 24)
         Me.cbo_q2_1.TabIndex = 10
         '
         'pnl_cbo_q2_2_readonly_alt_container
@@ -599,9 +599,9 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q2_2_readonly_alt_container.Controls.Add(Me.lbl_q2_2_cbo)
         Me.pnl_cbo_q2_2_readonly_alt_container.Controls.Add(Me.cbo_q2_2)
         Me.pnl_cbo_q2_2_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q2_2_readonly_alt_container.Location = New System.Drawing.Point(198, 60)
+        Me.pnl_cbo_q2_2_readonly_alt_container.Location = New System.Drawing.Point(191, 60)
         Me.pnl_cbo_q2_2_readonly_alt_container.Name = "pnl_cbo_q2_2_readonly_alt_container"
-        Me.pnl_cbo_q2_2_readonly_alt_container.Size = New System.Drawing.Size(54, 50)
+        Me.pnl_cbo_q2_2_readonly_alt_container.Size = New System.Drawing.Size(51, 50)
         Me.pnl_cbo_q2_2_readonly_alt_container.TabIndex = 12
         '
         'lbl_q2_2_cbo
@@ -611,7 +611,7 @@ Partial Class frm_file_eval
         Me.lbl_q2_2_cbo.ForeColor = System.Drawing.Color.White
         Me.lbl_q2_2_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q2_2_cbo.Name = "lbl_q2_2_cbo"
-        Me.lbl_q2_2_cbo.Size = New System.Drawing.Size(54, 26)
+        Me.lbl_q2_2_cbo.Size = New System.Drawing.Size(51, 26)
         Me.lbl_q2_2_cbo.TabIndex = 13
         Me.lbl_q2_2_cbo.Text = "label1"
         Me.lbl_q2_2_cbo.Visible = False
@@ -624,7 +624,7 @@ Partial Class frm_file_eval
         Me.cbo_q2_2.FormattingEnabled = True
         Me.cbo_q2_2.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q2_2.Name = "cbo_q2_2"
-        Me.cbo_q2_2.Size = New System.Drawing.Size(54, 24)
+        Me.cbo_q2_2.Size = New System.Drawing.Size(51, 24)
         Me.cbo_q2_2.TabIndex = 12
         '
         'tlp_question_container
@@ -677,7 +677,7 @@ Partial Class frm_file_eval
         Me.tlp_q1_container.ColumnCount = 3
         Me.tlp_q1_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.87735!))
         Me.tlp_q1_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.12265!))
-        Me.tlp_q1_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287.0!))
+        Me.tlp_q1_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297.0!))
         Me.tlp_q1_container.Controls.Add(Me.rtxt_q1_2, 2, 1)
         Me.tlp_q1_container.Controls.Add(Me.lbl_q1_1, 0, 0)
         Me.tlp_q1_container.Controls.Add(Me.lbl_q1_2, 0, 1)
@@ -697,9 +697,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q1_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q1_2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q1_2.Location = New System.Drawing.Point(259, 60)
+        Me.rtxt_q1_2.Location = New System.Drawing.Point(249, 60)
         Me.rtxt_q1_2.Name = "rtxt_q1_2"
-        Me.rtxt_q1_2.Size = New System.Drawing.Size(282, 50)
+        Me.rtxt_q1_2.Size = New System.Drawing.Size(292, 50)
         Me.rtxt_q1_2.TabIndex = 9
         Me.rtxt_q1_2.Text = ""
         '
@@ -710,7 +710,7 @@ Partial Class frm_file_eval
         Me.lbl_q1_1.ForeColor = System.Drawing.Color.White
         Me.lbl_q1_1.Location = New System.Drawing.Point(4, 1)
         Me.lbl_q1_1.Name = "lbl_q1_1"
-        Me.lbl_q1_1.Size = New System.Drawing.Size(186, 55)
+        Me.lbl_q1_1.Size = New System.Drawing.Size(179, 55)
         Me.lbl_q1_1.TabIndex = 0
         Me.lbl_q1_1.Text = "General Specifications" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Font and Spacing, Headers, Number Rules, Transcription B" &
     "asics General, Standalones)"
@@ -722,7 +722,7 @@ Partial Class frm_file_eval
         Me.lbl_q1_2.ForeColor = System.Drawing.Color.White
         Me.lbl_q1_2.Location = New System.Drawing.Point(4, 57)
         Me.lbl_q1_2.Name = "lbl_q1_2"
-        Me.lbl_q1_2.Size = New System.Drawing.Size(186, 56)
+        Me.lbl_q1_2.Size = New System.Drawing.Size(179, 56)
         Me.lbl_q1_2.TabIndex = 1
         Me.lbl_q1_2.Text = "Speaker Specification"
         '
@@ -730,9 +730,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q1_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q1_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q1_1.Location = New System.Drawing.Point(259, 4)
+        Me.rtxt_q1_1.Location = New System.Drawing.Point(249, 4)
         Me.rtxt_q1_1.Name = "rtxt_q1_1"
-        Me.rtxt_q1_1.Size = New System.Drawing.Size(282, 49)
+        Me.rtxt_q1_1.Size = New System.Drawing.Size(292, 49)
         Me.rtxt_q1_1.TabIndex = 7
         Me.rtxt_q1_1.Text = ""
         '
@@ -741,9 +741,9 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q1_1_readonly_alt_container.Controls.Add(Me.lbl_q1_1_cbo)
         Me.pnl_cbo_q1_1_readonly_alt_container.Controls.Add(Me.cbo_q1_1)
         Me.pnl_cbo_q1_1_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q1_1_readonly_alt_container.Location = New System.Drawing.Point(197, 4)
+        Me.pnl_cbo_q1_1_readonly_alt_container.Location = New System.Drawing.Point(190, 4)
         Me.pnl_cbo_q1_1_readonly_alt_container.Name = "pnl_cbo_q1_1_readonly_alt_container"
-        Me.pnl_cbo_q1_1_readonly_alt_container.Size = New System.Drawing.Size(55, 49)
+        Me.pnl_cbo_q1_1_readonly_alt_container.Size = New System.Drawing.Size(52, 49)
         Me.pnl_cbo_q1_1_readonly_alt_container.TabIndex = 11
         '
         'lbl_q1_1_cbo
@@ -753,7 +753,7 @@ Partial Class frm_file_eval
         Me.lbl_q1_1_cbo.ForeColor = System.Drawing.Color.White
         Me.lbl_q1_1_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q1_1_cbo.Name = "lbl_q1_1_cbo"
-        Me.lbl_q1_1_cbo.Size = New System.Drawing.Size(55, 25)
+        Me.lbl_q1_1_cbo.Size = New System.Drawing.Size(52, 25)
         Me.lbl_q1_1_cbo.TabIndex = 0
         Me.lbl_q1_1_cbo.Text = "label1"
         Me.lbl_q1_1_cbo.Visible = False
@@ -766,7 +766,7 @@ Partial Class frm_file_eval
         Me.cbo_q1_1.FormattingEnabled = True
         Me.cbo_q1_1.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q1_1.Name = "cbo_q1_1"
-        Me.cbo_q1_1.Size = New System.Drawing.Size(55, 24)
+        Me.cbo_q1_1.Size = New System.Drawing.Size(52, 24)
         Me.cbo_q1_1.TabIndex = 6
         '
         'pnl_cbo_q1_2_readonly_alt_container
@@ -774,9 +774,9 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q1_2_readonly_alt_container.Controls.Add(Me.lbl_q1_2_cbo)
         Me.pnl_cbo_q1_2_readonly_alt_container.Controls.Add(Me.cbo_q1_2)
         Me.pnl_cbo_q1_2_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q1_2_readonly_alt_container.Location = New System.Drawing.Point(197, 60)
+        Me.pnl_cbo_q1_2_readonly_alt_container.Location = New System.Drawing.Point(190, 60)
         Me.pnl_cbo_q1_2_readonly_alt_container.Name = "pnl_cbo_q1_2_readonly_alt_container"
-        Me.pnl_cbo_q1_2_readonly_alt_container.Size = New System.Drawing.Size(55, 50)
+        Me.pnl_cbo_q1_2_readonly_alt_container.Size = New System.Drawing.Size(52, 50)
         Me.pnl_cbo_q1_2_readonly_alt_container.TabIndex = 12
         '
         'lbl_q1_2_cbo
@@ -786,7 +786,7 @@ Partial Class frm_file_eval
         Me.lbl_q1_2_cbo.ForeColor = System.Drawing.Color.White
         Me.lbl_q1_2_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q1_2_cbo.Name = "lbl_q1_2_cbo"
-        Me.lbl_q1_2_cbo.Size = New System.Drawing.Size(55, 26)
+        Me.lbl_q1_2_cbo.Size = New System.Drawing.Size(52, 26)
         Me.lbl_q1_2_cbo.TabIndex = 9
         Me.lbl_q1_2_cbo.Text = "label1"
         Me.lbl_q1_2_cbo.Visible = False
@@ -799,7 +799,7 @@ Partial Class frm_file_eval
         Me.cbo_q1_2.FormattingEnabled = True
         Me.cbo_q1_2.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q1_2.Name = "cbo_q1_2"
-        Me.cbo_q1_2.Size = New System.Drawing.Size(55, 24)
+        Me.cbo_q1_2.Size = New System.Drawing.Size(52, 24)
         Me.cbo_q1_2.TabIndex = 8
         '
         'pnl_q1_lbl_container

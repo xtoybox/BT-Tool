@@ -141,3 +141,4 @@ C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markForm new\markform\obj\Debug\mar
 C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markForm new\markform\obj\Debug\markform.csproj.CopyComplete
 C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markForm new\markform\obj\Debug\markform.exe
 C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markForm new\markform\obj\Debug\markform.pdb
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\markForm new\markform\bin\Debug\FastMember.Signed.dll

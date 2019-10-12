@@ -13,6 +13,7 @@ Public Class frm_main
     Private CustomFn As New CustomFunctions()
     Private cf As New mainClass
     Private db As New markform.SQLClass
+
     Public locDir As String
     Private Const QuotationMark As String = """"
     Public baseLoc As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
@@ -926,33 +927,33 @@ Public Class frm_main
         frm_logout.TopMost = True
     End Sub
 
-    Private Sub btn_userlist_Click(sender As Object, e As EventArgs) Handles btn_userlist.Click
-        frm_userlist.ShowDialog(Me)
-    End Sub
+    'Private Sub btn_userlist_Click(sender As Object, e As EventArgs) Handles btn_userlist.Click
+    '    frm_userlist.ShowDialog(Me)
+    'End Sub
 
-    Private Sub btn_workflow_Click(sender As Object, e As EventArgs) Handles btn_workflow.Click
+    'Private Sub btn_workflow_Click(sender As Object, e As EventArgs) Handles btn_workflow.Click
 
-        frm_workflow.ShowDialog(Me)
+    '    frm_workflow.ShowDialog(Me)
 
-    End Sub
+    'End Sub
 
-    Private Sub btn_file_eval_Click(sender As Object, e As EventArgs) Handles btn_file_eval.Click
-        frm_file_eval.ShowDialog(Me)
-    End Sub
+    'Private Sub btn_file_eval_Click(sender As Object, e As EventArgs) Handles btn_file_eval.Click
+    '    frm_file_eval.ShowDialog(Me)
+    'End Sub
 
-    Private Sub btn_flagging_Click(sender As Object, e As EventArgs) Handles btn_flagging.Click
-        Dim flagging = New frm_flagging
+    'Private Sub btn_flagging_Click(sender As Object, e As EventArgs) Handles btn_flagging.Click
+    '    Dim flagging = New frm_flagging
 
-        flagging.ShowDialog(Me)
-    End Sub
+    '    flagging.ShowDialog(Me)
+    'End Sub
 
-    Private Sub btn_myeval_Click(sender As Object, e As EventArgs) Handles btn_myeval.Click
-        frm_file_eval.ShowDialog(Me)
-    End Sub
+    'Private Sub btn_myeval_Click(sender As Object, e As EventArgs) Handles btn_myeval.Click
+    '    frm_file_eval.ShowDialog(Me)
+    'End Sub
 
-    Private Sub btn_break_Click(sender As Object, e As EventArgs) Handles btn_break.Click
-        frm_break.ShowDialog(Me)
-    End Sub
+    'Private Sub btn_break_Click(sender As Object, e As EventArgs) Handles btn_break.Click
+    '    frm_break.ShowDialog(Me)
+    'End Sub
 
     Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
 
@@ -965,4 +966,5 @@ Public Class frm_main
     Private Sub Panel1_DoubleClick(sender As Object, e As EventArgs) Handles Panel1.DoubleClick
         Me.Location = New Point(0, 0)
     End Sub
+
 End Class
