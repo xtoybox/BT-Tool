@@ -18,7 +18,7 @@ Public Class frm_login
     Private Sub Login_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         CustomFn.SetForm(Me)
-        'CustomFn.FormDrag(Me, pnl_header)
+        CustomFn.FormDrag(Me, Panel1)
         Button2.Image = showpass
 
     End Sub

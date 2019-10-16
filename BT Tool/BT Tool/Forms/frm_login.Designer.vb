@@ -101,7 +101,7 @@ Partial Class frm_login
         Me.Error2_lbl.BackColor = System.Drawing.Color.Transparent
         Me.Error2_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Error2_lbl.ForeColor = System.Drawing.Color.Red
-        Me.Error2_lbl.Location = New System.Drawing.Point(122, 36)
+        Me.Error2_lbl.Location = New System.Drawing.Point(123, 36)
         Me.Error2_lbl.Name = "Error2_lbl"
         Me.Error2_lbl.Size = New System.Drawing.Size(109, 13)
         Me.Error2_lbl.TabIndex = 24
@@ -146,6 +146,7 @@ Partial Class frm_login
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(30, 27)
         Me.Button2.TabIndex = 30
+        Me.Button2.TabStop = False
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button2.UseVisualStyleBackColor = False
@@ -199,7 +200,7 @@ Partial Class frm_login
         Me.txt_password.Location = New System.Drawing.Point(27, 125)
         Me.txt_password.Name = "txt_password"
         Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
-        Me.txt_password.Size = New System.Drawing.Size(183, 27)
+        Me.txt_password.Size = New System.Drawing.Size(186, 27)
         Me.txt_password.TabIndex = 28
         '
         'txt_username

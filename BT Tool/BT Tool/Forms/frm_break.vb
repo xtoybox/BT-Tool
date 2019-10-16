@@ -14,6 +14,8 @@
 
         Me.lbl_time.Location = Me.PictureBox1.PointToClient(Me.PointToScreen(Me.lbl_time.Location))
         Me.lbl_time.Parent = Me.PictureBox1
+        Me.Panel1.Location = Me.PictureBox1.PointToClient(Me.PointToScreen(Me.Panel1.Location))
+        Me.Panel1.Parent = Me.PictureBox1
         Me.btn_stop.Location = Me.PictureBox1.PointToClient(Me.PointToScreen(Me.btn_stop.Location))
         Me.btn_stop.Parent = Me.PictureBox1
 

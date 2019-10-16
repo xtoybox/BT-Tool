@@ -32,7 +32,7 @@ Public Class frm_main
         ' == For design ==
 
         'User_Pnl.Height = 0
-
+        CustomFn.FormDrag(Me, Me)
         'User_Pnl.Visible = False
         Me.Width = screenWidth
         Me.Height = screenHeight - 44
@@ -43,10 +43,16 @@ Public Class frm_main
         Me.Show()
         frm_login.ShowDialog(Me)
 
-        main_gridview.Width = screenWidth - (174 + 63)
-        main_gridview.Height = screenHeight - (181 + 43 + 50)
+        resize_components()
 
         ' if main panel clicked hide all dropdowns 
+
+    End Sub
+
+    Sub resize_components()
+
+        main_gridview.Width = Me.Width - (174 + 81)
+        main_gridview.Height = Me.Height - (181 + 25)
 
     End Sub
 
@@ -459,7 +465,7 @@ Public Class frm_main
 
     'End Sub
 
-    Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
+    Private Sub Exit_btn_Click(sender As Object, e As EventArgs)
         End
     End Sub
 
@@ -912,59 +918,70 @@ Public Class frm_main
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        Me.Hide()
-        frm_minimized.Show()
-
-    End Sub
-
     Private Sub btn_loginout_Click(sender As Object, e As EventArgs) Handles btn_loginout.Click
+
+        Me.WindowState = FormWindowState.Maximized
         Me.Enabled = False
         Me.TopMost = True
         Me.Location = New Point(0, 0)
+
         frm_logout.Show()
         frm_logout.TopMost = True
     End Sub
+    'commenthere
+    Private Sub btn_userlist_Click(sender As Object, e As EventArgs) Handles btn_userlist.Click
+        frm_userlist.ShowDialog(Me)
+    End Sub
 
-    'Private Sub btn_userlist_Click(sender As Object, e As EventArgs) Handles btn_userlist.Click
-    '    frm_userlist.ShowDialog(Me)
-    'End Sub
-
-    'Private Sub btn_workflow_Click(sender As Object, e As EventArgs) Handles btn_workflow.Click
-
-    '    frm_workflow.ShowDialog(Me)
-
-    'End Sub
+    Private Sub btn_workflow_Click(sender As Object, e As EventArgs) Handles btn_workflow.Click
+        frm_workflow.ShowDialog(Me)
+    End Sub
 
     'Private Sub btn_file_eval_Click(sender As Object, e As EventArgs) Handles btn_file_eval.Click
     '    frm_file_eval.ShowDialog(Me)
     'End Sub
 
-    'Private Sub btn_flagging_Click(sender As Object, e As EventArgs) Handles btn_flagging.Click
-    '    Dim flagging = New frm_flagging
+    Private Sub btn_flagging_Click(sender As Object, e As EventArgs) Handles btn_flagging.Click
+        Dim flagging = New frm_flagging
 
-    '    flagging.ShowDialog(Me)
-    'End Sub
+        flagging.ShowDialog(Me)
+    End Sub
 
     'Private Sub btn_myeval_Click(sender As Object, e As EventArgs) Handles btn_myeval.Click
     '    frm_file_eval.ShowDialog(Me)
     'End Sub
 
-    'Private Sub btn_break_Click(sender As Object, e As EventArgs) Handles btn_break.Click
-    '    frm_break.ShowDialog(Me)
-    'End Sub
-
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
-
+    Private Sub btn_break_Click(sender As Object, e As EventArgs) Handles btn_break.Click
+        frm_break.ShowDialog(Me)
     End Sub
+    'commenthere
 
-    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel2.Paint
-
-    End Sub
-
-    Private Sub Panel1_DoubleClick(sender As Object, e As EventArgs) Handles Panel1.DoubleClick
+    Private Sub Panel1_DoubleClick(sender As Object, e As EventArgs)
         Me.Location = New Point(0, 0)
     End Sub
 
+    Private Sub frm_main_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
+        resize_components()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        frm_minimized.Show()
+    End Sub
+
+    Private Sub User_Btn_Click(sender As Object, e As EventArgs) Handles User_Btn.Click
+
+    End Sub
+
+    Private Sub btn_monitoring_Click(sender As Object, e As EventArgs) Handles btn_monitoring.Click
+        frm_monitoring.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btn_files_due_Click(sender As Object, e As EventArgs) Handles btn_files_due.Click
+        frm_duefile.Show()
+    End Sub
 End Class

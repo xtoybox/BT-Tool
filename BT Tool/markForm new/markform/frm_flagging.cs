@@ -433,6 +433,11 @@ namespace markform
 
         }
 
+        private void strip_info_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Filter data
         /// </summary>

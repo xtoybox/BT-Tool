@@ -137,3 +137,9 @@ C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_file_
 C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_file_eval_bulkdownload.resources
 C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_flagging.resources
 C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_workflow.resources
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\System.IO.Packaging.dll
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_monitoring.resources
+C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_duefile.resources

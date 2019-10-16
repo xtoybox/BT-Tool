@@ -78,7 +78,7 @@ Partial Class frm_flagging
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(998, 627)
+        Me.Panel1.Size = New System.Drawing.Size(998, 534)
         Me.Panel1.TabIndex = 0
         '
         'dgv_flag
@@ -107,12 +107,14 @@ Partial Class frm_flagging
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(84, Byte), Integer))
         Me.dgv_flag.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv_flag.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgv_flag.Size = New System.Drawing.Size(796, 575)
+        Me.dgv_flag.Size = New System.Drawing.Size(796, 482)
         Me.dgv_flag.TabIndex = 7
         '
         'pnl_group_container
         '
-        Me.pnl_group_container.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnl_group_container.AutoScroll = True
+        Me.pnl_group_container.BackColor = System.Drawing.SystemColors.Control
+        Me.pnl_group_container.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnl_group_container.Controls.Add(Me.tlp_flag_form_container)
         Me.pnl_group_container.Controls.Add(Me.label1)
         Me.pnl_group_container.Controls.Add(Me.tlp_filter_export)
@@ -121,12 +123,12 @@ Partial Class frm_flagging
         Me.pnl_group_container.ForeColor = System.Drawing.Color.White
         Me.pnl_group_container.Location = New System.Drawing.Point(0, 28)
         Me.pnl_group_container.Name = "pnl_group_container"
-        Me.pnl_group_container.Size = New System.Drawing.Size(200, 575)
+        Me.pnl_group_container.Size = New System.Drawing.Size(200, 482)
         Me.pnl_group_container.TabIndex = 6
         '
         'tlp_flag_form_container
         '
-        Me.tlp_flag_form_container.BackColor = System.Drawing.Color.Black
+        Me.tlp_flag_form_container.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_flag_form_container.ColumnCount = 1
         Me.tlp_flag_form_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlp_flag_form_container.Controls.Add(Me.lbl_client, 0, 0)
@@ -143,7 +145,7 @@ Partial Class frm_flagging
         Me.tlp_flag_form_container.Location = New System.Drawing.Point(0, 240)
         Me.tlp_flag_form_container.Name = "tlp_flag_form_container"
         Me.tlp_flag_form_container.Padding = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.tlp_flag_form_container.RowCount = 9
+        Me.tlp_flag_form_container.RowCount = 10
         Me.tlp_flag_form_container.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15.0!))
         Me.tlp_flag_form_container.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.tlp_flag_form_container.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15.0!))
@@ -153,13 +155,15 @@ Partial Class frm_flagging
         Me.tlp_flag_form_container.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33.0!))
         Me.tlp_flag_form_container.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33.0!))
         Me.tlp_flag_form_container.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33.0!))
-        Me.tlp_flag_form_container.Size = New System.Drawing.Size(200, 335)
+        Me.tlp_flag_form_container.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5.0!))
+        Me.tlp_flag_form_container.Size = New System.Drawing.Size(198, 240)
         Me.tlp_flag_form_container.TabIndex = 0
         '
         'lbl_client
         '
         Me.lbl_client.AutoSize = True
         Me.lbl_client.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_client.ForeColor = System.Drawing.Color.Black
         Me.lbl_client.Location = New System.Drawing.Point(8, 5)
         Me.lbl_client.Name = "lbl_client"
         Me.lbl_client.Size = New System.Drawing.Size(42, 15)
@@ -170,6 +174,7 @@ Partial Class frm_flagging
         '
         Me.lbl_filename.AutoSize = True
         Me.lbl_filename.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_filename.ForeColor = System.Drawing.Color.Black
         Me.lbl_filename.Location = New System.Drawing.Point(8, 50)
         Me.lbl_filename.Name = "lbl_filename"
         Me.lbl_filename.Size = New System.Drawing.Size(59, 15)
@@ -180,6 +185,7 @@ Partial Class frm_flagging
         '
         Me.lbl_problem.AutoSize = True
         Me.lbl_problem.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_problem.ForeColor = System.Drawing.Color.Black
         Me.lbl_problem.Location = New System.Drawing.Point(8, 95)
         Me.lbl_problem.Name = "lbl_problem"
         Me.lbl_problem.Size = New System.Drawing.Size(55, 15)
@@ -189,12 +195,12 @@ Partial Class frm_flagging
         'cbo_client
         '
         Me.cbo_client.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cbo_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbo_client.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cbo_client.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_client.FormattingEnabled = True
         Me.cbo_client.Location = New System.Drawing.Point(8, 23)
         Me.cbo_client.Name = "cbo_client"
-        Me.cbo_client.Size = New System.Drawing.Size(184, 24)
+        Me.cbo_client.Size = New System.Drawing.Size(182, 24)
         Me.cbo_client.TabIndex = 3
         '
         'txt_filename
@@ -204,7 +210,7 @@ Partial Class frm_flagging
         Me.txt_filename.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_filename.Location = New System.Drawing.Point(8, 68)
         Me.txt_filename.Name = "txt_filename"
-        Me.txt_filename.Size = New System.Drawing.Size(184, 21)
+        Me.txt_filename.Size = New System.Drawing.Size(182, 21)
         Me.txt_filename.TabIndex = 4
         '
         'rtxt_problem
@@ -214,13 +220,13 @@ Partial Class frm_flagging
         Me.rtxt_problem.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rtxt_problem.Location = New System.Drawing.Point(8, 113)
         Me.rtxt_problem.Name = "rtxt_problem"
-        Me.rtxt_problem.Size = New System.Drawing.Size(184, 120)
+        Me.rtxt_problem.Size = New System.Drawing.Size(182, 20)
         Me.rtxt_problem.TabIndex = 5
         Me.rtxt_problem.Text = ""
         '
         'btn_save
         '
-        Me.btn_save.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_save.BackColor = System.Drawing.Color.Black
         Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_save.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -230,16 +236,16 @@ Partial Class frm_flagging
         Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_save.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_save.ForeColor = System.Drawing.Color.White
-        Me.btn_save.Location = New System.Drawing.Point(8, 239)
+        Me.btn_save.Location = New System.Drawing.Point(8, 139)
         Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(184, 27)
+        Me.btn_save.Size = New System.Drawing.Size(182, 27)
         Me.btn_save.TabIndex = 6
         Me.btn_save.Text = "Save"
         Me.btn_save.UseVisualStyleBackColor = False
         '
         'btn_delete
         '
-        Me.btn_delete.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_delete.BackColor = System.Drawing.Color.Black
         Me.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_delete.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -249,9 +255,9 @@ Partial Class frm_flagging
         Me.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_delete.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_delete.ForeColor = System.Drawing.Color.White
-        Me.btn_delete.Location = New System.Drawing.Point(8, 272)
+        Me.btn_delete.Location = New System.Drawing.Point(8, 172)
         Me.btn_delete.Name = "btn_delete"
-        Me.btn_delete.Size = New System.Drawing.Size(184, 27)
+        Me.btn_delete.Size = New System.Drawing.Size(182, 27)
         Me.btn_delete.TabIndex = 7
         Me.btn_delete.Text = "Delete"
         Me.btn_delete.UseVisualStyleBackColor = False
@@ -264,17 +270,17 @@ Partial Class frm_flagging
         Me.tlp_seen_unseen_container.Controls.Add(Me.btn_seen, 0, 0)
         Me.tlp_seen_unseen_container.Controls.Add(Me.btn_unseen, 1, 0)
         Me.tlp_seen_unseen_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tlp_seen_unseen_container.Location = New System.Drawing.Point(5, 302)
+        Me.tlp_seen_unseen_container.Location = New System.Drawing.Point(5, 202)
         Me.tlp_seen_unseen_container.Margin = New System.Windows.Forms.Padding(0)
         Me.tlp_seen_unseen_container.Name = "tlp_seen_unseen_container"
         Me.tlp_seen_unseen_container.RowCount = 1
         Me.tlp_seen_unseen_container.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tlp_seen_unseen_container.Size = New System.Drawing.Size(190, 33)
+        Me.tlp_seen_unseen_container.Size = New System.Drawing.Size(188, 33)
         Me.tlp_seen_unseen_container.TabIndex = 8
         '
         'btn_seen
         '
-        Me.btn_seen.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_seen.BackColor = System.Drawing.Color.Black
         Me.btn_seen.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_seen.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_seen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -286,14 +292,14 @@ Partial Class frm_flagging
         Me.btn_seen.ForeColor = System.Drawing.Color.White
         Me.btn_seen.Location = New System.Drawing.Point(3, 3)
         Me.btn_seen.Name = "btn_seen"
-        Me.btn_seen.Size = New System.Drawing.Size(89, 27)
+        Me.btn_seen.Size = New System.Drawing.Size(88, 27)
         Me.btn_seen.TabIndex = 0
         Me.btn_seen.Text = "Seen"
         Me.btn_seen.UseVisualStyleBackColor = False
         '
         'btn_unseen
         '
-        Me.btn_unseen.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_unseen.BackColor = System.Drawing.Color.Black
         Me.btn_unseen.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_unseen.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_unseen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -303,29 +309,29 @@ Partial Class frm_flagging
         Me.btn_unseen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_unseen.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_unseen.ForeColor = System.Drawing.Color.White
-        Me.btn_unseen.Location = New System.Drawing.Point(98, 3)
+        Me.btn_unseen.Location = New System.Drawing.Point(97, 3)
         Me.btn_unseen.Name = "btn_unseen"
-        Me.btn_unseen.Size = New System.Drawing.Size(89, 27)
+        Me.btn_unseen.Size = New System.Drawing.Size(88, 27)
         Me.btn_unseen.TabIndex = 1
         Me.btn_unseen.Text = "Unseen"
         Me.btn_unseen.UseVisualStyleBackColor = False
         '
         'label1
         '
-        Me.label1.BackColor = System.Drawing.Color.Black
+        Me.label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.label1.Dock = System.Windows.Forms.DockStyle.Top
         Me.label1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.White
         Me.label1.Location = New System.Drawing.Point(0, 210)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(200, 30)
+        Me.label1.Size = New System.Drawing.Size(198, 30)
         Me.label1.TabIndex = 0
         Me.label1.Text = "Flagging Form"
         Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'tlp_filter_export
         '
-        Me.tlp_filter_export.BackColor = System.Drawing.Color.Black
+        Me.tlp_filter_export.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_filter_export.ColumnCount = 1
         Me.tlp_filter_export.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlp_filter_export.Controls.Add(Me.label2, 0, 0)
@@ -348,14 +354,15 @@ Partial Class frm_flagging
         Me.tlp_filter_export.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15.0!))
         Me.tlp_filter_export.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.tlp_filter_export.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlp_filter_export.Size = New System.Drawing.Size(200, 180)
+        Me.tlp_filter_export.Size = New System.Drawing.Size(198, 180)
         Me.tlp_filter_export.TabIndex = 6
         '
         'label2
         '
         Me.label2.AutoSize = True
+        Me.label2.BackColor = System.Drawing.Color.Transparent
         Me.label2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label2.ForeColor = System.Drawing.Color.White
+        Me.label2.ForeColor = System.Drawing.Color.Black
         Me.label2.Location = New System.Drawing.Point(8, 5)
         Me.label2.Name = "label2"
         Me.label2.Size = New System.Drawing.Size(38, 15)
@@ -365,19 +372,19 @@ Partial Class frm_flagging
         'cbo_dep
         '
         Me.cbo_dep.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cbo_dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_dep.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_dep.FormattingEnabled = True
         Me.cbo_dep.Location = New System.Drawing.Point(8, 113)
         Me.cbo_dep.Name = "cbo_dep"
-        Me.cbo_dep.Size = New System.Drawing.Size(184, 24)
+        Me.cbo_dep.Size = New System.Drawing.Size(182, 24)
         Me.cbo_dep.TabIndex = 2
         '
         'label3
         '
         Me.label3.AutoSize = True
+        Me.label3.BackColor = System.Drawing.Color.Transparent
         Me.label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label3.ForeColor = System.Drawing.Color.White
+        Me.label3.ForeColor = System.Drawing.Color.Black
         Me.label3.Location = New System.Drawing.Point(8, 95)
         Me.label3.Name = "label3"
         Me.label3.Size = New System.Drawing.Size(77, 15)
@@ -391,14 +398,15 @@ Partial Class frm_flagging
         Me.dtpicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpicker.Location = New System.Drawing.Point(8, 23)
         Me.dtpicker.Name = "dtpicker"
-        Me.dtpicker.Size = New System.Drawing.Size(184, 21)
+        Me.dtpicker.Size = New System.Drawing.Size(182, 21)
         Me.dtpicker.TabIndex = 0
         '
         'lbl_type
         '
         Me.lbl_type.AutoSize = True
+        Me.lbl_type.BackColor = System.Drawing.Color.Transparent
         Me.lbl_type.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_type.ForeColor = System.Drawing.Color.White
+        Me.lbl_type.ForeColor = System.Drawing.Color.Black
         Me.lbl_type.Location = New System.Drawing.Point(8, 50)
         Me.lbl_type.Name = "lbl_type"
         Me.lbl_type.Size = New System.Drawing.Size(37, 15)
@@ -408,12 +416,11 @@ Partial Class frm_flagging
         'cbo_type
         '
         Me.cbo_type.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cbo_type.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbo_type.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_type.FormattingEnabled = True
         Me.cbo_type.Location = New System.Drawing.Point(8, 68)
         Me.cbo_type.Name = "cbo_type"
-        Me.cbo_type.Size = New System.Drawing.Size(184, 24)
+        Me.cbo_type.Size = New System.Drawing.Size(182, 24)
         Me.cbo_type.TabIndex = 1
         '
         'tableLayoutPanel2
@@ -427,12 +434,12 @@ Partial Class frm_flagging
         Me.tableLayoutPanel2.Name = "tableLayoutPanel2"
         Me.tableLayoutPanel2.RowCount = 1
         Me.tableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableLayoutPanel2.Size = New System.Drawing.Size(184, 34)
+        Me.tableLayoutPanel2.Size = New System.Drawing.Size(182, 34)
         Me.tableLayoutPanel2.TabIndex = 6
         '
         'btn_export
         '
-        Me.btn_export.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_export.BackColor = System.Drawing.Color.Black
         Me.btn_export.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_export.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_export.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -444,14 +451,14 @@ Partial Class frm_flagging
         Me.btn_export.ForeColor = System.Drawing.Color.White
         Me.btn_export.Location = New System.Drawing.Point(3, 3)
         Me.btn_export.Name = "btn_export"
-        Me.btn_export.Size = New System.Drawing.Size(86, 28)
+        Me.btn_export.Size = New System.Drawing.Size(85, 28)
         Me.btn_export.TabIndex = 0
         Me.btn_export.Text = "Export"
         Me.btn_export.UseVisualStyleBackColor = False
         '
         'btn_reload
         '
-        Me.btn_reload.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_reload.BackColor = System.Drawing.Color.Black
         Me.btn_reload.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_reload.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_reload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -461,31 +468,31 @@ Partial Class frm_flagging
         Me.btn_reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_reload.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_reload.ForeColor = System.Drawing.Color.White
-        Me.btn_reload.Location = New System.Drawing.Point(95, 3)
+        Me.btn_reload.Location = New System.Drawing.Point(94, 3)
         Me.btn_reload.Name = "btn_reload"
-        Me.btn_reload.Size = New System.Drawing.Size(86, 28)
+        Me.btn_reload.Size = New System.Drawing.Size(85, 28)
         Me.btn_reload.TabIndex = 1
         Me.btn_reload.Text = "Reload"
         Me.btn_reload.UseVisualStyleBackColor = False
         '
         'label4
         '
-        Me.label4.BackColor = System.Drawing.Color.Black
+        Me.label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.label4.Dock = System.Windows.Forms.DockStyle.Top
         Me.label4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label4.ForeColor = System.Drawing.Color.White
         Me.label4.Location = New System.Drawing.Point(0, 0)
         Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(200, 30)
+        Me.label4.Size = New System.Drawing.Size(198, 30)
         Me.label4.TabIndex = 1
         Me.label4.Text = "Filter / Export"
         Me.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'strip_info
         '
-        Me.strip_info.BackColor = System.Drawing.Color.DimGray
+        Me.strip_info.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.strip_info.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tss_status})
-        Me.strip_info.Location = New System.Drawing.Point(0, 603)
+        Me.strip_info.Location = New System.Drawing.Point(0, 510)
         Me.strip_info.Name = "strip_info"
         Me.strip_info.Size = New System.Drawing.Size(996, 22)
         Me.strip_info.TabIndex = 5
@@ -493,17 +500,18 @@ Partial Class frm_flagging
         '
         'tss_status
         '
-        Me.tss_status.BackColor = System.Drawing.Color.DimGray
+        Me.tss_status.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.tss_status.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tss_status.ForeColor = System.Drawing.Color.White
         Me.tss_status.Name = "tss_status"
-        Me.tss_status.Size = New System.Drawing.Size(109, 17)
+        Me.tss_status.Size = New System.Drawing.Size(120, 17)
         Me.tss_status.Text = "toolStripStatusLabel1"
         '
         'Panel2
         '
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
-        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -524,18 +532,16 @@ Partial Class frm_flagging
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.DarkRed
+        Me.Button1.BackColor = System.Drawing.Color.Red
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.BT_Tool.My.Resources.Resources.close1
-        Me.Button1.Location = New System.Drawing.Point(967, 0)
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(965, 0)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(29, 28)
-        Me.Button1.TabIndex = 0
+        Me.Button1.Size = New System.Drawing.Size(31, 28)
+        Me.Button1.TabIndex = 11
+        Me.Button1.TabStop = False
         Me.Button1.UseVisualStyleBackColor = False
         '
         'frm_flagging
@@ -543,11 +549,12 @@ Partial Class frm_flagging
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(998, 627)
+        Me.ClientSize = New System.Drawing.Size(998, 534)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_flagging"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "BT-Tool Flagging"
         Me.Panel1.ResumeLayout(False)
@@ -597,7 +604,7 @@ Partial Class frm_flagging
     Private WithEvents strip_info As StatusStrip
     Private WithEvents tss_status As ToolStripStatusLabel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button1 As Button
     Private WithEvents dgv_flag As DataGridView
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button1 As Button
 End Class

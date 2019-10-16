@@ -26,7 +26,11 @@ Partial Class frm_break
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btn_stop = New System.Windows.Forms.Button()
         Me.lbl_time = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -70,6 +74,26 @@ Partial Class frm_break
         Me.lbl_time.Text = "00:00:00"
         Me.lbl_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(957, 119)
+        Me.Panel1.TabIndex = 14
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PictureBox2.Image = Global.BT_Tool.My.Resources.Resources.accoalde_logo_small
+        Me.PictureBox2.Location = New System.Drawing.Point(617, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(340, 119)
+        Me.PictureBox2.TabIndex = 0
+        Me.PictureBox2.TabStop = False
+        '
         'frm_break
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -78,6 +102,7 @@ Partial Class frm_break
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(957, 610)
         Me.Controls.Add(Me.btn_stop)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lbl_time)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -85,6 +110,8 @@ Partial Class frm_break
         Me.Name = "frm_break"
         Me.Text = "BT-Tool Break"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -92,4 +119,6 @@ Partial Class frm_break
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btn_stop As Button
     Friend WithEvents lbl_time As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

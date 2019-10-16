@@ -26,8 +26,8 @@ Partial Class frm_file_eval
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.rtxt_q2_2 = New System.Windows.Forms.RichTextBox()
         Me.lbl_q3_2_cbo = New System.Windows.Forms.Label()
         Me.cbo_q3_2 = New System.Windows.Forms.ComboBox()
@@ -179,13 +179,27 @@ Partial Class frm_file_eval
         'Panel1
         '
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1153, 29)
         Me.Panel1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(1122, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(31, 29)
+        Me.Button1.TabIndex = 2
+        Me.Button1.TabStop = False
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -200,29 +214,13 @@ Partial Class frm_file_eval
         Me.Label1.Tag = ""
         Me.Label1.Text = "Performance Evaluation"
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Maroon
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.BT_Tool.My.Resources.Resources.close1
-        Me.Button1.Location = New System.Drawing.Point(1123, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(30, 29)
-        Me.Button1.TabIndex = 0
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'rtxt_q2_2
         '
         Me.rtxt_q2_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q2_2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q2_2.Location = New System.Drawing.Point(249, 60)
+        Me.rtxt_q2_2.Location = New System.Drawing.Point(235, 60)
         Me.rtxt_q2_2.Name = "rtxt_q2_2"
-        Me.rtxt_q2_2.Size = New System.Drawing.Size(292, 50)
+        Me.rtxt_q2_2.Size = New System.Drawing.Size(306, 50)
         Me.rtxt_q2_2.TabIndex = 13
         Me.rtxt_q2_2.Text = ""
         '
@@ -230,10 +228,10 @@ Partial Class frm_file_eval
         '
         Me.lbl_q3_2_cbo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q3_2_cbo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q3_2_cbo.ForeColor = System.Drawing.Color.White
+        Me.lbl_q3_2_cbo.ForeColor = System.Drawing.Color.Black
         Me.lbl_q3_2_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q3_2_cbo.Name = "lbl_q3_2_cbo"
-        Me.lbl_q3_2_cbo.Size = New System.Drawing.Size(51, 26)
+        Me.lbl_q3_2_cbo.Size = New System.Drawing.Size(47, 26)
         Me.lbl_q3_2_cbo.TabIndex = 17
         Me.lbl_q3_2_cbo.Text = "label1"
         Me.lbl_q3_2_cbo.Visible = False
@@ -246,7 +244,7 @@ Partial Class frm_file_eval
         Me.cbo_q3_2.FormattingEnabled = True
         Me.cbo_q3_2.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q3_2.Name = "cbo_q3_2"
-        Me.cbo_q3_2.Size = New System.Drawing.Size(51, 24)
+        Me.cbo_q3_2.Size = New System.Drawing.Size(47, 24)
         Me.cbo_q3_2.TabIndex = 16
         '
         'pnl_cbo_q3_2_readonly_alt_container
@@ -254,19 +252,19 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q3_2_readonly_alt_container.Controls.Add(Me.lbl_q3_2_cbo)
         Me.pnl_cbo_q3_2_readonly_alt_container.Controls.Add(Me.cbo_q3_2)
         Me.pnl_cbo_q3_2_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q3_2_readonly_alt_container.Location = New System.Drawing.Point(191, 60)
+        Me.pnl_cbo_q3_2_readonly_alt_container.Location = New System.Drawing.Point(181, 60)
         Me.pnl_cbo_q3_2_readonly_alt_container.Name = "pnl_cbo_q3_2_readonly_alt_container"
-        Me.pnl_cbo_q3_2_readonly_alt_container.Size = New System.Drawing.Size(51, 50)
+        Me.pnl_cbo_q3_2_readonly_alt_container.Size = New System.Drawing.Size(47, 50)
         Me.pnl_cbo_q3_2_readonly_alt_container.TabIndex = 12
         '
         'lbl_q3_1_cbo
         '
         Me.lbl_q3_1_cbo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q3_1_cbo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q3_1_cbo.ForeColor = System.Drawing.Color.White
+        Me.lbl_q3_1_cbo.ForeColor = System.Drawing.Color.Black
         Me.lbl_q3_1_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q3_1_cbo.Name = "lbl_q3_1_cbo"
-        Me.lbl_q3_1_cbo.Size = New System.Drawing.Size(51, 25)
+        Me.lbl_q3_1_cbo.Size = New System.Drawing.Size(47, 25)
         Me.lbl_q3_1_cbo.TabIndex = 15
         Me.lbl_q3_1_cbo.Text = "label1"
         Me.lbl_q3_1_cbo.Visible = False
@@ -279,16 +277,16 @@ Partial Class frm_file_eval
         Me.cbo_q3_1.FormattingEnabled = True
         Me.cbo_q3_1.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q3_1.Name = "cbo_q3_1"
-        Me.cbo_q3_1.Size = New System.Drawing.Size(51, 24)
+        Me.cbo_q3_1.Size = New System.Drawing.Size(47, 24)
         Me.cbo_q3_1.TabIndex = 14
         '
         'rtxt_q3_2
         '
         Me.rtxt_q3_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q3_2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q3_2.Location = New System.Drawing.Point(249, 60)
+        Me.rtxt_q3_2.Location = New System.Drawing.Point(235, 60)
         Me.rtxt_q3_2.Name = "rtxt_q3_2"
-        Me.rtxt_q3_2.Size = New System.Drawing.Size(292, 50)
+        Me.rtxt_q3_2.Size = New System.Drawing.Size(306, 50)
         Me.rtxt_q3_2.TabIndex = 17
         Me.rtxt_q3_2.Text = ""
         '
@@ -296,10 +294,10 @@ Partial Class frm_file_eval
         '
         Me.lbl_q3_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q3_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q3_1.ForeColor = System.Drawing.Color.White
+        Me.lbl_q3_1.ForeColor = System.Drawing.Color.Black
         Me.lbl_q3_1.Location = New System.Drawing.Point(4, 1)
         Me.lbl_q3_1.Name = "lbl_q3_1"
-        Me.lbl_q3_1.Size = New System.Drawing.Size(180, 55)
+        Me.lbl_q3_1.Size = New System.Drawing.Size(170, 55)
         Me.lbl_q3_1.TabIndex = 0
         Me.lbl_q3_1.Text = "Was the file as accurately" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Grammar and Tenses, Punctuations, Spelling, Paraphra" &
     "sing, Timecoding)"
@@ -308,10 +306,10 @@ Partial Class frm_file_eval
         '
         Me.lbl_q3_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q3_2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q3_2.ForeColor = System.Drawing.Color.White
+        Me.lbl_q3_2.ForeColor = System.Drawing.Color.Black
         Me.lbl_q3_2.Location = New System.Drawing.Point(4, 57)
         Me.lbl_q3_2.Name = "lbl_q3_2"
-        Me.lbl_q3_2.Size = New System.Drawing.Size(180, 56)
+        Me.lbl_q3_2.Size = New System.Drawing.Size(170, 56)
         Me.lbl_q3_2.TabIndex = 1
         Me.lbl_q3_2.Text = "Header Information"
         '
@@ -319,9 +317,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q3_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q3_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q3_1.Location = New System.Drawing.Point(249, 4)
+        Me.rtxt_q3_1.Location = New System.Drawing.Point(235, 4)
         Me.rtxt_q3_1.Name = "rtxt_q3_1"
-        Me.rtxt_q3_1.Size = New System.Drawing.Size(292, 49)
+        Me.rtxt_q3_1.Size = New System.Drawing.Size(306, 49)
         Me.rtxt_q3_1.TabIndex = 15
         Me.rtxt_q3_1.Text = ""
         '
@@ -330,30 +328,31 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q3_1_readonly_alt_container.Controls.Add(Me.lbl_q3_1_cbo)
         Me.pnl_cbo_q3_1_readonly_alt_container.Controls.Add(Me.cbo_q3_1)
         Me.pnl_cbo_q3_1_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q3_1_readonly_alt_container.Location = New System.Drawing.Point(191, 4)
+        Me.pnl_cbo_q3_1_readonly_alt_container.Location = New System.Drawing.Point(181, 4)
         Me.pnl_cbo_q3_1_readonly_alt_container.Name = "pnl_cbo_q3_1_readonly_alt_container"
-        Me.pnl_cbo_q3_1_readonly_alt_container.Size = New System.Drawing.Size(51, 49)
+        Me.pnl_cbo_q3_1_readonly_alt_container.Size = New System.Drawing.Size(47, 49)
         Me.pnl_cbo_q3_1_readonly_alt_container.TabIndex = 12
         '
         'lbl_q4_cbo
         '
         Me.lbl_q4_cbo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q4_cbo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q4_cbo.ForeColor = System.Drawing.Color.White
+        Me.lbl_q4_cbo.ForeColor = System.Drawing.Color.Black
         Me.lbl_q4_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q4_cbo.Name = "lbl_q4_cbo"
-        Me.lbl_q4_cbo.Size = New System.Drawing.Size(52, 22)
+        Me.lbl_q4_cbo.Size = New System.Drawing.Size(49, 22)
         Me.lbl_q4_cbo.TabIndex = 19
         Me.lbl_q4_cbo.Text = "label1"
         Me.lbl_q4_cbo.Visible = False
         '
         'tlp_q3_container
         '
+        Me.tlp_q3_container.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_q3_container.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
         Me.tlp_q3_container.ColumnCount = 3
         Me.tlp_q3_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.60175!))
         Me.tlp_q3_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.39824!))
-        Me.tlp_q3_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297.0!))
+        Me.tlp_q3_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311.0!))
         Me.tlp_q3_container.Controls.Add(Me.rtxt_q3_2, 2, 1)
         Me.tlp_q3_container.Controls.Add(Me.lbl_q3_1, 0, 0)
         Me.tlp_q3_container.Controls.Add(Me.lbl_q3_2, 0, 1)
@@ -377,17 +376,17 @@ Partial Class frm_file_eval
         Me.cbo_q4.FormattingEnabled = True
         Me.cbo_q4.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q4.Name = "cbo_q4"
-        Me.cbo_q4.Size = New System.Drawing.Size(52, 24)
+        Me.cbo_q4.Size = New System.Drawing.Size(49, 24)
         Me.cbo_q4.TabIndex = 18
         '
         'lbl_q4_1
         '
         Me.lbl_q4_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q4_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q4_1.ForeColor = System.Drawing.Color.White
+        Me.lbl_q4_1.ForeColor = System.Drawing.Color.Black
         Me.lbl_q4_1.Location = New System.Drawing.Point(4, 1)
         Me.lbl_q4_1.Name = "lbl_q4_1"
-        Me.lbl_q4_1.Size = New System.Drawing.Size(179, 52)
+        Me.lbl_q4_1.Size = New System.Drawing.Size(168, 52)
         Me.lbl_q4_1.TabIndex = 0
         Me.lbl_q4_1.Text = "Incomplete Transcript (Ten-second Rule)"
         '
@@ -395,9 +394,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q4.Location = New System.Drawing.Point(249, 4)
+        Me.rtxt_q4.Location = New System.Drawing.Point(235, 4)
         Me.rtxt_q4.Name = "rtxt_q4"
-        Me.rtxt_q4.Size = New System.Drawing.Size(292, 46)
+        Me.rtxt_q4.Size = New System.Drawing.Size(306, 46)
         Me.rtxt_q4.TabIndex = 19
         Me.rtxt_q4.Text = ""
         '
@@ -406,9 +405,9 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q4_readonly_alt_container.Controls.Add(Me.lbl_q4_cbo)
         Me.pnl_cbo_q4_readonly_alt_container.Controls.Add(Me.cbo_q4)
         Me.pnl_cbo_q4_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q4_readonly_alt_container.Location = New System.Drawing.Point(190, 4)
+        Me.pnl_cbo_q4_readonly_alt_container.Location = New System.Drawing.Point(179, 4)
         Me.pnl_cbo_q4_readonly_alt_container.Name = "pnl_cbo_q4_readonly_alt_container"
-        Me.pnl_cbo_q4_readonly_alt_container.Size = New System.Drawing.Size(52, 46)
+        Me.pnl_cbo_q4_readonly_alt_container.Size = New System.Drawing.Size(49, 46)
         Me.pnl_cbo_q4_readonly_alt_container.TabIndex = 12
         '
         'tlp_q4_container
@@ -417,7 +416,7 @@ Partial Class frm_file_eval
         Me.tlp_q4_container.ColumnCount = 3
         Me.tlp_q4_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.97103!))
         Me.tlp_q4_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.02897!))
-        Me.tlp_q4_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297.0!))
+        Me.tlp_q4_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311.0!))
         Me.tlp_q4_container.Controls.Add(Me.lbl_q4_1, 0, 0)
         Me.tlp_q4_container.Controls.Add(Me.rtxt_q4, 2, 0)
         Me.tlp_q4_container.Controls.Add(Me.pnl_cbo_q4_readonly_alt_container, 1, 0)
@@ -431,7 +430,8 @@ Partial Class frm_file_eval
         '
         'lbl_q2
         '
-        Me.lbl_q2.BackColor = System.Drawing.Color.Gray
+        Me.lbl_q2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbl_q2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_q2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_q2.ForeColor = System.Drawing.Color.White
@@ -445,7 +445,8 @@ Partial Class frm_file_eval
         '
         'lbl_q2_score
         '
-        Me.lbl_q2_score.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lbl_q2_score.BackColor = System.Drawing.Color.White
+        Me.lbl_q2_score.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_q2_score.Dock = System.Windows.Forms.DockStyle.Left
         Me.lbl_q2_score.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_q2_score.ForeColor = System.Drawing.Color.Black
@@ -470,7 +471,8 @@ Partial Class frm_file_eval
         '
         'lbl_q3
         '
-        Me.lbl_q3.BackColor = System.Drawing.Color.Gray
+        Me.lbl_q3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbl_q3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_q3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_q3.ForeColor = System.Drawing.Color.White
@@ -484,7 +486,8 @@ Partial Class frm_file_eval
         '
         'lbl_q3_score
         '
-        Me.lbl_q3_score.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lbl_q3_score.BackColor = System.Drawing.Color.White
+        Me.lbl_q3_score.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_q3_score.Dock = System.Windows.Forms.DockStyle.Left
         Me.lbl_q3_score.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_q3_score.ForeColor = System.Drawing.Color.Black
@@ -509,11 +512,12 @@ Partial Class frm_file_eval
         '
         'tlp_q2_container
         '
+        Me.tlp_q2_container.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_q2_container.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
         Me.tlp_q2_container.ColumnCount = 3
         Me.tlp_q2_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.28316!))
         Me.tlp_q2_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.71683!))
-        Me.tlp_q2_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297.0!))
+        Me.tlp_q2_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311.0!))
         Me.tlp_q2_container.Controls.Add(Me.rtxt_q2_2, 2, 1)
         Me.tlp_q2_container.Controls.Add(Me.lbl_q2_1, 0, 0)
         Me.tlp_q2_container.Controls.Add(Me.lbl_q2_2, 0, 1)
@@ -533,10 +537,10 @@ Partial Class frm_file_eval
         '
         Me.lbl_q2_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q2_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q2_1.ForeColor = System.Drawing.Color.White
+        Me.lbl_q2_1.ForeColor = System.Drawing.Color.Black
         Me.lbl_q2_1.Location = New System.Drawing.Point(4, 1)
         Me.lbl_q2_1.Name = "lbl_q2_1"
-        Me.lbl_q2_1.Size = New System.Drawing.Size(180, 55)
+        Me.lbl_q2_1.Size = New System.Drawing.Size(169, 55)
         Me.lbl_q2_1.TabIndex = 0
         Me.lbl_q2_1.Text = "Transcription Guide, Job" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Face Sheets, Video, Text Files)"
         '
@@ -544,10 +548,10 @@ Partial Class frm_file_eval
         '
         Me.lbl_q2_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q2_2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q2_2.ForeColor = System.Drawing.Color.White
+        Me.lbl_q2_2.ForeColor = System.Drawing.Color.Black
         Me.lbl_q2_2.Location = New System.Drawing.Point(4, 57)
         Me.lbl_q2_2.Name = "lbl_q2_2"
-        Me.lbl_q2_2.Size = New System.Drawing.Size(180, 56)
+        Me.lbl_q2_2.Size = New System.Drawing.Size(169, 56)
         Me.lbl_q2_2.TabIndex = 1
         Me.lbl_q2_2.Text = "Internet Research"
         '
@@ -555,9 +559,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q2_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q2_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q2_1.Location = New System.Drawing.Point(249, 4)
+        Me.rtxt_q2_1.Location = New System.Drawing.Point(235, 4)
         Me.rtxt_q2_1.Name = "rtxt_q2_1"
-        Me.rtxt_q2_1.Size = New System.Drawing.Size(292, 49)
+        Me.rtxt_q2_1.Size = New System.Drawing.Size(306, 49)
         Me.rtxt_q2_1.TabIndex = 11
         Me.rtxt_q2_1.Text = ""
         '
@@ -566,19 +570,19 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q2_1_readonly_alt_container.Controls.Add(Me.lbl_q2_1_cbo)
         Me.pnl_cbo_q2_1_readonly_alt_container.Controls.Add(Me.cbo_q2_1)
         Me.pnl_cbo_q2_1_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q2_1_readonly_alt_container.Location = New System.Drawing.Point(191, 4)
+        Me.pnl_cbo_q2_1_readonly_alt_container.Location = New System.Drawing.Point(180, 4)
         Me.pnl_cbo_q2_1_readonly_alt_container.Name = "pnl_cbo_q2_1_readonly_alt_container"
-        Me.pnl_cbo_q2_1_readonly_alt_container.Size = New System.Drawing.Size(51, 49)
+        Me.pnl_cbo_q2_1_readonly_alt_container.Size = New System.Drawing.Size(48, 49)
         Me.pnl_cbo_q2_1_readonly_alt_container.TabIndex = 12
         '
         'lbl_q2_1_cbo
         '
         Me.lbl_q2_1_cbo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q2_1_cbo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q2_1_cbo.ForeColor = System.Drawing.Color.White
+        Me.lbl_q2_1_cbo.ForeColor = System.Drawing.Color.Black
         Me.lbl_q2_1_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q2_1_cbo.Name = "lbl_q2_1_cbo"
-        Me.lbl_q2_1_cbo.Size = New System.Drawing.Size(51, 25)
+        Me.lbl_q2_1_cbo.Size = New System.Drawing.Size(48, 25)
         Me.lbl_q2_1_cbo.TabIndex = 11
         Me.lbl_q2_1_cbo.Text = "label1"
         Me.lbl_q2_1_cbo.Visible = False
@@ -591,7 +595,7 @@ Partial Class frm_file_eval
         Me.cbo_q2_1.FormattingEnabled = True
         Me.cbo_q2_1.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q2_1.Name = "cbo_q2_1"
-        Me.cbo_q2_1.Size = New System.Drawing.Size(51, 24)
+        Me.cbo_q2_1.Size = New System.Drawing.Size(48, 24)
         Me.cbo_q2_1.TabIndex = 10
         '
         'pnl_cbo_q2_2_readonly_alt_container
@@ -599,19 +603,19 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q2_2_readonly_alt_container.Controls.Add(Me.lbl_q2_2_cbo)
         Me.pnl_cbo_q2_2_readonly_alt_container.Controls.Add(Me.cbo_q2_2)
         Me.pnl_cbo_q2_2_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q2_2_readonly_alt_container.Location = New System.Drawing.Point(191, 60)
+        Me.pnl_cbo_q2_2_readonly_alt_container.Location = New System.Drawing.Point(180, 60)
         Me.pnl_cbo_q2_2_readonly_alt_container.Name = "pnl_cbo_q2_2_readonly_alt_container"
-        Me.pnl_cbo_q2_2_readonly_alt_container.Size = New System.Drawing.Size(51, 50)
+        Me.pnl_cbo_q2_2_readonly_alt_container.Size = New System.Drawing.Size(48, 50)
         Me.pnl_cbo_q2_2_readonly_alt_container.TabIndex = 12
         '
         'lbl_q2_2_cbo
         '
         Me.lbl_q2_2_cbo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q2_2_cbo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q2_2_cbo.ForeColor = System.Drawing.Color.White
+        Me.lbl_q2_2_cbo.ForeColor = System.Drawing.Color.Black
         Me.lbl_q2_2_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q2_2_cbo.Name = "lbl_q2_2_cbo"
-        Me.lbl_q2_2_cbo.Size = New System.Drawing.Size(51, 26)
+        Me.lbl_q2_2_cbo.Size = New System.Drawing.Size(48, 26)
         Me.lbl_q2_2_cbo.TabIndex = 13
         Me.lbl_q2_2_cbo.Text = "label1"
         Me.lbl_q2_2_cbo.Visible = False
@@ -624,12 +628,12 @@ Partial Class frm_file_eval
         Me.cbo_q2_2.FormattingEnabled = True
         Me.cbo_q2_2.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q2_2.Name = "cbo_q2_2"
-        Me.cbo_q2_2.Size = New System.Drawing.Size(51, 24)
+        Me.cbo_q2_2.Size = New System.Drawing.Size(48, 24)
         Me.cbo_q2_2.TabIndex = 12
         '
         'tlp_question_container
         '
-        Me.tlp_question_container.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.tlp_question_container.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_question_container.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
         Me.tlp_question_container.ColumnCount = 1
         Me.tlp_question_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -659,7 +663,8 @@ Partial Class frm_file_eval
         '
         'lbl_q4
         '
-        Me.lbl_q4.BackColor = System.Drawing.Color.Gray
+        Me.lbl_q4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbl_q4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_q4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_q4.ForeColor = System.Drawing.Color.White
@@ -673,11 +678,12 @@ Partial Class frm_file_eval
         '
         'tlp_q1_container
         '
+        Me.tlp_q1_container.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_q1_container.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
         Me.tlp_q1_container.ColumnCount = 3
         Me.tlp_q1_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.87735!))
         Me.tlp_q1_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.12265!))
-        Me.tlp_q1_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297.0!))
+        Me.tlp_q1_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311.0!))
         Me.tlp_q1_container.Controls.Add(Me.rtxt_q1_2, 2, 1)
         Me.tlp_q1_container.Controls.Add(Me.lbl_q1_1, 0, 0)
         Me.tlp_q1_container.Controls.Add(Me.lbl_q1_2, 0, 1)
@@ -697,9 +703,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q1_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q1_2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q1_2.Location = New System.Drawing.Point(249, 60)
+        Me.rtxt_q1_2.Location = New System.Drawing.Point(235, 60)
         Me.rtxt_q1_2.Name = "rtxt_q1_2"
-        Me.rtxt_q1_2.Size = New System.Drawing.Size(292, 50)
+        Me.rtxt_q1_2.Size = New System.Drawing.Size(306, 50)
         Me.rtxt_q1_2.TabIndex = 9
         Me.rtxt_q1_2.Text = ""
         '
@@ -707,10 +713,10 @@ Partial Class frm_file_eval
         '
         Me.lbl_q1_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q1_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q1_1.ForeColor = System.Drawing.Color.White
+        Me.lbl_q1_1.ForeColor = System.Drawing.Color.Black
         Me.lbl_q1_1.Location = New System.Drawing.Point(4, 1)
         Me.lbl_q1_1.Name = "lbl_q1_1"
-        Me.lbl_q1_1.Size = New System.Drawing.Size(179, 55)
+        Me.lbl_q1_1.Size = New System.Drawing.Size(168, 55)
         Me.lbl_q1_1.TabIndex = 0
         Me.lbl_q1_1.Text = "General Specifications" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Font and Spacing, Headers, Number Rules, Transcription B" &
     "asics General, Standalones)"
@@ -719,10 +725,10 @@ Partial Class frm_file_eval
         '
         Me.lbl_q1_2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q1_2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q1_2.ForeColor = System.Drawing.Color.White
+        Me.lbl_q1_2.ForeColor = System.Drawing.Color.Black
         Me.lbl_q1_2.Location = New System.Drawing.Point(4, 57)
         Me.lbl_q1_2.Name = "lbl_q1_2"
-        Me.lbl_q1_2.Size = New System.Drawing.Size(179, 56)
+        Me.lbl_q1_2.Size = New System.Drawing.Size(168, 56)
         Me.lbl_q1_2.TabIndex = 1
         Me.lbl_q1_2.Text = "Speaker Specification"
         '
@@ -730,9 +736,9 @@ Partial Class frm_file_eval
         '
         Me.rtxt_q1_1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt_q1_1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_q1_1.Location = New System.Drawing.Point(249, 4)
+        Me.rtxt_q1_1.Location = New System.Drawing.Point(235, 4)
         Me.rtxt_q1_1.Name = "rtxt_q1_1"
-        Me.rtxt_q1_1.Size = New System.Drawing.Size(292, 49)
+        Me.rtxt_q1_1.Size = New System.Drawing.Size(306, 49)
         Me.rtxt_q1_1.TabIndex = 7
         Me.rtxt_q1_1.Text = ""
         '
@@ -741,19 +747,19 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q1_1_readonly_alt_container.Controls.Add(Me.lbl_q1_1_cbo)
         Me.pnl_cbo_q1_1_readonly_alt_container.Controls.Add(Me.cbo_q1_1)
         Me.pnl_cbo_q1_1_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q1_1_readonly_alt_container.Location = New System.Drawing.Point(190, 4)
+        Me.pnl_cbo_q1_1_readonly_alt_container.Location = New System.Drawing.Point(179, 4)
         Me.pnl_cbo_q1_1_readonly_alt_container.Name = "pnl_cbo_q1_1_readonly_alt_container"
-        Me.pnl_cbo_q1_1_readonly_alt_container.Size = New System.Drawing.Size(52, 49)
+        Me.pnl_cbo_q1_1_readonly_alt_container.Size = New System.Drawing.Size(49, 49)
         Me.pnl_cbo_q1_1_readonly_alt_container.TabIndex = 11
         '
         'lbl_q1_1_cbo
         '
         Me.lbl_q1_1_cbo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q1_1_cbo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q1_1_cbo.ForeColor = System.Drawing.Color.White
+        Me.lbl_q1_1_cbo.ForeColor = System.Drawing.Color.Black
         Me.lbl_q1_1_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q1_1_cbo.Name = "lbl_q1_1_cbo"
-        Me.lbl_q1_1_cbo.Size = New System.Drawing.Size(52, 25)
+        Me.lbl_q1_1_cbo.Size = New System.Drawing.Size(49, 25)
         Me.lbl_q1_1_cbo.TabIndex = 0
         Me.lbl_q1_1_cbo.Text = "label1"
         Me.lbl_q1_1_cbo.Visible = False
@@ -766,7 +772,7 @@ Partial Class frm_file_eval
         Me.cbo_q1_1.FormattingEnabled = True
         Me.cbo_q1_1.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q1_1.Name = "cbo_q1_1"
-        Me.cbo_q1_1.Size = New System.Drawing.Size(52, 24)
+        Me.cbo_q1_1.Size = New System.Drawing.Size(49, 24)
         Me.cbo_q1_1.TabIndex = 6
         '
         'pnl_cbo_q1_2_readonly_alt_container
@@ -774,19 +780,19 @@ Partial Class frm_file_eval
         Me.pnl_cbo_q1_2_readonly_alt_container.Controls.Add(Me.lbl_q1_2_cbo)
         Me.pnl_cbo_q1_2_readonly_alt_container.Controls.Add(Me.cbo_q1_2)
         Me.pnl_cbo_q1_2_readonly_alt_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_cbo_q1_2_readonly_alt_container.Location = New System.Drawing.Point(190, 60)
+        Me.pnl_cbo_q1_2_readonly_alt_container.Location = New System.Drawing.Point(179, 60)
         Me.pnl_cbo_q1_2_readonly_alt_container.Name = "pnl_cbo_q1_2_readonly_alt_container"
-        Me.pnl_cbo_q1_2_readonly_alt_container.Size = New System.Drawing.Size(52, 50)
+        Me.pnl_cbo_q1_2_readonly_alt_container.Size = New System.Drawing.Size(49, 50)
         Me.pnl_cbo_q1_2_readonly_alt_container.TabIndex = 12
         '
         'lbl_q1_2_cbo
         '
         Me.lbl_q1_2_cbo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q1_2_cbo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_q1_2_cbo.ForeColor = System.Drawing.Color.White
+        Me.lbl_q1_2_cbo.ForeColor = System.Drawing.Color.Black
         Me.lbl_q1_2_cbo.Location = New System.Drawing.Point(0, 24)
         Me.lbl_q1_2_cbo.Name = "lbl_q1_2_cbo"
-        Me.lbl_q1_2_cbo.Size = New System.Drawing.Size(52, 26)
+        Me.lbl_q1_2_cbo.Size = New System.Drawing.Size(49, 26)
         Me.lbl_q1_2_cbo.TabIndex = 9
         Me.lbl_q1_2_cbo.Text = "label1"
         Me.lbl_q1_2_cbo.Visible = False
@@ -799,7 +805,7 @@ Partial Class frm_file_eval
         Me.cbo_q1_2.FormattingEnabled = True
         Me.cbo_q1_2.Location = New System.Drawing.Point(0, 0)
         Me.cbo_q1_2.Name = "cbo_q1_2"
-        Me.cbo_q1_2.Size = New System.Drawing.Size(52, 24)
+        Me.cbo_q1_2.Size = New System.Drawing.Size(49, 24)
         Me.cbo_q1_2.TabIndex = 8
         '
         'pnl_q1_lbl_container
@@ -815,7 +821,8 @@ Partial Class frm_file_eval
         '
         'lbl_q1
         '
-        Me.lbl_q1.BackColor = System.Drawing.Color.Gray
+        Me.lbl_q1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbl_q1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_q1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_q1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_q1.ForeColor = System.Drawing.Color.White
@@ -829,7 +836,8 @@ Partial Class frm_file_eval
         '
         'lbl_q1_score
         '
-        Me.lbl_q1_score.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lbl_q1_score.BackColor = System.Drawing.Color.White
+        Me.lbl_q1_score.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_q1_score.Dock = System.Windows.Forms.DockStyle.Left
         Me.lbl_q1_score.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_q1_score.ForeColor = System.Drawing.Color.Black
@@ -843,6 +851,7 @@ Partial Class frm_file_eval
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.Control
         Me.Panel2.Controls.Add(Me.dgv_eval_list)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 85)
@@ -932,6 +941,7 @@ Partial Class frm_file_eval
         '
         'lbl_eval_list
         '
+        Me.lbl_eval_list.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lbl_eval_list.Dock = System.Windows.Forms.DockStyle.Top
         Me.lbl_eval_list.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_eval_list.ForeColor = System.Drawing.Color.White
@@ -944,6 +954,7 @@ Partial Class frm_file_eval
         '
         'pnl_mycontrol_container
         '
+        Me.pnl_mycontrol_container.BackColor = System.Drawing.SystemColors.Control
         Me.pnl_mycontrol_container.Controls.Add(Me.tlp_my_action_container)
         Me.pnl_mycontrol_container.Controls.Add(Me.dt_mypicker)
         Me.pnl_mycontrol_container.Dock = System.Windows.Forms.DockStyle.Top
@@ -955,6 +966,7 @@ Partial Class frm_file_eval
         '
         'tlp_my_action_container
         '
+        Me.tlp_my_action_container.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_my_action_container.ColumnCount = 2
         Me.tlp_my_action_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.5567!))
         Me.tlp_my_action_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.4433!))
@@ -970,10 +982,10 @@ Partial Class frm_file_eval
         '
         'btn_bulk_download
         '
-        Me.btn_bulk_download.BackColor = System.Drawing.Color.DimGray
+        Me.btn_bulk_download.BackColor = System.Drawing.Color.Black
         Me.btn_bulk_download.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_bulk_download.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_bulk_download.FlatAppearance.BorderSize = 0
+        Me.btn_bulk_download.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_bulk_download.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btn_bulk_download.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btn_bulk_download.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -988,10 +1000,10 @@ Partial Class frm_file_eval
         '
         'btn_reload
         '
-        Me.btn_reload.BackColor = System.Drawing.Color.DimGray
+        Me.btn_reload.BackColor = System.Drawing.Color.Black
         Me.btn_reload.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_reload.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_reload.FlatAppearance.BorderSize = 0
+        Me.btn_reload.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_reload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btn_reload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btn_reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1016,7 +1028,8 @@ Partial Class frm_file_eval
         '
         'lbl_score
         '
-        Me.lbl_score.BackColor = System.Drawing.Color.DimGray
+        Me.lbl_score.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbl_score.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_score.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_score.Font = New System.Drawing.Font("Century Gothic", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_score.ForeColor = System.Drawing.Color.White
@@ -1030,7 +1043,7 @@ Partial Class frm_file_eval
         '
         'tlp_info_container
         '
-        Me.tlp_info_container.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.tlp_info_container.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_info_container.ColumnCount = 1
         Me.tlp_info_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlp_info_container.Controls.Add(Me.lbl_score, 0, 0)
@@ -1069,7 +1082,8 @@ Partial Class frm_file_eval
         '
         'lbl_score_txt
         '
-        Me.lbl_score_txt.BackColor = System.Drawing.Color.Gainsboro
+        Me.lbl_score_txt.BackColor = System.Drawing.Color.White
+        Me.lbl_score_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_score_txt.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_score_txt.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_score_txt.ForeColor = System.Drawing.Color.DarkGreen
@@ -1104,7 +1118,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_evaluator.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_evaluator.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_evaluator.ForeColor = System.Drawing.Color.White
+        Me.lbl_evaluator.ForeColor = System.Drawing.Color.Black
         Me.lbl_evaluator.Location = New System.Drawing.Point(76, 25)
         Me.lbl_evaluator.Name = "lbl_evaluator"
         Me.lbl_evaluator.Size = New System.Drawing.Size(121, 25)
@@ -1116,7 +1130,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_evaluator_label.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_evaluator_label.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_evaluator_label.ForeColor = System.Drawing.Color.White
+        Me.lbl_evaluator_label.ForeColor = System.Drawing.Color.Black
         Me.lbl_evaluator_label.Location = New System.Drawing.Point(3, 25)
         Me.lbl_evaluator_label.Name = "lbl_evaluator_label"
         Me.lbl_evaluator_label.Size = New System.Drawing.Size(67, 25)
@@ -1128,7 +1142,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_evaluwee.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_evaluwee.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_evaluwee.ForeColor = System.Drawing.Color.White
+        Me.lbl_evaluwee.ForeColor = System.Drawing.Color.Black
         Me.lbl_evaluwee.Location = New System.Drawing.Point(76, 0)
         Me.lbl_evaluwee.Name = "lbl_evaluwee"
         Me.lbl_evaluwee.Size = New System.Drawing.Size(121, 25)
@@ -1140,7 +1154,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_name_label.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_name_label.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_name_label.ForeColor = System.Drawing.Color.White
+        Me.lbl_name_label.ForeColor = System.Drawing.Color.Black
         Me.lbl_name_label.Location = New System.Drawing.Point(3, 0)
         Me.lbl_name_label.Name = "lbl_name_label"
         Me.lbl_name_label.Size = New System.Drawing.Size(67, 25)
@@ -1152,7 +1166,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_accounts.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_accounts.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_accounts.ForeColor = System.Drawing.Color.White
+        Me.lbl_accounts.ForeColor = System.Drawing.Color.Black
         Me.lbl_accounts.Location = New System.Drawing.Point(3, 124)
         Me.lbl_accounts.Name = "lbl_accounts"
         Me.lbl_accounts.Size = New System.Drawing.Size(194, 20)
@@ -1164,7 +1178,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_filename.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_filename.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_filename.ForeColor = System.Drawing.Color.White
+        Me.lbl_filename.ForeColor = System.Drawing.Color.Black
         Me.lbl_filename.Location = New System.Drawing.Point(3, 174)
         Me.lbl_filename.Name = "lbl_filename"
         Me.lbl_filename.Size = New System.Drawing.Size(194, 20)
@@ -1176,7 +1190,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_audio_quality.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_audio_quality.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_audio_quality.ForeColor = System.Drawing.Color.White
+        Me.lbl_audio_quality.ForeColor = System.Drawing.Color.Black
         Me.lbl_audio_quality.Location = New System.Drawing.Point(3, 224)
         Me.lbl_audio_quality.Name = "lbl_audio_quality"
         Me.lbl_audio_quality.Size = New System.Drawing.Size(194, 20)
@@ -1188,7 +1202,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_compares.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_compares.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_compares.ForeColor = System.Drawing.Color.White
+        Me.lbl_compares.ForeColor = System.Drawing.Color.Black
         Me.lbl_compares.Location = New System.Drawing.Point(3, 274)
         Me.lbl_compares.Name = "lbl_compares"
         Me.lbl_compares.Size = New System.Drawing.Size(194, 20)
@@ -1198,6 +1212,7 @@ Partial Class frm_file_eval
         '
         'txt_filename
         '
+        Me.txt_filename.BackColor = System.Drawing.Color.White
         Me.txt_filename.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_filename.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_filename.Location = New System.Drawing.Point(3, 197)
@@ -1224,6 +1239,7 @@ Partial Class frm_file_eval
         '
         'txt_compares
         '
+        Me.txt_compares.BackColor = System.Drawing.Color.White
         Me.txt_compares.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_compares.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_compares.Location = New System.Drawing.Point(3, 3)
@@ -1234,14 +1250,14 @@ Partial Class frm_file_eval
         '
         'btn_compares
         '
-        Me.btn_compares.BackColor = System.Drawing.Color.DimGray
+        Me.btn_compares.BackColor = System.Drawing.Color.Black
         Me.btn_compares.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_compares.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_compares.FlatAppearance.BorderSize = 0
+        Me.btn_compares.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_compares.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btn_compares.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btn_compares.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_compares.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_compares.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_compares.ForeColor = System.Drawing.Color.White
         Me.btn_compares.Location = New System.Drawing.Point(166, 3)
         Me.btn_compares.Name = "btn_compares"
@@ -1279,7 +1295,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_words.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_words.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_words.ForeColor = System.Drawing.Color.White
+        Me.lbl_words.ForeColor = System.Drawing.Color.Black
         Me.lbl_words.Location = New System.Drawing.Point(3, 0)
         Me.lbl_words.Name = "lbl_words"
         Me.lbl_words.Size = New System.Drawing.Size(94, 25)
@@ -1291,7 +1307,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_mistakes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_mistakes.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_mistakes.ForeColor = System.Drawing.Color.White
+        Me.lbl_mistakes.ForeColor = System.Drawing.Color.Black
         Me.lbl_mistakes.Location = New System.Drawing.Point(3, 25)
         Me.lbl_mistakes.Name = "lbl_mistakes"
         Me.lbl_mistakes.Size = New System.Drawing.Size(94, 25)
@@ -1303,7 +1319,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_error_label.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_error_label.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_error_label.ForeColor = System.Drawing.Color.White
+        Me.lbl_error_label.ForeColor = System.Drawing.Color.Black
         Me.lbl_error_label.Location = New System.Drawing.Point(3, 50)
         Me.lbl_error_label.Name = "lbl_error_label"
         Me.lbl_error_label.Size = New System.Drawing.Size(94, 25)
@@ -1315,7 +1331,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_ac_label.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_ac_label.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_ac_label.ForeColor = System.Drawing.Color.White
+        Me.lbl_ac_label.ForeColor = System.Drawing.Color.Black
         Me.lbl_ac_label.Location = New System.Drawing.Point(3, 75)
         Me.lbl_ac_label.Name = "lbl_ac_label"
         Me.lbl_ac_label.Size = New System.Drawing.Size(94, 25)
@@ -1327,7 +1343,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_error.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_error.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_error.ForeColor = System.Drawing.Color.White
+        Me.lbl_error.ForeColor = System.Drawing.Color.Black
         Me.lbl_error.Location = New System.Drawing.Point(103, 50)
         Me.lbl_error.Name = "lbl_error"
         Me.lbl_error.Size = New System.Drawing.Size(94, 25)
@@ -1339,7 +1355,7 @@ Partial Class frm_file_eval
         '
         Me.lbl_ac.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_ac.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_ac.ForeColor = System.Drawing.Color.White
+        Me.lbl_ac.ForeColor = System.Drawing.Color.Black
         Me.lbl_ac.Location = New System.Drawing.Point(103, 75)
         Me.lbl_ac.Name = "lbl_ac"
         Me.lbl_ac.Size = New System.Drawing.Size(94, 25)
@@ -1371,10 +1387,10 @@ Partial Class frm_file_eval
         '
         'btn_save
         '
-        Me.btn_save.BackColor = System.Drawing.Color.DimGray
+        Me.btn_save.BackColor = System.Drawing.Color.Black
         Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_save.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_save.FlatAppearance.BorderSize = 0
+        Me.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btn_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1448,7 +1464,7 @@ Partial Class frm_file_eval
         '
         'tab_bt
         '
-        Me.tab_bt.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.tab_bt.BackColor = System.Drawing.SystemColors.Control
         Me.tab_bt.Controls.Add(Me.dgv_bt)
         Me.tab_bt.Location = New System.Drawing.Point(4, 25)
         Me.tab_bt.Name = "tab_bt"
@@ -1534,9 +1550,10 @@ Partial Class frm_file_eval
         'lbl_search_name
         '
         Me.lbl_search_name.AutoSize = True
+        Me.lbl_search_name.BackColor = System.Drawing.SystemColors.Control
         Me.lbl_search_name.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_search_name.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_search_name.ForeColor = System.Drawing.Color.White
+        Me.lbl_search_name.ForeColor = System.Drawing.Color.Black
         Me.lbl_search_name.Location = New System.Drawing.Point(3, 66)
         Me.lbl_search_name.Name = "lbl_search_name"
         Me.lbl_search_name.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
@@ -1561,10 +1578,10 @@ Partial Class frm_file_eval
         '
         'btn_refresh
         '
-        Me.btn_refresh.BackColor = System.Drawing.Color.DimGray
+        Me.btn_refresh.BackColor = System.Drawing.Color.Black
         Me.btn_refresh.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_refresh.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_refresh.FlatAppearance.BorderSize = 0
+        Me.btn_refresh.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_refresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btn_refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1579,10 +1596,10 @@ Partial Class frm_file_eval
         '
         'btn_export
         '
-        Me.btn_export.BackColor = System.Drawing.Color.DimGray
+        Me.btn_export.BackColor = System.Drawing.Color.Black
         Me.btn_export.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_export.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_export.FlatAppearance.BorderSize = 0
+        Me.btn_export.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_export.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btn_export.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray
         Me.btn_export.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1622,6 +1639,7 @@ Partial Class frm_file_eval
         '
         'tlp_filter_container
         '
+        Me.tlp_filter_container.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_filter_container.ColumnCount = 1
         Me.tlp_filter_container.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlp_filter_container.Controls.Add(Me.dtpicker, 0, 0)
@@ -1638,7 +1656,7 @@ Partial Class frm_file_eval
         '
         'tlp_1
         '
-        Me.tlp_1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.tlp_1.BackColor = System.Drawing.SystemColors.Control
         Me.tlp_1.ColumnCount = 1
         Me.tlp_1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlp_1.Controls.Add(Me.tlp_filter_container, 0, 0)
@@ -1831,6 +1849,6 @@ Partial Class frm_file_eval
     Private WithEvents tableLayoutPanel1 As TableLayoutPanel
     Private WithEvents tlp_filter_container As TableLayoutPanel
     Private WithEvents tlp_1 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class

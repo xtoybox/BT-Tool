@@ -430,6 +430,7 @@
             this.strip_info.Size = new System.Drawing.Size(1072, 22);
             this.strip_info.TabIndex = 1;
             this.strip_info.Text = "statusStrip1";
+            this.strip_info.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.strip_info_ItemClicked);
             // 
             // tss_status
             // 

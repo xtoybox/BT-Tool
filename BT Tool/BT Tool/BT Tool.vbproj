@@ -123,6 +123,12 @@
     <Compile Include="Forms\frm_break.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frm_duefile.Designer.vb">
+      <DependentUpon>frm_duefile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_duefile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_file_eval.Designer.vb">
       <DependentUpon>frm_file_eval.vb</DependentUpon>
     </Compile>
@@ -147,6 +153,10 @@
     <Compile Include="Forms\frm_minimized.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frm_monitoring.Designer.vb">
+      <DependentUpon>frm_monitoring.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_monitoring.vb" />
     <Compile Include="Forms\frm_upload.Designer.vb">
       <DependentUpon>frm_upload.vb</DependentUpon>
     </Compile>
@@ -225,6 +235,9 @@
     <EmbeddedResource Include="Forms\frm_break.resx">
       <DependentUpon>frm_break.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_duefile.resx">
+      <DependentUpon>frm_duefile.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_file_eval.resx">
       <DependentUpon>frm_file_eval.vb</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_minimized.resx">
       <DependentUpon>frm_minimized.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_monitoring.resx">
+      <DependentUpon>frm_monitoring.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_upload.resx">
       <DependentUpon>frm_upload.vb</DependentUpon>

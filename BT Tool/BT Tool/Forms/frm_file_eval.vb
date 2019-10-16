@@ -25,6 +25,20 @@ Public Class frm_file_eval
         ComparesFileName As String = "", ErrorQry As String = "",
         ComparesPath As String = "", CurUserRestriction As String = ""
     Public Event yeet As EventHandler
+    Private CustomFn As New CustomFunctions()
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub btn_compares_Click(sender As Object, e As EventArgs) Handles btn_compares.Click
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
     Private _cnl As CancellationTokenSource
     Dim ViewDep = New String() {}
     Private IsAllowViewEval As Boolean = False
@@ -392,7 +406,6 @@ Public Class frm_file_eval
             newdt.Columns.Add(h.text, h.type)
         Next h
 
-
         Dim progressHandler = New Progress(Of String)(Function(val)
                                                           tssl_status.Text = val
                                                       End Function)
@@ -524,6 +537,10 @@ Public Class frm_file_eval
 
         Return id
     End Function
+
+    Private Sub frm_file_eval_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CustomFn.FormDrag(Me, Panel1)
+    End Sub
 #End Region
 
     Public Class DGVData

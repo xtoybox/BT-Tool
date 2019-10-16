@@ -21,13 +21,31 @@ Public Class frm_userlist
 
 #Region "Events"
 
+    Private CustomFn As New CustomFunctions()
+    Dim showpass As Image = My.Resources.show_pass_241
+    Dim hidepass As Image = My.Resources.hide_pass_241
+
     Private Sub frm_userlist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        CustomFn.FormDrag(Me, Panel1)
+
         SetRestrictions()
         LoadUserList()
         LoadComboBox()
+
+        ' Fixing btn_showhide_pass 10142019
+        ImageList1.Images.Add(showpass)
+        ImageList1.Images.Add(hidepass)
+
+        btn_showhide_pass.PerformClick()
+        ' ---
+
     End Sub
     Private Sub btn_showhide_pass_Click(sender As Object, e As EventArgs) Handles btn_showhide_pass.Click
         Dim btn As Button = sender
+        ' Fixing btn_showhide_pass 10142019
+        btn.ImageList = ImageList1
+        ' ---
         Dim imgIndex As Integer = btn.ImageIndex : Dim HidePass As Boolean = True
         If imgIndex = 0 Then
             imgIndex = 1 : HidePass = False
@@ -477,12 +495,15 @@ Public Class frm_userlist
 #End Region
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
-    End Sub
-
     Private Sub PopupComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 
+    Private Sub dgv_userlist_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_userlist.CellContentClick
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
 End Class

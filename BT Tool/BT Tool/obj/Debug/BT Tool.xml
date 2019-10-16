@@ -766,6 +766,20 @@ Provides dragging functionality to a BorderStyle-None Form.
  <param name="lpString"></param>
  <returns></returns>
 </member>
+<member name="M:BT_Tool.CustomFunctions.FormResize(System.Windows.Forms.Form,System.String)">
+ <summary>
+ Execute a sub routine when form is resize.
+ </summary>
+ <param name="frm"></param>
+ <param name="lbltxt"></param>
+</member>
+<member name="M:BT_Tool.CustomFunctions.FormDrag(System.Windows.Forms.Form,System.Object)">
+ <summary>
+ Make custom object as a trigger for the form to drag.
+ </summary>
+ <param name="frm">The form that contains the object as trigger</param>
+ <param name="trggr">The object that will trigger the drag event</param>
+</member>
 <member name="M:BT_Tool.CustomFunctions.ButtonDropdownLocation(System.Windows.Forms.Panel,System.Windows.Forms.Button)">
  <summary>
  Setting the panel location at the bottom of the button and adding event handler to the button to trigger a dropdown effect to the panel.

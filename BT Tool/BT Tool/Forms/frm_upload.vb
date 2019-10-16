@@ -48,8 +48,11 @@ Public Class frm_upload
     Private _cancl As CancellationTokenSource
 #End Region
 #Region "Events"
+    Private CustomFn As New CustomFunctions()
 
     Private Sub frm_upload_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        CustomFn.FormDrag(Me, Panel1)
 
         Me.Label1.Text = "Loading files. Please wait."
         Me.Show()
@@ -66,7 +69,7 @@ Public Class frm_upload
 
     End Sub
 
-    Private Sub btn_exit_Click(sender As Object, e As EventArgs) Handles btn_exit.Click
+    Private Sub btn_exit_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -120,7 +123,6 @@ Public Class frm_upload
                 Dim ftype As String = selrow.Cells(6).Value
                 Dim cFlow As Integer = 0
 
-
                 varMod.servSound = Path.Combine("FROOT\AUDIO", uploadDir, branch)
                 Dim gPath As String = Path.Combine(varMod.BaseServer, varMod.servSound)
                 'If Not Directory.Exists(gPath) Then Directory.CreateDirectory(gPath)
@@ -171,12 +173,12 @@ Public Class frm_upload
 onError:
     End Sub
 
-    Private Sub ReloadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReloadToolStripMenuItem.Click
-        Me.cbo_client.Items.Clear()
-        cList.Clear()
-        Me.Cursor = Cursors.AppStarting
-        GetFiles(sDir)
-    End Sub
+    'Private Sub ReloadToolStripMenuItem_Click(sender As Object, e As EventArgs)
+    '    Me.cbo_client.Items.Clear()
+    '    cList.Clear()
+    '    Me.Cursor = Cursors.AppStarting
+    '    GetFiles(sDir)
+    'End Sub
 
     Private Sub cbo_client_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_client.SelectedIndexChanged
         filter()
@@ -672,6 +674,18 @@ onError:
     Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
 
     End Sub
+
+    Private Sub Btn_reload_Click(sender As Object, e As EventArgs) Handles Btn_reload.Click
+        Me.cbo_client.Items.Clear()
+        cList.Clear()
+        Me.Cursor = Cursors.AppStarting
+        GetFiles(sDir)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
 
 #End Region
 End Class

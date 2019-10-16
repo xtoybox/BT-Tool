@@ -22,44 +22,16 @@ Public Class frm_flagging
     Private IsAllowFlagView As Boolean = False
     Private AlloDep As String() = New String() {}
     Private IsAllowDeleteOther As Boolean = False
+    Private CustomFn As New CustomFunctions()
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
-
-
     Private Sub frm_flagging_Load(sender As Object, e As EventArgs, ByVal Optional args As String() = Nothing) Handles MyBase.Load
-        'InitializeComponent()
 
-        'If args IsNot Nothing Then
-        '    db.LogExceptions = True
-        '    Me.Tag = "flag"
-        '    uid = Integer.Parse(args(0).ToString())
-        '    uname = args(1).ToString()
-        '    upos = args(2).ToString()
-        '    udep = args(3).ToString()
-        '    ulvl = Integer.Parse(args(4).ToString())
-        '    CurrentRestriction = args(5).ToString()
-        '    strip_info.Items.Add("User ID: " & Me.uid)
-        '    strip_info.Items.Add("User Name: " & Me.uname.ToUpper())
-        '    strip_info.Items.Add("User Position: " & cf.GetPositionFull(Me.upos).ToUpper())
-        '    strip_info.Items.Add("User Department: " & Me.udep.ToUpper())
-        '    strip_info.Items.Add("User Level: " & Me.ulvl)
+        CustomFn.FormDrag(Me, Panel2)
 
-        '    For Each itm As ToolStripStatusLabel In strip_info.Items
-        '        itm.BorderSides = ToolStripStatusLabelBorderSides.Right
-        '        itm.BorderStyle = Border3DStyle.Flat
-        '        itm.ForeColor = Color.White
-        '    Next
-
-        '    SetRestrictions()
-        '    SetCboDataSource()
-        '    LoadData()
-        'End If
-    End Sub
-
-    Public Sub New(ByVal Optional args As String() = Nothing)
         InitializeComponent()
 
         If args IsNot Nothing Then
@@ -92,7 +64,37 @@ Public Class frm_flagging
             'cbo_dep.SelectedIndexChanged += New EventHandler(Cbo_SeletedItemChanged);
 
         End If
+
+        'InitializeComponent()
+
+        'If args IsNot Nothing Then
+        '    db.LogExceptions = True
+        '    Me.Tag = "flag"
+        '    uid = Integer.Parse(args(0).ToString())
+        '    uname = args(1).ToString()
+        '    upos = args(2).ToString()
+        '    udep = args(3).ToString()
+        '    ulvl = Integer.Parse(args(4).ToString())
+        '    CurrentRestriction = args(5).ToString()
+        '    strip_info.Items.Add("User ID: " & Me.uid)
+        '    strip_info.Items.Add("User Name: " & Me.uname.ToUpper())
+        '    strip_info.Items.Add("User Position: " & cf.GetPositionFull(Me.upos).ToUpper())
+        '    strip_info.Items.Add("User Department: " & Me.udep.ToUpper())
+        '    strip_info.Items.Add("User Level: " & Me.ulvl)
+
+        '    For Each itm As ToolStripStatusLabel In strip_info.Items
+        '        itm.BorderSides = ToolStripStatusLabelBorderSides.Right
+        '        itm.BorderStyle = Border3DStyle.Flat
+        '        itm.ForeColor = Color.White
+        '    Next
+
+        '    SetRestrictions()
+        '    SetCboDataSource()
+        '    LoadData()
+        'End If
     End Sub
+
+
 
     Private Sub ActionBtn_Click(ByVal sender As Object, ByVal e As EventArgs)
         Dim btn As Button = CType(sender, Button)
@@ -183,7 +185,7 @@ Public Class frm_flagging
 
             Select Case dep
                 Case "bt"
-                    LongName = "Business Transcirber"
+                    LongName = "Business Transcriber"
                 Case "pr"
                     LongName = "Proofreader"
             End Select
@@ -199,6 +201,7 @@ Public Class frm_flagging
         cbo_client.DisplayMember = "client"
         cbo_client.ValueMember = "cl_id"
         cbo_client.DataSource = dt
+
     End Sub
 
     Private Async Sub LoadData()
@@ -365,7 +368,6 @@ Public Class frm_flagging
         End Try
     End Sub
 
-
     Private Sub DisableForm(ByVal Optional b As Boolean = True)
         tlp_filter_export.Enabled = b
         tlp_flag_form_container.Enabled = b
@@ -379,7 +381,6 @@ Public Class frm_flagging
         txt_filename.Text = ""
         rtxt_problem.Text = ""
     End Sub
-
 
     Private Sub SetRestrictions()
         Dim flag As Flagging = New Flagging()
@@ -463,11 +464,27 @@ Public Class frm_flagging
         cf.RowsNumber(dgv_flag)
     End Sub
 
-    Private Sub btn_reload_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub btn_reload_Click_1(sender As Object, e As EventArgs) Handles btn_reload.Click
         Me.LoadData()
     End Sub
 
-    Private Sub btn_export_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click
+
+    End Sub
+
+    Private Sub btn_seen_Click(sender As Object, e As EventArgs) Handles btn_seen.Click
+
+    End Sub
+
+    Private Sub btn_unseen_Click(sender As Object, e As EventArgs) Handles btn_unseen.Click
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btn_export_Click_1(sender As Object, e As EventArgs) Handles btn_export.Click
         Me.Cursor = Cursors.AppStarting
         Dim frmex As frm_export = New frm_export(New String() {Me.uid.ToString(), Me.uname, Me.upos, Me.udep}, "flag")
         frmex.ShowDialog(Me)
@@ -482,6 +499,16 @@ Public Class frm_flagging
 
     Private Sub cbo_type_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_type.SelectedIndexChanged
         Me.FilterData()
+    End Sub
+
+    Private Sub frm_flagging_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+
+        If Me.Height <= 561 Then
+
+            Me.Height = 561
+
+        End If
+
     End Sub
 End Class
 
