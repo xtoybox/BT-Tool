@@ -27,7 +27,7 @@ Partial Class frm_upload
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_upload))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Btn_reload = New System.Windows.Forms.Button()
+        Me.btn_reload = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btn_upload = New System.Windows.Forms.Button()
@@ -40,7 +40,7 @@ Partial Class frm_upload
         Me.cbo_client = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_filename = New System.Windows.Forms.TextBox()
-        Me.grid_upload = New System.Windows.Forms.DataGridView()
+        Me.dgv_upload = New System.Windows.Forms.DataGridView()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
@@ -50,7 +50,7 @@ Partial Class frm_upload
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.grid_upload, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_upload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -70,7 +70,7 @@ Partial Class frm_upload
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Btn_reload)
+        Me.GroupBox2.Controls.Add(Me.btn_reload)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.btn_upload)
@@ -85,22 +85,22 @@ Partial Class frm_upload
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         '
-        'Btn_reload
+        'btn_reload
         '
-        Me.Btn_reload.BackColor = System.Drawing.Color.Black
-        Me.Btn_reload.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Btn_reload.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Btn_reload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Btn_reload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
-        Me.Btn_reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_reload.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_reload.ForeColor = System.Drawing.Color.White
-        Me.Btn_reload.Location = New System.Drawing.Point(461, 19)
-        Me.Btn_reload.Name = "Btn_reload"
-        Me.Btn_reload.Size = New System.Drawing.Size(77, 28)
-        Me.Btn_reload.TabIndex = 5
-        Me.Btn_reload.Text = "Reload"
-        Me.Btn_reload.UseVisualStyleBackColor = False
+        Me.btn_reload.BackColor = System.Drawing.Color.Black
+        Me.btn_reload.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_reload.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_reload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btn_reload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
+        Me.btn_reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_reload.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_reload.ForeColor = System.Drawing.Color.White
+        Me.btn_reload.Location = New System.Drawing.Point(461, 19)
+        Me.btn_reload.Name = "btn_reload"
+        Me.btn_reload.Size = New System.Drawing.Size(77, 28)
+        Me.btn_reload.TabIndex = 5
+        Me.btn_reload.Text = "Reload"
+        Me.btn_reload.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -243,32 +243,32 @@ Partial Class frm_upload
         Me.txt_filename.Size = New System.Drawing.Size(129, 23)
         Me.txt_filename.TabIndex = 6
         '
-        'grid_upload
+        'dgv_upload
         '
-        Me.grid_upload.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.grid_upload.BackgroundColor = System.Drawing.Color.White
-        Me.grid_upload.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.grid_upload.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.grid_upload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grid_upload.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grid_upload.Location = New System.Drawing.Point(0, 95)
-        Me.grid_upload.Name = "grid_upload"
+        Me.dgv_upload.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv_upload.BackgroundColor = System.Drawing.Color.White
+        Me.dgv_upload.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgv_upload.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgv_upload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_upload.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgv_upload.Location = New System.Drawing.Point(0, 95)
+        Me.dgv_upload.Name = "dgv_upload"
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkGray
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grid_upload.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.grid_upload.RowHeadersVisible = False
+        Me.dgv_upload.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgv_upload.RowHeadersVisible = False
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        Me.grid_upload.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.grid_upload.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grid_upload.Size = New System.Drawing.Size(931, 434)
-        Me.grid_upload.TabIndex = 2
+        Me.dgv_upload.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgv_upload.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgv_upload.Size = New System.Drawing.Size(931, 434)
+        Me.dgv_upload.TabIndex = 2
         '
         'Panel3
         '
@@ -336,7 +336,7 @@ Partial Class frm_upload
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(931, 529)
         Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.grid_upload)
+        Me.Controls.Add(Me.dgv_upload)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -350,7 +350,7 @@ Partial Class frm_upload
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.grid_upload, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_upload, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -370,13 +370,13 @@ Partial Class frm_upload
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents cbo_client As ComboBox
     Friend WithEvents txt_filename As TextBox
-    Friend WithEvents grid_upload As DataGridView
+    Friend WithEvents dgv_upload As DataGridView
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents lbl_status As Label
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
-    Friend WithEvents Btn_reload As Button
+    Friend WithEvents btn_reload As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button

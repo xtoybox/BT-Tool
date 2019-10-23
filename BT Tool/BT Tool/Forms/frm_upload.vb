@@ -3,7 +3,11 @@ Imports System.Globalization
 Imports System.ComponentModel
 Imports System.Text.RegularExpressions
 Imports System.Threading
+Imports System.Threading.Thread
 Imports System.Threading.Tasks
+
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
 
 Public Class frm_upload
 
@@ -34,347 +38,122 @@ Public Class frm_upload
     Private Declare Sub AVIFileExit Lib "avifil32" ()
 #End Region
 #Region "Instantiate Class"
-    Private cf As New CustomFunctions()
-    Private mf As New markform.CustomClass()
-    Private db As New markDBOClass.DboClass
+    Private cf As New markform.CustomClass
+    Private db As New markform.SQLClass
 #End Region
 #Region "Declaring Variables"
     Public objShell = CreateObject("Shell.Application")
-    Public flCount As Long = 0
-    Private uploadDir As String = ""
-    Private cList As List(Of String) = New List(Of String)
-    Private sDir As String = Path.Combine(varMod.BaseServer, "FROOT\AUDIO\UPLOAD")
+
+    Private CurrentFilesSourceDir As String = ""
+    Private ClientList As List(Of String) = New List(Of String)
+    Private LastScanData As String = ""
+    Private UseLastScan As Boolean = False
 
     Private _cancl As CancellationTokenSource
 #End Region
 #Region "Events"
-    Private CustomFn As New CustomFunctions()
-
+    ''' <summary>
+    ''' Executing event on form load
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub frm_upload_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        CustomFn.FormDrag(Me, Panel1)
-
-        Me.Label1.Text = "Loading files. Please wait."
-        Me.Show()
-
-        'Cursor = Cursors.WaitCursor
-        'Application.DoEvents()
-
-        'GetAllFolders(Path.Combine(varMod.BaseServer, "FROOT\AUDIO\UPLOAD")).0
-        Me.Cursor = Cursors.AppStarting
-        GetFiles(sDir)
-
-        Me.Label1.Text = "Upload"
-        Cursor = Cursors.Default
-
-    End Sub
-
-    Private Sub btn_exit_Click(sender As Object, e As EventArgs)
-        Me.Close()
-    End Sub
-
-    'Private Sub btn_browse_Click(sender As Object, e As EventArgs) Handles btn_browse.Click
-    '    Try
-    '        'get destination path from FolderBrowserDialog
-    '        If (FolderBrowserDialog1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-    '            Dim index As Integer = FolderBrowserDialog1.SelectedPath.LastIndexOf("\")
-    '            uploadDir = FolderBrowserDialog1.SelectedPath.Substring(index + 1)
-    '            GetAllFolders(FolderBrowserDialog1.SelectedPath)
-    '        End If
-    '    Catch ex As Exception
-    '        cf.ErrorLog(ex)
-    '    End Try
-    'End Sub
-
-    ''' <summary>
-    ''' old upload function
-    ''' </summary>
-    Private Sub btn_upload_Click(sender As Object, e As EventArgs) Handles btn_upload.Click
-
-        Try
-            upList.Clear()
-            'prgBar.Value = 0
-            Console.WriteLine(varMod.servSound)
-            Dim dateDue As String = Format(Me.dtp_due.Value, "MM/dd/yyyy")
-            Dim dTime As String = Me.dtp_time.Value.ToString("HH:mm")
-            Dim ct As Integer = 0
-
-            Dim increment As Integer = 0
-            Me.lbl_status.Text = "Uploading"
-            For a = 0 To Me.grid_upload.RowCount - 1
-                If Me.grid_upload.Rows(a).Selected = True Then
-                    ct += 1
-                End If
-            Next
-
-            Dim div = 100 / ct
-
-            Application.DoEvents()
-            For Each selrow As DataGridViewRow In Me.grid_upload.SelectedRows
-
-                Dim dateRec As String = selrow.Cells(0).Value
-                Dim client As String = selrow.Cells(1).Value
-                Dim branch As String = selrow.Cells(2).Value
-                Dim fName As String = selrow.Cells(3).Value
-                Dim duration As String = selrow.Cells(4).Value
-                'source directory
-                Dim sDir As String = selrow.Cells(5).Value
-                Dim flow As String = Me.cbo_workflow.Text
-                Dim ftype As String = selrow.Cells(6).Value
-                Dim cFlow As Integer = 0
-
-                varMod.servSound = Path.Combine("FROOT\AUDIO", uploadDir, branch)
-                Dim gPath As String = Path.Combine(varMod.BaseServer, varMod.servSound)
-                'If Not Directory.Exists(gPath) Then Directory.CreateDirectory(gPath)
-
-                'If branch <> "" Then
-                '    If Not Directory.Exists(gPath) Then Directory.CreateDirectory(gPath)
-                'End If
-
-                'get date?
-                'Dim newDir As String = Regex.Replace(sDir, "[/\\][/\\]+[A-Za-z0-9._%+-]+[/\\]+[A-Za-z0-9._%+-]+[/\\]", "", RegexOptions.IgnoreCase)
-                'Dim newDir As String = Regex.Replace(sDir, varMod.BaseServer, "", RegexOptions.IgnoreCase)
-                Dim newDir As String = sDir.Replace(varMod.BaseServer & "\", "")
-                Dim serverPath As String = Path.Combine(gPath, fName)
-
-                'Try
-                '    increment = increment + div
-                '    If increment > prgBar.Maximum Then
-                '        increment = prgBar.Maximum
-                '    End If
-                '    prgBar.Value = increment
-                'Catch ex As Exception
-                '    'File.Copy(sFile, serverPath, True)
-                '    MessageBox.Show(ex.ToString, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                '    GoTo onError
-                'End Try
-
-                upList.Add(dateRec & "|" & dateDue & "|" & dTime & "|" & client & "|" & branch & "|" & fName & "|" & duration & "|" & newDir & "|" & flow & "|" & cFlow & "|" & ftype)
-
-                Me.grid_upload.Rows.Remove(selrow)
-            Next
-
-            For Each element As String In upList
-                Console.WriteLine(element)
-            Next
-
-            uploadFiles()
-
-            Me.grid_upload.Refresh()
-            'prgBar.Value = prgBar.Maximum
-            My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Asterisk)
-            MsgBox("Upload complete", vbOKOnly, "Upload complete")
-            frm_main.fillMain()
-            Me.lbl_status.Text = "Upload Complete"
-        Catch ex As Exception
-            cf.ErrorLog(ex)
-        End Try
-
-onError:
-    End Sub
-
-    'Private Sub ReloadToolStripMenuItem_Click(sender As Object, e As EventArgs)
-    '    Me.cbo_client.Items.Clear()
-    '    cList.Clear()
-    '    Me.Cursor = Cursors.AppStarting
-    '    GetFiles(sDir)
-    'End Sub
-
-    Private Sub cbo_client_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_client.SelectedIndexChanged
-        filter()
-    End Sub
-
-    Private Sub txt_filename_TextChanged(sender As Object, e As EventArgs) Handles txt_filename.TextChanged
-        filter()
-    End Sub
-
-    Private Sub frm_upload_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        If _cancl IsNot Nothing Then
-            _cancl.Cancel()
+        CurrentFilesSourceDir = cf.ReadAppSetting("FileSourceDir") 'Assigning value from the application settings
+        'checking if there is a last upload data
+        Dim lud As String = cf.ReadAppSetting("LastScanData") 'Assigning value from the application settings
+        'if lud is not "NOT FOUND" then give option to the user to use the load 
+        If lud <> "NOT FOUND" Then
+            LastScanData = lud
+            Dim dr As DialogResult = MessageBox.Show(Me, "Would you like to load the data from last scan?", "Confirm Load Files", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            UseLastScan = (dr = DialogResult.Yes)
         End If
+        dgv_upload.DataSource = vbNull
+        LoadFiles()
+        LoadWorkFlowDataSource()
     End Sub
+    ''' <summary>
+    ''' Execute event when upload button is clicked
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btn_upload_Click(sender As Object, e As EventArgs) Handles btn_upload.Click
+        Dim cntTotal = 0 : Dim cntExist = 0 : Dim adMsg = ""
+        For Each SelRow As DataGridViewRow In dgv_upload.SelectedRows
+            Dim IsExist As Boolean = SelRow.Cells(7).Value
+            If IsExist Then cntExist = cntExist + 1
+            cntTotal = cntTotal + 1
+        Next
+        If cntExist > 0 Then
+            adMsg = "Total Selected File" & If(cntExist > 1, "s", "") & " that already exist in the database: " & cntExist & vbNewLine & vbNewLine &
+                "Warning! Selected files that already exist in the database will overwrite the data from the database."
 
+        End If
+        Dim dr As DialogResult = MessageBox.Show(Me, "Are you sure you want to upload selected file" & If(cntTotal > 1, "s", "") & "?" & vbNewLine & vbNewLine & "Total Selected file" & If(cntTotal > 1, "s", "") & ": " & cntTotal & vbNewLine & adMsg, "Confirm File Upload", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If dr = DialogResult.Yes Then UploadData()
+    End Sub
+    ''' <summary>
+    ''' Execute event when reload button from the menu strip control is clicked
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btn_reload_Click(sender As Object, e As EventArgs) Handles btn_reload.Click
+        UseLastScan = False
+        LoadFiles()
+    End Sub
+    ''' <summary>
+    ''' Execute event when datagridview header is clicked. This will fixed the format of the datagridview rows
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub dgv_upload_Sorted(sender As Object, e As EventArgs) Handles dgv_upload.Sorted
+        FormatDGV()
+    End Sub
+    ''' <summary>
+    ''' Execute the filter function if cbo_client selected item is changed or txt_filename text is changed.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub Filter_Event(sender As Object, e As EventArgs) Handles cbo_client.SelectedIndexChanged, txt_filename.TextChanged
+        Filter()
+    End Sub
 #End Region
-
 #Region "Sub Routine"
-
-    Sub fill_combo()
-        Try
-            Dim sList As List(Of String) = cList.Distinct.ToList
-
-            For Each element As String In sList
-                Me.cbo_client.Items.Add(element)
-            Next
-            Dim dt As DataTable = db.query("SELECT Id,flow FROM dbo.Workflow")
-
-            Me.cbo_workflow.DisplayMember = "flow"
-            Me.cbo_workflow.ValueMember = "Id"
-            Me.cbo_client.SelectedIndex = 0
-
-            cbo_workflow.DataSource = dt
-        Catch ex As Exception
-            cf.ErrorLog(ex)
-        End Try
-    End Sub
-
-    Sub folderLoop(ByRef directory As String)
-        Try
-            Dim ParentDir As String = directory
-            Dim d As String
-            For Each d In IO.Directory.GetDirectories(ParentDir)
-
-                folderLoop(d) 'Add all the subFolder's subfolders
-            Next
-        Catch ex As Exception
-            cf.ErrorLog(ex)
-        End Try
-    End Sub
-
     ''' <summary>
-    ''' old functin for uploading file
+    ''' Loading data from the server and populate data to the datagridview
     ''' </summary>
-    Private Sub GetAllFolders(directory As String)
-
-        Dim fi As New IO.DirectoryInfo(directory)
-        Dim pt() As String = {}, nDate As String, nClient As String = "", nBranch As String = "", medDuration As String, ext As String, ftype As String = ""
-        Dim itemArr As FileInfo() = fi.GetFiles()
-        Dim item As FileInfo
-        Dim leDate As Match
-        Dim leClient As Match
-
-        Dim wmp As WMPLib.WindowsMediaPlayer = New WMPLib.WindowsMediaPlayer
-
-        Dim objFolder = objShell.Namespace((directory))
-        Dim newdt As New DataTable
-        newdt.Columns.Add("", GetType(String)) : newdt.Columns.Add("Date", GetType(String)) : newdt.Columns.Add("Client", GetType(String)) : newdt.Columns.Add("Branch", GetType(String))
-        newdt.Columns.Add("Filename", GetType(String)) : newdt.Columns.Add("Duration", GetType(String)) : newdt.Columns.Add("Path", GetType(String)) : newdt.Columns.Add("", GetType(String))
-        newdt.Columns.Add("Type", GetType(String))
-
+    Private Async Sub LoadFiles()
+        _cancl = New CancellationTokenSource() 'instantiate new cancellation token.
+        Dim token As CancellationToken = _cancl.Token 'Used for cancelling the execution when cancel token is presented.
+        Dim AddMsg As String = "" 'Additional message for when an exception occured.
+        Dim ClItm As List(Of String) = New List(Of String) : ClItm.Add("ALL") 'declaring an list for the client and adding the first value of the list.
+        Cursor = Cursors.AppStarting 'change the cursor of the current form to AppStarting
+        EnableControls(False) 'Disabling the controls to prevent user from interacting the controls.
+        lbl_status.Text = If(UseLastScan, "Loading files from the last scan...", "Loading files form the server...") 'changing the text of the lbl_status base on either UseLastUpload is true or false
+        Sleep(1000) 'Delay the continuation of the execution for 1 seconds to let the user see the lbl_status message.
+        'encapsulate the process in Try Catch to capture any exception and prevent the application from crashing due to the exception.
         Try
-            Me.Cursor = Cursors.AppStarting
-
-            For Each item In itemArr
-                'data extraction goes here
-                If (Not objFolder Is Nothing) Then
-
-                    Dim objFolderItem = objFolder.ParseName(item.Name)
-                    Dim di As DirectoryInfo = item.Directory
-                    leClient = Regex.Match(di.FullName, "UPLOAD.+(\d{2})(\d{2})(\d{4})", RegexOptions.IgnoreCase)
-                    Dim splitClient As String() = leClient.ToString.Split("-")
-                    nClient = splitClient(1)
-
-                    If (Not objFolderItem Is Nothing) Then
-
-                        ext = Path.GetExtension(item.Name)
-                        Select Case ext.ToLower
-
-                            Case ".wav", ".mpeg", ".mp3", ".mp4", ".m4a", ".avi", ".wmv", ".mov", ".mpg", ".wpl", ".wma", " "
-
-                                Select Case ext.ToLower
-                                    Case ".wav", ".mpeg", ".mp3", ".wma"
-                                        ftype = "Audio"
-                                    Case ".mp4", ".m4a", ".avi", ".wmv", ".mov", ".mpg"
-                                        ftype = "Video"
-                                End Select
-                                'get date from directory
-                                leDate = Regex.Match(directory, "(\d{2})(\d{2})(\d{4})?", RegexOptions.IgnoreCase)
-                                Dim dt As DateTime = DateTime.ParseExact(leDate.ToString, "mmddyyyy", CultureInfo.InvariantCulture)
-                                nDate = dt.ToString("mm/dd/yyyy", CultureInfo.InvariantCulture)
-
-                                'get client and branch format
-                                If nClient = "MCY" Then
-                                    nBranch = objFolder.getdetailsof(objFolderItem, 176)
-                                ElseIf InStr(1, directory, "amica") <> 0 Then
-                                    nClient = "Amica"
-                                ElseIf InStr(1, directory, "K_DAL") <> 0 Then
-                                    nClient = "Kemper"
-                                ElseIf InStr(1, directory, "SPC") <> 0 Or InStr(1, directory, "UINS") <> 0 Then
-                                    nClient = "UINS SPC"
-                                End If
-
-                                Dim media As WMPLib.IWMPMedia = wmp.newMedia(directory & "\" & item.Name)
-                                medDuration = ShowAVIInfo(directory & "\" & item.Name).ToString
-
-                                Select Case medDuration
-
-                                    Case "00:00:00", ""
-                                        Dim iSecond As Double = media.duration 'Total number of seconds
-                                        Dim iSpan As TimeSpan = TimeSpan.FromSeconds(iSecond)
-
-                                        Dim hrs As String = iSpan.Hours.ToString.PadLeft(2, "0"c)
-                                        Dim min As String = iSpan.Minutes.ToString.PadLeft(2, "0"c)
-                                        Dim sec As String = iSpan.Seconds.ToString.PadLeft(2, "0"c)
-
-                                        medDuration = iSpan.Hours.ToString.PadLeft(2, "0"c) & ":" &
-                                                    iSpan.Minutes.ToString.PadLeft(2, "0"c) & ":" &
-                                                        iSpan.Seconds.ToString.PadLeft(2, "0"c)
-
-                                End Select
-                                cList.Add(nClient)
-                                newdt.Rows.Add(Nothing, nDate, nClient, nBranch, item.Name, medDuration, directory & "\" & item.Name, "", ftype)
-
-                        End Select
-here:
-                    End If
-
-                    objFolderItem = Nothing
-
-                End If
-            Next
-
-            For Each subfolder As IO.DirectoryInfo In fi.GetDirectories()
-                'loop to next folder
-                GetAllFolders(subfolder.FullName)
-            Next
-
-            Me.grid_upload.DataSource = newdt
-
-            objFolder = Nothing
-        Catch ex As Exception
-            MessageBox.Show(Me, ex.ToString(), "Error Encountered", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-        Me.Cursor = Cursors.Default
-
-    End Sub
-
-    ''' <summary>
-    ''' extract file details from predefined directory for uploading
-    ''' </summary>
-    Private Async Sub GetFiles(dir As String)
-        'Dim dir As String = "\\accomediasvr\MediaFiles-2\FROOT\AUDIO\UPLOAD"
-        _cancl = New CancellationTokenSource()
-        Dim token As CancellationToken = _cancl.Token
-
-        Dim catchErrorMsg As String = Nothing
-
-        Try
-
-            'Me.lbl_status.Text = 0 : Me.lbl_status.Text = ""
-            ' lbl_total_files.Text = 0 : lbl_file_prog.Text = ""  prgBar.Maximum = 0 : prgBar.Value = 0
-            Dim ExtArray() As String = New String() {".wav", ".mpeg", ".mp3", ".mp4", ".m4a", ".avi", ".wmv", ".mov", ".mpg", ".wpl", ".wma"}
-            Dim wmp As WMPLib.WindowsMediaPlayer = New WMPLib.WindowsMediaPlayer
-            Dim TopLevelFolder As New DirectoryInfo(dir) : Dim ProgSet As Boolean = False
-
-            Dim progressHandler As Progress(Of String) = New Progress(Of String)(
-                Sub(val)
+            Dim ExtArray() As String = New String() {".wav", ".mpeg", ".mp3", ".mp4", ".m4a", ".avi", ".wmv", ".mov", ".mpg", ".wpl", ".wma"} 'The allowed extention to be loaded
+            Dim ProgSet As Boolean = False 'Used for preparing the lbl_status for the progress changed
+            Dim TotalFiles As Integer = 0 : Dim CurrentCountFiles As Integer = 0 'Declaring the variable for the total number of files and the current files loaded.
+            Dim progressHandler As Progress(Of String) = New Progress(Of String)('declaring the progress event handler variable.
+                Sub(val) 'the process to be executed everytime the progress is changed. This will allow the user to see the current progress of the process being executed.
                     If ProgSet Then
-                        flCount = Integer.Parse(flCount) + 1
-                        Me.lbl_status.Text = flCount & " " & val
-                        'lbl_total_files.Text = Integer.Parse(lbl_total_files.Text) + 1
-                        'lbl_file_prog.Text = val
-                        'If prgBar.Value < prgBar.Maximum Then
-                        '    prgBar.Value = Integer.Parse(lbl_total_files.Text) + 1
-                        'End If
+                        If val = "COMPARE_DB" Then
+                            lbl_status.Text = "Checking the database for existing data..."
+                        Else
+                            CurrentCountFiles = CurrentCountFiles + 1
+                            lbl_status.Text = CurrentCountFiles & " of " & TotalFiles & " - " & val
+                        End If
+
                     Else
-                        'prgBar.Maximum = Integer.Parse(val)
+                        TotalFiles = Integer.Parse(val)
                         ProgSet = True
                     End If
                 End Sub)
-
-            Dim progress As IProgress(Of String) = CType(progressHandler, IProgress(Of String))
-            Dim dt As New DataTable() : Dim str As String = "" : Dim clst As New List(Of String) : clst.Add("All")
+            Dim progress As IProgress(Of String) = CType(progressHandler, IProgress(Of String)) 'declaring the progress variable to be used inside the asychronous function.
+            Dim dt As New DataTable() : Dim clst As New List(Of String) : clst.Add("All")
+            'preparing the datatable and datagridview header and column properties.
             Dim headers As New List(Of GridHeaders)()
-
             headers.Add(New GridHeaders() With {.index = 0, .text = "Receive", .type = GetType(String), .width = 70})
             headers.Add(New GridHeaders() With {.index = 1, .text = "Client", .type = GetType(String), .width = 60})
             headers.Add(New GridHeaders() With {.index = 2, .text = "Branch", .type = GetType(String), .width = 130})
@@ -382,310 +161,362 @@ here:
             headers.Add(New GridHeaders() With {.index = 4, .text = "Duration", .type = GetType(String), .width = 55})
             headers.Add(New GridHeaders() With {.index = 5, .text = "Directory", .type = GetType(String), .width = 100})
             headers.Add(New GridHeaders() With {.index = 6, .text = "Type", .type = GetType(String), .width = 40})
+            headers.Add(New GridHeaders() With {.index = 7, .text = "IsAlreadyExist", .type = GetType(Boolean), .visible = False})
+            headers.Add(New GridHeaders() With {.index = 8, .text = "Status", .type = GetType(String), .width = 60})
+            headers.Add(New GridHeaders() With {.index = 9, .text = "fid", .type = GetType(Integer), .visible = False})
 
             'add new column to datagridview
             For Each itm As GridHeaders In headers
                 dt.Columns.Add(itm.text, itm.type)
             Next
 
+            'running the asychronous function.
             Await Task.Run(
                 Sub()
-                    token.ThrowIfCancellationRequested()
-                    Dim x As Integer = 0
-                    For Each CurrentFile As FileInfo In TopLevelFolder.EnumerateFiles("*.*", SearchOption.AllDirectories).Where(
-                    Function(files As FileInfo)
-                        Return ExtArray.Any(Function(ext As String)
-                                                Return files.Extension.ToLowerInvariant = ext
-                                            End Function)
-                    End Function)
-                        token.ThrowIfCancellationRequested()
-                        x = x + 1
-                    Next
+                    token.ThrowIfCancellationRequested() 'terminate the process if cancellation is requested
+                    Dim drow As DataRow
+                    Dim CBFilnames As List(Of String) = New List(Of String) 'contains the combination of client, branch and filename. This will be used to filter database
+                    If UseLastScan Then 'use last scan data to populate the datagridview.
+                        Dim ludjson As LUData = JsonConvert.DeserializeObject(Of LUData)(LastScanData) 'deserialize the json string
+                        progress.Report(ludjson.LastScanData.Count()) 'report progress and changing the value of TotalFiles.
+                        For Each row As JArray In ludjson.LastScanData
+                            Dim cl As String = row(1) : Dim br As String = row(2) : Dim fn As String = row(3)
+                            CBFilnames.Add("'" & cl & br & fn & "'") 'this will be used for checking if data is already exist in the database.
+                            progress.Report(fn) 'report progress. Showing the user the filename of the current data that is being added to the datatable and adding incrementing the CurrentCountFiles
+                            dt.Rows.Add(row(0), row(1), row(2), row(3), row(4), row(5), row(6), row(7), row(8)) 'adding the data to the datatable
+                            ClItm.Add(row(1)) 'adding an item to the client list.
+                            Sleep(100)
+                        Next
+                    Else 'use server data to populate the datagridview
 
-                    progress.Report(x)
+                        Dim TopLevelFolder As New DirectoryInfo(CurrentFilesSourceDir)
+                        Dim wmp As WMPLib.WindowsMediaPlayer = New WMPLib.WindowsMediaPlayer
+                        Dim x As Integer = 0
+                        'This for each loop will only search for the files where extension is included in ExtArray
+                        For Each CurrentFile As FileInfo In TopLevelFolder.EnumerateFiles("*.*", SearchOption.AllDirectories).Where(
+                        Function(files As FileInfo)
+                            Return ExtArray.Any(Function(ext As String)
+                                                    Return files.Extension.ToLowerInvariant = ext
+                                                End Function)
+                        End Function)
+                            token.ThrowIfCancellationRequested() 'terminate the process if cancellation is requested
+                            x = x + 1
+                        Next
+                        progress.Report(x) 'report progress and changing the value of TotalFiles.
+                        'This for each loop will only search for the files where extension is included in ExtArray
+                        For Each CurrentFile As FileInfo In TopLevelFolder.EnumerateFiles("*.*", SearchOption.AllDirectories).Where(
+                        Function(files As FileInfo)
+                            Return ExtArray.Any(Function(ext As String)
+                                                    Return files.Extension.ToLowerInvariant = ext
+                                                End Function)
+                        End Function)
+                            token.ThrowIfCancellationRequested() 'terminate the process if cancellation is requested
+                            Dim FileType As String = "Video"
+                            If New String() {".wav", ".mpeg", ".mp3", ".wma"}.Contains(CurrentFile.Extension.ToLowerInvariant) Then
+                                FileType = "Audio"
+                            End If
+                            'get date from directory
+                            Dim GetDate As String = DateTime.ParseExact(Regex.Match(CurrentFile.DirectoryName, "(\d{2})(\d{2})(\d{4})?", RegexOptions.IgnoreCase).ToString(), "mmddyyyy", CultureInfo.InvariantCulture).ToString("mm/dd/yyyy", CultureInfo.InvariantCulture)
+                            'get client name
+                            Dim GetClient As String = Regex.Match(CurrentFile.DirectoryName, "UPLOAD.+(\d{2})(\d{2})(\d{4})", RegexOptions.IgnoreCase).ToString().Split("-")(1)
+                            Dim GetBranch As String = ""
 
-                    For Each CurrentFile As FileInfo In TopLevelFolder.EnumerateFiles("*.*", SearchOption.AllDirectories).Where(
-                    Function(files As FileInfo)
-                        Return ExtArray.Any(Function(ext As String)
-                                                Return files.Extension.ToLowerInvariant = ext
-                                            End Function)
-                    End Function)
-
-                        token.ThrowIfCancellationRequested()
-
-                        Dim FileType As String = "Video"
-                        If New String() {".wav", ".mpeg", ".mp3", ".wma"}.Contains(CurrentFile.Extension.ToLowerInvariant) Then
-                            FileType = "Audio"
-                        End If
-                        'get date from directory
-                        Dim GetDate As String = DateTime.ParseExact(Regex.Match(CurrentFile.DirectoryName, "(\d{2})(\d{2})(\d{4})?", RegexOptions.IgnoreCase).ToString(), "mmddyyyy", CultureInfo.InvariantCulture).ToString("mm/dd/yyyy", CultureInfo.InvariantCulture)
-                        'get client name
-                        Dim GetClient As String = Regex.Match(CurrentFile.DirectoryName, "UPLOAD.+(\d{2})(\d{2})(\d{4})", RegexOptions.IgnoreCase).ToString().Split("-")(1)
-                        Dim GetBranch As String = ""
-
-                        If GetClient = "MCY" Then
-                            Dim DirSplit() As String = CurrentFile.DirectoryName.Split("\"c)
-                            GetBranch = DirSplit(DirSplit.Length - 1)
-                        ElseIf GetClient.Contains("amica") Then
-                            GetClient = "Amica"
-                        ElseIf GetClient.Contains("K_DAL") Then
-                            GetClient = "Kemper"
-                        ElseIf GetClient.Contains("SPC") Or GetClient.Contains("UINS") Then
-                            GetClient = "UINS SPC"
-                        End If
-
-                        Dim media As WMPLib.IWMPMedia = wmp.newMedia(CurrentFile.FullName)
-                        clst.Add(GetClient)
-                        dt.Rows.Add(GetDate, GetClient, GetBranch, CurrentFile.Name, cf.SecondsToTime24(media.duration), CurrentFile.FullName, FileType)
-                        progress.Report(CurrentFile.Name)
-
+                            If GetClient = "MCY" Then
+                                Dim DirSplit() As String = CurrentFile.DirectoryName.Split("\"c)
+                                GetBranch = DirSplit(DirSplit.Length - 1)
+                            ElseIf GetClient.Contains("amica") Then
+                                GetClient = "Amica"
+                            ElseIf GetClient.Contains("K_DAL") Then
+                                GetClient = "Kemper"
+                            ElseIf GetClient.Contains("SPC") Or GetClient.Contains("UINS") Then
+                                GetClient = "UINS SPC"
+                            End If
+                            Dim media As WMPLib.IWMPMedia = wmp.newMedia(CurrentFile.FullName)
+                            clst.Add(GetClient)
+                            dt.Rows.Add(GetDate, GetClient, GetBranch, CurrentFile.Name, cf.SecondsToTime24(media.duration), CurrentFile.FullName, FileType, False, "") 'adding data to the datatable
+                            CBFilnames.Add("'" & GetClient & GetBranch & CurrentFile.Name & "'") 'this will be used for checking if data is already exist in the database.
+                            ClItm.Add(GetClient) 'adding an item to the client list.
+                            progress.Report(CurrentFile.Name) 'report progress. Showing the user the filename of the current data that is being added to the datatable and adding incrementing the CurrentCountFiles
+                        Next
+                    End If
+                    Sleep(500)
+                    token.ThrowIfCancellationRequested() 'terminate the process if cancellation is requested
+                    progress.Report("COMPARE_DB") 'report progress and change lbl_status.Text.
+                    'checking existing data from the database.
+                    Dim chkdt As DataTable = db.query("SELECT client+branch+sFile, [status],Id FROM dbo.Main WHERE client+branch+sFile IN(" & String.Join(",", CBFilnames) & ")")
+                    For Each rows As DataRow In chkdt.Rows
+                        token.ThrowIfCancellationRequested() 'terminate the process if cancellation is requested
+                        Dim row As Object() = rows.ItemArray
+                        Dim IndexOfFile As Integer = CBFilnames.IndexOf("'" & row(0).ToString() & "'") 'getting the row index.
+                        'changing the cell value
+                        dt.Rows(IndexOfFile)(7) = True : dt.Rows(IndexOfFile)(8) = row(1).ToString() : dt.Rows(IndexOfFile)(9) = Integer.Parse(row(2).ToString())
                     Next
                 End Sub)
+            lbl_status.Text = "Finalizing data..."
 
-            grid_upload.DataSource = dt
-
-            'set datagridview column properties
+            dgv_upload.DataSource = dt 'changing the DataSource of the datagridview.
+            cbo_client.Items.AddRange(ClItm.Distinct().ToArray()) 'Removing the duplicate values of the client list and adding the values to cbo_client
+            cbo_client.SelectedIndex = 0 'selecting the first value of the combobox.
+            'Setting the datagridview column properties
             For Each itm As GridHeaders In headers
-                Try
-                    grid_upload.Columns(itm.index).Width = itm.width
-                Catch ex As Exception
-                    catchErrorMsg = "Current Index: " & itm.index
-                    Throw ex
-                End Try
+                dgv_upload.Columns(itm.index).Visible = itm.visible
+                dgv_upload.Columns(itm.index).Width = itm.width
             Next
-
-            Me.lbl_status.Text = "Done"
-            cList = clst
-            fill_combo()
-        Catch exc As OperationCanceledException
-            Console.WriteLine("Cancelled")
-        Catch ex As Exception
-            cf.ErrorLog(ex, catchErrorMsg)
-        End Try
-
-        Me.Cursor = Cursors.Default
-    End Sub
-
-    ''' <summary>
-    ''' uploading process based on selected files on upload form
-    ''' </summary>
-    Public Sub uploadFiles()
-        'upload file details to database
-
-        Dim i As Long = 0
-        Dim sUp() As String
-        Dim upCount As Long = upList.Count - 1
-        Dim arr As String() = upList.ToArray
-        Dim dept As String = ""
-
-        For i = 0 To upCount
-
-            sUp = Split(upList(i).ToString, "|")
-
-            Dim dFlow As String() = Split(sUp(8), "-")
-
-            Select Case dFlow(0)
-                Case "BT"
-                    dept = "BT Sched"
-                Case "PR"
-                    dept = "PR Sched"
-                Case "S&T"
-                    dept = "ST Sched"
-                Case "CC"
-                    dept = "CC Sched"
-            End Select
-
-            Dim stringVal As String() = sUp(8).Split("-")
-            Dim forX As String = stringVal(sUp(9))
-
-            Dim nQuer As Integer = db.nQuery("INSERT INTO dbo.Main (dateRec,dateDue,timeDue,client,branch,sFile,duration,servSound,status,active,flow,cFlow,ftype) 
-                VALUES (@dateRec,@dateDue,@timeDue,@client,@branch,@sFile,@duration,@servSound,@status,@active,@flow,@cFlow,@ftype)",
-                    New String() {"dateRec", sUp(0), "dateDue", sUp(1), "timeDue", sUp(2), "client", sUp(3), "branch", sUp(4), "sFile", sUp(5), "duration",
-                        sUp(6), "servSound", sUp(7), "flow", sUp(8), "cFlow", sUp(9), "ftype", sUp(10), "status", forX & " Sched", "active", "0"})
-
-            If nQuer <> 0 Then
-                Debug.WriteLine("Record Added")
-            Else
-                MessageBox.Show("Failed to add record(s) on filename " & sUp(5) & ".")
+            'If UseLastScan is true then save last scan data to application settings.
+            If Not UseLastScan Then
+                Dim lud As List(Of Object()) = New List(Of Object())
+                For Each row As DataGridViewRow In dgv_upload.Rows
+                    Dim ludsub As List(Of Object) = New List(Of Object)
+                    For Each cell As DataGridViewCell In row.Cells
+                        ludsub.Add(cell.Value)
+                    Next
+                    lud.Add(ludsub.ToArray())
+                Next
+                Dim ludjson2 As LUData = New LUData
+                ludjson2.LastScanData = lud.ToArray()
+                Dim ludStr As String = JsonConvert.SerializeObject(ludjson2) 'convert list to Json String
+                cf.AddUpdateAppSettings("LastScanData", ludStr)
             End If
-
-        Next i
-here:
-    End Sub
-
-    ''' <summary>
-    ''' new upload function, not being used
-    ''' </summary>
-    Sub newUpload()
-        Try
-            upList.Clear()
-            'prgBar.Value = 0
-            Console.WriteLine(varMod.servSound)
-            Dim dateDue As String = Format(Me.dtp_due.Value, "MM/dd/yyyy")
-            Dim dTime As String = Me.dtp_time.Value.ToString("HH:mm")
-            Dim ct As Integer = 0
-
-            Dim increment As Integer = 0
-            Me.lbl_status.Text = "Uploading"
-            For a = 0 To Me.grid_upload.RowCount - 1
-                If Me.grid_upload.Rows(a).Selected = True Then
-                    ct += 1
-                End If
-            Next
-
-            Dim div = 100 / ct
-
-            Application.DoEvents()
-            For Each selrow As DataGridViewRow In Me.grid_upload.SelectedRows
-                'Application.DoEvents()
-
-                Dim dateRec As String = selrow.Cells(1).Value
-                Dim client As String = selrow.Cells(2).Value
-                Dim branch As String = selrow.Cells(3).Value
-                Dim fName As String = selrow.Cells(4).Value
-                Dim duration As String = selrow.Cells(5).Value
-                'source directory
-                Dim sDir As String = selrow.Cells(6).Value
-                Dim flow As String = Me.cbo_workflow.Text
-                Dim ftype As String = selrow.Cells(8).Value
-                Dim cFlow As Integer = 0
-
-                Console.WriteLine(sDir)
-
-                Dim servSound As String = Path.Combine("FROOT\AUDIO", uploadDir, branch)
-                Dim gPath As String = Path.Combine(varMod.BaseServer, servSound)
-                If Not Directory.Exists(gPath) Then Directory.CreateDirectory(gPath)
-
-                If branch <> "" Then
-                    If Not Directory.Exists(gPath) Then Directory.CreateDirectory(gPath)
-                End If
-                Console.WriteLine(gPath)
-                'check branch folder exist
-                '\\accomediasvr\MediaFiles-2
-                'Dim varmod.servsound As String = Path.Combine("\\accomediasvr\MediaFiles-2\FROOT\AUDIO", selrow.Cells(3).Value, fName)
-                Dim serverPath As String = Path.Combine(gPath, fName)
-                Console.WriteLine(serverPath)
-
-                Try
-                    increment = increment + div
-                    'If increment > prgBar.Maximum Then
-                    '    increment = prgBar.Maximum
-                    'End If
-                    'prgBar.Value = increment
-
-                Catch ex As Exception
-                    MessageBox.Show(ex.ToString, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    GoTo onError
-                End Try
-
-                upList.Add(dateRec & "|" & dateDue & "|" & dTime & "|" & client & "|" & branch & "|" & fName & "|" & duration & "|" & sDir & "|" & flow & "|" & cFlow & "|" & ftype)
-                Me.grid_upload.Rows.Remove(selrow)
-            Next
-
-            For x As Integer = Me.grid_upload.Rows.Count - 1 To 0 Step -1
-                If Me.grid_upload.Rows(x).Cells(1).Value Then 'Column1.Name
-                    Me.grid_upload.Rows.Remove(Me.grid_upload.Rows(x))
-                End If
-            Next
-
-            uploadFiles()
-
-            Me.grid_upload.Refresh()
-            'prgBar.Value = prgBar.Maximum
-            My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Asterisk)
-            MsgBox("Upload complete", vbOKOnly, "Upload complete")
-            frm_main.fillMain()
-            Me.lbl_status.Text = "Upload Complete"
+            Sleep(500) 'delaying the process for 0.5 seconds to let the user see the lbl_status message.
+            Filter()
+            FormatDGV()
 
         Catch ex As Exception
-            cf.ErrorLog(ex)
+            cf.Debug(ex, True, "", vbNewLine & vbNewLine & AddMsg)
+        End Try
+        Sleep(1000)
+        dgv_upload.ClearSelection()
+        lbl_status.Text = "Done!"
+        EnableControls() 'Enable the controls.
+        Cursor = Cursors.Default 'change the cursor of the current form to default
+    End Sub
+    ''' <summary>
+    ''' Enable or disable controls
+    ''' </summary>
+    ''' <param name="b"></param>
+    Private Sub EnableControls(Optional ByVal b As Boolean = True)
+        dgv_upload.Enabled = b
+
+        cbo_client.Enabled = b
+        cbo_workflow.Enabled = b
+
+        txt_filename.Enabled = b
+
+        dtp_due.Enabled = b
+        dtp_time.Enabled = b
+
+        'MenuStrip1.Enabled = b
+
+        btn_upload.Enabled = b
+    End Sub
+    ''' <summary>
+    ''' Asychronous function for uploading data to the database
+    ''' </summary>
+    Private Async Sub UploadData()
+        _cancl = New CancellationTokenSource() 'instantiate new cancellation token.
+        Dim token As CancellationToken = _cancl.Token 'Used for cancelling the execution when cancel token is presented.
+        Cursor = Cursors.AppStarting 'change the cursor of the current form to AppStarting
+        EnableControls(False) 'Disabling the controls to prevent user from interacting the controls.
+        lbl_status.Text = "Preparing to upload file..."
+        Sleep(1000)
+        Dim DueDate As String = Format(dtp_due.Value, "MM/dd/yyyy")
+        Dim DueTime As String = dtp_time.Value.ToString("HH:mm")
+        Dim wflowID As Integer = Integer.Parse(cbo_workflow.SelectedValue)
+        Dim wflow As String = cbo_workflow.Text
+        Dim status As String = wflow.Split("-")(0)
+        Dim RowIndexes As List(Of Integer) = New List(Of Integer)
+        Dim CBChkList As List(Of String) = New List(Of String)
+
+        Dim progressHandler As Progress(Of String) = New Progress(Of String)(
+                Sub(val)
+                    lbl_status.Text = val
+                End Sub)
+        Dim progress As IProgress(Of String) = CType(progressHandler, IProgress(Of String))
+        Try
+            Await Task.Run(
+                Sub()
+                    token.ThrowIfCancellationRequested() 'terminate the process if cancellation is requested
+                    Dim QueryValues As List(Of String) = New List(Of String)
+                    Dim QueryParam As List(Of String) = New List(Of String)
+                    Dim FidList As List(Of Integer) = New List(Of Integer)
+
+
+                    progress.Report("Preparing.")
+                    Sleep(200)
+                    Dim CurProgress = "Preparing." : Dim x As Integer = 1
+                    'Preparing update string
+                    Dim UpDateRec As String = " dateRec = Case " : Dim UpdateDue As String = " dateDue = Case "
+                    Dim UptimeDue As String = " timeDue = Case " : Dim Upclient As String = " client = Case "
+                    Dim Upbranch As String = " branch = Case " : Dim UpsFile As String = " sFile = Case "
+                    Dim Upduration As String = " duration = Case " : Dim UpservSound As String = " servSound = Case "
+                    Dim Upstat As String = " status = Case " : Dim Upactive As String = " active = Case "
+                    Dim Upflow As String = " flow = Case " : Dim UpcFlow As String = " cFlow = Case "
+                    Dim Upftype As String = " ftype = Case " : Dim Upwfid As String = " wfid = Case "
+
+                    Dim CntUpdate As Integer = 0
+                    For Each SelRow As DataGridViewRow In dgv_upload.SelectedRows
+                        token.ThrowIfCancellationRequested() 'terminate the process if cancellation is requested
+                        Select Case CurProgress.Length
+                            Case 10
+                                progress.Report("Preparing..")
+                            Case 11
+                                progress.Report("Preparing...")
+                            Case 12
+                                progress.Report("Preparing....")
+                            Case 13
+                                progress.Report("Preparing.....")
+                            Case Else
+                                progress.Report("Preparing.")
+                        End Select
+
+                        Dim DateRec As String = SelRow.Cells(0).Value
+                        Dim Client As String = SelRow.Cells(1).Value
+                        Dim Branch As String = SelRow.Cells(2).Value
+                        Dim Filename As String = SelRow.Cells(3).Value
+                        Dim Dur As String = SelRow.Cells(4).Value
+                        Dim SourceDir As String = SelRow.Cells(5).Value
+                        Dim FileType As String = SelRow.Cells(6).Value
+                        Dim IsExist As Boolean = SelRow.Cells(7).Value
+
+                        Dim ServSound As String = Path.Combine("FROOT\AUDIO", Branch)
+                        Dim gPath As String = Path.Combine(CustomVariables.BaseServer, ServSound)
+                        If Not Directory.Exists(gPath) Then Directory.CreateDirectory(gPath)
+                        If Branch <> "" Then
+                            If Not Directory.Exists(gPath) Then Directory.CreateDirectory(gPath)
+                        End If
+
+                        Dim newDir As String = Regex.Replace(SourceDir, "[/\\][/\\]+[A-Za-z0-9._%+-]+[/\\]+[A-Za-z0-9._%+-]+[/\\]", "", RegexOptions.IgnoreCase)
+                        Dim serverPath As String = Path.Combine(gPath, Filename)
+                        '(dateRec,dateDue,timeDue,client,branch,sFile,duration,servSound,status,active,flow,cFlow,ftype,wfid)
+                        If IsExist Then
+                            Dim fid As Integer = SelRow.Cells(9).Value
+                            FidList.Add(fid)
+                            CntUpdate = CntUpdate + 1
+                            UpDateRec = UpDateRec & " WHEN Id = " & fid & " THEN @dr" & x & " "
+                            UpdateDue = UpdateDue & " WHEN Id = " & fid & " THEN '" & DueDate & "' "
+                            UptimeDue = UptimeDue & " WHEN Id = " & fid & " THEN '" & DueTime & "' "
+                            Upclient = Upclient & " WHEN Id = " & fid & " THEN @cl" & x & " "
+                            Upbranch = Upbranch & " WHEN Id = " & fid & " THEN @br" & x & " "
+                            UpsFile = UpsFile & " WHEN Id = " & fid & " THEN @sf" & x & " "
+                            Upduration = Upduration & " WHEN Id = " & fid & " THEN @du" & x & " "
+                            UpservSound = UpservSound & " WHEN Id = " & fid & " THEN @ss" & x & " "
+                            Upstat = Upstat & " WHEN Id = " & fid & " THEN '" & status & " Sched' "
+                            Upactive = Upactive & " WHEN Id = " & fid & " THEN 0 "
+                            Upflow = Upflow & " WHEN Id = " & fid & " THEN '" & wflow & "' "
+                            UpcFlow = UpcFlow & " WHEN Id = " & fid & " THEN 0 "
+                            Upftype = Upftype & " WHEN Id = " & fid & " THEN '" & FileType & "' "
+                            Upwfid = Upwfid & " WHEN Id = " & fid & " THEN " & wflowID & " "
+                        Else
+                            QueryValues.Add("(@dr" & x & ",'" & DueDate & "','" & DueTime & "',@cl" & x & ",@br" & x & ",@sf" & x & ",@du" & x & ",@ss" & x & ",'" & status & " Sched',0,'" & wflow & "',0,'" & FileType & "'," & wflowID & ")")
+
+                        End If
+                        QueryParam.Add("dr" & x) : QueryParam.Add(DateRec)
+                        QueryParam.Add("cl" & x) : QueryParam.Add(Client)
+                        QueryParam.Add("br" & x) : QueryParam.Add(Branch)
+                        QueryParam.Add("sf" & x) : QueryParam.Add(Filename)
+                        QueryParam.Add("du" & x) : QueryParam.Add(Dur)
+                        QueryParam.Add("ss" & x) : QueryParam.Add(newDir)
+
+                        x = x + 1
+                        RowIndexes.Add(SelRow.Index)
+                        CBChkList.Add("'" & Client & Branch & Filename & "'")
+
+                    Next
+                    Sleep(200)
+                    progress.Report("Executing the query...")
+                    If CntUpdate > 0 Then
+                        UpDateRec = UpDateRec & " ELSE dateRec END "
+                        UpdateDue = UpdateDue & " ELSE dateDue END "
+                        UptimeDue = UptimeDue & " ELSE timeDue END "
+                        Upclient = Upclient & " ELSE client END "
+                        Upbranch = Upbranch & " ELSE branch END "
+                        UpsFile = UpsFile & " ELSE sFile END "
+                        Upduration = Upduration & " ELSE duration END "
+                        UpservSound = UpservSound & " ELSE servSound END "
+                        Upstat = Upstat & " ELSE status END "
+                        Upactive = Upactive & " ELSE active END "
+                        Upflow = Upflow & " ELSE flow END "
+                        UpcFlow = UpcFlow & " ELSE cFlow END "
+                        Upftype = Upftype & " ELSE ftype END "
+                        Upwfid = Upwfid & " ELSE wfid END "
+                        Dim uqrystr As String() = New String() {UpDateRec, UpdateDue, UptimeDue, Upclient, Upbranch, UpsFile, Upduration,
+                        UpservSound, Upstat, Upactive, Upflow, UpcFlow, Upftype, Upwfid}
+                        db.nQuery("UPDATE dbo.Main SET " & String.Join(",", uqrystr) & " WHERE Id IN(" & String.Join(",", FidList) & ") ", QueryParam.ToArray())
+                    End If
+                    If QueryValues.Count > 0 Then
+                        db.nQuery("INSERT INTO dbo.Main (dateRec,dateDue,timeDue,client,branch,sFile,duration,servSound,status,active,flow,cFlow,ftype,wfid)
+                                VALUES " & String.Join(",", QueryValues), QueryParam.ToArray())
+                    End If
+
+                    Dim chkdt As DataTable = db.query("SELECT client+branch+sFile,[status], Id FROM dbo.Main WHERE client+branch+sFile IN(" & String.Join(",", CBChkList) & ")")
+                    For Each rows As DataRow In chkdt.Rows
+                        token.ThrowIfCancellationRequested() 'terminate the process if cancellation is requested
+                        Dim row As Object() = rows.ItemArray
+                        Dim IndexOfFile As Integer = CBChkList.IndexOf("'" & row(0).ToString() & "'")
+                        Dim rowindex As Integer = RowIndexes(IndexOfFile)
+                        dgv_upload.Rows(rowindex).Cells(9).Value = Integer.Parse(row(2).ToString())
+                        dgv_upload.Rows(rowindex).Cells(7).Value = True
+                        dgv_upload.Rows(rowindex).Cells(8).Value = status & " Sched"
+                    Next
+                End Sub)
+            Sleep(200)
+            lbl_status.Text = "Finalizing..."
+            FormatDGV()
+        Catch ex As Exception
+            cf.Debug(ex)
         End Try
 
-onError:
+        Sleep(1000)
+        lbl_status.Text = "Done!"
+        EnableControls()
+        Cursor = Cursors.Default
     End Sub
-
-    'Sub upload_function()
-
-    '    If New String() {"admin", "ts"}.Contains(varMod.CurUserDep) Or varMod.canUpload = True Then
-    '        frm_upload.ShowDialog()
-    '        frm_upload.Dispose()
-    '    Else
-    '        MessageBox.Show("You do not have enough privileges to access this function.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End If
-    'End Sub
-
     ''' <summary>
-    ''' get sound file details for duration
+    ''' Populate workflow combobox
     ''' </summary>
-    Private Function ShowAVIInfo(ByVal dir As String) As TimeSpan
+    Private Sub LoadWorkFlowDataSource()
         Try
-
-            Dim hFile As Integer
-            Dim AviInfo As AVIFileInfo
-            Dim rTime As Double
-            'initialize the AVIFile library
-            AVIFileInit()
-            'create a handle to the AVI file
-            If AVIFileOpen(hFile, dir, OF_SHARE_DENY_WRITE, Nothing) = 0 Then
-                'retrieve the AVI information
-                If AVIFileInfo_Renamed(hFile, AviInfo, Len(AviInfo)) = 0 Then
-
-                    rTime = (AviInfo.dwLength / (AviInfo.dwRate / AviInfo.dwScale))
-
-                    Dim wow As Long = Math.Floor(rTime)
-                    Dim tp As TimeSpan = New TimeSpan(0, 0, wow)
-
-                    ShowAVIInfo = tp
-
-                End If
-                'release the file handle
-                AVIFileRelease(hFile)
+            Dim dt As DataTable = db.query("SELECT Id,flow FROM dbo.WorkFlow")
+            With cbo_workflow
+                .DisplayMember = "flow" : .ValueMember = "Id" : .DataSource = dt
+            End With
+        Catch ex As Exception
+            cf.Debug(ex)
+        End Try
+    End Sub
+    ''' <summary>
+    ''' Format datagridview row
+    ''' </summary>
+    Private Sub FormatDGV()
+        For Each row As DataGridViewRow In dgv_upload.Rows
+            If row.Cells(7).Value Then
+                row.DefaultCellStyle.BackColor = Color.Yellow
+                'row.DefaultCellStyle.ForeColor = Color.Black
             End If
-            'exit the AVIFile library and decrement the reference count for the library
-            AVIFileExit()
-        Catch ex As Exception
-            cf.ErrorLog(ex)
-        End Try
+        Next
+    End Sub
+    ''' <summary>
+    ''' Filter datagridview
+    ''' </summary>
+    Private Sub Filter()
+        Dim cl As String = cbo_client.Text : Dim fn As String = txt_filename.Text
+        Dim flst As List(Of String) = New List(Of String)
 
-    End Function
+        If Not cf.IsStringEmpty(cl) And cl <> "ALL" Then flst.Add("Client LIKE '" & cl & "'")
+        If Not cf.IsStringEmpty(fn) Then flst.Add("Filename LIKE '%" & fn & "%'")
 
-    Sub filter()
-
-        Dim txt As String = ""
-        Dim filter As List(Of String) = New List(Of String)
-
-        If Me.txt_filename.Text <> "" Then
-            filter.Add("Filename LIKE '%" & Me.txt_filename.Text & "%'")
+        If Not IsNothing(dgv_upload.DataSource) Then
+            Dim ds As New DataTable
+            ds = dgv_upload.DataSource
+            ds.DefaultView.RowFilter = String.Join(" AND ", flst.ToArray())
         End If
-
-        If Me.cbo_client.SelectedItem <> "All" Then
-            filter.Add("Client LIKE '" & Me.cbo_client.SelectedItem & "'")
-        End If
-
-        If filter.Count <> 0 Then
-            txt = String.Join(" AND ", filter.ToArray)
-        End If
-
-        Dim ds As DataTable = grid_upload.DataSource
-        ds.DefaultView.RowFilter = txt
-
     End Sub
-
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
-
-    End Sub
-
-    Private Sub Btn_reload_Click(sender As Object, e As EventArgs) Handles Btn_reload.Click
-        Me.cbo_client.Items.Clear()
-        cList.Clear()
-        Me.Cursor = Cursors.AppStarting
-        GetFiles(sDir)
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
-    End Sub
-
 
 #End Region
+End Class
+''' <summary>
+''' A class to store last 
+''' </summary>
+Public Class LUData
+    Public Property LastScanData As Object() = New Object() {}
 End Class

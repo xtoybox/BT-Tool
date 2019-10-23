@@ -143,3 +143,5 @@ C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\DocumentF
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_monitoring.resources
 C:\Users\Accolade P3\Desktop\Newrepo\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_duefile.resources
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_duefile.resources
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_monitoring.resources

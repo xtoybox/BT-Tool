@@ -278,7 +278,7 @@ namespace markform
         /// opens a file browser to select a .doc file and putting the file path to txt_compares
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="e"></param>..
         private void btn_compares_Click(object sender, EventArgs e)
         {
             this.GetSetCompares();

@@ -156,7 +156,9 @@
     <Compile Include="Forms\frm_monitoring.Designer.vb">
       <DependentUpon>frm_monitoring.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_monitoring.vb" />
+    <Compile Include="Forms\frm_monitoring.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_upload.Designer.vb">
       <DependentUpon>frm_upload.vb</DependentUpon>
     </Compile>
@@ -181,6 +183,7 @@
     <Compile Include="Modules\JsonClass.vb" />
     <Compile Include="Modules\mainClass.vb" />
     <Compile Include="Modules\restrictionMod.vb" />
+    <Compile Include="Modules\RevisionCounter65.vb" />
     <Compile Include="Modules\SQLClass.vb" />
     <Compile Include="Modules\varMod.vb" />
     <SplashScreen Include="Forms\SplashScreen.vb">

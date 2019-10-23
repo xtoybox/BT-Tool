@@ -202,11 +202,4 @@ Partial Class frm_monitoring
     Private WithEvents dgv_monitoring As DataGridView
     Friend WithEvents Button1 As Button
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
-    End Sub
-
-    Private Sub frm_monitoring_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CustomFn.FormDrag(Me, Panel2)
-    End Sub
 End Class

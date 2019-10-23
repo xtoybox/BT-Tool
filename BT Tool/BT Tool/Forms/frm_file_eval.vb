@@ -27,18 +27,6 @@ Public Class frm_file_eval
     Public Event yeet As EventHandler
     Private CustomFn As New CustomFunctions()
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub btn_compares_Click(sender As Object, e As EventArgs) Handles btn_compares.Click
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
-    End Sub
-
     Private _cnl As CancellationTokenSource
     Dim ViewDep = New String() {}
     Private IsAllowViewEval As Boolean = False
@@ -210,32 +198,6 @@ Public Class frm_file_eval
         cbo_q4.DataSource = dt
     End Sub
 
-    Private Sub Set_EvaluweeInfo()
-        Try
-            Dim qry As String() = db.row("SELECT Id,UPPER(LEFT(username,1))+LOWER(SUBSTRING(username,2,LEN(username))) AS uname,department,position FROM dbo.UserData WHERE Id = " & btid)
-            evaluwee_uid = Integer.Parse(qry(0))
-            evaluwee_name = qry(1)
-            evaluwee_dep = qry(2)
-            evaluwee_pos = qry(3)
-        Catch ex As Exception
-            cf.Debug(ex, True, "Failed to get the evaluwee info.")
-        End Try
-    End Sub
-
-    'Private Sub SetEventHandler()
-    '    cbo_q1_1.SelectedIndexChanged += cbo_q_SelectedIndexChanged()
-    '    Me.cbo_q1_2.SelectedIndexChanged += cbo_q_SelectedIndexChanged()
-    '    Me.cbo_q2_1.SelectedIndexChanged += cbo_q_SelectedIndexChanged()
-    '    Me.cbo_q2_2.SelectedIndexChanged += cbo_q_SelectedIndexChanged()
-    '    Me.cbo_q3_1.SelectedIndexChanged += cbo_q_SelectedIndexChanged()
-    '    Me.cbo_q3_2.SelectedIndexChanged += cbo_q_SelectedIndexChanged()
-    '    Me.cbo_q4.SelectedIndexChanged += cbo_q_SelectedIndexChanged()
-    'End Sub
-
-    Private Sub cbo_q_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs)
-        Me.ScoreCalculator()
-    End Sub
-
     Private Sub ScoreCalculator()
 
         Dim q1_1 = Double.Parse(cbo_q1_1.SelectedValue.ToString)
@@ -288,6 +250,63 @@ Public Class frm_file_eval
         lbl_score_txt.Text = scoretxt
         lbl_score_txt.ForeColor = scoretxtcolor
 
+    End Sub
+
+    Private Sub EACompute(ByVal Optional w As Decimal = 0, ByVal Optional m As Decimal = 0)
+        Dim escore As Decimal = 0, ascore As Decimal = 0
+        escore = If(m = 0 AndAlso w = 0, 0, m / w * 100)
+        ascore = If(escore > 100, 0, 100 - escore)
+        lbl_ac.Text = ascore.ToString("0.00")
+        lbl_error.Text = escore.ToString("0.00")
+    End Sub
+
+    Private Sub Set_EvaluweeInfo()
+        Try
+            Dim qry As String() = db.row("SELECT Id,UPPER(LEFT(username,1))+LOWER(SUBSTRING(username,2,LEN(username))) AS uname,department,position FROM dbo.UserData WHERE Id = " & btid)
+            evaluwee_uid = Integer.Parse(qry(0))
+            evaluwee_name = qry(1)
+            evaluwee_dep = qry(2)
+            evaluwee_pos = qry(3)
+        Catch ex As Exception
+            cf.Debug(ex, True, "Failed to get the evaluwee info.")
+        End Try
+    End Sub
+
+    Private Sub GetSetCompares()
+        If Me.Tag.ToString Is "save" Then
+
+            Using ofd As OpenFileDialog = New OpenFileDialog
+                ofd.Title = "Please select the Compares"
+                ofd.Filter = "Word Documents|*.doc"
+                ofd.Multiselect = False
+
+                If ofd.ShowDialog = DialogResult.OK Then
+                    Me.ComparesFileName = ofd.SafeFileName
+                    txt_compares.Text = ofd.FileName
+                End If
+            End Using
+        Else
+            Dim path As String = txt_compares.Text
+
+            If Not cf.IsStringEmpty(path) Then
+
+                Using fbd As FolderBrowserDialog = New FolderBrowserDialog
+                    Dim pathArr = path.Split("\"c)
+                    fbd.Description = "Please select a folder"
+
+                    If fbd.ShowDialog = DialogResult.OK Then
+                        Dim newpath As String = fbd.SelectedPath & "\" & pathArr(pathArr.Length - 1)
+                        File.Copy(path, newpath)
+
+                        If cf.IsExist(newpath, True) Is "ok" Then
+                            MessageBox.Show(Me, "Success", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Else
+                            MessageBox.Show(Me, "Something went wrong while copying the compares from the server." & vbLf & "Please check the compares from this path: " & vbLf & path, "Error", MessageBoxButtons.OK, MessageBoxIcon.[Error])
+                        End If
+                    End If
+                End Using
+            End If
+        End If
     End Sub
 
     Private Sub DisplayUserList()
@@ -370,7 +389,6 @@ Public Class frm_file_eval
         tssl_status.Text = tssStr
         Me.Cursor = Cursors.Default
     End Sub
-
 
     Private Async Sub DisplayEvals()
 
@@ -514,12 +532,137 @@ Public Class frm_file_eval
 #End Region
 
 #Region "Events"
+
+    Private Sub frm_file_eval_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CustomFn.FormDrag(Me, Panel1)
+    End Sub
+
+
     Private Sub cbo_q1_1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_q1_1.SelectedIndexChanged, cbo_q1_2.SelectedIndexChanged, cbo_q2_1.SelectedIndexChanged,
                                                                                     cbo_q2_2.SelectedIndexChanged, cbo_q3_1.SelectedIndexChanged, cbo_q3_2.SelectedIndexChanged,
                                                                                     cbo_q4.SelectedIndexChanged
 
         Me.ScoreCalculator()
 
+    End Sub
+
+    Private Sub EA_TextChanged(ByVal sender As Object, ByVal e As EventArgs)
+        Try
+            Dim m, w As Decimal
+            Dim mistakes As String = txt_mistakes.Text, words As String = txt_words.Text
+            m = If(cf.IsStringEmpty(mistakes), 0, Decimal.Parse(mistakes))
+            w = If(cf.IsStringEmpty(words), 0, Decimal.Parse(words))
+            Me.EACompute(w, m)
+        Catch ex As Exception
+            cf.Debug(ex, False)
+        End Try
+    End Sub
+
+    Private Async Sub btn_save_Click(ByVal sender As Object, ByVal e As EventArgs)
+
+        Dim msg = New List(Of String)
+        Dim words As String = txt_words.Text, mistakes As String = txt_mistakes.Text
+        Dim accounts = Integer.Parse(cbo_accounts.SelectedValue.ToString), aq = Integer.Parse(cbo_aq.SelectedValue.ToString)
+
+        If cf.IsStringEmpty(filename) Then
+            msg.Add("-Filename is empty.")
+        End If
+
+        If cf.IsStringEmpty(words) Then
+            msg.Add("-Please input the total number of words.")
+        End If
+
+        If cf.IsStringEmpty(mistakes) Then
+            msg.Add("-Please input the total number of mistakes.")
+        End If
+
+        If cf.IsStringEmpty(txt_compares.Text) Then
+            msg.Add("-Please select compares.")
+        End If
+
+        If msg.Count > 0 Then
+            MessageBox.Show(Me, String.Join(vbLf, msg.ToArray), "Error", MessageBoxButtons.OK, MessageBoxIcon.[Error])
+        Else
+            Dim dr As DialogResult = MessageBox.Show(Me, "You are about to submit this evaluation.", "Confirm Submission", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+            If dr = DialogResult.OK Then
+                tlp_info_container.Enabled = False
+                tlp_question_container.Enabled = False
+                Me.Cursor = Cursors.AppStarting
+                tssl_status.Visible = True
+                tssl_status.Text = "Initializing..."
+                Dim tssStr = ""
+                Dim qdt As String() = Me.GetQuestionData
+                Dim isCancel = False
+                Dim CancelMsg = ""
+                Dim progressHandler = New Progress(Of String)(Function(val)
+                                                                  tssl_status.Text = val
+                                                              End Function)
+                Dim progress As IProgress(Of String) = progressHandler
+
+                Try
+                    Await Task.Run(Function()
+                                       progress.Report("Creating folder if not exist...")
+                                       Directory.CreateDirectory(Me.ComparesStoragePath + cf.GetCurrentDate & "\" + evaluwee_uid & "." + evaluwee_name)
+                                       progress.Report("Getting the questionnaire data...")
+                                       Dim ComPatArr As String() = ComparesPath.Split("\"c)
+                                       Dim transferpath As String = Me.ComparesStoragePath + cf.GetCurrentDate & "\" + evaluwee_uid & "." + evaluwee_name & "\" & ComPatArr(ComPatArr.Length - 1)
+                                       Dim qry = "INSERT INTO dbo.tbl_btpr_eval(user_id,eval_user_id,dep,filename,filepath,cl_id,autofail,q1,q2,q3,audio_quality,total_score,other,dt_created) " & "VALUES (@user_id,@eval_user_id,@dep,@filename,@filepath,@cl_id,@autofail,@q1,@q2,@q3,@audio_quality,@total_score,@other,@dt_created)"
+                                       Dim qryR = 0
+
+                                       Try
+                                           qryR = db.nQuery(qry, New String() {"user_id", Me.evaluwee_uid.ToString, "eval_user_id", Me.evaluator_uid.ToString, "dep", Me.evaluwee_dep, "filename", Me.filename, "filepath", transferpath, "cl_id", accounts.ToString, "autofail", qdt(3), "q1", qdt(0), "q2", qdt(1), "q3", qdt(2), "audio_quality", aq.ToString, "total_score", lbl_score.Text, "other", qdt(4), "dt_created", Date.Now.ToString("yyyy/MM/dd HH:mm:ss")})
+
+                                           If qryR = 0 Then
+                                               ErrorQry = qry
+                                               isCancel = True
+                                               CancelMsg = "Something went wrong while trying to save data"
+                                           Else
+                                               progress.Report("Copying compares from desktop to server...")
+
+                                               Try
+                                                   File.Copy(ComparesPath, transferpath, True)
+                                                   progress.Report("Finishing...")
+                                                   Dim eid As Integer = GetEvalID
+                                                   qry = "UPDATE dbo.Main SET evalid = " & eid & " WHERE Id = " & Me.fid
+
+                                                   Try
+                                                       Dim uqry As Integer = db.nQuery(qry)
+                                                   Catch __unusedException1__ As Exception
+                                                       ErrorQry = qry
+                                                       Throw
+                                                   End Try
+
+                                               Catch ex As Exception
+                                                   tssStr = "Error Encountered!"
+                                                   cf.Debug(ex, True, "", ComparesPath)
+                                               End Try
+                                           End If
+
+                                       Catch ex As Exception
+                                           tssStr = "Error Encountered!"
+                                           cf.Debug(ex, True, "", qry)
+                                       End Try
+                                   End Function)
+                    tssStr = "Saved..."
+                    MessageBox.Show(Me, "Saved!" & vbLf & vbLf & "The eval form will close after this message box is closed.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Me.DialogResult = DialogResult.Yes
+                    Me.Dispose()
+                Catch ex As Exception
+                    tssStr = "Error Encountered!"
+                    cf.Debug(ex, True, "", ErrorQry)
+                End Try
+
+                If isCancel Then
+                    MessageBox.Show(Me, CancelMsg, "Error Encountered", MessageBoxButtons.OK, MessageBoxIcon.[Error])
+                End If
+
+                tssl_status.Text = tssStr
+                Me.Cursor = Cursors.[Default]
+                tlp_info_container.Enabled = True
+                tlp_question_container.Enabled = True
+            End If
+        End If
     End Sub
 #End Region
 
@@ -538,10 +681,85 @@ Public Class frm_file_eval
         Return id
     End Function
 
-    Private Sub frm_file_eval_Load(sender As Object, e As EventArgs) Handles Me.Load
-        CustomFn.FormDrag(Me, Panel1)
-    End Sub
+    Private Function GetQuestionData() As String()
+        Dim q1o, q2o, q3o, q4o, othersO As String
+        Dim q1 As QuestionData.Q1 = New QuestionData.Q1
+        Dim q2 As QuestionData.Q2 = New QuestionData.Q2
+        Dim q3 As QuestionData.Q3 = New QuestionData.Q3
+        Dim q4 As QuestionData.Q4 = New QuestionData.Q4
+        Dim others As QuestionData.Others = New QuestionData.Others
+        q1.sel1 = cbo_q1_1.SelectedValue.ToString
+        q1.sel2 = cbo_q1_2.SelectedValue.ToString
+        q2.sel1 = cbo_q2_1.SelectedValue.ToString
+        q2.sel2 = cbo_q2_2.SelectedValue.ToString
+        q3.sel1 = cbo_q3_1.SelectedValue.ToString
+        q3.sel2 = cbo_q3_2.SelectedValue.ToString
+        q4.sel = cbo_q4.SelectedValue.ToString
+        q1.feedback1 = rtxt_q1_1.Text
+        q1.feedback2 = rtxt_q1_2.Text
+        q2.feedback1 = rtxt_q2_1.Text
+        q2.feedback2 = rtxt_q2_2.Text
+        q3.feedback1 = rtxt_q3_1.Text
+        q3.feedback2 = rtxt_q3_2.Text
+        q4.feedback = rtxt_q4.Text
+        others.words = txt_words.Text
+        others.mistakes = txt_mistakes.Text
+        q1o = JsonConvert.SerializeObject(q1)
+        q2o = JsonConvert.SerializeObject(q2)
+        q3o = JsonConvert.SerializeObject(q3)
+        q4o = JsonConvert.SerializeObject(q4)
+        othersO = JsonConvert.SerializeObject(others)
+        Return New String() {q1o, q2o, q3o, q4o, othersO}
+    End Function
+
+    Private Function GetEvalID() As Integer
+        Dim evalid = 0
+        Dim filename As String = txt_filename.Text
+
+        Try
+            Dim dts As String = db.single("SELECT eid FROM dbo.tbl_btpr_eval WHERE user_id = " & evaluwee_uid.ToString & " AND eval_user_id = " + evaluator_uid.ToString & " AND filename LIKE '" & filename & "'")
+            evalid = Integer.Parse(dts)
+        Catch ex As Exception
+            cf.Debug(ex, True, "Failed to get evaluation ID.")
+        End Try
+
+        Return evalid
+    End Function
 #End Region
+
+    Public Class QuestionData
+        Public Class Q1
+            Public Property sel1 As String
+            Public Property feedback1 As String
+            Public Property sel2 As String
+            Public Property feedback2 As String
+        End Class
+
+        Public Class Q2
+            Public Property sel1 As String
+            Public Property feedback1 As String
+            Public Property sel2 As String
+            Public Property feedback2 As String
+        End Class
+
+        Public Class Q3
+            Public Property sel1 As String
+            Public Property feedback1 As String
+            Public Property sel2 As String
+            Public Property feedback2 As String
+        End Class
+
+        Public Class Q4
+            Public Property sel As String
+            Public Property feedback As String
+        End Class
+
+        Public Class Others
+            Public Property words As String
+            Public Property mistakes As String
+        End Class
+    End Class
+
 
     Public Class DGVData
         Public Property dgv As DataGridView

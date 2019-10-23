@@ -25,11 +25,11 @@ Partial Class frm_login
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_login))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_close = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Error2_lbl = New System.Windows.Forms.Label()
         Me.Error1_lbl = New System.Windows.Forms.Label()
-        Me.err = New System.Windows.Forms.Label()
+        Me.lbl_err = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btn_login = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -45,7 +45,7 @@ Partial Class frm_login
         Me.Panel1.BackColor = System.Drawing.Color.Black
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btn_close)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -63,26 +63,26 @@ Partial Class frm_login
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Log In"
         '
-        'Button1
+        'btn_close
         '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(224, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(39, 36)
-        Me.Button1.TabIndex = 0
-        Me.Button1.TabStop = False
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_close.BackColor = System.Drawing.Color.Red
+        Me.btn_close.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_close.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_close.Image = CType(resources.GetObject("btn_close.Image"), System.Drawing.Image)
+        Me.btn_close.Location = New System.Drawing.Point(224, 0)
+        Me.btn_close.Name = "btn_close"
+        Me.btn_close.Size = New System.Drawing.Size(39, 36)
+        Me.btn_close.TabIndex = 0
+        Me.btn_close.TabStop = False
+        Me.btn_close.UseVisualStyleBackColor = False
         '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Error2_lbl)
         Me.Panel2.Controls.Add(Me.Error1_lbl)
-        Me.Panel2.Controls.Add(Me.err)
+        Me.Panel2.Controls.Add(Me.lbl_err)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.btn_login)
         Me.Panel2.Controls.Add(Me.Label3)
@@ -101,7 +101,7 @@ Partial Class frm_login
         Me.Error2_lbl.BackColor = System.Drawing.Color.Transparent
         Me.Error2_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Error2_lbl.ForeColor = System.Drawing.Color.Red
-        Me.Error2_lbl.Location = New System.Drawing.Point(123, 36)
+        Me.Error2_lbl.Location = New System.Drawing.Point(104, 233)
         Me.Error2_lbl.Name = "Error2_lbl"
         Me.Error2_lbl.Size = New System.Drawing.Size(109, 13)
         Me.Error2_lbl.TabIndex = 24
@@ -114,24 +114,24 @@ Partial Class frm_login
         Me.Error1_lbl.BackColor = System.Drawing.Color.Transparent
         Me.Error1_lbl.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Error1_lbl.ForeColor = System.Drawing.Color.Red
-        Me.Error1_lbl.Location = New System.Drawing.Point(122, 23)
+        Me.Error1_lbl.Location = New System.Drawing.Point(152, 240)
         Me.Error1_lbl.Name = "Error1_lbl"
         Me.Error1_lbl.Size = New System.Drawing.Size(112, 13)
         Me.Error1_lbl.TabIndex = 25
         Me.Error1_lbl.Text = "Please enter Username!"
         Me.Error1_lbl.Visible = False
         '
-        'err
+        'lbl_err
         '
-        Me.err.BackColor = System.Drawing.Color.Transparent
-        Me.err.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.err.ForeColor = System.Drawing.Color.Red
-        Me.err.Location = New System.Drawing.Point(-1, 155)
-        Me.err.Name = "err"
-        Me.err.Size = New System.Drawing.Size(264, 30)
-        Me.err.TabIndex = 26
-        Me.err.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.err.Visible = False
+        Me.lbl_err.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_err.Font = New System.Drawing.Font("Century Gothic", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_err.ForeColor = System.Drawing.Color.Red
+        Me.lbl_err.Location = New System.Drawing.Point(0, 6)
+        Me.lbl_err.Name = "lbl_err"
+        Me.lbl_err.Size = New System.Drawing.Size(264, 30)
+        Me.lbl_err.TabIndex = 26
+        Me.lbl_err.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lbl_err.Visible = False
         '
         'Button2
         '
@@ -142,7 +142,7 @@ Partial Class frm_login
         Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = Global.BT_Tool.My.Resources.Resources.show_pass_24
-        Me.Button2.Location = New System.Drawing.Point(211, 125)
+        Me.Button2.Location = New System.Drawing.Point(211, 138)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(30, 27)
         Me.Button2.TabIndex = 30
@@ -175,7 +175,7 @@ Partial Class frm_login
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(23, 102)
+        Me.Label3.Location = New System.Drawing.Point(23, 115)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(95, 20)
         Me.Label3.TabIndex = 31
@@ -187,7 +187,7 @@ Partial Class frm_login
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(23, 36)
+        Me.Label2.Location = New System.Drawing.Point(23, 49)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 20)
         Me.Label2.TabIndex = 32
@@ -197,7 +197,7 @@ Partial Class frm_login
         '
         Me.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_password.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_password.Location = New System.Drawing.Point(27, 125)
+        Me.txt_password.Location = New System.Drawing.Point(27, 138)
         Me.txt_password.Name = "txt_password"
         Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txt_password.Size = New System.Drawing.Size(186, 27)
@@ -207,7 +207,7 @@ Partial Class frm_login
         '
         Me.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_username.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_username.Location = New System.Drawing.Point(27, 59)
+        Me.txt_username.Location = New System.Drawing.Point(27, 72)
         Me.txt_username.Name = "txt_username"
         Me.txt_username.Size = New System.Drawing.Size(214, 27)
         Me.txt_username.TabIndex = 27
@@ -236,11 +236,11 @@ Partial Class frm_login
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_close As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Error2_lbl As Label
     Friend WithEvents Error1_lbl As Label
-    Friend WithEvents err As Label
+    Friend WithEvents lbl_err As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents btn_login As Button
     Friend WithEvents Label3 As Label
