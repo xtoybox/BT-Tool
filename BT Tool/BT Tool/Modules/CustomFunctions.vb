@@ -1,17 +1,10 @@
-﻿Imports bttool.BorderStyleNoneExtensions
-Imports bttool.BorderStyleNoneExtensions.Resizer
+﻿Imports BT_Tool.BorderStyleNoneExtensions
+Imports BT_Tool.BorderStyleNoneExtensions.Resizer
 Imports System.IO
 Imports System.Runtime.InteropServices
 Imports System.Windows.Forms
-Imports System.Configuration
-Imports BT_Tool.BorderStyleNoneExtensions.Resizer
-Imports BT_Tool
 
 Public Class CustomFunctions
-
-    'Private cf As New CustomFunctions()
-    'Private db As New markDBOClass.DboClass
-
     ''' <summary>
     ''' Used for custom dropdown menu and <see cref="IsFormOpen(String, Boolean, String)"/> function.
     ''' </summary>
@@ -20,11 +13,6 @@ Public Class CustomFunctions
     ''' used for the <see cref="IsFormOpen(String, Boolean, String)"/> function.
     ''' </summary>
     Public GetForm As Form
-
-    Friend Sub FormResize(frm_login As frm_login)
-        Throw New NotImplementedException()
-    End Sub
-
     ''' <summary>
     ''' Setting the value of <see cref="frm"/>
     ''' </summary>
@@ -48,7 +36,7 @@ Public Class CustomFunctions
     ''' <param name="lbltxt"></param>
     Public Sub FormResize(ByVal frm As Form, ByVal lbltxt As String)
         'resize functionality
-        Dim _resizer As New BorderStyleNoneExtensions.Resizer(frm)
+        Dim _resizer As New Resizer(frm)
         _resizer.Compass = CardinalDirection.All
         'or you can assign values this way in bitwise
         _resizer.Compass =
@@ -70,7 +58,7 @@ Public Class CustomFunctions
     ''' <param name="trggr">The object that will trigger the drag event</param>
     Public Sub FormDrag(ByVal frm As Form, ByVal trggr As Object)
         'drag functionality
-        Dim _dragger As New BorderStyleNoneExtensions.Dragger({trggr, frm})
+        Dim _dragger As New Dragger({trggr, frm})
 
     End Sub
     ''' <summary>
@@ -312,167 +300,4 @@ recheckfile:
         Me.WriteToFile("{0}==>" & ex.ToString(), Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\BTTOOL_Error_Log.txt")
         MessageBox.Show(msg & vbNewLine & Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\BTTOOL_Error_Log.txt", "Error Encountered!", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
-
-    Public Function ReadAppSetting(ByVal key As String) As String
-        Dim result = "NOT FOUND"
-
-        Try
-            Dim appSettings = ConfigurationManager.AppSettings
-            result = If(appSettings(key), "NOT FOUND")
-        Catch ex As ConfigurationErrorsException
-            MessageBox.Show(ex.Message)
-        End Try
-
-        Return result
-    End Function
-
-    Public Sub ClearTextBoxes(ByVal frm As Form, Optional ByVal ctrlcol As Control.ControlCollection = Nothing)
-        If ctrlcol Is Nothing Then ctrlcol = frm.Controls
-        For Each ctrl As Control In ctrlcol
-            If TypeOf (ctrl) Is TextBox Then
-                'ctl.Text = ""
-                DirectCast(ctrl, TextBox).Clear()
-            ElseIf TypeOf (ctrl) Is ComboBox Then
-                DirectCast(ctrl, ComboBox).SelectedValue = 0
-            Else
-                If Not ctrl.Controls Is Nothing OrElse ctrl.Controls.Count <> 0 Then
-                    ClearTextBoxes(frm, ctrl.Controls)
-                End If
-            End If
-        Next
-    End Sub
-
-    ''' <summary>
-    ''' exporting files with ready status
-    ''' saved to excel in a folder named "Export" located in the desktop
-    ''' </summary>
-    'Sub export_function()
-    '    db.SQLDependency(False)
-    '    'export files function
-    '    If New String() {"ts", "admin"}.Contains(varMod.CurUserPos) Then
-
-    '        Dim excelDir As String = Path.Combine(My.Computer.FileSystem.SpecialDirectories.Desktop, "Export", "EXPORT " & Format(Date.Now, "MMddyyyy") & ".xlsx")
-
-    '        Dim xlApp As Excel.Application
-    '        Dim xlWb As Excel.Workbook
-    '        Dim xlSh As Excel.Worksheet
-    '        Dim xlRa As Excel.Range
-
-    '        xlApp = New Excel.Application()
-    '        xlApp.Visible = False
-    '        If File.Exists(excelDir) Then
-    '            'open existing excel document
-    '            xlWb = xlApp.Workbooks.Open(excelDir)
-    '        Else
-    '            'create new excel document
-    '            xlWb = xlApp.Workbooks.Add
-    '        End If
-    '        xlSh = xlWb.ActiveSheet
-    '        Dim lastRow As Long
-
-    '        If varMod.CurUserPos = "ts" Then
-
-    '            Dim dt As New Data.DataTable
-
-    '            dt = db.query("SELECT Id,dateRec,dateServ,dateDue,client,branch,sFile,duration,wFile,servDoc,page,
-    '                (SELECT username FROM dbo.UserData WHERE Id = bt) AS btname,(SELECT username FROM dbo.UserData WHERE Id = pr) AS prname,
-    '                (SELECT username FROM dbo.UserData WHERE Id = st) AS stname,(SELECT username FROM dbo.UserData WHERE Id = cc) AS ccname,
-    '                (SELECT username FROM dbo.UserData WHERE Id = qabt) AS qbt,(SELECT username FROM dbo.UserData WHERE Id = qapr) AS qpr,
-    '                (SELECT username FROM dbo.UserData WHERE Id = qast) AS qst,(SELECT username FROM dbo.UserData WHERE Id = qacc) AS qcc,
-    '                accuracy,bt,pr,st,cc FROM dbo.Main WHERE status LIKE @status", New String() {"status", "Ready"})
-
-    '            If dt.Rows.Count <> 0 Then
-
-    '                Dim div As Integer = 100 / dt.Rows.Count
-    '                Dim increment As Integer = 0
-
-    '                frm_main.lbl_status.Text = "Exporting"
-    '                frm_main.lbl_status.Visible = True
-
-    '                If dt.Rows.Count = 0 Then
-    '                    MessageBox.Show("No data to export", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '                    Exit Sub
-    '                End If
-    '                'check if file type has branches
-    '                For Each rows As DataRow In dt.Rows
-
-    '                    If File.Exists(Path.Combine(varMod.BaseServer, rows(9), rows(8))) Then
-
-    '                        Dim dirExport As String = Path.Combine(My.Computer.FileSystem.SpecialDirectories.Desktop, "Export")
-    '                        Dim dirExport2 As String = ""
-    '                        Dim dNow As DateTime = Convert.ToDateTime(rows(1))
-    '                        Dim dtDown As String = dNow.ToString("MMddyyyy", CultureInfo.InvariantCulture)
-
-    '                        If rows(4) <> "" Then
-    '                            'dirExport = Path.Combine(dirExport)
-    '                            dirExport = Path.Combine(dirExport, "DOWNLOAD-" & rows(4) & "-" & dtDown)
-    '                            If Not Directory.Exists(dirExport) Then Directory.CreateDirectory(dirExport)
-    '                        End If
-
-    '                        If rows(5) <> "" Then
-    '                            dirExport = Path.Combine(dirExport, rows(5))
-    '                            If Not Directory.Exists(dirExport) Then Directory.CreateDirectory(dirExport)
-    '                        End If
-
-    '                        Try
-    '                            File.Copy(Path.Combine(varMod.BaseServer, rows(9), rows(8)), Path.Combine(dirExport, rows(8)), True)
-    '                        Catch ex As Exception
-    '                            CustomFn.DebugMsg(ex, True)
-    '                            Exit Sub
-    '                        End Try
-
-    '                        'remove querry from loop and put it inside an array
-    '                        nQuer = db.nQuery("UPDATE dbo.Main SET status=@status WHERE Id=" & rows(0), New String() {"status", "done"})
-    '                        increment = increment + div
-    '                        If increment > frm_main.prgExport.Maximum Then
-    '                            increment = frm_main.prgExport.Maximum
-    '                        End If
-    '                        frm_main.prgExport.Value = increment
-
-    '                        Dim shortDateServ As Date = rows(2)
-    '                        shortDateServ = shortDateServ.ToShortDateString
-    '                        'exclude rows(9)
-    '                        'length 15
-    '                        lastRow = xlSh.Cells(xlSh.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row
-    '                        xlSh.Cells(lastRow + 1, 1) = String.Join("|", rows(0), rows(1), rows(2), rows(3), rows(4), rows(5), rows(6), rows(7), rows(8), rows(10),
-    '                            rows(11), rows(12), rows(13), rows(14), rows(15), rows(16), rows(17), rows(18), rows(19))
-    '                    End If
-    '                Next
-
-    '                xlApp.DisplayAlerts = False
-    '                xlWb.SaveAs(excelDir)
-    '                xlWb.Close()
-    '                xlApp.DisplayAlerts = True
-    '                xlApp.Quit()
-    '                frm_main.lbl_status.Text = "Done"
-    '                frm_main.fillMain()
-    '                MessageBox.Show("Export done")
-    '            Else
-    '                MessageBox.Show("No files available for export", "No files found.", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    '            End If
-    '        Else
-    '            MsgBox("You have no access to this function.", vbOKOnly, "YOU! SHALL NOT! PASS!")
-    '        End If
-    '    End If
-    'End Sub
-
-    'Sub userlist_function()
-    '    If New String() {"tl", "admin"}.Contains(varMod.CurUserPos) Then
-    '        frm_userlist.ShowDialog()
-    '        frm_main.fillCombo()
-    '    Else
-    '        MsgBox("You have no access to this function.", vbOKOnly, "Access Denied")
-    '    End If
-    'End Sub
-
-    'Sub workflow_function()
-    '    If varMod.CurUserPos <> "admin" Then
-    '        MessageBox.Show("You do not have enough privileges to access this function.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    Else
-    '        frm_workflow.Show()
-    '    End If
-    'End Sub
-
-
-
 End Class
