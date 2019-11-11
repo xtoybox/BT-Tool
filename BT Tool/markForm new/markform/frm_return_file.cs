@@ -21,7 +21,7 @@ namespace markform
         private DataTable nDataTable = new DataTable();
         private List<CustomClass.GridHeaders> headers = new List<CustomClass.GridHeaders>();
         #endregion
-
+                       
         #region Setting Variables
         private int uid, ulvl, btid;
         private string uname, upos, udep, UserRestriction = "";
@@ -35,7 +35,7 @@ namespace markform
         #endregion
 
         #region Form Class Initialization
-        /// <summary>
+                /// <summary>
         /// <paramref name="args"/> should contain an array of Array(user id, username, user position, user department, user level,filename,client id,btid)
         /// </summary>
         /// <param name="args"></param>
@@ -253,7 +253,7 @@ namespace markform
             }
             else
             {
-                string ws = (Ids.Count > 1) ? "s" : "";
+                string ws = (Ids.Count > 1)     ? "s" : "";
                 msgContent = (btn.Text.ToLower() == "delete") ?
                     "You are about to delete " + Ids.Count + " selected item" + ws + "." :
                     "You are about to " + btn.Text.ToLower() + " " + Ids.Count + " selected item" + ws + ".";

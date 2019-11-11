@@ -25,8 +25,7 @@ Partial Class frm_return
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_return))
-        Me.pic_prank = New System.Windows.Forms.PictureBox()
+        Me.btn_save = New System.Windows.Forms.Button()
         Me.tableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.lbl_prbet_1 = New System.Windows.Forms.Label()
         Me.cbo_second_assigned = New System.Windows.Forms.ComboBox()
@@ -43,16 +42,15 @@ Partial Class frm_return
         Me.lbl_prbet_3 = New System.Windows.Forms.Label()
         Me.cbo_actby = New System.Windows.Forms.ComboBox()
         Me.cbo_name = New System.Windows.Forms.ComboBox()
-        Me.btn_save = New System.Windows.Forms.Button()
-        Me.cbo_cl = New System.Windows.Forms.ComboBox()
-        Me.lbl_prbet_2 = New System.Windows.Forms.Label()
-        Me.rtxt_com3 = New System.Windows.Forms.RichTextBox()
         Me.tableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.rtxt_com3 = New System.Windows.Forms.RichTextBox()
         Me.rtxt_com2 = New System.Windows.Forms.RichTextBox()
         Me.lbl_comment = New System.Windows.Forms.Label()
         Me.lbl_sbs_feed = New System.Windows.Forms.Label()
         Me.lbl_prbet_4 = New System.Windows.Forms.Label()
         Me.rtxt_com1 = New System.Windows.Forms.RichTextBox()
+        Me.cbo_cl = New System.Windows.Forms.ComboBox()
+        Me.lbl_prbet_2 = New System.Windows.Forms.Label()
         Me.sb_info = New System.Windows.Forms.StatusStrip()
         Me.tss_status = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tss_status2 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -72,7 +70,7 @@ Partial Class frm_return
         Me.btn_seen = New System.Windows.Forms.Button()
         Me.btn_del = New System.Windows.Forms.Button()
         Me.gb_form_container = New System.Windows.Forms.GroupBox()
-        CType(Me.pic_prank, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pic_prank = New System.Windows.Forms.PictureBox()
         Me.tableLayoutPanel2.SuspendLayout()
         Me.tableLayoutPanel3.SuspendLayout()
         Me.sb_info.SuspendLayout()
@@ -82,16 +80,23 @@ Partial Class frm_return
         Me.tableLayoutPanel1.SuspendLayout()
         Me.panel1.SuspendLayout()
         Me.gb_form_container.SuspendLayout()
+        CType(Me.pic_prank, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'pic_prank
+        'btn_save
         '
-        Me.pic_prank.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pic_prank.Location = New System.Drawing.Point(1153, 16)
-        Me.pic_prank.Name = "pic_prank"
-        Me.pic_prank.Size = New System.Drawing.Size(102, 177)
-        Me.pic_prank.TabIndex = 6
-        Me.pic_prank.TabStop = False
+        Me.btn_save.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_save.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save.ForeColor = System.Drawing.Color.White
+        Me.btn_save.Location = New System.Drawing.Point(796, 167)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(106, 28)
+        Me.btn_save.TabIndex = 16
+        Me.btn_save.Text = "Save"
+        Me.btn_save.UseVisualStyleBackColor = False
         '
         'tableLayoutPanel2
         '
@@ -276,53 +281,6 @@ Partial Class frm_return
         Me.cbo_name.TabIndex = 6
         Me.cbo_name.Visible = False
         '
-        'btn_save
-        '
-        Me.btn_save.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_save.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save.ForeColor = System.Drawing.Color.White
-        Me.btn_save.Location = New System.Drawing.Point(796, 167)
-        Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(106, 28)
-        Me.btn_save.TabIndex = 16
-        Me.btn_save.Text = "Save"
-        Me.btn_save.UseVisualStyleBackColor = False
-        '
-        'cbo_cl
-        '
-        Me.cbo_cl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_cl.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbo_cl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbo_cl.FormattingEnabled = True
-        Me.cbo_cl.Location = New System.Drawing.Point(796, 67)
-        Me.cbo_cl.Name = "cbo_cl"
-        Me.cbo_cl.Size = New System.Drawing.Size(106, 21)
-        Me.cbo_cl.TabIndex = 10
-        Me.cbo_cl.Visible = False
-        '
-        'lbl_prbet_2
-        '
-        Me.lbl_prbet_2.AutoSize = True
-        Me.lbl_prbet_2.Location = New System.Drawing.Point(799, 16)
-        Me.lbl_prbet_2.Name = "lbl_prbet_2"
-        Me.lbl_prbet_2.Size = New System.Drawing.Size(63, 13)
-        Me.lbl_prbet_2.TabIndex = 7
-        Me.lbl_prbet_2.Text = "BT Name:"
-        Me.lbl_prbet_2.Visible = False
-        '
-        'rtxt_com3
-        '
-        Me.rtxt_com3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtxt_com3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxt_com3.Location = New System.Drawing.Point(300, 18)
-        Me.rtxt_com3.Name = "rtxt_com3"
-        Me.rtxt_com3.Size = New System.Drawing.Size(144, 158)
-        Me.rtxt_com3.TabIndex = 15
-        Me.rtxt_com3.Text = ""
-        '
         'tableLayoutPanel3
         '
         Me.tableLayoutPanel3.ColumnCount = 3
@@ -343,6 +301,16 @@ Partial Class frm_return
         Me.tableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tableLayoutPanel3.Size = New System.Drawing.Size(447, 179)
         Me.tableLayoutPanel3.TabIndex = 1
+        '
+        'rtxt_com3
+        '
+        Me.rtxt_com3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rtxt_com3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rtxt_com3.Location = New System.Drawing.Point(300, 18)
+        Me.rtxt_com3.Name = "rtxt_com3"
+        Me.rtxt_com3.Size = New System.Drawing.Size(144, 158)
+        Me.rtxt_com3.TabIndex = 15
+        Me.rtxt_com3.Text = ""
         '
         'rtxt_com2
         '
@@ -390,6 +358,28 @@ Partial Class frm_return
         Me.rtxt_com1.Size = New System.Drawing.Size(142, 158)
         Me.rtxt_com1.TabIndex = 13
         Me.rtxt_com1.Text = ""
+        '
+        'cbo_cl
+        '
+        Me.cbo_cl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_cl.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbo_cl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbo_cl.FormattingEnabled = True
+        Me.cbo_cl.Location = New System.Drawing.Point(796, 67)
+        Me.cbo_cl.Name = "cbo_cl"
+        Me.cbo_cl.Size = New System.Drawing.Size(106, 21)
+        Me.cbo_cl.TabIndex = 10
+        Me.cbo_cl.Visible = False
+        '
+        'lbl_prbet_2
+        '
+        Me.lbl_prbet_2.AutoSize = True
+        Me.lbl_prbet_2.Location = New System.Drawing.Point(799, 16)
+        Me.lbl_prbet_2.Name = "lbl_prbet_2"
+        Me.lbl_prbet_2.Size = New System.Drawing.Size(63, 13)
+        Me.lbl_prbet_2.TabIndex = 7
+        Me.lbl_prbet_2.Text = "BT Name:"
+        Me.lbl_prbet_2.Visible = False
         '
         'sb_info
         '
@@ -661,6 +651,15 @@ Partial Class frm_return
         Me.gb_form_container.TabStop = False
         Me.gb_form_container.Text = "Return Form"
         '
+        'pic_prank
+        '
+        Me.pic_prank.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pic_prank.Location = New System.Drawing.Point(1153, 16)
+        Me.pic_prank.Name = "pic_prank"
+        Me.pic_prank.Size = New System.Drawing.Size(102, 177)
+        Me.pic_prank.TabIndex = 6
+        Me.pic_prank.TabStop = False
+        '
         'frm_return
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -668,10 +667,8 @@ Partial Class frm_return
         Me.ClientSize = New System.Drawing.Size(1072, 573)
         Me.Controls.Add(Me.sb_info)
         Me.Controls.Add(Me.pnl_content_container)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_return"
-        Me.Text = "Return File"
-        CType(Me.pic_prank, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "frm_return"
         Me.tableLayoutPanel2.ResumeLayout(False)
         Me.tableLayoutPanel2.PerformLayout()
         Me.tableLayoutPanel3.ResumeLayout(False)
@@ -686,12 +683,13 @@ Partial Class frm_return
         Me.panel1.ResumeLayout(False)
         Me.gb_form_container.ResumeLayout(False)
         Me.gb_form_container.PerformLayout()
+        CType(Me.pic_prank, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Private WithEvents pic_prank As PictureBox
+    Private WithEvents btn_save As Button
     Private WithEvents tableLayoutPanel2 As TableLayoutPanel
     Private WithEvents lbl_prbet_1 As Label
     Private WithEvents cbo_second_assigned As ComboBox
@@ -708,16 +706,15 @@ Partial Class frm_return
     Private WithEvents lbl_prbet_3 As Label
     Private WithEvents cbo_actby As ComboBox
     Private WithEvents cbo_name As ComboBox
-    Private WithEvents btn_save As Button
-    Private WithEvents cbo_cl As ComboBox
-    Private WithEvents lbl_prbet_2 As Label
-    Private WithEvents rtxt_com3 As RichTextBox
     Private WithEvents tableLayoutPanel3 As TableLayoutPanel
+    Private WithEvents rtxt_com3 As RichTextBox
     Private WithEvents rtxt_com2 As RichTextBox
     Private WithEvents lbl_comment As Label
     Private WithEvents lbl_sbs_feed As Label
     Private WithEvents lbl_prbet_4 As Label
     Private WithEvents rtxt_com1 As RichTextBox
+    Private WithEvents cbo_cl As ComboBox
+    Private WithEvents lbl_prbet_2 As Label
     Private WithEvents sb_info As StatusStrip
     Private WithEvents tss_status As ToolStripStatusLabel
     Private WithEvents tss_status2 As ToolStripStatusLabel
@@ -737,4 +734,5 @@ Partial Class frm_return
     Private WithEvents btn_seen As Button
     Private WithEvents btn_del As Button
     Private WithEvents gb_form_container As GroupBox
+    Private WithEvents pic_prank As PictureBox
 End Class

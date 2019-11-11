@@ -234,6 +234,12 @@
     <Compile Include="Forms\frm_monitoring.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frm_return.Designer.vb">
+      <DependentUpon>frm_return.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_return.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_upload.Designer.vb">
       <DependentUpon>frm_upload.vb</DependentUpon>
     </Compile>
@@ -250,6 +256,12 @@
       <DependentUpon>frm_workflow.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frm_workflow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\test.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\BorderStyleNoneExtensions.vb" />
@@ -312,12 +324,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\frm_break.resx">
       <DependentUpon>frm_break.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_duefile.resx">
       <DependentUpon>frm_duefile.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_export.resx">
       <DependentUpon>frm_export.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_file_eval.resx">
       <DependentUpon>frm_file_eval.vb</DependentUpon>
@@ -343,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_monitoring.resx">
       <DependentUpon>frm_monitoring.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_return.resx">
+      <DependentUpon>frm_return.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_upload.resx">
       <DependentUpon>frm_upload.vb</DependentUpon>
