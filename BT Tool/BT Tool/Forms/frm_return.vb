@@ -175,6 +175,7 @@ Public Class frm_return
         ErrorQuery = ""
         tss_status.Text = tssStr
         Cursor = Cursors.Default
+
     End Sub
 
     Public Sub FilterData()
@@ -238,7 +239,7 @@ Public Class frm_return
         Dim dt As New DataTable
         'Dim rdv As DataRowView
         Dim dv As New DataView
-4
+
         If (Not IsViewOnly Or IsAllowSave) Then
 
             dt = db.query("SELECT cl_id,client FROM dbo.tbl_client ORDER BY client")
@@ -458,6 +459,8 @@ Public Class frm_return
 
 
     End Sub
+
+
 
     'add event for button clicks
     'add event for combobox index change

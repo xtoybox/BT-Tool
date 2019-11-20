@@ -194,7 +194,7 @@ Public Class frm_monitoring
     'Private Sub Notif()
     '    Dim curdate As String = dtpicker.Value.Date.ToString("MM/dd/yyyy")
     '    db.SQLDependency(True)
-    '    db.OnNewMessage += New SQLClass.NewMessage(OnNewMessage)
+    '    db.OnNewMessage += New SQLClass.NewMessage(AddressOf OnNewMessage)
     '    db.query("SELECT Id,status,dateServ FROM dbo.Main ")
     'End Sub
 

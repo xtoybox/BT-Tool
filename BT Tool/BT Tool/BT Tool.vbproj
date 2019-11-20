@@ -186,6 +186,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frm_qrtracker.Designer.vb">
+      <DependentUpon>frm_qrtracker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_qrtracker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_break.Designer.vb">
       <DependentUpon>frm_break.vb</DependentUpon>
     </Compile>
@@ -234,10 +240,34 @@
     <Compile Include="Forms\frm_monitoring.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frm_report_log.Designer.vb">
+      <DependentUpon>frm_report_log.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_report_log.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_restrictions.Designer.vb">
+      <DependentUpon>frm_restrictions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_restrictions.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_return.Designer.vb">
       <DependentUpon>frm_return.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frm_return.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_sub_monitoring.Designer.vb">
+      <DependentUpon>frm_sub_monitoring.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_sub_monitoring.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_sub_report_log.Designer.vb">
+      <DependentUpon>frm_sub_report_log.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_sub_report_log.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frm_upload.Designer.vb">
@@ -359,8 +389,23 @@
     <EmbeddedResource Include="Forms\frm_monitoring.resx">
       <DependentUpon>frm_monitoring.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_qrtracker.resx">
+      <DependentUpon>frm_qrtracker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_report_log.resx">
+      <DependentUpon>frm_report_log.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_restrictions.resx">
+      <DependentUpon>frm_restrictions.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_return.resx">
       <DependentUpon>frm_return.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_sub_monitoring.resx">
+      <DependentUpon>frm_sub_monitoring.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_sub_report_log.resx">
+      <DependentUpon>frm_sub_report_log.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_upload.resx">
       <DependentUpon>frm_upload.vb</DependentUpon>

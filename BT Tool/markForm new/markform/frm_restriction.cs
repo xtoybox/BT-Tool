@@ -389,7 +389,7 @@ namespace markform
                 DataTable ndt = new DataTable();
                 ndt.Columns.Add("uid", typeof(int));
                 ndt.Columns.Add("Username", typeof(string));
-                ndt.Columns.Add("restrictions", typeof(string));
+                ndt.Columns.Add("Restrictions", typeof(string));
                 ndt.Columns.Add("Department", typeof(string));
                 DataTable dt = db.query("SELECT Id, UPPER(LEFT(username,1))+LOWER(SUBSTRING(username,2,LEN(username))) AS uname,restrictions,department FROM dbo.UserData WHERE deactivated = 0 AND Id != "+ CurrentUID + " ORDER BY department,position,username");
                 foreach (DataRow row in dt.Rows)
