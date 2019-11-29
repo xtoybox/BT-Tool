@@ -244,3 +244,8 @@ C:\Users\Accolade P1\Desktop\BT-Tool - Copy\BT Tool\BT Tool\bin\Debug\SocketIOCl
 C:\Users\Accolade P1\Desktop\BT-Tool - Copy\BT Tool\BT Tool\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Accolade P1\Desktop\BT-Tool - Copy\BT Tool\BT Tool\bin\Debug\WebSocket4Net.pdb
 C:\Users\Accolade P1\Desktop\BT-Tool - Copy\BT Tool\BT Tool\obj\Debug\BT Tool.vbproj.CopyComplete
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_qrtracker.resources
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_report_log.resources
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_sub_monitoring.resources
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_sub_report_log.resources
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\BT Tool\obj\Debug\BT_Tool.frm_restrictions.resources

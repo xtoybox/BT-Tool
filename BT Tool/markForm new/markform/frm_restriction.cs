@@ -288,6 +288,7 @@ namespace markform
                 cf.Debug(ex);
             }
         }
+
         private void btn_reset_Click(object sender, EventArgs e)
         {
             SetRestriction(DefaultRestriction);
@@ -303,6 +304,7 @@ namespace markform
         {
             GetPreset();
         }
+
         private void chk_CheckedChanged(object sender, EventArgs e)
         {
             try
@@ -647,5 +649,10 @@ namespace markform
         #region Functions
 
         #endregion Functions
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

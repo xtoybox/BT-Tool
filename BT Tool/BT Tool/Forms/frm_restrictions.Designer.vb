@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_restrictions
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,27 +20,19 @@ Partial Class frm_restrictions
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.label3 = New System.Windows.Forms.Label()
         Me.chk_ccqa = New System.Windows.Forms.CheckBox()
         Me.chk_cc = New System.Windows.Forms.CheckBox()
         Me.chk_stqa = New System.Windows.Forms.CheckBox()
         Me.chk_st = New System.Windows.Forms.CheckBox()
         Me.chk_prqa = New System.Windows.Forms.CheckBox()
-        Me.chk_pr = New System.Windows.Forms.CheckBox()
-        Me.tab_userlist = New System.Windows.Forms.TabPage()
-        Me.chk_ua_allow_save = New System.Windows.Forms.CheckBox()
-        Me.gbox_assign_user = New System.Windows.Forms.GroupBox()
         Me.chk_btqa = New System.Windows.Forms.CheckBox()
-        Me.chk_bt = New System.Windows.Forms.CheckBox()
-        Me.tab_idle_tracker = New System.Windows.Forms.TabPage()
-        Me.tab_wait_tracker = New System.Windows.Forms.TabPage()
-        Me.tab_work_flow = New System.Windows.Forms.TabPage()
-        Me.tab_upload = New System.Windows.Forms.TabPage()
-        Me.checkBox10 = New System.Windows.Forms.CheckBox()
         Me.chk_return_file = New System.Windows.Forms.CheckBox()
+        Me.gbox_assign_user = New System.Windows.Forms.GroupBox()
+        Me.chk_pr = New System.Windows.Forms.CheckBox()
+        Me.chk_bt = New System.Windows.Forms.CheckBox()
         Me.groupBox2 = New System.Windows.Forms.GroupBox()
         Me.gbox_workfile = New System.Windows.Forms.GroupBox()
         Me.chk_doc = New System.Windows.Forms.CheckBox()
@@ -59,43 +51,50 @@ Partial Class frm_restrictions
         Me.chk_file_info = New System.Windows.Forms.CheckBox()
         Me.chk_assign_user = New System.Windows.Forms.CheckBox()
         Me.tab_export = New System.Windows.Forms.TabPage()
+        Me.tab_archive = New System.Windows.Forms.TabPage()
         Me.tab_ref = New System.Windows.Forms.TabPage()
         Me.tab_btfile = New System.Windows.Forms.TabPage()
+        Me.checkBox10 = New System.Windows.Forms.CheckBox()
+        Me.tab_idle_tracker = New System.Windows.Forms.TabPage()
+        Me.tab_wait_tracker = New System.Windows.Forms.TabPage()
+        Me.tab_work_flow = New System.Windows.Forms.TabPage()
+        Me.tab_upload = New System.Windows.Forms.TabPage()
+        Me.chk_ua_allow_save = New System.Windows.Forms.CheckBox()
+        Me.tab_userlist = New System.Windows.Forms.TabPage()
         Me.checkBox15 = New System.Windows.Forms.CheckBox()
         Me.checkBox16 = New System.Windows.Forms.CheckBox()
         Me.checkBox17 = New System.Windows.Forms.CheckBox()
         Me.pnl_rl_allow_il = New System.Windows.Forms.Panel()
         Me.chk_rl_allow_il = New System.Windows.Forms.CheckBox()
         Me.groupBox8 = New System.Windows.Forms.GroupBox()
-        Me.tab_archive = New System.Windows.Forms.TabPage()
+        Me.pnl_rl_allow_bl = New System.Windows.Forms.Panel()
         Me.checkBox14 = New System.Windows.Forms.CheckBox()
+        Me.checkBox12 = New System.Windows.Forms.CheckBox()
+        Me.checkBox13 = New System.Windows.Forms.CheckBox()
+        Me.cbo_preset_pos = New System.Windows.Forms.ComboBox()
         Me.cbo_preset_dep = New System.Windows.Forms.ComboBox()
         Me.label2 = New System.Windows.Forms.Label()
-        Me.cbo_preset_pos = New System.Windows.Forms.ComboBox()
-        Me.groupBox5 = New System.Windows.Forms.GroupBox()
         Me.checkBox3 = New System.Windows.Forms.CheckBox()
         Me.label1 = New System.Windows.Forms.Label()
         Me.checkBox2 = New System.Windows.Forms.CheckBox()
         Me.txt_f_username = New System.Windows.Forms.TextBox()
         Me.checkBox1 = New System.Windows.Forms.CheckBox()
-        Me.pnl_filterdgv_container = New System.Windows.Forms.Panel()
         Me.dgv_userlist = New System.Windows.Forms.DataGridView()
+        Me.pnl_filterdgv_container = New System.Windows.Forms.Panel()
+        Me.pnl_contains_userlist = New System.Windows.Forms.Panel()
         Me.toolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.chk_fe_allow_view_eval = New System.Windows.Forms.CheckBox()
         Me.chk_ret_allow_view = New System.Windows.Forms.CheckBox()
         Me.chk_flag_view_all = New System.Windows.Forms.CheckBox()
-        Me.pnl_contains_userlist = New System.Windows.Forms.Panel()
-        Me.checkBox12 = New System.Windows.Forms.CheckBox()
-        Me.pnl_rl_allow_bl = New System.Windows.Forms.Panel()
-        Me.checkBox13 = New System.Windows.Forms.CheckBox()
+        Me.label3 = New System.Windows.Forms.Label()
         Me.chk_fe_allow_export_eval = New System.Windows.Forms.CheckBox()
-        Me.chk_fe_allow_create_eval = New System.Windows.Forms.CheckBox()
-        Me.tab_file_eval = New System.Windows.Forms.TabPage()
         Me.groupBox3 = New System.Windows.Forms.GroupBox()
         Me.pnl_evaldep = New System.Windows.Forms.Panel()
         Me.checkBox34 = New System.Windows.Forms.CheckBox()
         Me.checkBox32 = New System.Windows.Forms.CheckBox()
         Me.checkBox33 = New System.Windows.Forms.CheckBox()
+        Me.tab_file_eval = New System.Windows.Forms.TabPage()
+        Me.chk_fe_allow_create_eval = New System.Windows.Forms.CheckBox()
         Me.tabctrl_restriction_menu = New System.Windows.Forms.TabControl()
         Me.tab_view_return = New System.Windows.Forms.TabPage()
         Me.chk_ret_allow_seen = New System.Windows.Forms.CheckBox()
@@ -128,6 +127,8 @@ Partial Class frm_restrictions
         Me.chk_upload = New System.Windows.Forms.CheckBox()
         Me.chk_workflow = New System.Windows.Forms.CheckBox()
         Me.chk_userlist = New System.Windows.Forms.CheckBox()
+        Me.groupBox1 = New System.Windows.Forms.GroupBox()
+        Me.pnl_menu_checkbox_container = New System.Windows.Forms.Panel()
         Me.chk_files_due = New System.Windows.Forms.CheckBox()
         Me.chk_wait_tracker = New System.Windows.Forms.CheckBox()
         Me.chk_idle_track = New System.Windows.Forms.CheckBox()
@@ -136,28 +137,26 @@ Partial Class frm_restrictions
         Me.chk_view_return = New System.Windows.Forms.CheckBox()
         Me.chk_monitoring = New System.Windows.Forms.CheckBox()
         Me.chk_file_eval = New System.Windows.Forms.CheckBox()
-        Me.pnl_menu_checkbox_container = New System.Windows.Forms.Panel()
-        Me.groupBox1 = New System.Windows.Forms.GroupBox()
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_save = New System.Windows.Forms.Button()
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.panel2 = New System.Windows.Forms.Panel()
-        Me.tab_userlist.SuspendLayout()
+        Me.groupBox5 = New System.Windows.Forms.GroupBox()
         Me.gbox_assign_user.SuspendLayout()
-        Me.tab_upload.SuspendLayout()
         Me.groupBox2.SuspendLayout()
         Me.gbox_workfile.SuspendLayout()
         Me.gbox_fileinfo.SuspendLayout()
+        Me.tab_upload.SuspendLayout()
+        Me.tab_userlist.SuspendLayout()
         Me.pnl_rl_allow_il.SuspendLayout()
         Me.groupBox8.SuspendLayout()
-        Me.groupBox5.SuspendLayout()
-        Me.pnl_filterdgv_container.SuspendLayout()
-        CType(Me.dgv_userlist, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnl_contains_userlist.SuspendLayout()
         Me.pnl_rl_allow_bl.SuspendLayout()
-        Me.tab_file_eval.SuspendLayout()
+        CType(Me.dgv_userlist, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnl_filterdgv_container.SuspendLayout()
+        Me.pnl_contains_userlist.SuspendLayout()
         Me.groupBox3.SuspendLayout()
         Me.pnl_evaldep.SuspendLayout()
+        Me.tab_file_eval.SuspendLayout()
         Me.tabctrl_restriction_menu.SuspendLayout()
         Me.tab_view_return.SuspendLayout()
         Me.groupBox6.SuspendLayout()
@@ -167,19 +166,11 @@ Partial Class frm_restrictions
         Me.pnl_flag_allow_dep.SuspendLayout()
         Me.tab_report_logs.SuspendLayout()
         Me.groupBox7.SuspendLayout()
-        Me.pnl_menu_checkbox_container.SuspendLayout()
         Me.groupBox1.SuspendLayout()
+        Me.pnl_menu_checkbox_container.SuspendLayout()
         Me.panel2.SuspendLayout()
+        Me.groupBox5.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'label3
-        '
-        Me.label3.AutoSize = True
-        Me.label3.Location = New System.Drawing.Point(184, 21)
-        Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(47, 13)
-        Me.label3.TabIndex = 1
-        Me.label3.Text = "Position:"
         '
         'chk_ccqa
         '
@@ -243,39 +234,31 @@ Partial Class frm_restrictions
         Me.chk_prqa.Text = "PR QA"
         Me.chk_prqa.UseVisualStyleBackColor = True
         '
-        'chk_pr
+        'chk_btqa
         '
-        Me.chk_pr.AutoSize = True
-        Me.chk_pr.Checked = True
-        Me.chk_pr.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_pr.Location = New System.Drawing.Point(6, 43)
-        Me.chk_pr.Name = "chk_pr"
-        Me.chk_pr.Size = New System.Drawing.Size(41, 17)
-        Me.chk_pr.TabIndex = 1
-        Me.chk_pr.Text = "PR"
-        Me.chk_pr.UseVisualStyleBackColor = True
+        Me.chk_btqa.AutoSize = True
+        Me.chk_btqa.Checked = True
+        Me.chk_btqa.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_btqa.Location = New System.Drawing.Point(98, 20)
+        Me.chk_btqa.Name = "chk_btqa"
+        Me.chk_btqa.Size = New System.Drawing.Size(58, 17)
+        Me.chk_btqa.TabIndex = 0
+        Me.chk_btqa.Text = "BT QA"
+        Me.chk_btqa.UseVisualStyleBackColor = True
         '
-        'tab_userlist
+        'chk_return_file
         '
-        Me.tab_userlist.Controls.Add(Me.chk_ua_allow_save)
-        Me.tab_userlist.Location = New System.Drawing.Point(4, 40)
-        Me.tab_userlist.Name = "tab_userlist"
-        Me.tab_userlist.Size = New System.Drawing.Size(587, 492)
-        Me.tab_userlist.TabIndex = 8
-        Me.tab_userlist.Text = "USER LIST"
-        Me.tab_userlist.UseVisualStyleBackColor = True
-        '
-        'chk_ua_allow_save
-        '
-        Me.chk_ua_allow_save.AutoSize = True
-        Me.chk_ua_allow_save.Checked = True
-        Me.chk_ua_allow_save.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_ua_allow_save.Location = New System.Drawing.Point(13, 8)
-        Me.chk_ua_allow_save.Name = "chk_ua_allow_save"
-        Me.chk_ua_allow_save.Size = New System.Drawing.Size(132, 17)
-        Me.chk_ua_allow_save.TabIndex = 0
-        Me.chk_ua_allow_save.Text = "Allow user to add/edit."
-        Me.chk_ua_allow_save.UseVisualStyleBackColor = True
+        Me.chk_return_file.AutoSize = True
+        Me.chk_return_file.BackColor = System.Drawing.SystemColors.Control
+        Me.chk_return_file.Checked = True
+        Me.chk_return_file.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_return_file.Location = New System.Drawing.Point(6, 120)
+        Me.chk_return_file.Name = "chk_return_file"
+        Me.chk_return_file.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
+        Me.chk_return_file.Size = New System.Drawing.Size(80, 17)
+        Me.chk_return_file.TabIndex = 10
+        Me.chk_return_file.Text = "Return File"
+        Me.chk_return_file.UseVisualStyleBackColor = False
         '
         'gbox_assign_user
         '
@@ -294,17 +277,17 @@ Partial Class frm_restrictions
         Me.gbox_assign_user.TabStop = False
         Me.gbox_assign_user.Text = "Assign User"
         '
-        'chk_btqa
+        'chk_pr
         '
-        Me.chk_btqa.AutoSize = True
-        Me.chk_btqa.Checked = True
-        Me.chk_btqa.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_btqa.Location = New System.Drawing.Point(98, 20)
-        Me.chk_btqa.Name = "chk_btqa"
-        Me.chk_btqa.Size = New System.Drawing.Size(58, 17)
-        Me.chk_btqa.TabIndex = 0
-        Me.chk_btqa.Text = "BT QA"
-        Me.chk_btqa.UseVisualStyleBackColor = True
+        Me.chk_pr.AutoSize = True
+        Me.chk_pr.Checked = True
+        Me.chk_pr.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_pr.Location = New System.Drawing.Point(6, 43)
+        Me.chk_pr.Name = "chk_pr"
+        Me.chk_pr.Size = New System.Drawing.Size(41, 17)
+        Me.chk_pr.TabIndex = 1
+        Me.chk_pr.Text = "PR"
+        Me.chk_pr.UseVisualStyleBackColor = True
         '
         'chk_bt
         '
@@ -318,70 +301,6 @@ Partial Class frm_restrictions
         Me.chk_bt.Text = "BT"
         Me.chk_bt.UseVisualStyleBackColor = True
         '
-        'tab_idle_tracker
-        '
-        Me.tab_idle_tracker.Location = New System.Drawing.Point(4, 40)
-        Me.tab_idle_tracker.Name = "tab_idle_tracker"
-        Me.tab_idle_tracker.Size = New System.Drawing.Size(587, 492)
-        Me.tab_idle_tracker.TabIndex = 5
-        Me.tab_idle_tracker.Text = "IDLE TRACKER"
-        Me.tab_idle_tracker.UseVisualStyleBackColor = True
-        '
-        'tab_wait_tracker
-        '
-        Me.tab_wait_tracker.Location = New System.Drawing.Point(4, 40)
-        Me.tab_wait_tracker.Name = "tab_wait_tracker"
-        Me.tab_wait_tracker.Size = New System.Drawing.Size(587, 492)
-        Me.tab_wait_tracker.TabIndex = 6
-        Me.tab_wait_tracker.Text = "WAIT TRACKER"
-        Me.tab_wait_tracker.UseVisualStyleBackColor = True
-        '
-        'tab_work_flow
-        '
-        Me.tab_work_flow.Location = New System.Drawing.Point(4, 40)
-        Me.tab_work_flow.Name = "tab_work_flow"
-        Me.tab_work_flow.Size = New System.Drawing.Size(587, 492)
-        Me.tab_work_flow.TabIndex = 9
-        Me.tab_work_flow.Text = "WORK FLOW"
-        Me.tab_work_flow.UseVisualStyleBackColor = True
-        '
-        'tab_upload
-        '
-        Me.tab_upload.Controls.Add(Me.checkBox10)
-        Me.tab_upload.Location = New System.Drawing.Point(4, 40)
-        Me.tab_upload.Name = "tab_upload"
-        Me.tab_upload.Size = New System.Drawing.Size(587, 492)
-        Me.tab_upload.TabIndex = 10
-        Me.tab_upload.Text = "UPLOAD"
-        Me.tab_upload.UseVisualStyleBackColor = True
-        '
-        'checkBox10
-        '
-        Me.checkBox10.AutoSize = True
-        Me.checkBox10.Checked = True
-        Me.checkBox10.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.checkBox10.Location = New System.Drawing.Point(3, 8)
-        Me.checkBox10.Name = "checkBox10"
-        Me.checkBox10.Size = New System.Drawing.Size(237, 17)
-        Me.checkBox10.TabIndex = 0
-        Me.checkBox10.Text = "Allow user to change the file source directory"
-        Me.checkBox10.UseVisualStyleBackColor = True
-        '
-        'chk_return_file
-        '
-        Me.chk_return_file.AutoSize = True
-        Me.chk_return_file.BackColor = System.Drawing.SystemColors.Control
-        Me.chk_return_file.Checked = True
-        Me.chk_return_file.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_return_file.Location = New System.Drawing.Point(6, 120)
-        Me.chk_return_file.Name = "chk_return_file"
-        Me.chk_return_file.Padding = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.chk_return_file.Size = New System.Drawing.Size(80, 17)
-        Me.chk_return_file.TabIndex = 10
-        Me.chk_return_file.Text = "Return File"
-        Me.toolTip1.SetToolTip(Me.chk_return_file, "Hide or unhide return file button")
-        Me.chk_return_file.UseVisualStyleBackColor = False
-        '
         'groupBox2
         '
         Me.groupBox2.Controls.Add(Me.chk_return_file)
@@ -393,9 +312,9 @@ Partial Class frm_restrictions
         Me.groupBox2.Controls.Add(Me.chk_file_info)
         Me.groupBox2.Controls.Add(Me.chk_assign_user)
         Me.groupBox2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.groupBox2.Location = New System.Drawing.Point(311, 49)
+        Me.groupBox2.Location = New System.Drawing.Point(153, 49)
         Me.groupBox2.Name = "groupBox2"
-        Me.groupBox2.Size = New System.Drawing.Size(442, 144)
+        Me.groupBox2.Size = New System.Drawing.Size(600, 144)
         Me.groupBox2.TabIndex = 10
         Me.groupBox2.TabStop = False
         Me.groupBox2.Text = "Main Form Restrictions"
@@ -606,16 +525,25 @@ Partial Class frm_restrictions
         '
         Me.tab_export.Location = New System.Drawing.Point(4, 40)
         Me.tab_export.Name = "tab_export"
-        Me.tab_export.Size = New System.Drawing.Size(587, 492)
+        Me.tab_export.Size = New System.Drawing.Size(592, 299)
         Me.tab_export.TabIndex = 11
         Me.tab_export.Text = "EXPORT"
         Me.tab_export.UseVisualStyleBackColor = True
+        '
+        'tab_archive
+        '
+        Me.tab_archive.Location = New System.Drawing.Point(4, 40)
+        Me.tab_archive.Name = "tab_archive"
+        Me.tab_archive.Size = New System.Drawing.Size(592, 299)
+        Me.tab_archive.TabIndex = 12
+        Me.tab_archive.Text = "ARCHIVE"
+        Me.tab_archive.UseVisualStyleBackColor = True
         '
         'tab_ref
         '
         Me.tab_ref.Location = New System.Drawing.Point(4, 40)
         Me.tab_ref.Name = "tab_ref"
-        Me.tab_ref.Size = New System.Drawing.Size(587, 492)
+        Me.tab_ref.Size = New System.Drawing.Size(592, 299)
         Me.tab_ref.TabIndex = 14
         Me.tab_ref.Text = "REFERENCE"
         Me.tab_ref.UseVisualStyleBackColor = True
@@ -624,10 +552,81 @@ Partial Class frm_restrictions
         '
         Me.tab_btfile.Location = New System.Drawing.Point(4, 40)
         Me.tab_btfile.Name = "tab_btfile"
-        Me.tab_btfile.Size = New System.Drawing.Size(587, 492)
+        Me.tab_btfile.Size = New System.Drawing.Size(592, 299)
         Me.tab_btfile.TabIndex = 15
         Me.tab_btfile.Text = "BT FILE"
         Me.tab_btfile.UseVisualStyleBackColor = True
+        '
+        'checkBox10
+        '
+        Me.checkBox10.AutoSize = True
+        Me.checkBox10.Checked = True
+        Me.checkBox10.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.checkBox10.Location = New System.Drawing.Point(3, 8)
+        Me.checkBox10.Name = "checkBox10"
+        Me.checkBox10.Size = New System.Drawing.Size(237, 17)
+        Me.checkBox10.TabIndex = 0
+        Me.checkBox10.Text = "Allow user to change the file source directory"
+        Me.checkBox10.UseVisualStyleBackColor = True
+        '
+        'tab_idle_tracker
+        '
+        Me.tab_idle_tracker.Location = New System.Drawing.Point(4, 22)
+        Me.tab_idle_tracker.Name = "tab_idle_tracker"
+        Me.tab_idle_tracker.Size = New System.Drawing.Size(592, 317)
+        Me.tab_idle_tracker.TabIndex = 5
+        Me.tab_idle_tracker.Text = "IDLE TRACKER"
+        Me.tab_idle_tracker.UseVisualStyleBackColor = True
+        '
+        'tab_wait_tracker
+        '
+        Me.tab_wait_tracker.Location = New System.Drawing.Point(4, 40)
+        Me.tab_wait_tracker.Name = "tab_wait_tracker"
+        Me.tab_wait_tracker.Size = New System.Drawing.Size(710, 299)
+        Me.tab_wait_tracker.TabIndex = 6
+        Me.tab_wait_tracker.Text = "WAIT TRACKER"
+        Me.tab_wait_tracker.UseVisualStyleBackColor = True
+        '
+        'tab_work_flow
+        '
+        Me.tab_work_flow.Location = New System.Drawing.Point(4, 40)
+        Me.tab_work_flow.Name = "tab_work_flow"
+        Me.tab_work_flow.Size = New System.Drawing.Size(592, 299)
+        Me.tab_work_flow.TabIndex = 9
+        Me.tab_work_flow.Text = "WORK FLOW"
+        Me.tab_work_flow.UseVisualStyleBackColor = True
+        '
+        'tab_upload
+        '
+        Me.tab_upload.Controls.Add(Me.checkBox10)
+        Me.tab_upload.Location = New System.Drawing.Point(4, 58)
+        Me.tab_upload.Name = "tab_upload"
+        Me.tab_upload.Size = New System.Drawing.Size(436, 281)
+        Me.tab_upload.TabIndex = 10
+        Me.tab_upload.Text = "UPLOAD"
+        Me.tab_upload.UseVisualStyleBackColor = True
+        '
+        'chk_ua_allow_save
+        '
+        Me.chk_ua_allow_save.AutoSize = True
+        Me.chk_ua_allow_save.Checked = True
+        Me.chk_ua_allow_save.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_ua_allow_save.Location = New System.Drawing.Point(13, 8)
+        Me.chk_ua_allow_save.Name = "chk_ua_allow_save"
+        Me.chk_ua_allow_save.Size = New System.Drawing.Size(132, 17)
+        Me.chk_ua_allow_save.TabIndex = 0
+        Me.chk_ua_allow_save.Text = "Allow user to add/edit."
+        Me.chk_ua_allow_save.UseVisualStyleBackColor = True
+        '
+        'tab_userlist
+        '
+        Me.tab_userlist.Controls.Add(Me.chk_ua_allow_save)
+        Me.tab_userlist.Location = New System.Drawing.Point(4, 58)
+        Me.tab_userlist.Name = "tab_userlist"
+        Me.tab_userlist.Size = New System.Drawing.Size(436, 281)
+        Me.tab_userlist.TabIndex = 8
+        Me.tab_userlist.Text = "USER LIST"
+        Me.tab_userlist.UseVisualStyleBackColor = True
         '
         'checkBox15
         '
@@ -697,14 +696,16 @@ Partial Class frm_restrictions
         Me.groupBox8.TabIndex = 3
         Me.groupBox8.TabStop = False
         '
-        'tab_archive
+        'pnl_rl_allow_bl
         '
-        Me.tab_archive.Location = New System.Drawing.Point(4, 40)
-        Me.tab_archive.Name = "tab_archive"
-        Me.tab_archive.Size = New System.Drawing.Size(587, 492)
-        Me.tab_archive.TabIndex = 12
-        Me.tab_archive.Text = "ARCHIVE"
-        Me.tab_archive.UseVisualStyleBackColor = True
+        Me.pnl_rl_allow_bl.Controls.Add(Me.checkBox14)
+        Me.pnl_rl_allow_bl.Controls.Add(Me.checkBox12)
+        Me.pnl_rl_allow_bl.Controls.Add(Me.checkBox13)
+        Me.pnl_rl_allow_bl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnl_rl_allow_bl.Location = New System.Drawing.Point(3, 16)
+        Me.pnl_rl_allow_bl.Name = "pnl_rl_allow_bl"
+        Me.pnl_rl_allow_bl.Size = New System.Drawing.Size(163, 22)
+        Me.pnl_rl_allow_bl.TabIndex = 0
         '
         'checkBox14
         '
@@ -717,6 +718,39 @@ Partial Class frm_restrictions
         Me.checkBox14.TabIndex = 5
         Me.checkBox14.Text = "BET"
         Me.checkBox14.UseVisualStyleBackColor = True
+        '
+        'checkBox12
+        '
+        Me.checkBox12.AutoSize = True
+        Me.checkBox12.Checked = True
+        Me.checkBox12.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.checkBox12.Location = New System.Drawing.Point(12, 3)
+        Me.checkBox12.Name = "checkBox12"
+        Me.checkBox12.Size = New System.Drawing.Size(40, 17)
+        Me.checkBox12.TabIndex = 3
+        Me.checkBox12.Text = "BT"
+        Me.checkBox12.UseVisualStyleBackColor = True
+        '
+        'checkBox13
+        '
+        Me.checkBox13.AutoSize = True
+        Me.checkBox13.Checked = True
+        Me.checkBox13.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.checkBox13.Location = New System.Drawing.Point(58, 3)
+        Me.checkBox13.Name = "checkBox13"
+        Me.checkBox13.Size = New System.Drawing.Size(41, 17)
+        Me.checkBox13.TabIndex = 4
+        Me.checkBox13.Text = "PR"
+        Me.checkBox13.UseVisualStyleBackColor = True
+        '
+        'cbo_preset_pos
+        '
+        Me.cbo_preset_pos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_preset_pos.FormattingEnabled = True
+        Me.cbo_preset_pos.Location = New System.Drawing.Point(241, 18)
+        Me.cbo_preset_pos.Name = "cbo_preset_pos"
+        Me.cbo_preset_pos.Size = New System.Drawing.Size(155, 21)
+        Me.cbo_preset_pos.TabIndex = 3
         '
         'cbo_preset_dep
         '
@@ -735,29 +769,6 @@ Partial Class frm_restrictions
         Me.label2.Size = New System.Drawing.Size(65, 13)
         Me.label2.TabIndex = 0
         Me.label2.Text = "Department:"
-        '
-        'cbo_preset_pos
-        '
-        Me.cbo_preset_pos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_preset_pos.FormattingEnabled = True
-        Me.cbo_preset_pos.Location = New System.Drawing.Point(241, 18)
-        Me.cbo_preset_pos.Name = "cbo_preset_pos"
-        Me.cbo_preset_pos.Size = New System.Drawing.Size(155, 21)
-        Me.cbo_preset_pos.TabIndex = 3
-        '
-        'groupBox5
-        '
-        Me.groupBox5.Controls.Add(Me.cbo_preset_pos)
-        Me.groupBox5.Controls.Add(Me.cbo_preset_dep)
-        Me.groupBox5.Controls.Add(Me.label3)
-        Me.groupBox5.Controls.Add(Me.label2)
-        Me.groupBox5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.groupBox5.Location = New System.Drawing.Point(311, 0)
-        Me.groupBox5.Name = "groupBox5"
-        Me.groupBox5.Size = New System.Drawing.Size(442, 49)
-        Me.groupBox5.TabIndex = 12
-        Me.groupBox5.TabStop = False
-        Me.groupBox5.Text = "Presets"
         '
         'checkBox3
         '
@@ -806,19 +817,6 @@ Partial Class frm_restrictions
         Me.checkBox1.Text = "BT"
         Me.checkBox1.UseVisualStyleBackColor = True
         '
-        'pnl_filterdgv_container
-        '
-        Me.pnl_filterdgv_container.Controls.Add(Me.checkBox3)
-        Me.pnl_filterdgv_container.Controls.Add(Me.label1)
-        Me.pnl_filterdgv_container.Controls.Add(Me.checkBox2)
-        Me.pnl_filterdgv_container.Controls.Add(Me.txt_f_username)
-        Me.pnl_filterdgv_container.Controls.Add(Me.checkBox1)
-        Me.pnl_filterdgv_container.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnl_filterdgv_container.Location = New System.Drawing.Point(0, 0)
-        Me.pnl_filterdgv_container.Name = "pnl_filterdgv_container"
-        Me.pnl_filterdgv_container.Size = New System.Drawing.Size(153, 70)
-        Me.pnl_filterdgv_container.TabIndex = 0
-        '
         'dgv_userlist
         '
         Me.dgv_userlist.AllowUserToAddRows = False
@@ -834,8 +832,31 @@ Partial Class frm_restrictions
         Me.dgv_userlist.ReadOnly = True
         Me.dgv_userlist.RowHeadersVisible = False
         Me.dgv_userlist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_userlist.Size = New System.Drawing.Size(153, 466)
+        Me.dgv_userlist.Size = New System.Drawing.Size(153, 501)
         Me.dgv_userlist.TabIndex = 1
+        '
+        'pnl_filterdgv_container
+        '
+        Me.pnl_filterdgv_container.Controls.Add(Me.checkBox3)
+        Me.pnl_filterdgv_container.Controls.Add(Me.label1)
+        Me.pnl_filterdgv_container.Controls.Add(Me.checkBox2)
+        Me.pnl_filterdgv_container.Controls.Add(Me.txt_f_username)
+        Me.pnl_filterdgv_container.Controls.Add(Me.checkBox1)
+        Me.pnl_filterdgv_container.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnl_filterdgv_container.Location = New System.Drawing.Point(0, 0)
+        Me.pnl_filterdgv_container.Name = "pnl_filterdgv_container"
+        Me.pnl_filterdgv_container.Size = New System.Drawing.Size(153, 70)
+        Me.pnl_filterdgv_container.TabIndex = 0
+        '
+        'pnl_contains_userlist
+        '
+        Me.pnl_contains_userlist.Controls.Add(Me.dgv_userlist)
+        Me.pnl_contains_userlist.Controls.Add(Me.pnl_filterdgv_container)
+        Me.pnl_contains_userlist.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnl_contains_userlist.Location = New System.Drawing.Point(0, 0)
+        Me.pnl_contains_userlist.Name = "pnl_contains_userlist"
+        Me.pnl_contains_userlist.Size = New System.Drawing.Size(153, 571)
+        Me.pnl_contains_userlist.TabIndex = 11
         '
         'chk_fe_allow_view_eval
         '
@@ -847,7 +868,6 @@ Partial Class frm_restrictions
         Me.chk_fe_allow_view_eval.Size = New System.Drawing.Size(163, 17)
         Me.chk_fe_allow_view_eval.TabIndex = 1
         Me.chk_fe_allow_view_eval.Text = "Allow user to view evaluation"
-        Me.toolTip1.SetToolTip(Me.chk_fe_allow_view_eval, "Allow user to view evaluations base on the selected department.")
         Me.chk_fe_allow_view_eval.UseVisualStyleBackColor = True
         '
         'chk_ret_allow_view
@@ -860,8 +880,6 @@ Partial Class frm_restrictions
         Me.chk_ret_allow_view.Size = New System.Drawing.Size(162, 17)
         Me.chk_ret_allow_view.TabIndex = 1
         Me.chk_ret_allow_view.Text = "Allow user to view return files"
-        Me.toolTip1.SetToolTip(Me.chk_ret_allow_view, "This will allow user to view other return files base on the selected department o" &
-        "ther than the return files that the user return files.")
         Me.chk_ret_allow_view.UseVisualStyleBackColor = True
         '
         'chk_flag_view_all
@@ -874,53 +892,16 @@ Partial Class frm_restrictions
         Me.chk_flag_view_all.Size = New System.Drawing.Size(149, 17)
         Me.chk_flag_view_all.TabIndex = 0
         Me.chk_flag_view_all.Text = "Allow user to view all flags"
-        Me.toolTip1.SetToolTip(Me.chk_flag_view_all, "View all the flags base on the selected department.")
         Me.chk_flag_view_all.UseVisualStyleBackColor = True
         '
-        'pnl_contains_userlist
+        'label3
         '
-        Me.pnl_contains_userlist.Controls.Add(Me.dgv_userlist)
-        Me.pnl_contains_userlist.Controls.Add(Me.pnl_filterdgv_container)
-        Me.pnl_contains_userlist.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnl_contains_userlist.Location = New System.Drawing.Point(158, 0)
-        Me.pnl_contains_userlist.Name = "pnl_contains_userlist"
-        Me.pnl_contains_userlist.Size = New System.Drawing.Size(153, 536)
-        Me.pnl_contains_userlist.TabIndex = 11
-        '
-        'checkBox12
-        '
-        Me.checkBox12.AutoSize = True
-        Me.checkBox12.Checked = True
-        Me.checkBox12.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.checkBox12.Location = New System.Drawing.Point(12, 3)
-        Me.checkBox12.Name = "checkBox12"
-        Me.checkBox12.Size = New System.Drawing.Size(40, 17)
-        Me.checkBox12.TabIndex = 3
-        Me.checkBox12.Text = "BT"
-        Me.checkBox12.UseVisualStyleBackColor = True
-        '
-        'pnl_rl_allow_bl
-        '
-        Me.pnl_rl_allow_bl.Controls.Add(Me.checkBox14)
-        Me.pnl_rl_allow_bl.Controls.Add(Me.checkBox12)
-        Me.pnl_rl_allow_bl.Controls.Add(Me.checkBox13)
-        Me.pnl_rl_allow_bl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_rl_allow_bl.Location = New System.Drawing.Point(3, 16)
-        Me.pnl_rl_allow_bl.Name = "pnl_rl_allow_bl"
-        Me.pnl_rl_allow_bl.Size = New System.Drawing.Size(163, 22)
-        Me.pnl_rl_allow_bl.TabIndex = 0
-        '
-        'checkBox13
-        '
-        Me.checkBox13.AutoSize = True
-        Me.checkBox13.Checked = True
-        Me.checkBox13.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.checkBox13.Location = New System.Drawing.Point(58, 3)
-        Me.checkBox13.Name = "checkBox13"
-        Me.checkBox13.Size = New System.Drawing.Size(41, 17)
-        Me.checkBox13.TabIndex = 4
-        Me.checkBox13.Text = "PR"
-        Me.checkBox13.UseVisualStyleBackColor = True
+        Me.label3.AutoSize = True
+        Me.label3.Location = New System.Drawing.Point(184, 21)
+        Me.label3.Name = "label3"
+        Me.label3.Size = New System.Drawing.Size(47, 13)
+        Me.label3.TabIndex = 1
+        Me.label3.Text = "Position:"
         '
         'chk_fe_allow_export_eval
         '
@@ -933,32 +914,6 @@ Partial Class frm_restrictions
         Me.chk_fe_allow_export_eval.TabIndex = 2
         Me.chk_fe_allow_export_eval.Text = "Allow user to export evaluation"
         Me.chk_fe_allow_export_eval.UseVisualStyleBackColor = True
-        '
-        'chk_fe_allow_create_eval
-        '
-        Me.chk_fe_allow_create_eval.AutoSize = True
-        Me.chk_fe_allow_create_eval.Checked = True
-        Me.chk_fe_allow_create_eval.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_fe_allow_create_eval.Location = New System.Drawing.Point(6, 6)
-        Me.chk_fe_allow_create_eval.Name = "chk_fe_allow_create_eval"
-        Me.chk_fe_allow_create_eval.Size = New System.Drawing.Size(186, 17)
-        Me.chk_fe_allow_create_eval.TabIndex = 0
-        Me.chk_fe_allow_create_eval.Text = "Allow user to create an evaluation"
-        Me.chk_fe_allow_create_eval.UseVisualStyleBackColor = True
-        '
-        'tab_file_eval
-        '
-        Me.tab_file_eval.Controls.Add(Me.chk_fe_allow_export_eval)
-        Me.tab_file_eval.Controls.Add(Me.chk_fe_allow_view_eval)
-        Me.tab_file_eval.Controls.Add(Me.chk_fe_allow_create_eval)
-        Me.tab_file_eval.Controls.Add(Me.groupBox3)
-        Me.tab_file_eval.Location = New System.Drawing.Point(4, 40)
-        Me.tab_file_eval.Name = "tab_file_eval"
-        Me.tab_file_eval.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_file_eval.Size = New System.Drawing.Size(587, 492)
-        Me.tab_file_eval.TabIndex = 0
-        Me.tab_file_eval.Text = "FILE EVALUATION"
-        Me.tab_file_eval.UseVisualStyleBackColor = True
         '
         'groupBox3
         '
@@ -1016,6 +971,32 @@ Partial Class frm_restrictions
         Me.checkBox33.Text = "PR"
         Me.checkBox33.UseVisualStyleBackColor = True
         '
+        'tab_file_eval
+        '
+        Me.tab_file_eval.Controls.Add(Me.chk_fe_allow_export_eval)
+        Me.tab_file_eval.Controls.Add(Me.chk_fe_allow_view_eval)
+        Me.tab_file_eval.Controls.Add(Me.chk_fe_allow_create_eval)
+        Me.tab_file_eval.Controls.Add(Me.groupBox3)
+        Me.tab_file_eval.Location = New System.Drawing.Point(4, 58)
+        Me.tab_file_eval.Name = "tab_file_eval"
+        Me.tab_file_eval.Padding = New System.Windows.Forms.Padding(3)
+        Me.tab_file_eval.Size = New System.Drawing.Size(436, 281)
+        Me.tab_file_eval.TabIndex = 0
+        Me.tab_file_eval.Text = "FILE EVALUATION"
+        Me.tab_file_eval.UseVisualStyleBackColor = True
+        '
+        'chk_fe_allow_create_eval
+        '
+        Me.chk_fe_allow_create_eval.AutoSize = True
+        Me.chk_fe_allow_create_eval.Checked = True
+        Me.chk_fe_allow_create_eval.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_fe_allow_create_eval.Location = New System.Drawing.Point(6, 6)
+        Me.chk_fe_allow_create_eval.Name = "chk_fe_allow_create_eval"
+        Me.chk_fe_allow_create_eval.Size = New System.Drawing.Size(186, 17)
+        Me.chk_fe_allow_create_eval.TabIndex = 0
+        Me.chk_fe_allow_create_eval.Text = "Allow user to create an evaluation"
+        Me.chk_fe_allow_create_eval.UseVisualStyleBackColor = True
+        '
         'tabctrl_restriction_menu
         '
         Me.tabctrl_restriction_menu.Controls.Add(Me.tab_file_eval)
@@ -1031,14 +1012,14 @@ Partial Class frm_restrictions
         Me.tabctrl_restriction_menu.Controls.Add(Me.tab_archive)
         Me.tabctrl_restriction_menu.Controls.Add(Me.tab_ref)
         Me.tabctrl_restriction_menu.Controls.Add(Me.tab_btfile)
-        Me.tabctrl_restriction_menu.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tabctrl_restriction_menu.Dock = System.Windows.Forms.DockStyle.Left
         Me.tabctrl_restriction_menu.HotTrack = True
-        Me.tabctrl_restriction_menu.Location = New System.Drawing.Point(158, 0)
+        Me.tabctrl_restriction_menu.Location = New System.Drawing.Point(311, 193)
         Me.tabctrl_restriction_menu.Multiline = True
         Me.tabctrl_restriction_menu.Name = "tabctrl_restriction_menu"
         Me.tabctrl_restriction_menu.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.tabctrl_restriction_menu.SelectedIndex = 0
-        Me.tabctrl_restriction_menu.Size = New System.Drawing.Size(595, 536)
+        Me.tabctrl_restriction_menu.Size = New System.Drawing.Size(444, 343)
         Me.tabctrl_restriction_menu.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
         Me.tabctrl_restriction_menu.TabIndex = 9
         '
@@ -1052,7 +1033,7 @@ Partial Class frm_restrictions
         Me.tab_view_return.Controls.Add(Me.groupBox6)
         Me.tab_view_return.Location = New System.Drawing.Point(4, 40)
         Me.tab_view_return.Name = "tab_view_return"
-        Me.tab_view_return.Size = New System.Drawing.Size(587, 492)
+        Me.tab_view_return.Size = New System.Drawing.Size(710, 443)
         Me.tab_view_return.TabIndex = 2
         Me.tab_view_return.Text = "VIEW RETURN"
         Me.tab_view_return.UseVisualStyleBackColor = True
@@ -1171,7 +1152,7 @@ Partial Class frm_restrictions
         Me.tab_flagging.Controls.Add(Me.chk_flag_allow_create)
         Me.tab_flagging.Location = New System.Drawing.Point(4, 40)
         Me.tab_flagging.Name = "tab_flagging"
-        Me.tab_flagging.Size = New System.Drawing.Size(587, 492)
+        Me.tab_flagging.Size = New System.Drawing.Size(710, 443)
         Me.tab_flagging.TabIndex = 3
         Me.tab_flagging.Text = "FLAGGING"
         Me.tab_flagging.UseVisualStyleBackColor = True
@@ -1288,7 +1269,7 @@ Partial Class frm_restrictions
         Me.tab_report_logs.Controls.Add(Me.groupBox8)
         Me.tab_report_logs.Location = New System.Drawing.Point(4, 40)
         Me.tab_report_logs.Name = "tab_report_logs"
-        Me.tab_report_logs.Size = New System.Drawing.Size(587, 492)
+        Me.tab_report_logs.Size = New System.Drawing.Size(710, 299)
         Me.tab_report_logs.TabIndex = 13
         Me.tab_report_logs.Text = "REPORT LOGS"
         Me.tab_report_logs.UseVisualStyleBackColor = True
@@ -1323,7 +1304,7 @@ Partial Class frm_restrictions
         Me.chk_btfile.Location = New System.Drawing.Point(10, 335)
         Me.chk_btfile.Name = "chk_btfile"
         Me.chk_btfile.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_btfile.Size = New System.Drawing.Size(132, 22)
+        Me.chk_btfile.Size = New System.Drawing.Size(116, 22)
         Me.chk_btfile.TabIndex = 15
         Me.chk_btfile.Tag = "btn_file"
         Me.chk_btfile.Text = "BT FILE"
@@ -1338,7 +1319,7 @@ Partial Class frm_restrictions
         Me.chk_ref.Location = New System.Drawing.Point(10, 313)
         Me.chk_ref.Name = "chk_ref"
         Me.chk_ref.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_ref.Size = New System.Drawing.Size(132, 22)
+        Me.chk_ref.Size = New System.Drawing.Size(116, 22)
         Me.chk_ref.TabIndex = 14
         Me.chk_ref.Tag = "btn_reference"
         Me.chk_ref.Text = "REFERENCE"
@@ -1353,7 +1334,7 @@ Partial Class frm_restrictions
         Me.chk_report_logs.Location = New System.Drawing.Point(10, 291)
         Me.chk_report_logs.Name = "chk_report_logs"
         Me.chk_report_logs.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_report_logs.Size = New System.Drawing.Size(132, 22)
+        Me.chk_report_logs.Size = New System.Drawing.Size(116, 22)
         Me.chk_report_logs.TabIndex = 13
         Me.chk_report_logs.Tag = "btn_report_log"
         Me.chk_report_logs.Text = "REPORT LOGS"
@@ -1368,7 +1349,7 @@ Partial Class frm_restrictions
         Me.chk_archive.Location = New System.Drawing.Point(10, 269)
         Me.chk_archive.Name = "chk_archive"
         Me.chk_archive.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_archive.Size = New System.Drawing.Size(132, 22)
+        Me.chk_archive.Size = New System.Drawing.Size(116, 22)
         Me.chk_archive.TabIndex = 12
         Me.chk_archive.Tag = "btn_archive"
         Me.chk_archive.Text = "ARCHIVE"
@@ -1383,7 +1364,7 @@ Partial Class frm_restrictions
         Me.chk_export.Location = New System.Drawing.Point(10, 247)
         Me.chk_export.Name = "chk_export"
         Me.chk_export.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_export.Size = New System.Drawing.Size(132, 22)
+        Me.chk_export.Size = New System.Drawing.Size(116, 22)
         Me.chk_export.TabIndex = 11
         Me.chk_export.Tag = "btn_export"
         Me.chk_export.Text = "EXPORT"
@@ -1398,7 +1379,7 @@ Partial Class frm_restrictions
         Me.chk_upload.Location = New System.Drawing.Point(10, 225)
         Me.chk_upload.Name = "chk_upload"
         Me.chk_upload.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_upload.Size = New System.Drawing.Size(132, 22)
+        Me.chk_upload.Size = New System.Drawing.Size(116, 22)
         Me.chk_upload.TabIndex = 10
         Me.chk_upload.Tag = "btn_upload"
         Me.chk_upload.Text = "UPLOAD"
@@ -1413,7 +1394,7 @@ Partial Class frm_restrictions
         Me.chk_workflow.Location = New System.Drawing.Point(10, 203)
         Me.chk_workflow.Name = "chk_workflow"
         Me.chk_workflow.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_workflow.Size = New System.Drawing.Size(132, 22)
+        Me.chk_workflow.Size = New System.Drawing.Size(116, 22)
         Me.chk_workflow.TabIndex = 9
         Me.chk_workflow.Tag = "btn_workflow"
         Me.chk_workflow.Text = "WORK FLOW"
@@ -1428,130 +1409,23 @@ Partial Class frm_restrictions
         Me.chk_userlist.Location = New System.Drawing.Point(10, 181)
         Me.chk_userlist.Name = "chk_userlist"
         Me.chk_userlist.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_userlist.Size = New System.Drawing.Size(132, 22)
+        Me.chk_userlist.Size = New System.Drawing.Size(116, 22)
         Me.chk_userlist.TabIndex = 8
         Me.chk_userlist.Tag = "btn_userlist"
         Me.chk_userlist.Text = "USER LIST"
         Me.chk_userlist.UseVisualStyleBackColor = True
         '
-        'chk_files_due
+        'groupBox1
         '
-        Me.chk_files_due.AutoSize = True
-        Me.chk_files_due.Checked = True
-        Me.chk_files_due.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_files_due.Dock = System.Windows.Forms.DockStyle.Top
-        Me.chk_files_due.Location = New System.Drawing.Point(10, 159)
-        Me.chk_files_due.Name = "chk_files_due"
-        Me.chk_files_due.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_files_due.Size = New System.Drawing.Size(132, 22)
-        Me.chk_files_due.TabIndex = 7
-        Me.chk_files_due.Tag = "btn_files_due"
-        Me.chk_files_due.Text = "FILES DUE"
-        Me.chk_files_due.UseVisualStyleBackColor = True
-        '
-        'chk_wait_tracker
-        '
-        Me.chk_wait_tracker.AutoSize = True
-        Me.chk_wait_tracker.Checked = True
-        Me.chk_wait_tracker.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_wait_tracker.Dock = System.Windows.Forms.DockStyle.Top
-        Me.chk_wait_tracker.Location = New System.Drawing.Point(10, 137)
-        Me.chk_wait_tracker.Name = "chk_wait_tracker"
-        Me.chk_wait_tracker.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_wait_tracker.Size = New System.Drawing.Size(132, 22)
-        Me.chk_wait_tracker.TabIndex = 6
-        Me.chk_wait_tracker.Tag = "btn_wait"
-        Me.chk_wait_tracker.Text = "WAIT TRACKER"
-        Me.chk_wait_tracker.UseVisualStyleBackColor = True
-        '
-        'chk_idle_track
-        '
-        Me.chk_idle_track.AutoSize = True
-        Me.chk_idle_track.Checked = True
-        Me.chk_idle_track.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_idle_track.Dock = System.Windows.Forms.DockStyle.Top
-        Me.chk_idle_track.Location = New System.Drawing.Point(10, 115)
-        Me.chk_idle_track.Name = "chk_idle_track"
-        Me.chk_idle_track.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_idle_track.Size = New System.Drawing.Size(132, 22)
-        Me.chk_idle_track.TabIndex = 5
-        Me.chk_idle_track.Tag = "btn_idle"
-        Me.chk_idle_track.Text = "IDLE TRACKER"
-        Me.chk_idle_track.UseVisualStyleBackColor = True
-        '
-        'chk_ratio_track
-        '
-        Me.chk_ratio_track.AutoSize = True
-        Me.chk_ratio_track.Checked = True
-        Me.chk_ratio_track.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_ratio_track.Dock = System.Windows.Forms.DockStyle.Top
-        Me.chk_ratio_track.Location = New System.Drawing.Point(10, 93)
-        Me.chk_ratio_track.Name = "chk_ratio_track"
-        Me.chk_ratio_track.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_ratio_track.Size = New System.Drawing.Size(132, 22)
-        Me.chk_ratio_track.TabIndex = 4
-        Me.chk_ratio_track.Tag = "btn_qrtracker"
-        Me.chk_ratio_track.Text = "RATIO TRACKER"
-        Me.chk_ratio_track.UseVisualStyleBackColor = True
-        '
-        'chk_flagging
-        '
-        Me.chk_flagging.AutoSize = True
-        Me.chk_flagging.Checked = True
-        Me.chk_flagging.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_flagging.Dock = System.Windows.Forms.DockStyle.Top
-        Me.chk_flagging.Location = New System.Drawing.Point(10, 71)
-        Me.chk_flagging.Name = "chk_flagging"
-        Me.chk_flagging.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_flagging.Size = New System.Drawing.Size(132, 22)
-        Me.chk_flagging.TabIndex = 3
-        Me.chk_flagging.Tag = "btn_flagging"
-        Me.chk_flagging.Text = "FLAGGING"
-        Me.chk_flagging.UseVisualStyleBackColor = True
-        '
-        'chk_view_return
-        '
-        Me.chk_view_return.AutoSize = True
-        Me.chk_view_return.Checked = True
-        Me.chk_view_return.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_view_return.Dock = System.Windows.Forms.DockStyle.Top
-        Me.chk_view_return.Location = New System.Drawing.Point(10, 49)
-        Me.chk_view_return.Name = "chk_view_return"
-        Me.chk_view_return.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_view_return.Size = New System.Drawing.Size(132, 22)
-        Me.chk_view_return.TabIndex = 2
-        Me.chk_view_return.Tag = "btn_returnfile"
-        Me.chk_view_return.Text = "VIEW RETURN"
-        Me.chk_view_return.UseVisualStyleBackColor = True
-        '
-        'chk_monitoring
-        '
-        Me.chk_monitoring.AutoSize = True
-        Me.chk_monitoring.Checked = True
-        Me.chk_monitoring.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_monitoring.Dock = System.Windows.Forms.DockStyle.Top
-        Me.chk_monitoring.Location = New System.Drawing.Point(10, 27)
-        Me.chk_monitoring.Name = "chk_monitoring"
-        Me.chk_monitoring.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.chk_monitoring.Size = New System.Drawing.Size(132, 22)
-        Me.chk_monitoring.TabIndex = 1
-        Me.chk_monitoring.Tag = "btn_monitoring"
-        Me.chk_monitoring.Text = "MONITORING"
-        Me.chk_monitoring.UseVisualStyleBackColor = True
-        '
-        'chk_file_eval
-        '
-        Me.chk_file_eval.AutoSize = True
-        Me.chk_file_eval.Checked = True
-        Me.chk_file_eval.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_file_eval.Dock = System.Windows.Forms.DockStyle.Top
-        Me.chk_file_eval.Location = New System.Drawing.Point(10, 10)
-        Me.chk_file_eval.Name = "chk_file_eval"
-        Me.chk_file_eval.Size = New System.Drawing.Size(132, 17)
-        Me.chk_file_eval.TabIndex = 0
-        Me.chk_file_eval.Tag = "btn_file_eval"
-        Me.chk_file_eval.Text = "FILE EVALUATION"
-        Me.chk_file_eval.UseVisualStyleBackColor = True
+        Me.groupBox1.Controls.Add(Me.pnl_menu_checkbox_container)
+        Me.groupBox1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.groupBox1.Location = New System.Drawing.Point(153, 193)
+        Me.groupBox1.Name = "groupBox1"
+        Me.groupBox1.Size = New System.Drawing.Size(158, 343)
+        Me.groupBox1.TabIndex = 8
+        Me.groupBox1.TabStop = False
+        Me.groupBox1.Text = "Enable/Disable Menu"
         '
         'pnl_menu_checkbox_container
         '
@@ -1577,25 +1451,132 @@ Partial Class frm_restrictions
         Me.pnl_menu_checkbox_container.Location = New System.Drawing.Point(3, 16)
         Me.pnl_menu_checkbox_container.Name = "pnl_menu_checkbox_container"
         Me.pnl_menu_checkbox_container.Padding = New System.Windows.Forms.Padding(10)
-        Me.pnl_menu_checkbox_container.Size = New System.Drawing.Size(152, 517)
+        Me.pnl_menu_checkbox_container.Size = New System.Drawing.Size(152, 324)
         Me.pnl_menu_checkbox_container.TabIndex = 0
         '
-        'groupBox1
+        'chk_files_due
         '
-        Me.groupBox1.Controls.Add(Me.pnl_menu_checkbox_container)
-        Me.groupBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.groupBox1.Name = "groupBox1"
-        Me.groupBox1.Size = New System.Drawing.Size(158, 536)
-        Me.groupBox1.TabIndex = 8
-        Me.groupBox1.TabStop = False
-        Me.groupBox1.Text = "Enable/Disable Menu"
+        Me.chk_files_due.AutoSize = True
+        Me.chk_files_due.Checked = True
+        Me.chk_files_due.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_files_due.Dock = System.Windows.Forms.DockStyle.Top
+        Me.chk_files_due.Location = New System.Drawing.Point(10, 159)
+        Me.chk_files_due.Name = "chk_files_due"
+        Me.chk_files_due.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.chk_files_due.Size = New System.Drawing.Size(116, 22)
+        Me.chk_files_due.TabIndex = 7
+        Me.chk_files_due.Tag = "btn_files_due"
+        Me.chk_files_due.Text = "FILES DUE"
+        Me.chk_files_due.UseVisualStyleBackColor = True
+        '
+        'chk_wait_tracker
+        '
+        Me.chk_wait_tracker.AutoSize = True
+        Me.chk_wait_tracker.Checked = True
+        Me.chk_wait_tracker.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_wait_tracker.Dock = System.Windows.Forms.DockStyle.Top
+        Me.chk_wait_tracker.Location = New System.Drawing.Point(10, 137)
+        Me.chk_wait_tracker.Name = "chk_wait_tracker"
+        Me.chk_wait_tracker.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.chk_wait_tracker.Size = New System.Drawing.Size(116, 22)
+        Me.chk_wait_tracker.TabIndex = 6
+        Me.chk_wait_tracker.Tag = "btn_wait"
+        Me.chk_wait_tracker.Text = "WAIT TRACKER"
+        Me.chk_wait_tracker.UseVisualStyleBackColor = True
+        '
+        'chk_idle_track
+        '
+        Me.chk_idle_track.AutoSize = True
+        Me.chk_idle_track.Checked = True
+        Me.chk_idle_track.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_idle_track.Dock = System.Windows.Forms.DockStyle.Top
+        Me.chk_idle_track.Location = New System.Drawing.Point(10, 115)
+        Me.chk_idle_track.Name = "chk_idle_track"
+        Me.chk_idle_track.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.chk_idle_track.Size = New System.Drawing.Size(116, 22)
+        Me.chk_idle_track.TabIndex = 5
+        Me.chk_idle_track.Tag = "btn_idle"
+        Me.chk_idle_track.Text = "IDLE TRACKER"
+        Me.chk_idle_track.UseVisualStyleBackColor = True
+        '
+        'chk_ratio_track
+        '
+        Me.chk_ratio_track.AutoSize = True
+        Me.chk_ratio_track.Checked = True
+        Me.chk_ratio_track.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_ratio_track.Dock = System.Windows.Forms.DockStyle.Top
+        Me.chk_ratio_track.Location = New System.Drawing.Point(10, 93)
+        Me.chk_ratio_track.Name = "chk_ratio_track"
+        Me.chk_ratio_track.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.chk_ratio_track.Size = New System.Drawing.Size(116, 22)
+        Me.chk_ratio_track.TabIndex = 4
+        Me.chk_ratio_track.Tag = "btn_qrtracker"
+        Me.chk_ratio_track.Text = "RATIO TRACKER"
+        Me.chk_ratio_track.UseVisualStyleBackColor = True
+        '
+        'chk_flagging
+        '
+        Me.chk_flagging.AutoSize = True
+        Me.chk_flagging.Checked = True
+        Me.chk_flagging.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_flagging.Dock = System.Windows.Forms.DockStyle.Top
+        Me.chk_flagging.Location = New System.Drawing.Point(10, 71)
+        Me.chk_flagging.Name = "chk_flagging"
+        Me.chk_flagging.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.chk_flagging.Size = New System.Drawing.Size(116, 22)
+        Me.chk_flagging.TabIndex = 3
+        Me.chk_flagging.Tag = "btn_flagging"
+        Me.chk_flagging.Text = "FLAGGING"
+        Me.chk_flagging.UseVisualStyleBackColor = True
+        '
+        'chk_view_return
+        '
+        Me.chk_view_return.AutoSize = True
+        Me.chk_view_return.Checked = True
+        Me.chk_view_return.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_view_return.Dock = System.Windows.Forms.DockStyle.Top
+        Me.chk_view_return.Location = New System.Drawing.Point(10, 49)
+        Me.chk_view_return.Name = "chk_view_return"
+        Me.chk_view_return.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.chk_view_return.Size = New System.Drawing.Size(116, 22)
+        Me.chk_view_return.TabIndex = 2
+        Me.chk_view_return.Tag = "btn_returnfile"
+        Me.chk_view_return.Text = "VIEW RETURN"
+        Me.chk_view_return.UseVisualStyleBackColor = True
+        '
+        'chk_monitoring
+        '
+        Me.chk_monitoring.AutoSize = True
+        Me.chk_monitoring.Checked = True
+        Me.chk_monitoring.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_monitoring.Dock = System.Windows.Forms.DockStyle.Top
+        Me.chk_monitoring.Location = New System.Drawing.Point(10, 27)
+        Me.chk_monitoring.Name = "chk_monitoring"
+        Me.chk_monitoring.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.chk_monitoring.Size = New System.Drawing.Size(116, 22)
+        Me.chk_monitoring.TabIndex = 1
+        Me.chk_monitoring.Tag = "btn_monitoring"
+        Me.chk_monitoring.Text = "MONITORING"
+        Me.chk_monitoring.UseVisualStyleBackColor = True
+        '
+        'chk_file_eval
+        '
+        Me.chk_file_eval.AutoSize = True
+        Me.chk_file_eval.Checked = True
+        Me.chk_file_eval.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_file_eval.Dock = System.Windows.Forms.DockStyle.Top
+        Me.chk_file_eval.Location = New System.Drawing.Point(10, 10)
+        Me.chk_file_eval.Name = "chk_file_eval"
+        Me.chk_file_eval.Size = New System.Drawing.Size(116, 17)
+        Me.chk_file_eval.TabIndex = 0
+        Me.chk_file_eval.Tag = "btn_file_eval"
+        Me.chk_file_eval.Text = "FILE EVALUATION"
+        Me.chk_file_eval.UseVisualStyleBackColor = True
         '
         'btn_reset
         '
         Me.btn_reset.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btn_reset.Location = New System.Drawing.Point(523, 5)
+        Me.btn_reset.Location = New System.Drawing.Point(370, 5)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(75, 25)
         Me.btn_reset.TabIndex = 2
@@ -1605,7 +1586,7 @@ Partial Class frm_restrictions
         'btn_save
         '
         Me.btn_save.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btn_save.Location = New System.Drawing.Point(598, 5)
+        Me.btn_save.Location = New System.Drawing.Point(445, 5)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(75, 25)
         Me.btn_save.TabIndex = 0
@@ -1616,7 +1597,7 @@ Partial Class frm_restrictions
         '
         Me.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btn_cancel.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btn_cancel.Location = New System.Drawing.Point(673, 5)
+        Me.btn_cancel.Location = New System.Drawing.Point(520, 5)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(75, 25)
         Me.btn_cancel.TabIndex = 1
@@ -1629,53 +1610,66 @@ Partial Class frm_restrictions
         Me.panel2.Controls.Add(Me.btn_save)
         Me.panel2.Controls.Add(Me.btn_cancel)
         Me.panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panel2.Location = New System.Drawing.Point(0, 536)
+        Me.panel2.Location = New System.Drawing.Point(153, 536)
         Me.panel2.Name = "panel2"
         Me.panel2.Padding = New System.Windows.Forms.Padding(0, 5, 5, 5)
-        Me.panel2.Size = New System.Drawing.Size(753, 35)
+        Me.panel2.Size = New System.Drawing.Size(600, 35)
         Me.panel2.TabIndex = 7
+        '
+        'groupBox5
+        '
+        Me.groupBox5.Controls.Add(Me.cbo_preset_pos)
+        Me.groupBox5.Controls.Add(Me.cbo_preset_dep)
+        Me.groupBox5.Controls.Add(Me.label3)
+        Me.groupBox5.Controls.Add(Me.label2)
+        Me.groupBox5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.groupBox5.Location = New System.Drawing.Point(153, 0)
+        Me.groupBox5.Name = "groupBox5"
+        Me.groupBox5.Size = New System.Drawing.Size(600, 49)
+        Me.groupBox5.TabIndex = 12
+        Me.groupBox5.TabStop = False
+        Me.groupBox5.Text = "Presets"
         '
         'frm_restrictions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(753, 571)
-        Me.Controls.Add(Me.groupBox2)
-        Me.Controls.Add(Me.groupBox5)
-        Me.Controls.Add(Me.pnl_contains_userlist)
+        Me.ControlBox = False
         Me.Controls.Add(Me.tabctrl_restriction_menu)
         Me.Controls.Add(Me.groupBox1)
+        Me.Controls.Add(Me.groupBox2)
         Me.Controls.Add(Me.panel2)
+        Me.Controls.Add(Me.groupBox5)
+        Me.Controls.Add(Me.pnl_contains_userlist)
         Me.Name = "frm_restrictions"
-        Me.Text = "BTTOOL - User Restriction Editor"
-        Me.tab_userlist.ResumeLayout(False)
-        Me.tab_userlist.PerformLayout()
+        Me.Text = "YEET BTTOOL - User Restriction Editor"
         Me.gbox_assign_user.ResumeLayout(False)
         Me.gbox_assign_user.PerformLayout()
-        Me.tab_upload.ResumeLayout(False)
-        Me.tab_upload.PerformLayout()
         Me.groupBox2.ResumeLayout(False)
         Me.groupBox2.PerformLayout()
         Me.gbox_workfile.ResumeLayout(False)
         Me.gbox_workfile.PerformLayout()
         Me.gbox_fileinfo.ResumeLayout(False)
         Me.gbox_fileinfo.PerformLayout()
+        Me.tab_upload.ResumeLayout(False)
+        Me.tab_upload.PerformLayout()
+        Me.tab_userlist.ResumeLayout(False)
+        Me.tab_userlist.PerformLayout()
         Me.pnl_rl_allow_il.ResumeLayout(False)
         Me.pnl_rl_allow_il.PerformLayout()
         Me.groupBox8.ResumeLayout(False)
-        Me.groupBox5.ResumeLayout(False)
-        Me.groupBox5.PerformLayout()
-        Me.pnl_filterdgv_container.ResumeLayout(False)
-        Me.pnl_filterdgv_container.PerformLayout()
-        CType(Me.dgv_userlist, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnl_contains_userlist.ResumeLayout(False)
         Me.pnl_rl_allow_bl.ResumeLayout(False)
         Me.pnl_rl_allow_bl.PerformLayout()
-        Me.tab_file_eval.ResumeLayout(False)
-        Me.tab_file_eval.PerformLayout()
+        CType(Me.dgv_userlist, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnl_filterdgv_container.ResumeLayout(False)
+        Me.pnl_filterdgv_container.PerformLayout()
+        Me.pnl_contains_userlist.ResumeLayout(False)
         Me.groupBox3.ResumeLayout(False)
         Me.pnl_evaldep.ResumeLayout(False)
         Me.pnl_evaldep.PerformLayout()
+        Me.tab_file_eval.ResumeLayout(False)
+        Me.tab_file_eval.PerformLayout()
         Me.tabctrl_restriction_menu.ResumeLayout(False)
         Me.tab_view_return.ResumeLayout(False)
         Me.tab_view_return.PerformLayout()
@@ -1690,33 +1684,26 @@ Partial Class frm_restrictions
         Me.tab_report_logs.ResumeLayout(False)
         Me.tab_report_logs.PerformLayout()
         Me.groupBox7.ResumeLayout(False)
+        Me.groupBox1.ResumeLayout(False)
         Me.pnl_menu_checkbox_container.ResumeLayout(False)
         Me.pnl_menu_checkbox_container.PerformLayout()
-        Me.groupBox1.ResumeLayout(False)
         Me.panel2.ResumeLayout(False)
+        Me.groupBox5.ResumeLayout(False)
+        Me.groupBox5.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Private WithEvents label3 As Label
     Private WithEvents chk_ccqa As CheckBox
     Private WithEvents chk_cc As CheckBox
     Private WithEvents chk_stqa As CheckBox
     Private WithEvents chk_st As CheckBox
     Private WithEvents chk_prqa As CheckBox
-    Private WithEvents chk_pr As CheckBox
-    Private WithEvents tab_userlist As TabPage
-    Private WithEvents chk_ua_allow_save As CheckBox
-    Private WithEvents gbox_assign_user As GroupBox
     Private WithEvents chk_btqa As CheckBox
-    Private WithEvents chk_bt As CheckBox
-    Private WithEvents tab_idle_tracker As TabPage
-    Private WithEvents tab_wait_tracker As TabPage
-    Private WithEvents tab_work_flow As TabPage
-    Private WithEvents tab_upload As TabPage
-    Private WithEvents checkBox10 As CheckBox
     Private WithEvents chk_return_file As CheckBox
-    Private WithEvents toolTip1 As ToolTip
+    Private WithEvents gbox_assign_user As GroupBox
+    Private WithEvents chk_pr As CheckBox
+    Private WithEvents chk_bt As CheckBox
     Private WithEvents groupBox2 As GroupBox
     Private WithEvents gbox_workfile As GroupBox
     Private WithEvents chk_doc As CheckBox
@@ -1735,42 +1722,50 @@ Partial Class frm_restrictions
     Private WithEvents chk_file_info As CheckBox
     Private WithEvents chk_assign_user As CheckBox
     Private WithEvents tab_export As TabPage
+    Private WithEvents tab_archive As TabPage
     Private WithEvents tab_ref As TabPage
     Private WithEvents tab_btfile As TabPage
+    Private WithEvents checkBox10 As CheckBox
+    Private WithEvents tab_idle_tracker As TabPage
+    Private WithEvents tab_wait_tracker As TabPage
+    Private WithEvents tab_work_flow As TabPage
+    Private WithEvents tab_upload As TabPage
+    Private WithEvents chk_ua_allow_save As CheckBox
+    Private WithEvents tab_userlist As TabPage
     Private WithEvents checkBox15 As CheckBox
     Private WithEvents checkBox16 As CheckBox
     Private WithEvents checkBox17 As CheckBox
     Private WithEvents pnl_rl_allow_il As Panel
     Private WithEvents chk_rl_allow_il As CheckBox
     Private WithEvents groupBox8 As GroupBox
-    Private WithEvents tab_archive As TabPage
+    Private WithEvents pnl_rl_allow_bl As Panel
     Private WithEvents checkBox14 As CheckBox
+    Private WithEvents checkBox12 As CheckBox
+    Private WithEvents checkBox13 As CheckBox
+    Private WithEvents cbo_preset_pos As ComboBox
     Private WithEvents cbo_preset_dep As ComboBox
     Private WithEvents label2 As Label
-    Private WithEvents cbo_preset_pos As ComboBox
-    Private WithEvents groupBox5 As GroupBox
     Private WithEvents checkBox3 As CheckBox
     Private WithEvents label1 As Label
     Private WithEvents checkBox2 As CheckBox
     Private WithEvents txt_f_username As TextBox
     Private WithEvents checkBox1 As CheckBox
-    Private WithEvents pnl_filterdgv_container As Panel
     Private WithEvents dgv_userlist As DataGridView
+    Private WithEvents pnl_filterdgv_container As Panel
+    Private WithEvents pnl_contains_userlist As Panel
+    Private WithEvents toolTip1 As ToolTip
     Private WithEvents chk_fe_allow_view_eval As CheckBox
     Private WithEvents chk_ret_allow_view As CheckBox
     Private WithEvents chk_flag_view_all As CheckBox
-    Private WithEvents pnl_contains_userlist As Panel
-    Private WithEvents checkBox12 As CheckBox
-    Private WithEvents pnl_rl_allow_bl As Panel
-    Private WithEvents checkBox13 As CheckBox
+    Private WithEvents label3 As Label
     Private WithEvents chk_fe_allow_export_eval As CheckBox
-    Private WithEvents chk_fe_allow_create_eval As CheckBox
-    Private WithEvents tab_file_eval As TabPage
     Private WithEvents groupBox3 As GroupBox
     Private WithEvents pnl_evaldep As Panel
     Private WithEvents checkBox34 As CheckBox
     Private WithEvents checkBox32 As CheckBox
     Private WithEvents checkBox33 As CheckBox
+    Private WithEvents tab_file_eval As TabPage
+    Private WithEvents chk_fe_allow_create_eval As CheckBox
     Private WithEvents tabctrl_restriction_menu As TabControl
     Private WithEvents tab_view_return As TabPage
     Private WithEvents chk_ret_allow_seen As CheckBox
@@ -1803,6 +1798,8 @@ Partial Class frm_restrictions
     Private WithEvents chk_upload As CheckBox
     Private WithEvents chk_workflow As CheckBox
     Private WithEvents chk_userlist As CheckBox
+    Private WithEvents groupBox1 As GroupBox
+    Private WithEvents pnl_menu_checkbox_container As Panel
     Private WithEvents chk_files_due As CheckBox
     Private WithEvents chk_wait_tracker As CheckBox
     Private WithEvents chk_idle_track As CheckBox
@@ -1811,10 +1808,9 @@ Partial Class frm_restrictions
     Private WithEvents chk_view_return As CheckBox
     Private WithEvents chk_monitoring As CheckBox
     Private WithEvents chk_file_eval As CheckBox
-    Private WithEvents pnl_menu_checkbox_container As Panel
-    Private WithEvents groupBox1 As GroupBox
     Private WithEvents btn_reset As Button
     Private WithEvents btn_save As Button
     Private WithEvents btn_cancel As Button
     Private WithEvents panel2 As Panel
+    Private WithEvents groupBox5 As GroupBox
 End Class

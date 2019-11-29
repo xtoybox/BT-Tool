@@ -109,6 +109,7 @@
             this.tab_ref = new System.Windows.Forms.TabPage();
             this.tab_btfile = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chk_return_file = new System.Windows.Forms.CheckBox();
             this.gbox_assign_user = new System.Windows.Forms.GroupBox();
             this.chk_ccqa = new System.Windows.Forms.CheckBox();
             this.chk_cc = new System.Windows.Forms.CheckBox();
@@ -148,7 +149,6 @@
             this.cbo_preset_dep = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.chk_return_file = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnl_menu_checkbox_container.SuspendLayout();
@@ -229,7 +229,7 @@
             // 
             this.groupBox1.Controls.Add(this.pnl_menu_checkbox_container);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(153, 193);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(158, 345);
@@ -258,10 +258,10 @@
             this.pnl_menu_checkbox_container.Controls.Add(this.chk_monitoring);
             this.pnl_menu_checkbox_container.Controls.Add(this.chk_file_eval);
             this.pnl_menu_checkbox_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_menu_checkbox_container.Location = new System.Drawing.Point(3, 17);
+            this.pnl_menu_checkbox_container.Location = new System.Drawing.Point(3, 16);
             this.pnl_menu_checkbox_container.Name = "pnl_menu_checkbox_container";
             this.pnl_menu_checkbox_container.Padding = new System.Windows.Forms.Padding(10);
-            this.pnl_menu_checkbox_container.Size = new System.Drawing.Size(152, 325);
+            this.pnl_menu_checkbox_container.Size = new System.Drawing.Size(152, 326);
             this.pnl_menu_checkbox_container.TabIndex = 0;
             // 
             // chk_btfile
@@ -555,7 +555,7 @@
             this.chk_fe_allow_export_eval.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_fe_allow_export_eval.Location = new System.Drawing.Point(6, 29);
             this.chk_fe_allow_export_eval.Name = "chk_fe_allow_export_eval";
-            this.chk_fe_allow_export_eval.Size = new System.Drawing.Size(179, 17);
+            this.chk_fe_allow_export_eval.Size = new System.Drawing.Size(170, 17);
             this.chk_fe_allow_export_eval.TabIndex = 2;
             this.chk_fe_allow_export_eval.Text = "Allow user to export evaluation";
             this.chk_fe_allow_export_eval.UseVisualStyleBackColor = true;
@@ -567,7 +567,7 @@
             this.chk_fe_allow_view_eval.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_fe_allow_view_eval.Location = new System.Drawing.Point(6, 55);
             this.chk_fe_allow_view_eval.Name = "chk_fe_allow_view_eval";
-            this.chk_fe_allow_view_eval.Size = new System.Drawing.Size(170, 17);
+            this.chk_fe_allow_view_eval.Size = new System.Drawing.Size(163, 17);
             this.chk_fe_allow_view_eval.TabIndex = 1;
             this.chk_fe_allow_view_eval.Text = "Allow user to view evaluation";
             this.toolTip1.SetToolTip(this.chk_fe_allow_view_eval, "Allow user to view evaluations base on the selected department.");
@@ -581,7 +581,7 @@
             this.chk_fe_allow_create_eval.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_fe_allow_create_eval.Location = new System.Drawing.Point(6, 6);
             this.chk_fe_allow_create_eval.Name = "chk_fe_allow_create_eval";
-            this.chk_fe_allow_create_eval.Size = new System.Drawing.Size(195, 17);
+            this.chk_fe_allow_create_eval.Size = new System.Drawing.Size(186, 17);
             this.chk_fe_allow_create_eval.TabIndex = 0;
             this.chk_fe_allow_create_eval.Text = "Allow user to create an evaluation";
             this.chk_fe_allow_create_eval.UseVisualStyleBackColor = true;
@@ -601,9 +601,9 @@
             this.pnl_evaldep.Controls.Add(this.checkBox32);
             this.pnl_evaldep.Controls.Add(this.checkBox33);
             this.pnl_evaldep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_evaldep.Location = new System.Drawing.Point(3, 17);
+            this.pnl_evaldep.Location = new System.Drawing.Point(3, 16);
             this.pnl_evaldep.Name = "pnl_evaldep";
-            this.pnl_evaldep.Size = new System.Drawing.Size(164, 22);
+            this.pnl_evaldep.Size = new System.Drawing.Size(164, 23);
             this.pnl_evaldep.TabIndex = 5;
             // 
             // checkBox34
@@ -613,7 +613,7 @@
             this.checkBox34.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox34.Location = new System.Drawing.Point(110, 3);
             this.checkBox34.Name = "checkBox34";
-            this.checkBox34.Size = new System.Drawing.Size(46, 17);
+            this.checkBox34.Size = new System.Drawing.Size(47, 17);
             this.checkBox34.TabIndex = 2;
             this.checkBox34.Text = "BET";
             this.checkBox34.UseVisualStyleBackColor = true;
@@ -637,7 +637,7 @@
             this.checkBox33.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox33.Location = new System.Drawing.Point(64, 3);
             this.checkBox33.Name = "checkBox33";
-            this.checkBox33.Size = new System.Drawing.Size(40, 17);
+            this.checkBox33.Size = new System.Drawing.Size(41, 17);
             this.checkBox33.TabIndex = 1;
             this.checkBox33.Text = "PR";
             this.checkBox33.UseVisualStyleBackColor = true;
@@ -664,7 +664,7 @@
             this.chk_ret_allow_view.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_ret_allow_view.Location = new System.Drawing.Point(3, 95);
             this.chk_ret_allow_view.Name = "chk_ret_allow_view";
-            this.chk_ret_allow_view.Size = new System.Drawing.Size(173, 17);
+            this.chk_ret_allow_view.Size = new System.Drawing.Size(162, 17);
             this.chk_ret_allow_view.TabIndex = 1;
             this.chk_ret_allow_view.Text = "Allow user to view return files";
             this.toolTip1.SetToolTip(this.chk_ret_allow_view, "This will allow user to view other return files base on the selected department o" +
@@ -679,7 +679,7 @@
             this.chk_ret_allow_seen.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_ret_allow_seen.Location = new System.Drawing.Point(3, 72);
             this.chk_ret_allow_seen.Name = "chk_ret_allow_seen";
-            this.chk_ret_allow_seen.Size = new System.Drawing.Size(286, 17);
+            this.chk_ret_allow_seen.Size = new System.Drawing.Size(268, 17);
             this.chk_ret_allow_seen.TabIndex = 5;
             this.chk_ret_allow_seen.Text = "Allow user to change seen status of the return file/s";
             this.chk_ret_allow_seen.UseVisualStyleBackColor = true;
@@ -691,7 +691,7 @@
             this.chk_ret_allo_delete.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_ret_allo_delete.Location = new System.Drawing.Point(3, 49);
             this.chk_ret_allo_delete.Name = "chk_ret_allo_delete";
-            this.chk_ret_allo_delete.Size = new System.Drawing.Size(187, 17);
+            this.chk_ret_allo_delete.Size = new System.Drawing.Size(174, 17);
             this.chk_ret_allo_delete.TabIndex = 2;
             this.chk_ret_allo_delete.Text = "Allow user to delete return file/s";
             this.chk_ret_allo_delete.UseVisualStyleBackColor = true;
@@ -703,7 +703,7 @@
             this.chk_ret_allo_export.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_ret_allo_export.Location = new System.Drawing.Point(3, 26);
             this.chk_ret_allo_export.Name = "chk_ret_allo_export";
-            this.chk_ret_allo_export.Size = new System.Drawing.Size(187, 17);
+            this.chk_ret_allo_export.Size = new System.Drawing.Size(174, 17);
             this.chk_ret_allo_export.TabIndex = 1;
             this.chk_ret_allo_export.Text = "Allow user to export return file/s";
             this.chk_ret_allo_export.UseVisualStyleBackColor = true;
@@ -715,7 +715,7 @@
             this.chk_ret_allow_save.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_ret_allow_save.Location = new System.Drawing.Point(3, 3);
             this.chk_ret_allow_save.Name = "chk_ret_allow_save";
-            this.chk_ret_allow_save.Size = new System.Drawing.Size(168, 17);
+            this.chk_ret_allow_save.Size = new System.Drawing.Size(158, 17);
             this.chk_ret_allow_save.TabIndex = 0;
             this.chk_ret_allow_save.Text = "Allow user to save return file";
             this.chk_ret_allow_save.UseVisualStyleBackColor = true;
@@ -735,9 +735,9 @@
             this.pnl_ret_allow_dep.Controls.Add(this.checkBox8);
             this.pnl_ret_allow_dep.Controls.Add(this.checkBox9);
             this.pnl_ret_allow_dep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_ret_allow_dep.Location = new System.Drawing.Point(3, 17);
+            this.pnl_ret_allow_dep.Location = new System.Drawing.Point(3, 16);
             this.pnl_ret_allow_dep.Name = "pnl_ret_allow_dep";
-            this.pnl_ret_allow_dep.Size = new System.Drawing.Size(173, 22);
+            this.pnl_ret_allow_dep.Size = new System.Drawing.Size(173, 23);
             this.pnl_ret_allow_dep.TabIndex = 5;
             // 
             // checkBox4
@@ -747,7 +747,7 @@
             this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Location = new System.Drawing.Point(112, 3);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(46, 17);
+            this.checkBox4.Size = new System.Drawing.Size(47, 17);
             this.checkBox4.TabIndex = 2;
             this.checkBox4.Text = "BET";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -771,7 +771,7 @@
             this.checkBox9.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox9.Location = new System.Drawing.Point(66, 3);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(40, 17);
+            this.checkBox9.Size = new System.Drawing.Size(41, 17);
             this.checkBox9.TabIndex = 1;
             this.checkBox9.Text = "PR";
             this.checkBox9.UseVisualStyleBackColor = true;
@@ -798,7 +798,7 @@
             this.chk_flag_allow_seen.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_flag_allow_seen.Location = new System.Drawing.Point(3, 72);
             this.chk_flag_allow_seen.Name = "chk_flag_allow_seen";
-            this.chk_flag_allow_seen.Size = new System.Drawing.Size(256, 17);
+            this.chk_flag_allow_seen.Size = new System.Drawing.Size(242, 17);
             this.chk_flag_allow_seen.TabIndex = 4;
             this.chk_flag_allow_seen.Text = "Allow user to change seen status of the flag/s";
             this.chk_flag_allow_seen.UseVisualStyleBackColor = true;
@@ -810,7 +810,7 @@
             this.chk_flag_view_all.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_flag_view_all.Location = new System.Drawing.Point(3, 95);
             this.chk_flag_view_all.Name = "chk_flag_view_all";
-            this.chk_flag_view_all.Size = new System.Drawing.Size(158, 17);
+            this.chk_flag_view_all.Size = new System.Drawing.Size(149, 17);
             this.chk_flag_view_all.TabIndex = 0;
             this.chk_flag_view_all.Text = "Allow user to view all flags";
             this.toolTip1.SetToolTip(this.chk_flag_view_all, "View all the flags base on the selected department.");
@@ -832,9 +832,9 @@
             this.pnl_flag_allow_dep.Controls.Add(this.checkBox6);
             this.pnl_flag_allow_dep.Controls.Add(this.checkBox5);
             this.pnl_flag_allow_dep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_flag_allow_dep.Location = new System.Drawing.Point(3, 17);
+            this.pnl_flag_allow_dep.Location = new System.Drawing.Point(3, 16);
             this.pnl_flag_allow_dep.Name = "pnl_flag_allow_dep";
-            this.pnl_flag_allow_dep.Size = new System.Drawing.Size(161, 21);
+            this.pnl_flag_allow_dep.Size = new System.Drawing.Size(161, 22);
             this.pnl_flag_allow_dep.TabIndex = 5;
             // 
             // checkBox7
@@ -844,7 +844,7 @@
             this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox7.Location = new System.Drawing.Point(103, 3);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(46, 17);
+            this.checkBox7.Size = new System.Drawing.Size(47, 17);
             this.checkBox7.TabIndex = 2;
             this.checkBox7.Text = "BET";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -856,7 +856,7 @@
             this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox6.Location = new System.Drawing.Point(57, 3);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(40, 17);
+            this.checkBox6.Size = new System.Drawing.Size(41, 17);
             this.checkBox6.TabIndex = 1;
             this.checkBox6.Text = "PR";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -880,7 +880,7 @@
             this.chk_flag_allow_delete.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_flag_allow_delete.Location = new System.Drawing.Point(3, 49);
             this.chk_flag_allow_delete.Name = "chk_flag_allow_delete";
-            this.chk_flag_allow_delete.Size = new System.Drawing.Size(186, 17);
+            this.chk_flag_allow_delete.Size = new System.Drawing.Size(175, 17);
             this.chk_flag_allow_delete.TabIndex = 2;
             this.chk_flag_allow_delete.Text = "Allow user to delete other flag/s";
             this.chk_flag_allow_delete.UseVisualStyleBackColor = true;
@@ -892,7 +892,7 @@
             this.chk_flag_allo_export.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_flag_allo_export.Location = new System.Drawing.Point(3, 26);
             this.chk_flag_allo_export.Name = "chk_flag_allo_export";
-            this.chk_flag_allo_export.Size = new System.Drawing.Size(157, 17);
+            this.chk_flag_allo_export.Size = new System.Drawing.Size(148, 17);
             this.chk_flag_allo_export.TabIndex = 1;
             this.chk_flag_allo_export.Text = "Allow user to export flag/s";
             this.chk_flag_allo_export.UseVisualStyleBackColor = true;
@@ -904,7 +904,7 @@
             this.chk_flag_allow_create.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_flag_allow_create.Location = new System.Drawing.Point(3, 3);
             this.chk_flag_allow_create.Name = "chk_flag_allow_create";
-            this.chk_flag_allow_create.Size = new System.Drawing.Size(156, 17);
+            this.chk_flag_allow_create.Size = new System.Drawing.Size(148, 17);
             this.chk_flag_allow_create.TabIndex = 0;
             this.chk_flag_allow_create.Text = "Allow user to create a flag";
             this.chk_flag_allow_create.UseVisualStyleBackColor = true;
@@ -929,7 +929,7 @@
             this.chk_rl_allow_bl.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_rl_allow_bl.Location = new System.Drawing.Point(12, 8);
             this.chk_rl_allow_bl.Name = "chk_rl_allow_bl";
-            this.chk_rl_allow_bl.Size = new System.Drawing.Size(165, 17);
+            this.chk_rl_allow_bl.Size = new System.Drawing.Size(158, 17);
             this.chk_rl_allow_bl.TabIndex = 0;
             this.chk_rl_allow_bl.Text = "Allow user to view break log";
             this.chk_rl_allow_bl.UseVisualStyleBackColor = true;
@@ -950,9 +950,9 @@
             this.pnl_rl_allow_bl.Controls.Add(this.checkBox12);
             this.pnl_rl_allow_bl.Controls.Add(this.checkBox13);
             this.pnl_rl_allow_bl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_rl_allow_bl.Location = new System.Drawing.Point(3, 17);
+            this.pnl_rl_allow_bl.Location = new System.Drawing.Point(3, 16);
             this.pnl_rl_allow_bl.Name = "pnl_rl_allow_bl";
-            this.pnl_rl_allow_bl.Size = new System.Drawing.Size(163, 21);
+            this.pnl_rl_allow_bl.Size = new System.Drawing.Size(163, 22);
             this.pnl_rl_allow_bl.TabIndex = 0;
             // 
             // checkBox14
@@ -962,7 +962,7 @@
             this.checkBox14.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox14.Location = new System.Drawing.Point(101, 3);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(46, 17);
+            this.checkBox14.Size = new System.Drawing.Size(47, 17);
             this.checkBox14.TabIndex = 5;
             this.checkBox14.Text = "BET";
             this.checkBox14.UseVisualStyleBackColor = true;
@@ -986,7 +986,7 @@
             this.checkBox13.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox13.Location = new System.Drawing.Point(58, 3);
             this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(40, 17);
+            this.checkBox13.Size = new System.Drawing.Size(41, 17);
             this.checkBox13.TabIndex = 4;
             this.checkBox13.Text = "PR";
             this.checkBox13.UseVisualStyleBackColor = true;
@@ -998,7 +998,7 @@
             this.chk_rl_allow_il.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_rl_allow_il.Location = new System.Drawing.Point(12, 68);
             this.chk_rl_allow_il.Name = "chk_rl_allow_il";
-            this.chk_rl_allow_il.Size = new System.Drawing.Size(155, 17);
+            this.chk_rl_allow_il.Size = new System.Drawing.Size(147, 17);
             this.chk_rl_allow_il.TabIndex = 1;
             this.chk_rl_allow_il.Text = "Allow user to view idle log";
             this.chk_rl_allow_il.UseVisualStyleBackColor = true;
@@ -1019,9 +1019,9 @@
             this.pnl_rl_allow_il.Controls.Add(this.checkBox16);
             this.pnl_rl_allow_il.Controls.Add(this.checkBox17);
             this.pnl_rl_allow_il.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_rl_allow_il.Location = new System.Drawing.Point(3, 17);
+            this.pnl_rl_allow_il.Location = new System.Drawing.Point(3, 16);
             this.pnl_rl_allow_il.Name = "pnl_rl_allow_il";
-            this.pnl_rl_allow_il.Size = new System.Drawing.Size(162, 17);
+            this.pnl_rl_allow_il.Size = new System.Drawing.Size(162, 18);
             this.pnl_rl_allow_il.TabIndex = 0;
             // 
             // checkBox15
@@ -1031,7 +1031,7 @@
             this.checkBox15.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox15.Location = new System.Drawing.Point(100, 0);
             this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(46, 17);
+            this.checkBox15.Size = new System.Drawing.Size(47, 17);
             this.checkBox15.TabIndex = 5;
             this.checkBox15.Text = "BET";
             this.checkBox15.UseVisualStyleBackColor = true;
@@ -1055,7 +1055,7 @@
             this.checkBox17.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox17.Location = new System.Drawing.Point(57, 0);
             this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(40, 17);
+            this.checkBox17.Size = new System.Drawing.Size(41, 17);
             this.checkBox17.TabIndex = 4;
             this.checkBox17.Text = "PR";
             this.checkBox17.UseVisualStyleBackColor = true;
@@ -1077,7 +1077,7 @@
             this.chk_ua_allow_save.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_ua_allow_save.Location = new System.Drawing.Point(13, 8);
             this.chk_ua_allow_save.Name = "chk_ua_allow_save";
-            this.chk_ua_allow_save.Size = new System.Drawing.Size(139, 17);
+            this.chk_ua_allow_save.Size = new System.Drawing.Size(132, 17);
             this.chk_ua_allow_save.TabIndex = 0;
             this.chk_ua_allow_save.Text = "Allow user to add/edit.";
             this.chk_ua_allow_save.UseVisualStyleBackColor = true;
@@ -1126,7 +1126,7 @@
             this.checkBox10.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox10.Location = new System.Drawing.Point(3, 8);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(251, 17);
+            this.checkBox10.Size = new System.Drawing.Size(237, 17);
             this.checkBox10.TabIndex = 0;
             this.checkBox10.Text = "Allow user to change the file source directory";
             this.checkBox10.UseVisualStyleBackColor = true;
@@ -1185,6 +1185,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Main Form Restrictions";
             // 
+            // chk_return_file
+            // 
+            this.chk_return_file.AutoSize = true;
+            this.chk_return_file.BackColor = System.Drawing.SystemColors.Control;
+            this.chk_return_file.Checked = true;
+            this.chk_return_file.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_return_file.Location = new System.Drawing.Point(6, 120);
+            this.chk_return_file.Name = "chk_return_file";
+            this.chk_return_file.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.chk_return_file.Size = new System.Drawing.Size(80, 17);
+            this.chk_return_file.TabIndex = 10;
+            this.chk_return_file.Text = "Return File";
+            this.toolTip1.SetToolTip(this.chk_return_file, "Hide or unhide return file button");
+            this.chk_return_file.UseVisualStyleBackColor = false;
+            // 
             // gbox_assign_user
             // 
             this.gbox_assign_user.Controls.Add(this.chk_ccqa);
@@ -1233,7 +1248,7 @@
             this.chk_stqa.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_stqa.Location = new System.Drawing.Point(98, 66);
             this.chk_stqa.Name = "chk_stqa";
-            this.chk_stqa.Size = new System.Drawing.Size(65, 17);
+            this.chk_stqa.Size = new System.Drawing.Size(64, 17);
             this.chk_stqa.TabIndex = 2;
             this.chk_stqa.Text = "S&T QA";
             this.chk_stqa.UseMnemonic = false;
@@ -1246,7 +1261,7 @@
             this.chk_st.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_st.Location = new System.Drawing.Point(6, 66);
             this.chk_st.Name = "chk_st";
-            this.chk_st.Size = new System.Drawing.Size(47, 17);
+            this.chk_st.Size = new System.Drawing.Size(46, 17);
             this.chk_st.TabIndex = 2;
             this.chk_st.Text = "S&T";
             this.chk_st.UseMnemonic = false;
@@ -1259,7 +1274,7 @@
             this.chk_prqa.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_prqa.Location = new System.Drawing.Point(98, 43);
             this.chk_prqa.Name = "chk_prqa";
-            this.chk_prqa.Size = new System.Drawing.Size(58, 17);
+            this.chk_prqa.Size = new System.Drawing.Size(59, 17);
             this.chk_prqa.TabIndex = 1;
             this.chk_prqa.Text = "PR QA";
             this.chk_prqa.UseVisualStyleBackColor = true;
@@ -1271,7 +1286,7 @@
             this.chk_pr.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_pr.Location = new System.Drawing.Point(6, 43);
             this.chk_pr.Name = "chk_pr";
-            this.chk_pr.Size = new System.Drawing.Size(40, 17);
+            this.chk_pr.Size = new System.Drawing.Size(41, 17);
             this.chk_pr.TabIndex = 1;
             this.chk_pr.Text = "PR";
             this.chk_pr.UseVisualStyleBackColor = true;
@@ -1318,7 +1333,7 @@
             this.chk_doc.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_doc.Location = new System.Drawing.Point(6, 43);
             this.chk_doc.Name = "chk_doc";
-            this.chk_doc.Size = new System.Drawing.Size(77, 17);
+            this.chk_doc.Size = new System.Drawing.Size(75, 17);
             this.chk_doc.TabIndex = 1;
             this.chk_doc.Text = "Document";
             this.chk_doc.UseVisualStyleBackColor = true;
@@ -1330,7 +1345,7 @@
             this.chk_audio.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_audio.Location = new System.Drawing.Point(6, 20);
             this.chk_audio.Name = "chk_audio";
-            this.chk_audio.Size = new System.Drawing.Size(54, 17);
+            this.chk_audio.Size = new System.Drawing.Size(53, 17);
             this.chk_audio.TabIndex = 0;
             this.chk_audio.Text = "Audio";
             this.chk_audio.UseVisualStyleBackColor = true;
@@ -1344,7 +1359,7 @@
             this.chk_work_file.Location = new System.Drawing.Point(6, 74);
             this.chk_work_file.Name = "chk_work_file";
             this.chk_work_file.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.chk_work_file.Size = new System.Drawing.Size(76, 17);
+            this.chk_work_file.Size = new System.Drawing.Size(74, 17);
             this.chk_work_file.TabIndex = 7;
             this.chk_work_file.Text = "Work File";
             this.chk_work_file.UseVisualStyleBackColor = false;
@@ -1374,7 +1389,7 @@
             this.chk_accuracy.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_accuracy.Location = new System.Drawing.Point(99, 89);
             this.chk_accuracy.Name = "chk_accuracy";
-            this.chk_accuracy.Size = new System.Drawing.Size(72, 17);
+            this.chk_accuracy.Size = new System.Drawing.Size(71, 17);
             this.chk_accuracy.TabIndex = 7;
             this.chk_accuracy.Text = "Accuracy";
             this.chk_accuracy.UseVisualStyleBackColor = true;
@@ -1398,7 +1413,7 @@
             this.chk_dur.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_dur.Location = new System.Drawing.Point(99, 43);
             this.chk_dur.Name = "chk_dur";
-            this.chk_dur.Size = new System.Drawing.Size(68, 17);
+            this.chk_dur.Size = new System.Drawing.Size(66, 17);
             this.chk_dur.TabIndex = 5;
             this.chk_dur.Text = "Duration";
             this.chk_dur.UseVisualStyleBackColor = true;
@@ -1410,7 +1425,7 @@
             this.chk_receive.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_receive.Location = new System.Drawing.Point(99, 20);
             this.chk_receive.Name = "chk_receive";
-            this.chk_receive.Size = new System.Drawing.Size(65, 17);
+            this.chk_receive.Size = new System.Drawing.Size(66, 17);
             this.chk_receive.TabIndex = 4;
             this.chk_receive.Text = "Receive";
             this.chk_receive.UseVisualStyleBackColor = true;
@@ -1422,7 +1437,7 @@
             this.chk_branch.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_branch.Location = new System.Drawing.Point(6, 89);
             this.chk_branch.Name = "chk_branch";
-            this.chk_branch.Size = new System.Drawing.Size(61, 17);
+            this.chk_branch.Size = new System.Drawing.Size(60, 17);
             this.chk_branch.TabIndex = 3;
             this.chk_branch.Text = "Branch";
             this.chk_branch.UseVisualStyleBackColor = true;
@@ -1434,7 +1449,7 @@
             this.chk_client.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_client.Location = new System.Drawing.Point(6, 66);
             this.chk_client.Name = "chk_client";
-            this.chk_client.Size = new System.Drawing.Size(55, 17);
+            this.chk_client.Size = new System.Drawing.Size(52, 17);
             this.chk_client.TabIndex = 2;
             this.chk_client.Text = "Client";
             this.chk_client.UseVisualStyleBackColor = true;
@@ -1446,7 +1461,7 @@
             this.chk_serv_date.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_serv_date.Location = new System.Drawing.Point(6, 43);
             this.chk_serv_date.Name = "chk_serv_date";
-            this.chk_serv_date.Size = new System.Drawing.Size(89, 17);
+            this.chk_serv_date.Size = new System.Drawing.Size(88, 17);
             this.chk_serv_date.TabIndex = 1;
             this.chk_serv_date.Text = "Service Date";
             this.chk_serv_date.UseVisualStyleBackColor = true;
@@ -1458,7 +1473,7 @@
             this.chk_due_date.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_due_date.Location = new System.Drawing.Point(6, 20);
             this.chk_due_date.Name = "chk_due_date";
-            this.chk_due_date.Size = new System.Drawing.Size(71, 17);
+            this.chk_due_date.Size = new System.Drawing.Size(72, 17);
             this.chk_due_date.TabIndex = 0;
             this.chk_due_date.Text = "Due Date";
             this.chk_due_date.UseVisualStyleBackColor = true;
@@ -1470,7 +1485,7 @@
             this.chk_file_prio.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_file_prio.Location = new System.Drawing.Point(6, 28);
             this.chk_file_prio.Name = "chk_file_prio";
-            this.chk_file_prio.Size = new System.Drawing.Size(83, 17);
+            this.chk_file_prio.Size = new System.Drawing.Size(76, 17);
             this.chk_file_prio.TabIndex = 3;
             this.chk_file_prio.Text = "File Priority";
             this.chk_file_prio.UseVisualStyleBackColor = true;
@@ -1484,7 +1499,7 @@
             this.chk_file_info.Location = new System.Drawing.Point(6, 51);
             this.chk_file_info.Name = "chk_file_info";
             this.chk_file_info.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.chk_file_info.Size = new System.Drawing.Size(108, 17);
+            this.chk_file_info.Size = new System.Drawing.Size(100, 17);
             this.chk_file_info.TabIndex = 4;
             this.chk_file_info.Text = "File Information";
             this.chk_file_info.UseVisualStyleBackColor = false;
@@ -1499,7 +1514,7 @@
             this.chk_assign_user.Location = new System.Drawing.Point(6, 97);
             this.chk_assign_user.Name = "chk_assign_user";
             this.chk_assign_user.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.chk_assign_user.Size = new System.Drawing.Size(89, 17);
+            this.chk_assign_user.Size = new System.Drawing.Size(85, 17);
             this.chk_assign_user.TabIndex = 5;
             this.chk_assign_user.Text = "Assign User";
             this.chk_assign_user.UseVisualStyleBackColor = false;
@@ -1552,7 +1567,7 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(97, 46);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(46, 17);
+            this.checkBox3.Size = new System.Drawing.Size(47, 17);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "BET";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -1563,7 +1578,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username:";
             // 
@@ -1572,7 +1587,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(51, 46);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(40, 17);
+            this.checkBox2.Size = new System.Drawing.Size(41, 17);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "PR";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -1583,7 +1598,7 @@
             this.txt_f_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_f_username.Location = new System.Drawing.Point(5, 19);
             this.txt_f_username.Name = "txt_f_username";
-            this.txt_f_username.Size = new System.Drawing.Size(142, 21);
+            this.txt_f_username.Size = new System.Drawing.Size(142, 20);
             this.txt_f_username.TabIndex = 0;
             this.txt_f_username.TextChanged += new System.EventHandler(this.txt_f_username_TextChanged);
             // 
@@ -1611,6 +1626,7 @@
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Presets";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // cbo_preset_pos
             // 
@@ -1635,7 +1651,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(184, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Position:";
             // 
@@ -1644,24 +1660,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Department:";
-            // 
-            // chk_return_file
-            // 
-            this.chk_return_file.AutoSize = true;
-            this.chk_return_file.BackColor = System.Drawing.SystemColors.Control;
-            this.chk_return_file.Checked = true;
-            this.chk_return_file.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_return_file.Location = new System.Drawing.Point(6, 120);
-            this.chk_return_file.Name = "chk_return_file";
-            this.chk_return_file.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.chk_return_file.Size = new System.Drawing.Size(83, 17);
-            this.chk_return_file.TabIndex = 10;
-            this.chk_return_file.Text = "Return File";
-            this.toolTip1.SetToolTip(this.chk_return_file, "Hide or unhide return file button");
-            this.chk_return_file.UseVisualStyleBackColor = false;
             // 
             // frm_restriction
             // 
@@ -1676,13 +1677,13 @@
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.pnl_contains_userlist);
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_restriction";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BTTOOL - User Restriction Editor";
+            this.Text = "YEET BTTOOL - User Restriction Editor";
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.pnl_menu_checkbox_container.ResumeLayout(false);

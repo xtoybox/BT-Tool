@@ -210,9 +210,41 @@ Public Class frm_report_log
             Notif("idle")
         End If
     End Sub
+
+
 #End Region
 
 #Region "Events"
+
+    Private Sub dgv_break_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_break.CellDoubleClick
+
+        If (e.RowIndex <> -1 And e.ColumnIndex <> -1) Then
+            Dim breakdata As String = dgv_break(2, e.RowIndex).Value.ToString, name As String = dgv_break(0, e.RowIndex).Value.ToString
+            CurSelUser = name
+            frm.DisplayData(breakdata, name)
+            frm.SetLocation(Width)
+
+            If Not cf.IsFormOpen("frm_sub_report_log", True, "breaklog") Then
+                Try
+                    frm.Show(Me)
+                Catch ex As Exception
+                    frm = New frm_sub_report_log
+                    frm.DisplayData(breakdata, name)
+                    frm.SetLocation(Width)
+                    frm.Show(Me)
+                End Try
+            Else
+                cf.GetForm.Activate()
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub refreshToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles refreshToolStripMenuItem.Click
+        If IsAllowViewBL Then DisplayData("break")
+        If IsAllowViewIL Then DisplayData("idle")
+    End Sub
 
 #End Region
 

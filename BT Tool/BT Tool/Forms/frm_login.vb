@@ -72,15 +72,9 @@ Public Class frm_login
                         Dim UserData As String() = db.row("SELECT Id,username,uDept,lockTime,status,password,position,department,btwork,restrictions
                             FROM dbo.UserData WHERE username LIKE @uname", New String() {"uname", uname})
                         'set the variable with the data from UserData
-                        Uid = UserData(0)
-                        UserName = UserData(1)
-                        UDept = UserData(2)
-                        LockTime = UserData(3)
-                        Status = UserData(4)
-                        Password = UserData(5)
-                        Position = UserData(6)
-                        Department = UserData(7)
-                        BTWork = UserData(8)
+                        Uid = UserData(0) : UserName = UserData(1) : UDept = UserData(2)
+                        LockTime = UserData(3) : Status = UserData(4) : Password = UserData(5)
+                        Position = UserData(6) : Department = UserData(7) : BTWork = UserData(8)
                         Restrictions = UserData(9)
 
                         'check if username exist

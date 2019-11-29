@@ -209,6 +209,7 @@ Public Class frm_userlist
         End If
         Me.Dispose()
     End Sub
+
     Private Sub btn_edit_restrict_Click(sender As Object, e As EventArgs) Handles btn_edit_restrict.Click
         Dim frmrestriction As markform.frm_restriction
         If Not cf.IsFormOpen("frm_restriction") Then
@@ -220,6 +221,7 @@ Public Class frm_userlist
             cf.GetForm.Activate()
         End If
     End Sub
+
     Private Sub btn_open_restrict_editor_Click(sender As Object, e As EventArgs) Handles btn_open_restrict_editor.Click
         Dim frmrestriction As markform.frm_restriction
         If Not cf.IsFormOpen("frm_restriction") Then
@@ -492,18 +494,11 @@ Public Class frm_userlist
             cf.Debug(ex)
         End Try
     End Sub
-#End Region
-
-
-    Private Sub PopupComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub dgv_userlist_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_userlist.CellContentClick
-
-    End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
     End Sub
+
+#End Region
+
 End Class

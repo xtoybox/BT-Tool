@@ -30,6 +30,7 @@ Partial Class frm_userlist
         Dim CheckBoxProperties1 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
         Dim CheckBoxProperties2 As PresentationControls.CheckBoxProperties = New PresentationControls.CheckBoxProperties()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.dgv_userlist = New System.Windows.Forms.DataGridView()
@@ -86,7 +87,6 @@ Partial Class frm_userlist
         Me.Label11 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.dgv_userlist, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,6 +110,20 @@ Partial Class frm_userlist
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(761, 30)
         Me.Panel1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(730, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(31, 30)
+        Me.Button1.TabIndex = 1
+        Me.Button1.TabStop = False
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -879,20 +893,6 @@ Partial Class frm_userlist
         Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
         Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(730, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(31, 30)
-        Me.Button1.TabIndex = 1
-        Me.Button1.TabStop = False
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'frm_userlist
         '

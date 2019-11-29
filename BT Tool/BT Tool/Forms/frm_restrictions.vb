@@ -16,15 +16,16 @@ Public Class frm_restrictions
 #Region "Variables"
     Private DefaultRestriction As String = ""
     Private TempRestriction As String = ""
-    Private UserID As Integer = ""
+    Private UserID As Integer = 0
     Private UserName As String = ""
-    Private UserRestriction As String = ""
+    Public UserRestriction As String = ""
     Private CurrentSelectedRow As Integer = -1
     Private CurrentUID As Integer = 0
     Private IsAll As Boolean = False
 #End Region
 
 #Region "Initialization"
+
     Public Sub New(ByVal args As Object())
 
         ' This call is required by the designer.
@@ -33,6 +34,7 @@ Public Class frm_restrictions
         ' Add any initialization after the InitializeComponent() call.
         Try
             If Not IsNothing(args) Then
+
                 UserID = Integer.Parse(args(0))
                 UserName = If(IsNothing(args(1)), "", args(1).ToString)
                 UserRestriction = args(2).ToString
@@ -46,16 +48,17 @@ Public Class frm_restrictions
                 DefaultRestriction = urc.DefaultRestriction
 
                 PopulatePresets()
-                'add event handler for cbodep indexchange
-                'add event handler for dbopos indexchange
+                AddHandler cbo_preset_dep.SelectedIndexChanged, AddressOf cbodep_indexchange
+                AddHandler cbo_preset_pos.SelectedIndexChanged, AddressOf cbopos_indexchanged
                 FilterCBO("all", "all")
-                SetRestrictions(If(Not cf.IsStringEmpty(UserRestriction), UserRestriction, DefaultRestriction))
+                SetRestriction(If(Not cf.IsStringEmpty(UserRestriction), UserRestriction, DefaultRestriction))
 
             End If
         Catch ex As Exception
             cf.Debug(ex)
         End Try
     End Sub
+
 #End Region
 
 #Region "Sub"
@@ -83,6 +86,7 @@ Public Class frm_restrictions
         Catch ex As Exception
             cf.Debug(ex)
         End Try
+
     End Sub
 
     Private Sub FilterDGV()
@@ -125,7 +129,7 @@ Public Class frm_restrictions
         End Try
     End Sub
 
-    Private Sub SetRestrictions(ByVal JSONString As String)
+    Private Sub SetRestriction(ByVal JSONString As String)
         Try
             JSONString = If(Not cf.IsStringEmpty(JSONString), JSONString, DefaultRestriction)
 
@@ -248,7 +252,7 @@ Public Class frm_restrictions
         End Try
     End Sub
 
-    Private Sub FIlterCBO(ByVal cbodep As String, ByVal cbopos As String)
+    Private Sub FilterCBO(ByVal cbodep As String, ByVal cbopos As String)
         Try
             Dim fpos As String = ""
             If cbodep = "ts" Then
@@ -278,11 +282,278 @@ Public Class frm_restrictions
 #End Region
 
 #Region "Events"
-    Private Sub txt_f_username_TextChanged(sender As Object, e As EventArgs) Handles txt_f_username.TextChanged
-        FilterDGV
+
+    Private Sub txt_f_username_TextChanged(sender As Object, e As EventArgs)
+        FilterDGV()
     End Sub
 
+    Private Sub btn_cancel_Click(sender As Object, e As EventArgs)
+        Me.Dispose()
+    End Sub
+
+    Private Sub btn_save_Click(sender As Object, e As EventArgs)
+
+        'Dim urc As markform.UserRestrictionsClass = JsonConvert.DeserializeObject(Of markform.UserRestrictionsClass)(JSONString)
+
+        Try
+            Dim fi As markform.FileInformation = New markform.FileInformation With {
+                .Enabled = chk_file_info.Checked,
+                .DueDate = chk_due_date.Checked,
+                .ServiceDate = chk_serv_date.Checked,
+                .Client = chk_client.Checked,
+                .Branch = chk_branch.Checked,
+                .Receive = chk_receive.Checked,
+                .DurationInfo = chk_dur.Checked,
+                .PageInfo = chk_page.Checked,
+                .Accuracy = chk_accuracy.Checked
+            }
+            Dim wf As markform.WorkFile = New markform.WorkFile With {
+                .Enabled = chk_work_file.Checked,
+                .AudioFile = chk_audio.Checked,
+                .DocumentInfo = chk_doc.Checked
+            }
+            Dim au As markform.AssignUser = New markform.AssignUser With {
+                .Enabled = chk_assign_user.Checked,
+                .BT = chk_bt.Checked,
+                .PR = chk_pr.Checked,
+                .ST = chk_st.Checked,
+                .CC = chk_cc.Checked,
+                .BTQA = chk_btqa.Checked,
+                .PRQA = chk_prqa.Checked,
+                .STQA = chk_stqa.Checked,
+                .CCQA = chk_ccqa.Checked
+            }
+
+#Region "Get file eval restrictions"
+            Dim fileEval As markform.FileEval = New markform.FileEval With {
+                .Enabled = chk_file_eval.Checked,
+                .AllowCreateEval = chk_fe_allow_create_eval.Checked,
+                .AllowExport = chk_fe_allow_export_eval.Checked,
+                .AllowViewEval = chk_fe_allow_view_eval.Checked
+            }
+            Dim fe_dept = New List(Of String)
+
+            For Each chk As CheckBox In pnl_evaldep.Controls.OfType(Of CheckBox).Reverse
+
+                If chk.Name IsNot "chk_fe_allow_view_eval" AndAlso chk.Checked Then
+                    fe_dept.Add(chk.Text.ToLower)
+                End If
+            Next
+
+            fileEval.RestrictedDepartment = fe_dept.ToArray
+#End Region
+
+#Region "Get file return restrictions"
+            Dim fileReturn As markform.FileReturn = New markform.FileReturn With {
+                .Enabled = chk_view_return.Checked,
+                .AllowSave = chk_ret_allow_save.Checked,
+                .AllowDelete = chk_ret_allo_delete.Checked,
+                .AllowExport = chk_ret_allo_export.Checked,
+                .AllowChangeSeen = chk_ret_allow_seen.Checked,
+                .AllowViewReturn = chk_ret_allow_view.Checked
+            }
+            Dim fr_dep = New List(Of String)
+
+            For Each chk As CheckBox In pnl_ret_allow_dep.Controls.OfType(Of CheckBox).Reverse
+
+                If chk.Name IsNot "chk_ret_allow_view" AndAlso chk.Checked Then
+                    fr_dep.Add(chk.Text.ToLower)
+                End If
+            Next
+
+            fileReturn.RestrictedDepartment = fr_dep.ToArray
+#End Region
+
+#Region "Get flagging restrictions"
+            Dim flagging As markform.Flagging = New markform.Flagging With {
+                .Enabled = chk_flagging.Checked,
+                .AllowDelete = chk_flag_allow_delete.Checked,
+                .AllowExport = chk_flag_allo_export.Checked,
+                .AllowSave = chk_flag_allow_create.Checked,
+                .AllowViewFlag = chk_flag_view_all.Checked,
+                .AllowChangeSeen = chk_flag_allow_seen.Checked
+            }
+            Dim flag_dept = New List(Of String)
+
+            For Each chk As CheckBox In pnl_flag_allow_dep.Controls.OfType(Of CheckBox).Reverse
+
+                If chk.Name IsNot "chk_flag_view_all" AndAlso chk.Checked Then
+                    flag_dept.Add(chk.Text.ToLower)
+                End If
+            Next
+
+            flagging.RestrictedDepartment = flag_dept.ToArray
+#End Region
+
+#Region "Get report log restrictions"
+
+            Dim reportLog As markform.ReportLog = New markform.ReportLog With {
+                .Enabled = chk_report_logs.Checked,
+                .AllowViewBreakLog = chk_rl_allow_bl.Checked,
+                .AllowViewIdleLog = chk_rl_allow_il.Checked
+            }
+            Dim rlbl_dep = New List(Of String), rlil_dep = New List(Of String)
+
+            For Each chk As CheckBox In pnl_rl_allow_bl.Controls.OfType(Of CheckBox).Reverse
+
+                If chk.Name IsNot "chk_rl_allow_bl" AndAlso chk.Checked Then
+                    rlbl_dep.Add(chk.Text.ToLower)
+                End If
+            Next
+
+            For Each chk As CheckBox In pnl_rl_allow_il.Controls.OfType(Of CheckBox).Reverse
+
+                If chk.Name IsNot "chk_rl_allow_il" AndAlso chk.Checked Then
+                    rlil_dep.Add(chk.Text.ToLower)
+                End If
+            Next
+
+            reportLog.BreakLogRestrictedDepartment = rlbl_dep.ToArray
+            reportLog.IdleLogRestrictedDepartment = rlil_dep.ToArray
+#End Region
+
+
+            Dim monitoring As markform.Monitoring = New markform.Monitoring With {
+                 .Enabled = chk_monitoring.Checked
+            }
+            Dim ratioTracker As markform.RatioTracker = New markform.RatioTracker With {
+                .Enabled = chk_ratio_track.Checked
+            }
+            Dim idleTracker As markform.IdleTracker = New markform.IdleTracker With {
+                .Enabled = chk_idle_track.Checked
+            }
+            Dim waitTracker As markform.WaitTracker = New markform.WaitTracker With {
+                .Enabled = chk_wait_tracker.Checked
+            }
+            Dim filesDue As markform.FilesDue = New markform.FilesDue With {
+                .Enabled = chk_files_due.Checked
+            }
+            Dim userList As markform.UserList = New markform.UserList With {
+                .Enabled = chk_userlist.Checked,
+                .AllowSave = chk_ua_allow_save.Checked
+            }
+            Dim workFlow As markform.WorkFlow = New markform.WorkFlow With {
+                .Enabled = chk_workflow.Checked
+            }
+            Dim uploadFunction As markform.UploadFunction = New markform.UploadFunction With {
+                .Enabled = chk_upload.Checked
+            }
+            Dim exportFunction As markform.ExportFunction = New markform.ExportFunction With {
+                .Enabled = chk_export.Checked
+            }
+            Dim archiveFunction As markform.ArchiveFunction = New markform.ArchiveFunction With {
+                .Enabled = chk_archive.Checked
+            }
+            Dim referenceFunction As markform.ReferenceFunction = New markform.ReferenceFunction With {
+                .Enabled = chk_ref.Checked
+            }
+            Dim bTFileFunction As markform.BTFileFunction = New markform.BTFileFunction With {
+                .Enabled = chk_btfile.Checked
+            }
+
+            Dim urc As markform.UserRestrictionsClass = New markform.UserRestrictionsClass With {
+                .FilePriority = chk_file_prio.Checked, .FileInformation = fi, .WorkFile = wf, .AssignUser = au, .FileEval = fileEval, .FileReturn = fileReturn, .Flagging = flagging, .Monitoring = monitoring,
+                .RatioTracker = ratioTracker, .IdleTracker = idleTracker, .WaitTracker = waitTracker, .FilesDue = filesDue, .UserList = userList, .WorkFlow = workFlow, .UploadFunction = uploadFunction,
+                .ExportFunction = exportFunction, .ArchiveFunction = archiveFunction, .ReportLog = reportLog, .ReferenceFunction = referenceFunction, .BTFileFunction = bTFileFunction, .ReturnFileBtn = chk_return_file.Checked
+            }
+
+            Dim restrictions As String = JsonConvert.SerializeObject(urc)
+            Console.WriteLine(restrictions)
+
+            If Not IsAll Then
+                UserRestriction = restrictions
+                Me.DialogResult = DialogResult.OK
+                Me.Close()
+            Else
+                Dim qry As Integer = db.nQuery("UPDATE dbo.UserData SET restrictions = '" & restrictions & "' WHERE Id = " & UserID)
+
+                If qry <> 0 Then
+                    MessageBox.Show(Me, "Success!", UserName & "'s restrictions successfully saved.", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    dgv_userlist(2, CurrentSelectedRow).Value = restrictions
+                Else
+                    MessageBox.Show(Me, "Failed!", UserName & "'s restrictions failed to save.", MessageBoxButtons.OK, MessageBoxIcon.[Error])
+                End If
+            End If
+
+        Catch ex As Exception
+            cf.Debug(ex)
+        End Try
+
+    End Sub
+
+    Private Sub btn_reset_Click(sender As Object, e As EventArgs)
+        SetRestriction(DefaultRestriction)
+    End Sub
+
+    Private Sub cbodep_indexchange(sender As Object, e As EventArgs)
+
+        Dim dep As String = cbo_preset_dep.SelectedValue.ToString, pos As String = cbo_preset_pos.SelectedValue.ToString
+        FilterCBO(dep, pos)
+        GetPreset()
+    End Sub
+
+    Private Sub cbopos_indexchanged(sender As Object, e As EventArgs)
+        GetPreset()
+    End Sub
+
+    Private Sub chk_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs)
+
+        Try
+            Select Case DirectCast(sender, Button).Name
+                Case "chk_file_info"
+                    gbox_fileinfo.Enabled = chk_file_info.Checked
+                Case "chk_work_file"
+                    gbox_workfile.Enabled = chk_work_file.Checked
+                Case "chk_assign_user"
+                    gbox_assign_user.Enabled = chk_assign_user.Checked
+                Case "chk_fe_allow_view_eval"
+                    pnl_evaldep.Enabled = chk_fe_allow_view_eval.Checked
+                Case "chk_file_eval"
+                    DirectCast(tab_file_eval, Control).Enabled = chk_file_eval.Checked
+                Case "chk_view_return"
+                    DirectCast(tab_view_return, Control).Enabled = chk_view_return.Checked
+                Case "chk_userlist"
+                    DirectCast(tab_userlist, Control).Enabled = chk_userlist.Checked
+                Case "chk_report_logs"
+                    DirectCast(tab_report_logs, Control).Enabled = chk_report_logs.Checked
+                Case "chk_flag_view_all"
+                    pnl_flag_allow_dep.Enabled = chk_flag_view_all.Checked
+                Case "chk_ret_allow_view"
+                    pnl_ret_allow_dep.Enabled = chk_ret_allow_view.Checked
+                Case "chk_rl_allow_bl"
+                    pnl_rl_allow_bl.Enabled = chk_rl_allow_bl.Enabled
+                Case "chk_rl_allow_il"
+                    pnl_rl_allow_bl.Enabled = chk_rl_allow_il.Checked
+            End Select
+
+        Catch ex As Exception
+            cf.Debug(ex)
+        End Try
+
+    End Sub
+
+    Private Sub dgv_userlist_CellClick(sender As Object, e As DataGridViewCellEventArgs)
+
+        Try
+            If e.RowIndex <> -1 Then
+                CurrentSelectedRow = e.RowIndex
+                Dim SelRow As DataGridViewRow = dgv_userlist.Rows(e.RowIndex)
+                UserID = Integer.Parse(SelRow.Cells(0).Value)
+                UserName = SelRow.Cells(1).Value.ToString.ToUpper
+                UserRestriction = SelRow.Cells(2).Value.ToString
+                SetRestriction(UserRestriction)
+            End If
+        Catch ex As Exception
+            cf.Debug(ex)
+        End Try
+    End Sub
+
+    Public Sub Filter_CheckChange(ByVal sender As String, ByVal e As EventArgs)
+        FilterDGV()
+    End Sub
 
 #End Region
+
+
 
 End Class
