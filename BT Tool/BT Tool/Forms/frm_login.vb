@@ -12,11 +12,12 @@ Public Class frm_login
 #End Region
 
 #Region "Events"
-    Private Sub Txt_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_username.KeyDown, txt_password.KeyDown
+    Private Sub txt_Key(sender As Object, e As KeyEventArgs) Handles txt_username.KeyUp, txt_password.KeyUp
         If e.KeyValue = 13 Then
             LoginValidation()
         End If
     End Sub
+
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         LoginValidation()
     End Sub
@@ -25,6 +26,9 @@ Public Class frm_login
         CustomFn.SetForm(Me)
         CustomFn.FormDrag(Me, Panel1)
         txt_username.Select()
+        If cf.IsFormOpen("frm_splash") Then
+            'Me.Dispose()
+        End If
     End Sub
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
         End
@@ -136,6 +140,10 @@ Public Class frm_login
             End Try
         End If
         'pbox_loader.Visible = False
+    End Sub
+
+    Sub test(sender As Object, e As EventArgs)
+
     End Sub
     ''' <summary>
     ''' Displaying error message to the label.

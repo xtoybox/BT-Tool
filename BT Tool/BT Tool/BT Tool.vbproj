@@ -29,6 +29,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -258,6 +259,12 @@
     <Compile Include="Forms\frm_return.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frm_splash.Designer.vb">
+      <DependentUpon>frm_splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_sub_monitoring.Designer.vb">
       <DependentUpon>frm_sub_monitoring.vb</DependentUpon>
     </Compile>
@@ -288,6 +295,12 @@
     <Compile Include="Forms\frm_workflow.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\SplashScreen2.Designer.vb">
+      <DependentUpon>SplashScreen2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\test.Designer.vb">
       <DependentUpon>test.vb</DependentUpon>
     </Compile>
@@ -303,9 +316,6 @@
     <Compile Include="Modules\RevisionCounter65.vb" />
     <Compile Include="Modules\SQLClass.vb" />
     <Compile Include="Modules\varMod.vb" />
-    <SplashScreen Include="Forms\SplashScreen.vb">
-      <SubType>Form</SubType>
-    </SplashScreen>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Modules\connection.vb" />
     <Compile Include="LogintestdbDataSet.Designer.vb">
@@ -335,10 +345,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SplashScreen.Designer.vb">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -401,6 +407,9 @@
     <EmbeddedResource Include="Forms\frm_return.resx">
       <DependentUpon>frm_return.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_splash.resx">
+      <DependentUpon>frm_splash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_sub_monitoring.resx">
       <DependentUpon>frm_sub_monitoring.vb</DependentUpon>
     </EmbeddedResource>
@@ -416,8 +425,8 @@
     <EmbeddedResource Include="Forms\frm_workflow.resx">
       <DependentUpon>frm_workflow.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SplashScreen.resx">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\SplashScreen2.resx">
+      <DependentUpon>SplashScreen2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

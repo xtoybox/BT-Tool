@@ -116,7 +116,14 @@ Public Class frm_upload
     Private Sub Filter_Event(sender As Object, e As EventArgs) Handles cbo_client.SelectedIndexChanged, txt_filename.TextChanged
         Filter()
     End Sub
+
+    Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
+        Me.Dispose()
+    End Sub
+
 #End Region
+
+
 #Region "Sub Routine"
     ''' <summary>
     ''' Loading data from the server and populate data to the datagridview

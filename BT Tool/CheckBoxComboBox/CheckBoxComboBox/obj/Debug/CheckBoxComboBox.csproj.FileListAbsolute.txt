@@ -22,3 +22,10 @@ C:\Users\Accolade P3\Documents\important\c# projects\CheckBoxComboBox\CheckBoxCo
 C:\Users\Accolade P3\Documents\important\c# projects\CheckBoxComboBox\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.csproj.CoreCompileInputs.cache
 C:\Users\Accolade P3\Documents\important\c# projects\CheckBoxComboBox\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.dll
 C:\Users\Accolade P3\Documents\important\c# projects\CheckBoxComboBox\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.pdb
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\CheckBoxComboBox\CheckBoxComboBox\bin\Debug\CheckBoxComboBox.dll
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\CheckBoxComboBox\CheckBoxComboBox\bin\Debug\CheckBoxComboBox.pdb
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\CheckBoxComboBox\CheckBoxComboBox\obj\Debug\PresentationControls.PopupComboBox.resources
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\CheckBoxComboBox\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.csproj.GenerateResource.cache
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\CheckBoxComboBox\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.csproj.CoreCompileInputs.cache
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\CheckBoxComboBox\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.dll
+C:\Users\Accolade P1\Desktop\BT-Tool\BT Tool\CheckBoxComboBox\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.pdb

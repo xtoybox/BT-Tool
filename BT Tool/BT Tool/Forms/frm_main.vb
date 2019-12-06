@@ -80,17 +80,21 @@ Public Class frm_main
 
 #Region "Events"
     Private Sub frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         Me.Show()
         Console.WriteLine("File Exist 1: " & File.Exists("\\accomediasvr\MediaFiles-2\FROOT\TRANSCRIPT\CC\cc\DOWNLOAD-MCY-10042017\CA unit 0007 SYSMAN\test.txt"))
         Console.WriteLine("File Exist 2: " & File.Exists("\\172.16.3.54\MediaFiles-2\FROOT\TRANSCRIPT\CC\cc\DOWNLOAD-MCY-10042017\CA unit 0007 SYSMAN\test.txt"))
         Dim login As DialogResult = frm_login.ShowDialog(Me)
         LoginDefault(login)
+
     End Sub
 
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles IdleTimer.Tick, WaitTimer.Tick
+
         If Not BWTimer.IsBusy Then
             BWTimer.RunWorkerAsync(main_gridview)
         End If
+
     End Sub
 
     Private Sub btn_loginout_Click(sender As Object, e As EventArgs) Handles btn_loginout.Click
@@ -126,7 +130,6 @@ Public Class frm_main
             End Try
         End If
     End Sub
-
 
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
         End
@@ -299,9 +302,11 @@ Public Class frm_main
                 MessageBox.Show(Me, "The file is currently being opened by other user.", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
+
     End Sub
 
     Private Sub btn_cancel_Click(sender As Object, e As EventArgs) Handles btn_cancel.Click
+
         If CustomVariables.FileID <> 0 Then
             Dim AddWhere As String = ""
             If CustomVariables.CurrentUserPosition.ToLower() <> "admin" Then
@@ -324,6 +329,7 @@ Public Class frm_main
                 cf.WriteToFile("{0}==>" & ex.ToString() & vbNewLine & qry, DebugFilePath)
             End Try
         End If
+
     End Sub
 
     Private Sub btn_refresh_Click(sender As Object, e As EventArgs) Handles btn_refresh.Click
@@ -584,6 +590,7 @@ Public Class frm_main
     End Sub
 
     Private Sub btn_Audio_Click(sender As Object, e As EventArgs) Handles btn_Audio.Click
+
         Dim CatchErrorMsg As String = "Something went wrong."
         Try
             Dim SoundName As String = txt_audio.Text
@@ -611,7 +618,7 @@ Public Class frm_main
                     End Try
                 End If
                 'get the name of the selected player
-                Dim rButton As String = gbox_players.Controls.OfType(Of RadioButton).FirstOrDefault(Function(r) r.Checked).Text
+                Dim rButton As String = TableLayoutPanel6.Controls.OfType(Of RadioButton).FirstOrDefault(Function(r) r.Checked).Text
                 Dim progDir As String = "" : Dim ProcStartInfo As New ProcessStartInfo
                 ProcStartInfo.Arguments = """" & locSound & """"
 
@@ -706,10 +713,6 @@ Public Class frm_main
             End Try
             LoadData()
         End If
-    End Sub
-
-    Private Sub btn_reference_Click(sender As Object, e As EventArgs) Handles btn_reference.Click
-
     End Sub
 
     Private Sub FormOpen_Click(sender As Object, e As EventArgs) Handles btn_break.Click, btn_break_log.Click,
@@ -809,11 +812,14 @@ Public Class frm_main
                     frm_upload.ShowDialog(Me)
 
             End Select
+
         Catch ex As Exception
             cf.WriteToFile("{0}==>" & ex.ToString(), DebugFilePath)
             MessageBox.Show(Me, "Something went wrong.", "Error Encountered!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+
         Me.Cursor = Cursors.Default
+
     End Sub
 
 #End Region
@@ -829,48 +835,20 @@ Public Class frm_main
             'JSONString = If(Not cf.IsStringEmpty(JSONString), JSONString, urc2.GetPresetRestriction(CustomVariables.CurrentUserDepartment, CustomVariables.CurrentUserPosition))
 
             Dim urc As markform.UserRestrictionsClass = JsonConvert.DeserializeObject(Of markform.UserRestrictionsClass)(JSONString)
-
-            Dim fi As markform.FileInformation = urc.FileInformation
-            Dim wf As markform.WorkFile = urc.WorkFile
-            Dim au As markform.AssignUser = urc.AssignUser
-
-            Dim fe As markform.FileEval = urc.FileEval
-            Dim fr As markform.FileReturn = urc.FileReturn
-            Dim flag As markform.Flagging = urc.Flagging
-            Dim mo As markform.Monitoring = urc.Monitoring
-            Dim rt As markform.RatioTracker = urc.RatioTracker
-            Dim it As markform.IdleTracker = urc.IdleTracker
-            Dim wt As markform.WaitTracker = urc.WaitTracker
-            Dim fd As markform.FilesDue = urc.FilesDue
-            Dim ua As markform.UserList = urc.UserList
-            Dim wfw As markform.WorkFlow = urc.WorkFlow
-            Dim uf As markform.UploadFunction = urc.UploadFunction
-            Dim ef As markform.ExportFunction = urc.ExportFunction
-            Dim af As markform.ArchiveFunction = urc.ArchiveFunction
-            Dim rl As markform.ReportLog = urc.ReportLog
-            Dim rf As markform.ReferenceFunction = urc.ReferenceFunction
+            Dim fi As markform.FileInformation = urc.FileInformation : Dim wf As markform.WorkFile = urc.WorkFile : Dim au As markform.AssignUser = urc.AssignUser
+            Dim fe As markform.FileEval = urc.FileEval : Dim fr As markform.FileReturn = urc.FileReturn : Dim flag As markform.Flagging = urc.Flagging
+            Dim mo As markform.Monitoring = urc.Monitoring : Dim rt As markform.RatioTracker = urc.RatioTracker : Dim it As markform.IdleTracker = urc.IdleTracker
+            Dim wt As markform.WaitTracker = urc.WaitTracker : Dim fd As markform.FilesDue = urc.FilesDue : Dim ua As markform.UserList = urc.UserList
+            Dim wfw As markform.WorkFlow = urc.WorkFlow : Dim uf As markform.UploadFunction = urc.UploadFunction : Dim ef As markform.ExportFunction = urc.ExportFunction
+            Dim af As markform.ArchiveFunction = urc.ArchiveFunction : Dim rl As markform.ReportLog = urc.ReportLog : Dim rf As markform.ReferenceFunction = urc.ReferenceFunction
             Dim btf As markform.BTFileFunction = urc.BTFileFunction
 
-            btn_return.Visible = urc.ReturnFileBtn
-            btn_file_eval.Visible = fe.Enabled
-            btn_monitoring.Visible = mo.Enabled
-            btn_return.Visible = fr.Enabled
-            btn_flagging.Visible = flag.Enabled
-            btn_ratio_tracker.Visible = rt.Enabled
-            btn_idle_tracker.Visible = it.Enabled
-            btn_wait_tracker.Visible = wt.Enabled
-            btn_files_due.Visible = fd.Enabled
-            btn_userlist.Visible = ua.Enabled
-            btn_workflow.Visible = wfw.Enabled
-            btn_upload.Visible = uf.Enabled
-            btn_export.Visible = ef.Enabled
-            btn_archive.Visible = af.Enabled
-            btn_report_log.Visible = rl.Enabled
-            btn_reference.Visible = rf.Enabled
-            btn_file.Visible = btf.Enabled
+            btn_return.Visible = urc.ReturnFileBtn : btn_file_eval.Visible = fe.Enabled : btn_monitoring.Visible = mo.Enabled : btn_return.Visible = fr.Enabled : btn_flagging.Visible = flag.Enabled
+            btn_ratio_tracker.Visible = rt.Enabled : btn_idle_tracker.Visible = it.Enabled : btn_wait_tracker.Visible = wt.Enabled : btn_files_due.Visible = fd.Enabled
+            btn_userlist.Visible = ua.Enabled : btn_workflow.Visible = wfw.Enabled : btn_upload.Visible = uf.Enabled : btn_export.Visible = ef.Enabled : btn_archive.Visible = af.Enabled
+            btn_report_log.Visible = rl.Enabled : btn_reference.Visible = rf.Enabled : btn_file.Visible = btf.Enabled
 
-            gbox_prio.Enabled = urc.FilePriority
-            gbox_file_info.Enabled = fi.Enabled
+            gbox_prio.Enabled = urc.FilePriority : gbox_file_info.Enabled = fi.Enabled
 
             GboxUList.Visible = au.Enabled
             If fi.Enabled Then
@@ -1563,6 +1541,7 @@ Public Class frm_main
             End If
         End If
     End Sub
+
     ''' <summary>
     ''' Background Worker for idle and wait timer
     ''' </summary>

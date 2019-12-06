@@ -46,7 +46,7 @@ Partial Class frm_upload
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_close = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -306,7 +306,7 @@ Partial Class frm_upload
         'Panel1
         '
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btn_close)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -316,19 +316,19 @@ Partial Class frm_upload
         Me.Panel1.Size = New System.Drawing.Size(931, 27)
         Me.Panel1.TabIndex = 0
         '
-        'Button1
+        'btn_close
         '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(900, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(31, 27)
-        Me.Button1.TabIndex = 10
-        Me.Button1.TabStop = False
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_close.BackColor = System.Drawing.Color.Red
+        Me.btn_close.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_close.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_close.Image = CType(resources.GetObject("btn_close.Image"), System.Drawing.Image)
+        Me.btn_close.Location = New System.Drawing.Point(900, 0)
+        Me.btn_close.Name = "btn_close"
+        Me.btn_close.Size = New System.Drawing.Size(31, 27)
+        Me.btn_close.TabIndex = 10
+        Me.btn_close.TabStop = False
+        Me.btn_close.UseVisualStyleBackColor = False
         '
         'frm_upload
         '
@@ -379,5 +379,5 @@ Partial Class frm_upload
     Friend WithEvents btn_reload As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_close As Button
 End Class

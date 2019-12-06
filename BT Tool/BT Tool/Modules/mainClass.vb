@@ -3,14 +3,15 @@ Imports System.Globalization
 
 Public Class mainClass
 
-    Private db As New markform.SQLClass
-    Dim baseLoc As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-    Private CustomFn As New CustomFunctions()
 
-    Public Function isStringEmpty(ByRef str) As Boolean
-        Return String.IsNullOrEmpty(str) OrElse String.IsNullOrWhiteSpace(str)
-        Return isStringEmpty
-    End Function
+    'Dim baseLoc As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+    'Private CustomFn As New CustomFunctions()
+    'Private db As New markform.SQLClass
+
+    'Public Function isStringEmpty(ByRef str) As Boolean
+    '    Return String.IsNullOrEmpty(str) OrElse String.IsNullOrWhiteSpace(str)
+    '    Return isStringEmpty
+    'End Function
 
     'Public Function userLogin(val As Integer) As Boolean
 
