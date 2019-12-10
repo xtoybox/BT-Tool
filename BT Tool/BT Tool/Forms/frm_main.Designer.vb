@@ -321,7 +321,7 @@ Partial Class frm_main
         Me.btn_viewreturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btn_viewreturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_viewreturn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_viewreturn.ForeColor = System.Drawing.Color.White
+        Me.btn_viewreturn.ForeColor = System.Drawing.Color.DimGray
         Me.btn_viewreturn.Image = CType(resources.GetObject("btn_viewreturn.Image"), System.Drawing.Image)
         Me.btn_viewreturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_viewreturn.Location = New System.Drawing.Point(0, 141)
@@ -573,7 +573,7 @@ Partial Class frm_main
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.5!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.gbox_file_info, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.gbox_work_file, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.gbox_prio, 0, 0)
@@ -591,10 +591,10 @@ Partial Class frm_main
         Me.gbox_file_info.Controls.Add(Me.TableLayoutPanel2)
         Me.gbox_file_info.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gbox_file_info.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbox_file_info.Location = New System.Drawing.Point(418, 3)
+        Me.gbox_file_info.Location = New System.Drawing.Point(413, 3)
         Me.gbox_file_info.Name = "gbox_file_info"
         Me.gbox_file_info.Padding = New System.Windows.Forms.Padding(6, 3, 6, 6)
-        Me.gbox_file_info.Size = New System.Drawing.Size(388, 155)
+        Me.gbox_file_info.Size = New System.Drawing.Size(384, 155)
         Me.gbox_file_info.TabIndex = 64
         Me.gbox_file_info.TabStop = False
         Me.gbox_file_info.Text = "File Information:"
@@ -630,7 +630,7 @@ Partial Class frm_main
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(376, 132)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(372, 132)
         Me.TableLayoutPanel2.TabIndex = 46
         '
         'cbo_service
@@ -642,7 +642,7 @@ Partial Class frm_main
         Me.cbo_service.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.cbo_service.Location = New System.Drawing.Point(73, 31)
         Me.cbo_service.Name = "cbo_service"
-        Me.cbo_service.Size = New System.Drawing.Size(112, 21)
+        Me.cbo_service.Size = New System.Drawing.Size(110, 21)
         Me.cbo_service.TabIndex = 7
         '
         'txt_accuracy
@@ -651,17 +651,17 @@ Partial Class frm_main
         Me.txt_accuracy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_accuracy.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_accuracy.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_accuracy.Location = New System.Drawing.Point(261, 88)
+        Me.txt_accuracy.Location = New System.Drawing.Point(259, 88)
         Me.txt_accuracy.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_accuracy.Name = "txt_accuracy"
-        Me.txt_accuracy.Size = New System.Drawing.Size(112, 22)
+        Me.txt_accuracy.Size = New System.Drawing.Size(110, 22)
         Me.txt_accuracy.TabIndex = 22
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(191, 28)
+        Me.Label7.Location = New System.Drawing.Point(189, 28)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(60, 16)
         Me.Label7.TabIndex = 17
@@ -673,17 +673,17 @@ Partial Class frm_main
         Me.txt_page.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_page.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_page.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_page.Location = New System.Drawing.Point(261, 60)
+        Me.txt_page.Location = New System.Drawing.Point(259, 60)
         Me.txt_page.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_page.Name = "txt_page"
-        Me.txt_page.Size = New System.Drawing.Size(112, 22)
+        Me.txt_page.Size = New System.Drawing.Size(110, 22)
         Me.txt_page.TabIndex = 20
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(191, 56)
+        Me.Label6.Location = New System.Drawing.Point(189, 56)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(40, 16)
         Me.Label6.TabIndex = 19
@@ -695,17 +695,17 @@ Partial Class frm_main
         Me.txt_duration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_duration.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_duration.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_duration.Location = New System.Drawing.Point(261, 32)
+        Me.txt_duration.Location = New System.Drawing.Point(259, 32)
         Me.txt_duration.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_duration.Name = "txt_duration"
-        Me.txt_duration.Size = New System.Drawing.Size(112, 22)
+        Me.txt_duration.Size = New System.Drawing.Size(110, 22)
         Me.txt_duration.TabIndex = 18
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(191, 84)
+        Me.Label5.Location = New System.Drawing.Point(189, 84)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(63, 16)
         Me.Label5.TabIndex = 21
@@ -717,10 +717,10 @@ Partial Class frm_main
         Me.txt_receive.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_receive.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_receive.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_receive.Location = New System.Drawing.Point(261, 4)
+        Me.txt_receive.Location = New System.Drawing.Point(259, 4)
         Me.txt_receive.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_receive.Name = "txt_receive"
-        Me.txt_receive.Size = New System.Drawing.Size(112, 22)
+        Me.txt_receive.Size = New System.Drawing.Size(110, 22)
         Me.txt_receive.TabIndex = 16
         '
         'txt_client
@@ -732,7 +732,7 @@ Partial Class frm_main
         Me.txt_client.Location = New System.Drawing.Point(73, 60)
         Me.txt_client.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_client.Name = "txt_client"
-        Me.txt_client.Size = New System.Drawing.Size(112, 22)
+        Me.txt_client.Size = New System.Drawing.Size(110, 22)
         Me.txt_client.TabIndex = 12
         '
         'txt_due
@@ -744,7 +744,7 @@ Partial Class frm_main
         Me.txt_due.Location = New System.Drawing.Point(73, 4)
         Me.txt_due.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_due.Name = "txt_due"
-        Me.txt_due.Size = New System.Drawing.Size(112, 22)
+        Me.txt_due.Size = New System.Drawing.Size(110, 22)
         Me.txt_due.TabIndex = 8
         '
         'Label11
@@ -781,7 +781,7 @@ Partial Class frm_main
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(191, 0)
+        Me.Label8.Location = New System.Drawing.Point(189, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 16)
         Me.Label8.TabIndex = 15
@@ -796,7 +796,7 @@ Partial Class frm_main
         Me.txt_branch.Location = New System.Drawing.Point(73, 88)
         Me.txt_branch.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_branch.Name = "txt_branch"
-        Me.txt_branch.Size = New System.Drawing.Size(112, 22)
+        Me.txt_branch.Size = New System.Drawing.Size(110, 22)
         Me.txt_branch.TabIndex = 14
         '
         'Label22
@@ -814,10 +814,10 @@ Partial Class frm_main
         Me.gbox_work_file.Controls.Add(Me.Panel6)
         Me.gbox_work_file.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gbox_work_file.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbox_work_file.Location = New System.Drawing.Point(94, 3)
+        Me.gbox_work_file.Location = New System.Drawing.Point(93, 3)
         Me.gbox_work_file.Name = "gbox_work_file"
         Me.gbox_work_file.Padding = New System.Windows.Forms.Padding(6, 3, 6, 6)
-        Me.gbox_work_file.Size = New System.Drawing.Size(318, 155)
+        Me.gbox_work_file.Size = New System.Drawing.Size(314, 155)
         Me.gbox_work_file.TabIndex = 63
         Me.gbox_work_file.TabStop = False
         Me.gbox_work_file.Text = "Work File:"
@@ -829,7 +829,7 @@ Partial Class frm_main
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel6.Location = New System.Drawing.Point(6, 17)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(306, 132)
+        Me.Panel6.Size = New System.Drawing.Size(302, 132)
         Me.Panel6.TabIndex = 49
         '
         'TableLayoutPanel5
@@ -850,7 +850,7 @@ Partial Class frm_main
         Me.TableLayoutPanel5.RowCount = 2
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(306, 63)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(302, 63)
         Me.TableLayoutPanel5.TabIndex = 32
         '
         'btn_Doc
@@ -861,7 +861,7 @@ Partial Class frm_main
         Me.btn_Doc.FlatAppearance.BorderSize = 0
         Me.btn_Doc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_Doc.Image = CType(resources.GetObject("btn_Doc.Image"), System.Drawing.Image)
-        Me.btn_Doc.Location = New System.Drawing.Point(277, 35)
+        Me.btn_Doc.Location = New System.Drawing.Point(273, 35)
         Me.btn_Doc.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_Doc.Name = "btn_Doc"
         Me.btn_Doc.Size = New System.Drawing.Size(26, 21)
@@ -877,7 +877,7 @@ Partial Class frm_main
         Me.txt_document.Location = New System.Drawing.Point(78, 35)
         Me.txt_document.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_document.Name = "txt_document"
-        Me.txt_document.Size = New System.Drawing.Size(193, 21)
+        Me.txt_document.Size = New System.Drawing.Size(189, 21)
         Me.txt_document.TabIndex = 42
         '
         'btn_Audio
@@ -887,7 +887,7 @@ Partial Class frm_main
         Me.btn_Audio.FlatAppearance.BorderSize = 0
         Me.btn_Audio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_Audio.Image = CType(resources.GetObject("btn_Audio.Image"), System.Drawing.Image)
-        Me.btn_Audio.Location = New System.Drawing.Point(277, 4)
+        Me.btn_Audio.Location = New System.Drawing.Point(273, 4)
         Me.btn_Audio.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_Audio.Name = "btn_Audio"
         Me.btn_Audio.Size = New System.Drawing.Size(26, 21)
@@ -914,7 +914,7 @@ Partial Class frm_main
         Me.txt_audio.Location = New System.Drawing.Point(78, 4)
         Me.txt_audio.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_audio.Name = "txt_audio"
-        Me.txt_audio.Size = New System.Drawing.Size(193, 21)
+        Me.txt_audio.Size = New System.Drawing.Size(189, 21)
         Me.txt_audio.TabIndex = 41
         '
         'Label10
@@ -935,7 +935,7 @@ Partial Class frm_main
         Me.gbox_players.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbox_players.Location = New System.Drawing.Point(0, 0)
         Me.gbox_players.Name = "gbox_players"
-        Me.gbox_players.Size = New System.Drawing.Size(306, 69)
+        Me.gbox_players.Size = New System.Drawing.Size(302, 69)
         Me.gbox_players.TabIndex = 31
         Me.gbox_players.TabStop = False
         Me.gbox_players.Text = "Select the player to be used"
@@ -954,7 +954,7 @@ Partial Class frm_main
         Me.TableLayoutPanel6.RowCount = 2
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(300, 49)
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(296, 49)
         Me.TableLayoutPanel6.TabIndex = 0
         '
         'rd_acqt
@@ -972,7 +972,7 @@ Partial Class frm_main
         '
         Me.rd_pepsup.AutoSize = True
         Me.rd_pepsup.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rd_pepsup.Location = New System.Drawing.Point(153, 3)
+        Me.rd_pepsup.Location = New System.Drawing.Point(151, 3)
         Me.rd_pepsup.Name = "rd_pepsup"
         Me.rd_pepsup.Size = New System.Drawing.Size(110, 18)
         Me.rd_pepsup.TabIndex = 9
@@ -1000,7 +1000,7 @@ Partial Class frm_main
         Me.gbox_prio.Location = New System.Drawing.Point(3, 3)
         Me.gbox_prio.Name = "gbox_prio"
         Me.gbox_prio.Padding = New System.Windows.Forms.Padding(6, 3, 6, 6)
-        Me.gbox_prio.Size = New System.Drawing.Size(85, 155)
+        Me.gbox_prio.Size = New System.Drawing.Size(84, 155)
         Me.gbox_prio.TabIndex = 61
         Me.gbox_prio.TabStop = False
         Me.gbox_prio.Text = "File Priority:"
@@ -1018,7 +1018,7 @@ Partial Class frm_main
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(73, 132)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(72, 132)
         Me.TableLayoutPanel3.TabIndex = 47
         '
         'chk_blank
@@ -1053,10 +1053,10 @@ Partial Class frm_main
         Me.GboxUList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GboxUList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GboxUList.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GboxUList.Location = New System.Drawing.Point(812, 3)
+        Me.GboxUList.Location = New System.Drawing.Point(803, 3)
         Me.GboxUList.Name = "GboxUList"
         Me.GboxUList.Padding = New System.Windows.Forms.Padding(6, 3, 6, 6)
-        Me.GboxUList.Size = New System.Drawing.Size(264, 155)
+        Me.GboxUList.Size = New System.Drawing.Size(261, 155)
         Me.GboxUList.TabIndex = 59
         Me.GboxUList.TabStop = False
         Me.GboxUList.Text = "Assign User:"
@@ -1092,7 +1092,7 @@ Partial Class frm_main
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(252, 132)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(249, 132)
         Me.TableLayoutPanel4.TabIndex = 0
         '
         'Label12
@@ -1112,9 +1112,9 @@ Partial Class frm_main
         Me.cbo_qapr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_qapr.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_qapr.FormattingEnabled = True
-        Me.cbo_qapr.Location = New System.Drawing.Point(177, 31)
+        Me.cbo_qapr.Location = New System.Drawing.Point(175, 31)
         Me.cbo_qapr.Name = "cbo_qapr"
-        Me.cbo_qapr.Size = New System.Drawing.Size(72, 24)
+        Me.cbo_qapr.Size = New System.Drawing.Size(71, 24)
         Me.cbo_qapr.TabIndex = 41
         '
         'Label13
@@ -1134,9 +1134,9 @@ Partial Class frm_main
         Me.cbo_qabt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_qabt.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_qabt.FormattingEnabled = True
-        Me.cbo_qabt.Location = New System.Drawing.Point(177, 3)
+        Me.cbo_qabt.Location = New System.Drawing.Point(175, 3)
         Me.cbo_qabt.Name = "cbo_qabt"
-        Me.cbo_qabt.Size = New System.Drawing.Size(72, 24)
+        Me.cbo_qabt.Size = New System.Drawing.Size(71, 24)
         Me.cbo_qabt.TabIndex = 39
         '
         'cbo_bt
@@ -1148,14 +1148,14 @@ Partial Class frm_main
         Me.cbo_bt.FormattingEnabled = True
         Me.cbo_bt.Location = New System.Drawing.Point(47, 3)
         Me.cbo_bt.Name = "cbo_bt"
-        Me.cbo_bt.Size = New System.Drawing.Size(72, 24)
+        Me.cbo_bt.Size = New System.Drawing.Size(70, 24)
         Me.cbo_bt.TabIndex = 31
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(125, 28)
+        Me.Label18.Location = New System.Drawing.Point(123, 28)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(42, 16)
         Me.Label18.TabIndex = 40
@@ -1170,14 +1170,14 @@ Partial Class frm_main
         Me.cbo_pr.FormattingEnabled = True
         Me.cbo_pr.Location = New System.Drawing.Point(47, 31)
         Me.cbo_pr.Name = "cbo_pr"
-        Me.cbo_pr.Size = New System.Drawing.Size(72, 24)
+        Me.cbo_pr.Size = New System.Drawing.Size(70, 24)
         Me.cbo_pr.TabIndex = 33
         '
         'Label19
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(125, 0)
+        Me.Label19.Location = New System.Drawing.Point(123, 0)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(39, 16)
         Me.Label19.TabIndex = 38
@@ -1190,9 +1190,9 @@ Partial Class frm_main
         Me.cbo_qacc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_qacc.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_qacc.FormattingEnabled = True
-        Me.cbo_qacc.Location = New System.Drawing.Point(177, 87)
+        Me.cbo_qacc.Location = New System.Drawing.Point(175, 87)
         Me.cbo_qacc.Name = "cbo_qacc"
-        Me.cbo_qacc.Size = New System.Drawing.Size(72, 24)
+        Me.cbo_qacc.Size = New System.Drawing.Size(71, 24)
         Me.cbo_qacc.TabIndex = 43
         '
         'cbo_qast
@@ -1202,9 +1202,9 @@ Partial Class frm_main
         Me.cbo_qast.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_qast.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_qast.FormattingEnabled = True
-        Me.cbo_qast.Location = New System.Drawing.Point(177, 59)
+        Me.cbo_qast.Location = New System.Drawing.Point(175, 59)
         Me.cbo_qast.Name = "cbo_qast"
-        Me.cbo_qast.Size = New System.Drawing.Size(72, 24)
+        Me.cbo_qast.Size = New System.Drawing.Size(71, 24)
         Me.cbo_qast.TabIndex = 45
         '
         'cbo_cc
@@ -1216,7 +1216,7 @@ Partial Class frm_main
         Me.cbo_cc.FormattingEnabled = True
         Me.cbo_cc.Location = New System.Drawing.Point(47, 87)
         Me.cbo_cc.Name = "cbo_cc"
-        Me.cbo_cc.Size = New System.Drawing.Size(72, 24)
+        Me.cbo_cc.Size = New System.Drawing.Size(70, 24)
         Me.cbo_cc.TabIndex = 35
         '
         'cbo_st
@@ -1228,14 +1228,14 @@ Partial Class frm_main
         Me.cbo_st.FormattingEnabled = True
         Me.cbo_st.Location = New System.Drawing.Point(47, 59)
         Me.cbo_st.Name = "cbo_st"
-        Me.cbo_st.Size = New System.Drawing.Size(72, 24)
+        Me.cbo_st.Size = New System.Drawing.Size(70, 24)
         Me.cbo_st.TabIndex = 37
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(125, 84)
+        Me.Label17.Location = New System.Drawing.Point(123, 84)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(46, 16)
         Me.Label17.TabIndex = 42
@@ -1245,7 +1245,7 @@ Partial Class frm_main
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(125, 56)
+        Me.Label16.Location = New System.Drawing.Point(123, 56)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(39, 16)
         Me.Label16.TabIndex = 44

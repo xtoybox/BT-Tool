@@ -24,8 +24,8 @@ Partial Class frm_logout
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_logout))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_cancel = New System.Windows.Forms.Button()
+        Me.btn_yes = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -40,33 +40,33 @@ Partial Class frm_logout
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Would you like to Log Out ?"
         '
-        'Button2
+        'btn_cancel
         '
-        Me.Button2.BackColor = System.Drawing.Color.Maroon
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(171, 62)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(98, 34)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "CANCEL"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn_cancel.BackColor = System.Drawing.Color.Maroon
+        Me.btn_cancel.FlatAppearance.BorderSize = 0
+        Me.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancel.ForeColor = System.Drawing.Color.White
+        Me.btn_cancel.Location = New System.Drawing.Point(171, 62)
+        Me.btn_cancel.Name = "btn_cancel"
+        Me.btn_cancel.Size = New System.Drawing.Size(98, 34)
+        Me.btn_cancel.TabIndex = 2
+        Me.btn_cancel.Text = "CANCEL"
+        Me.btn_cancel.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btn_yes
         '
-        Me.Button1.BackColor = System.Drawing.Color.Green
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(32, 62)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 34)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "YES"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_yes.BackColor = System.Drawing.Color.Green
+        Me.btn_yes.FlatAppearance.BorderSize = 0
+        Me.btn_yes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_yes.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_yes.ForeColor = System.Drawing.Color.White
+        Me.btn_yes.Location = New System.Drawing.Point(32, 62)
+        Me.btn_yes.Name = "btn_yes"
+        Me.btn_yes.Size = New System.Drawing.Size(98, 34)
+        Me.btn_yes.TabIndex = 3
+        Me.btn_yes.Text = "YES"
+        Me.btn_yes.UseVisualStyleBackColor = False
         '
         'frm_logout
         '
@@ -75,8 +75,8 @@ Partial Class frm_logout
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(298, 127)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_cancel)
+        Me.Controls.Add(Me.btn_yes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_logout"
@@ -89,6 +89,6 @@ Partial Class frm_logout
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_cancel As Button
+    Friend WithEvents btn_yes As Button
 End Class

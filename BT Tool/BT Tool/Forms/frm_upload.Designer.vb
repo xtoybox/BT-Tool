@@ -245,6 +245,9 @@ Partial Class frm_upload
         '
         'dgv_upload
         '
+        Me.dgv_upload.AllowUserToAddRows = False
+        Me.dgv_upload.AllowUserToDeleteRows = False
+        Me.dgv_upload.AllowUserToResizeRows = False
         Me.dgv_upload.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_upload.BackgroundColor = System.Drawing.Color.White
         Me.dgv_upload.BorderStyle = System.Windows.Forms.BorderStyle.None

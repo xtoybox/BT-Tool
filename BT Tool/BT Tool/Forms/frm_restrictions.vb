@@ -496,10 +496,12 @@ Public Class frm_restrictions
         GetPreset()
     End Sub
 
-    Private Sub chk_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub chk_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles chk_file_info.CheckedChanged, chk_work_file.CheckedChanged, chk_assign_user.CheckedChanged, chk_fe_allow_view_eval.CheckedChanged,
+                                                                                        chk_file_eval.CheckedChanged, chk_view_return.CheckedChanged, chk_userlist.CheckedChanged, chk_report_logs.CheckedChanged,
+                                                                                        chk_flag_view_all.CheckedChanged, chk_ret_allow_view.CheckedChanged, chk_rl_allow_bl.CheckedChanged, chk_rl_allow_il.CheckedChanged
 
         Try
-            Select Case DirectCast(sender, Button).Name
+            Select Case DirectCast(sender, CheckBox).Name
                 Case "chk_file_info"
                     gbox_fileinfo.Enabled = chk_file_info.Checked
                 Case "chk_work_file"

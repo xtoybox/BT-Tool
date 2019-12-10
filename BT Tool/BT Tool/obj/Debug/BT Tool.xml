@@ -767,6 +767,22 @@ BT Tool
  Setting the restriction for user list form.
  </summary>
 </member>
+<member name="M:BT_Tool.frm_workflow.PopulateCBO(System.Windows.Forms.ComboBox)">
+ <summary>
+ Populate data to combobox
+ </summary>
+ <param name="cbo"></param>
+</member>
+<member name="M:BT_Tool.frm_workflow.ResetToDefault">
+ <summary>
+ Reset the selected item to default
+ </summary>
+</member>
+<member name="M:BT_Tool.frm_workflow.LoadWorkFlow">
+ <summary>
+ Load Data to datagridview
+ </summary>
+</member>
 <member name="T:BT_Tool.BorderStyleNoneExtensions.Resizer">
  <summary>
 Provides resizing functionality to a BorderStyle-None Form.

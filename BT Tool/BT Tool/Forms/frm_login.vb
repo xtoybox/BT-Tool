@@ -4,7 +4,6 @@ Imports System.Data.SqlClient
 
 Public Class frm_login
 
-
 #Region "Initialize Classes"
     Private db As New markform.SQLClass
     Private cf As New markform.CustomClass
@@ -98,6 +97,7 @@ Public Class frm_login
                                 End If
                             End If
                         End If
+
                         'check if there's an error from validating the above conditions and display error
                         If errmsg.Count > 0 Then
                             IsOK = False
@@ -142,9 +142,6 @@ Public Class frm_login
         'pbox_loader.Visible = False
     End Sub
 
-    Sub test(sender As Object, e As EventArgs)
-
-    End Sub
     ''' <summary>
     ''' Displaying error message to the label.
     ''' </summary>
@@ -157,6 +154,7 @@ Public Class frm_login
             txt.BackColor = Color.FromArgb(233, 170, 170) 'change the color of all the txtbox that has an error
         Next
     End Sub
+
 
 #End Region
 

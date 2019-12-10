@@ -211,9 +211,9 @@ Public Class frm_userlist
     End Sub
 
     Private Sub btn_edit_restrict_Click(sender As Object, e As EventArgs) Handles btn_edit_restrict.Click
-        Dim frmrestriction As markform.frm_restriction
-        If Not cf.IsFormOpen("frm_restriction") Then
-            frmrestriction = New markform.frm_restriction(New Object() {EditUID, txt_uname.Text, UserRestrictions, False, CustomVariables.CurrentUserID})
+        Dim frmrestriction As frm_restrictions
+        If Not cf.IsFormOpen("frm_restrictions") Then
+            frmrestriction = New frm_restrictions(New Object() {EditUID, txt_uname.Text, UserRestrictions, False, CustomVariables.CurrentUserID})
             If frmrestriction.ShowDialog(Me) = DialogResult.OK Then
                 UserRestrictions = frmrestriction.UserRestriction
             End If
@@ -223,9 +223,9 @@ Public Class frm_userlist
     End Sub
 
     Private Sub btn_open_restrict_editor_Click(sender As Object, e As EventArgs) Handles btn_open_restrict_editor.Click
-        Dim frmrestriction As markform.frm_restriction
-        If Not cf.IsFormOpen("frm_restriction") Then
-            frmrestriction = New markform.frm_restriction(New Object() {0, "", "", True, CustomVariables.CurrentUserID})
+        Dim frmrestriction As frm_restrictions
+        If Not cf.IsFormOpen("frm_restrictions") Then
+            frmrestriction = New frm_restrictions(New Object() {0, "", "", True, CustomVariables.CurrentUserID})
             If frmrestriction.ShowDialog(Me) = DialogResult.OK Then
                 UserRestrictions = frmrestriction.UserRestriction
             End If

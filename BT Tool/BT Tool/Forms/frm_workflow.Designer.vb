@@ -26,7 +26,7 @@ Partial Class frm_workflow
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_close = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.dgv_wf = New System.Windows.Forms.DataGridView()
@@ -58,7 +58,7 @@ Partial Class frm_workflow
         'Panel1
         '
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btn_close)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -66,19 +66,19 @@ Partial Class frm_workflow
         Me.Panel1.Size = New System.Drawing.Size(354, 27)
         Me.Panel1.TabIndex = 0
         '
-        'Button1
+        'btn_close
         '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(323, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(31, 27)
-        Me.Button1.TabIndex = 12
-        Me.Button1.TabStop = False
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_close.BackColor = System.Drawing.Color.Red
+        Me.btn_close.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_close.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_close.Image = CType(resources.GetObject("btn_close.Image"), System.Drawing.Image)
+        Me.btn_close.Location = New System.Drawing.Point(323, 0)
+        Me.btn_close.Name = "btn_close"
+        Me.btn_close.Size = New System.Drawing.Size(31, 27)
+        Me.btn_close.TabIndex = 12
+        Me.btn_close.TabStop = False
+        Me.btn_close.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -411,5 +411,5 @@ Partial Class frm_workflow
     Friend WithEvents cbo_step1 As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_close As Button
 End Class

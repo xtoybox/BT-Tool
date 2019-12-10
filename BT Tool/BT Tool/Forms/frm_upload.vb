@@ -62,11 +62,13 @@ Public Class frm_upload
         'checking if there is a last upload data
         Dim lud As String = cf.ReadAppSetting("LastScanData") 'Assigning value from the application settings
         'if lud is not "NOT FOUND" then give option to the user to use the load 
+
         If lud <> "NOT FOUND" Then
             LastScanData = lud
             Dim dr As DialogResult = MessageBox.Show(Me, "Would you like to load the data from last scan?", "Confirm Load Files", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             UseLastScan = (dr = DialogResult.Yes)
         End If
+
         dgv_upload.DataSource = vbNull
         LoadFiles()
         LoadWorkFlowDataSource()
@@ -190,6 +192,10 @@ Public Class frm_upload
                             Dim cl As String = row(1) : Dim br As String = row(2) : Dim fn As String = row(3)
                             CBFilnames.Add("'" & cl & br & fn & "'") 'this will be used for checking if data is already exist in the database.
                             progress.Report(fn) 'report progress. Showing the user the filename of the current data that is being added to the datatable and adding incrementing the CurrentCountFiles
+                            Dim pl As Integer = 0
+                            For pl = 0 To 8
+                                Console.WriteLine(row(pl))
+                            Next
                             dt.Rows.Add(row(0), row(1), row(2), row(3), row(4), row(5), row(6), row(7), row(8)) 'adding the data to the datatable
                             ClItm.Add(row(1)) 'adding an item to the client list.
                             Sleep(100)

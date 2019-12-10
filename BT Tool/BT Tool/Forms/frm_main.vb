@@ -32,6 +32,7 @@ Public Class frm_main
     ''' A class for manipulating database (eg. INSERT,UPDATE,DELETE,SELECT)
     ''' </summary>
     Private db As New markform.SQLClass
+    Private CustomFn As New CustomFunctions()
     Private lastInputInf As New LASTINPUTINFO()
 #End Region
 
@@ -82,8 +83,12 @@ Public Class frm_main
     Private Sub frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Me.Show()
-        Console.WriteLine("File Exist 1: " & File.Exists("\\accomediasvr\MediaFiles-2\FROOT\TRANSCRIPT\CC\cc\DOWNLOAD-MCY-10042017\CA unit 0007 SYSMAN\test.txt"))
-        Console.WriteLine("File Exist 2: " & File.Exists("\\172.16.3.54\MediaFiles-2\FROOT\TRANSCRIPT\CC\cc\DOWNLOAD-MCY-10042017\CA unit 0007 SYSMAN\test.txt"))
+        CustomFn.SetForm(Me)
+        CustomFn.FormDrag(Me, Panel4)
+        CustomFn.FormDrag(Me, Label1)
+        CustomFn.FormDrag(Me, Label4)
+        'Console.WriteLine("File Exist 1: " & File.Exists("\\accomediasvr\MediaFiles-2\FROOT\TRANSCRIPT\CC\cc\DOWNLOAD-MCY-10042017\CA unit 0007 SYSMAN\test.txt"))
+        'Console.WriteLine("File Exist 2: " & File.Exists("\\172.16.3.54\MediaFiles-2\FROOT\TRANSCRIPT\CC\cc\DOWNLOAD-MCY-10042017\CA unit 0007 SYSMAN\test.txt"))
         Dim login As DialogResult = frm_login.ShowDialog(Me)
         LoginDefault(login)
 
@@ -98,6 +103,9 @@ Public Class frm_main
     End Sub
 
     Private Sub btn_loginout_Click(sender As Object, e As EventArgs) Handles btn_loginout.Click
+
+        frm_logout.ShowDialog()
+
         Dim dr As DialogResult = MessageBox.Show("Are you sure you want to logout", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If dr = DialogResult.Yes Then
@@ -110,6 +118,7 @@ Public Class frm_main
                         CustomVariables.FileID = 0
                     End If
                 End If
+
                 Me.Text = "BT TOOL"
 
                 For Each frm As Form In My.Application.OpenForms
@@ -219,7 +228,6 @@ Public Class frm_main
                         Select Case CustomVariables.CurrentUserPosition
                             Case "admin", "ts", "auditor"
                                 txt_page.Text = SelectedRow.Cells(15).Value.ToString()
-
                                 cbo_bt.SelectedValue = SelectedRow.Cells(24).Value
                                 cbo_qabt.SelectedValue = SelectedRow.Cells(25).Value
                                 cbo_pr.SelectedValue = SelectedRow.Cells(26).Value
@@ -228,6 +236,7 @@ Public Class frm_main
                                 cbo_qast.SelectedValue = SelectedRow.Cells(29).Value
                                 cbo_cc.SelectedValue = SelectedRow.Cells(30).Value
                                 cbo_qacc.SelectedValue = SelectedRow.Cells(31).Value
+
                             Case "sched"
                                 txt_page.Text = SelectedRow.Cells(15).Value.ToString()
                                 Select Case CustomVariables.CurrentUserDepartment
@@ -775,7 +784,7 @@ Public Class frm_main
                     Else
                         cf.GetForm.Activate()
                     End If
-                Case "btn_qrtracker"
+                Case "btn_ratio_tracker"
                     Dim qrtrackFrm As markform.frm_qrtracker
                     If Not cf.IsFormOpen("frm_qrtracker", True, "track") Then
                         qrtrackFrm = New markform.frm_qrtracker()
@@ -914,6 +923,7 @@ Public Class frm_main
         cbo_st.Enabled = True : cbo_qast.Enabled = True
         cbo_cc.Enabled = True : cbo_qacc.Enabled = True
     End Sub
+
     ''' <summary>
     ''' The default variables and functions that to be set when the user is logged in.
     ''' </summary>
@@ -931,6 +941,7 @@ Public Class frm_main
             Me.Dispose()
         End If
     End Sub
+
     ''' <summary>
     ''' Load data to main gridview.
     ''' </summary>
