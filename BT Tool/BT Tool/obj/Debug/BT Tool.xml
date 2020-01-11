@@ -657,6 +657,12 @@ BT Tool
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:BT_Tool.frm_break.SaveTime(System.String)">
+ <summary>
+ This will save the start/end time to the database
+ </summary>
+ <param name="savetype">SAVE or END</param>
+</member>
 <member name="M:BT_Tool.frm_upload.frm_upload_Load(System.Object,System.EventArgs)">
  <summary>
  Executing event on form load

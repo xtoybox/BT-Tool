@@ -882,6 +882,7 @@ Public Class frm_main
         Catch ex As Exception
             cf.Debug(ex)
         End Try
+
     End Sub
     ''' <summary>
     ''' Reset the restriction to default
@@ -1573,9 +1574,20 @@ Public Class frm_main
         End If
     End Sub
 
+    Private Sub main_gridview_SelectionChanged(sender As Object, e As EventArgs) Handles main_gridview.SelectionChanged
+
+    End Sub
+
+    Private Sub btn_export_Click(sender As Object, e As EventArgs) Handles btn_export.Click
+
+    End Sub
+
 #End Region
 
 #Region "old form main"
+
+
+
     'Private cf As New CustomFunctions()
     'Private mC As New mainClass
     'Private db As New markform.SQLClass

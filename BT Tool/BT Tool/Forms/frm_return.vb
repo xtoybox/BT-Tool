@@ -433,13 +433,14 @@ Public Class frm_return
                     tssStr = "Error Encountered!"
                     cf.Debug(ex, True, "", "\n\n" + ErrorQuery)
                 End Try
+
                 tss_status.Text = tssStr
                 DisableForm()
                 Me.Cursor = Cursors.Default
                 LoadReturn()
+
             End If
         End If
-
 
     End Sub
 
@@ -453,18 +454,8 @@ Public Class frm_return
         End If
     End Sub
 
-    Private Sub btn_click(sender As Object, e As EventArgs) Handles btn_del.Click, btn_export.Click, btn_reload.Click, btn_save.Click,
-            btn_seen.Click, btn_unseen.Click
-
-
-
-    End Sub
-
-
-
     'add event for button clicks
     'add event for combobox index change
-
 
 #End Region
 
@@ -483,6 +474,7 @@ Public Class frm_return
         End Try
 
         Return id
+
     End Function
 
 

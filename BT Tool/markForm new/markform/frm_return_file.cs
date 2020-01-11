@@ -281,7 +281,6 @@ namespace markform
                     LoadReturn();
                 }
             }
-
         }
         /// <summary>
         /// Filter Data when combobox selected item is changed
@@ -293,7 +292,6 @@ namespace markform
             FilterData();
         }
         
-
         #endregion
 
         #region Void Methods

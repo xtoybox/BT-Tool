@@ -499,6 +499,10 @@ Public Class frm_userlist
         Me.Close()
     End Sub
 
+    Private Sub dgv_userlist_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_userlist.CellContentClick
+
+    End Sub
+
 #End Region
 
 End Class

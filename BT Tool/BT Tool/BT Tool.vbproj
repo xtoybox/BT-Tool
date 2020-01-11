@@ -259,6 +259,12 @@
     <Compile Include="Forms\frm_return.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frm_file_return.Designer.vb">
+      <DependentUpon>frm_file_return.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_file_return.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_splash.Designer.vb">
       <DependentUpon>frm_splash.vb</DependentUpon>
     </Compile>
@@ -375,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_file_eval_bulkdownload.resx">
       <DependentUpon>frm_file_eval_bulkdownload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_file_return.resx">
+      <DependentUpon>frm_file_return.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_flagging.resx">
       <DependentUpon>frm_flagging.vb</DependentUpon>
